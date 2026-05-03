@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "3868742b-1b8b-49c1-b1dc-cd4f054a5fec",
+  "name": "TheBoy",
+  "symbol": "sprite_theboy",
+  "states": [
+    {
+      "id": "3bf26a00-f13c-4e92-885a-109db6776f31",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0004b09d-c4c6-41d0-a899-173eb32ff6c6",
+          "frames": [
+            {
+              "id": "c5f42dda-b27b-4996-810c-50d0245e318d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2570e520-63fd-4e7d-a7d4-a568471a3ef6",
+          "frames": [
+            {
+              "id": "88b605e4-a49c-4b97-9ddf-2785892add41",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7c20186b-a82f-4434-a947-54acb248c450",
+          "frames": [
+            {
+              "id": "6c7d5c91-d0b7-4f30-af08-e648f3ec24eb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fff33506-12b6-4e82-a7a8-68d6c4fd5f67",
+          "frames": [
+            {
+              "id": "0ccde18c-2468-4ad0-8f51-1d0a3859bea3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ac6e76bc-ad0f-4386-8571-73e4fbf67358",
+          "frames": [
+            {
+              "id": "690c0474-a946-4405-ba53-c115474693ee",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e8fe963c-3990-4b44-a3c6-90153a5aa7b0",
+          "frames": [
+            {
+              "id": "5f7d47e5-9ab3-4045-b752-f1a17443a2b5",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "866c25eb-3500-40c5-b4a9-1487ee82327d",
+          "frames": [
+            {
+              "id": "4dfe08a6-68d8-4840-9d4c-6f4a57ebd838",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ff39af58-a212-421f-b7b5-8fa4a8ff1a39",
+          "frames": [
+            {
+              "id": "384949db-ecfb-4095-8b2d-7e86074484e1",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "TheBoy.png",
+  "width": 48,
+  "height": 48,
+  "checksum": "c2452e4987b8a99db48fddacdb4deb9485af5301"
+}

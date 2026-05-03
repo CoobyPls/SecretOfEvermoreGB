@@ -1,0 +1,41 @@
+{
+  "_resourceType": "trigger",
+  "id": "6698caef-1e85-4ea6-92e1-5628ae476cbd",
+  "name": "",
+  "prefabId": "",
+  "x": 23,
+  "y": 3,
+  "symbol": "trigger_5",
+  "prefabScriptOverrides": {},
+  "width": 3,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Raptors ahead!\n     ~Strong Heart"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "bbda28c6-3070-4b6a-af4d-63d14869964c"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 2
+}

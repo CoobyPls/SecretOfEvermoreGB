@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "a085a431-b541-46f1-83b1-ae056623b1af",
+  "name": "Raptor Pit",
+  "symbol": "bg_raptor_pit",
+  "tileColors": "00280+",
+  "filename": "Raptor Pit.png",
+  "width": 20,
+  "height": 32,
+  "imageWidth": 160,
+  "imageHeight": 256
+}

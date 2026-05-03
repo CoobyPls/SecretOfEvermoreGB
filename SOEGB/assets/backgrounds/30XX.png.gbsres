@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "5dd9be97-390f-4c05-8b06-8737596e5926",
+  "name": "30XX",
+  "symbol": "bg_30xx",
+  "tileColors": "",
+  "filename": "30XX.png",
+  "width": 32,
+  "height": 32,
+  "imageWidth": 256,
+  "imageHeight": 256
+}

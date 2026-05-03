@@ -1,0 +1,26 @@
+{
+  "_resourceType": "background",
+  "id": "7e093e8c-3ee0-4d8c-8615-cf3ca078b690",
+  "name": "Fire Eye's Village",
+  "symbol": "sprite_fire_eye_s_village",
+  "tileColors": "",
+  "states": [
+    "6b33adce-8ff0-41d3-b96d-9a40257e9e99"
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Fire Eye's Village.png",
+  "width": 64,
+  "height": 64,
+  "checksum": "c82970e94b04349de97c64fb7a5bd449d76a5946",
+  "imageWidth": 512,
+  "imageHeight": 512
+}

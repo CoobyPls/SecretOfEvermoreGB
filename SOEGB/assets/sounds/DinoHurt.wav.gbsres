@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "3d8155fc-bdd4-452e-94cd-2d96e0a78444",
+  "name": "DinoHurt.wav",
+  "symbol": "sound_dinohurt_wav",
+  "type": "wav",
+  "filename": "DinoHurt.wav"
+}

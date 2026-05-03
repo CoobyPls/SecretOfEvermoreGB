@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "3ab22d1b-b815-455b-a76f-80ff1d47c5cf",
+  "name": "tile2resize",
+  "symbol": "tileset_tile2resize",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "tile2resize.png"
+}

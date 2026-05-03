@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "f39c7475-b7ba-4d19-b415-0b36d92769ea",
+  "name": "RaptorStatic",
+  "symbol": "sprite_raptorstatic",
+  "states": [
+    {
+      "id": "3d8eaf56-d466-4022-9e50-89db905db734",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "f8b1c8b4-4d00-4886-9296-68851e3dff25",
+          "frames": [
+            {
+              "id": "7f85fe6a-53b2-43a4-8f89-3c93b552879b",
+              "tiles": [
+                {
+                  "id": "98de29cc-e8c7-4bf4-aab8-73830e53c944",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "cd796b95-59b1-4faa-95e6-f4f2914449a4",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "db6297d6-e2b1-4ff4-9769-921bdb5612f9",
+          "frames": [
+            {
+              "id": "6f53d5f3-869b-49b9-8fef-9881075b2552",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "bdfca0d9-5391-4067-81f2-da1dc56005a2",
+          "frames": [
+            {
+              "id": "15f13913-f5d9-4cc3-a15b-1cc0a11ddf10",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "89d783d9-1cc5-41a2-b059-0e52baaddeff",
+          "frames": [
+            {
+              "id": "849f9896-3b13-44aa-9606-ffb079b2a2db",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0e434acf-eb11-4ba7-9680-93b81df50796",
+          "frames": [
+            {
+              "id": "a77dbd60-297c-4d35-9d10-9e728ec86c83",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "bb2be813-5c40-4bb9-84f8-f4351af501df",
+          "frames": [
+            {
+              "id": "15a3e704-4281-462c-9ee8-dc1fae7bfb45",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d6e92f99-2af7-483a-83c5-4e31e86af2b3",
+          "frames": [
+            {
+              "id": "63afdb61-ad65-429c-ba1e-317200a1d08f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "87004d36-809d-48ac-9614-302728dc3dff",
+          "frames": [
+            {
+              "id": "a2adc5c6-eea8-477e-ba4a-4e8ce10138fc",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "RaptorStatic.png",
+  "width": 28,
+  "height": 16,
+  "checksum": "cdc4754ab29db1d9873029f132f8cd247c2ea358"
+}
