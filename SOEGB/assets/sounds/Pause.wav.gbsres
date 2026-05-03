@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "4e5a4523-5c66-43d6-9080-15577a296874",
+  "name": "Pause.wav",
+  "symbol": "sound_pause_wav",
+  "type": "wav",
+  "filename": "Pause.wav"
+}

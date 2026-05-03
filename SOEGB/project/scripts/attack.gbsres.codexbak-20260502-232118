@@ -1,0 +1,242 @@
+﻿{
+    "_resourceType":  "script",
+    "id":  "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd",
+    "name":  "Attack",
+    "description":  "",
+    "variables":  {
+
+                  },
+    "actors":  {
+
+               },
+    "symbol":  "script_1",
+    "script":  [
+                   {
+                       "command":  "EVENT_SET_INPUT_SCRIPT",
+                       "args":  {
+                                    "input":  [
+                                                  "a"
+                                              ],
+                                    "override":  true,
+                                    "__scriptTabs":  "press"
+                                },
+                       "children":  {
+                                        "true":  [
+                                                     {
+                                                         "command":  "EVENT_IF_ACTOR_DIRECTION",
+                                                         "args":  {
+                                                                      "actorId":  "player",
+                                                                      "direction":  {
+                                                                                        "type":  "direction",
+                                                                                        "value":  "down"
+                                                                                    },
+                                                                      "__collapseElse":  true,
+                                                                      "__collapse":  true
+                                                                  },
+                                                         "children":  {
+                                                                          "true":  [
+                                                                                       {
+                                                                                           "command":  "EVENT_LAUNCH_PROJECTILE",
+                                                                                           "args":  {
+                                                                                                        "__section":  "projectile",
+                                                                                                        "spriteSheetId":  "4cde0a63-2d90-4edd-a817-37575af43819",
+                                                                                                        "spriteStateId":  "",
+                                                                                                        "actorId":  "player",
+                                                                                                        "x":  6,
+                                                                                                        "y":  -15,
+                                                                                                        "directionType":  "actor",
+                                                                                                        "otherActorId":  "player",
+                                                                                                        "direction":  "down",
+                                                                                                        "angle":  0,
+                                                                                                        "angleVariable":  "0",
+                                                                                                        "targetActorId":  "player",
+                                                                                                        "speed":  0,
+                                                                                                        "animSpeed":  255,
+                                                                                                        "lifeTime":  0.3,
+                                                                                                        "initialOffset":  0,
+                                                                                                        "loopAnim":  true,
+                                                                                                        "destroyOnHit":  true,
+                                                                                                        "collisionGroup":  "3",
+                                                                                                        "collisionMask":  [
+                                                                                                                              "1"
+                                                                                                                          ],
+                                                                                                        "__presetId":  "cad9a7e6-9c5e-4c76-999f-71a68cdcfb72"
+                                                                                                    },
+                                                                                           "id":  "a835e4f0-681a-4477-b96b-f48e78b0f1b1"
+                                                                                       }
+                                                                                   ],
+                                                                          "false":  [
+
+                                                                                    ]
+                                                                      },
+                                                         "id":  "b0abd57c-db40-4ad0-bcd8-b39a900ba7ea"
+                                                     },
+                                                     {
+                                                         "command":  "EVENT_IF_ACTOR_DIRECTION",
+                                                         "args":  {
+                                                                      "actorId":  "player",
+                                                                      "direction":  {
+                                                                                        "type":  "direction",
+                                                                                        "value":  "right"
+                                                                                    },
+                                                                      "__collapseElse":  true,
+                                                                      "__collapse":  true
+                                                                  },
+                                                         "children":  {
+                                                                          "true":  [
+                                                                                       {
+                                                                                           "command":  "EVENT_LAUNCH_PROJECTILE",
+                                                                                           "args":  {
+                                                                                                        "__section":  "presets",
+                                                                                                        "spriteSheetId":  "4cde0a63-2d90-4edd-a817-37575af43819",
+                                                                                                        "spriteStateId":  "",
+                                                                                                        "actorId":  "player",
+                                                                                                        "x":  18,
+                                                                                                        "y":  -4,
+                                                                                                        "directionType":  "actor",
+                                                                                                        "otherActorId":  "player",
+                                                                                                        "direction":  "down",
+                                                                                                        "angle":  0,
+                                                                                                        "angleVariable":  "0",
+                                                                                                        "targetActorId":  "player",
+                                                                                                        "speed":  0,
+                                                                                                        "animSpeed":  255,
+                                                                                                        "lifeTime":  0.3,
+                                                                                                        "initialOffset":  0,
+                                                                                                        "loopAnim":  true,
+                                                                                                        "destroyOnHit":  true,
+                                                                                                        "collisionGroup":  "3",
+                                                                                                        "collisionMask":  [
+                                                                                                                              "1"
+                                                                                                                          ],
+                                                                                                        "__presetId":  "2f114a1f-7e06-4cd8-8f98-8c19ec5c4c27"
+                                                                                                    },
+                                                                                           "id":  "7e0137f0-0543-41e9-85fe-00724791a474"
+                                                                                       }
+                                                                                   ],
+                                                                          "false":  [
+
+                                                                                    ]
+                                                                      },
+                                                         "id":  "03734ccd-196f-42ea-93be-e77a155a8269"
+                                                     },
+                                                     {
+                                                         "command":  "EVENT_IF_ACTOR_DIRECTION",
+                                                         "args":  {
+                                                                      "actorId":  "player",
+                                                                      "direction":  {
+                                                                                        "type":  "direction",
+                                                                                        "value":  "left"
+                                                                                    },
+                                                                      "__collapseElse":  true,
+                                                                      "__collapse":  false
+                                                                  },
+                                                         "children":  {
+                                                                          "true":  [
+                                                                                       {
+                                                                                           "command":  "EVENT_LAUNCH_PROJECTILE",
+                                                                                           "args":  {
+                                                                                                        "__section":  "projectile",
+                                                                                                        "spriteSheetId":  "4cde0a63-2d90-4edd-a817-37575af43819",
+                                                                                                        "spriteStateId":  "",
+                                                                                                        "actorId":  "player",
+                                                                                                        "x":  -6,
+                                                                                                        "y":  2,
+                                                                                                        "directionType":  "actor",
+                                                                                                        "otherActorId":  "player",
+                                                                                                        "direction":  "down",
+                                                                                                        "angle":  0,
+                                                                                                        "angleVariable":  "0",
+                                                                                                        "targetActorId":  "player",
+                                                                                                        "speed":  0,
+                                                                                                        "animSpeed":  255,
+                                                                                                        "lifeTime":  0.3,
+                                                                                                        "initialOffset":  0,
+                                                                                                        "loopAnim":  true,
+                                                                                                        "destroyOnHit":  true,
+                                                                                                        "collisionGroup":  "3",
+                                                                                                        "collisionMask":  [
+                                                                                                                              "1"
+                                                                                                                          ],
+                                                                                                        "__presetId":  "cb04ccd8-9329-424a-bda5-dd9cd7c0f568"
+                                                                                                    },
+                                                                                           "id":  "58639bb4-f509-436b-b809-fbee497e693c"
+                                                                                       }
+                                                                                   ],
+                                                                          "false":  [
+
+                                                                                    ]
+                                                                      },
+                                                         "id":  "f61a876c-d368-48ec-ac02-7d07571e066c"
+                                                     },
+                                                     {
+                                                         "command":  "EVENT_IF_ACTOR_DIRECTION",
+                                                         "args":  {
+                                                                      "actorId":  "player",
+                                                                      "direction":  {
+                                                                                        "type":  "direction",
+                                                                                        "value":  "up"
+                                                                                    },
+                                                                      "__collapseElse":  true,
+                                                                      "__collapse":  true
+                                                                  },
+                                                         "children":  {
+                                                                          "true":  [
+                                                                                       {
+                                                                                           "command":  "EVENT_LAUNCH_PROJECTILE",
+                                                                                           "args":  {
+                                                                                                        "__presetId":  "7f47a77f-3a65-4d8f-a826-ac4f1f030fbf",
+                                                                                                        "__section":  "presets",
+                                                                                                        "spriteSheetId":  "4cde0a63-2d90-4edd-a817-37575af43819",
+                                                                                                        "spriteStateId":  "",
+                                                                                                        "actorId":  "player",
+                                                                                                        "x":  10,
+                                                                                                        "y":  15,
+                                                                                                        "directionType":  "actor",
+                                                                                                        "otherActorId":  "player",
+                                                                                                        "direction":  "down",
+                                                                                                        "angle":  0,
+                                                                                                        "angleVariable":  "0",
+                                                                                                        "targetActorId":  "player",
+                                                                                                        "speed":  0,
+                                                                                                        "animSpeed":  255,
+                                                                                                        "lifeTime":  0.3,
+                                                                                                        "initialOffset":  0,
+                                                                                                        "loopAnim":  true,
+                                                                                                        "destroyOnHit":  true,
+                                                                                                        "collisionGroup":  "3",
+                                                                                                        "collisionMask":  [
+                                                                                                                              "1"
+                                                                                                                          ],
+                                                                                                        "__collapse":  true
+                                                                                                    },
+                                                                                           "id":  "d814f7c7-ff1b-4528-b87b-75b75e99b5c3"
+                                                                                       }
+                                                                                   ],
+                                                                          "false":  [
+
+                                                                                    ]
+                                                                      },
+                                                         "id":  "d1249327-ae40-4ec6-98ea-19314e2f8041"
+                                                     },
+                                                     {
+                                                         "command":  "EVENT_WAIT",
+                                                         "args":  {
+                                                                      "time":  {
+                                                                                   "type":  "number",
+                                                                                   "value":  0.3
+                                                                               },
+                                                                      "frames":  {
+                                                                                     "type":  "number",
+                                                                                     "value":  1
+                                                                                 },
+                                                                      "__collapse":  true
+                                                                  },
+                                                         "id":  "13390f3a-3709-47dc-8c51-e949d2a48865"
+                                                     }
+                                                 ]
+                                    },
+                       "id":  "879128e9-0978-4fe8-8732-800aab83affc"
+                   }
+               ]
+}

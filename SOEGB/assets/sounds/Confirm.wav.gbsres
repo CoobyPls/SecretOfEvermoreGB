@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "928885f8-ce3a-47f1-9793-38362118b1ff",
+  "name": "Confirm.wav",
+  "symbol": "sound_confirm_wav",
+  "type": "wav",
+  "filename": "Confirm.wav"
+}

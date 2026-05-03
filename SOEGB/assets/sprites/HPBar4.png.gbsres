@@ -1,0 +1,155 @@
+{
+  "_resourceType": "sprite",
+  "id": "cb247264-5551-4581-b66a-a15147134992",
+  "name": "HPBar4",
+  "symbol": "sprite_hpbar4",
+  "states": [
+    {
+      "id": "1521bf2e-105f-47a1-b16e-88ec2fdb00b7",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "7b1a3463-acde-43c5-a71e-0de1779c0b51",
+          "frames": [
+            {
+              "id": "33e09234-4b03-4a96-9010-05387a86854c",
+              "tiles": [
+                {
+                  "id": "5c25de09-abbc-4e8f-a72a-b113b4536eb7",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "2509dda8-c88b-4a69-ad22-93ccd3e5478c",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "72a0c8da-3ee6-482a-a4cb-672997662fa6",
+                  "x": 0,
+                  "y": 8,
+                  "sliceX": 0,
+                  "sliceY": 8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "3ea53619-8688-4029-bc2f-96e63b8146dc",
+                  "x": 8,
+                  "y": 8,
+                  "sliceX": 8,
+                  "sliceY": 8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "34c24023-5431-4a2e-b2ef-9fa6f201afb2",
+          "frames": [
+            {
+              "id": "a1c95f75-636c-4d14-b98a-94a863b9b006",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1058ae53-f79c-4470-81dd-bcb7682b65f0",
+          "frames": [
+            {
+              "id": "651b02f0-c5dc-4a82-98d7-2c78006f13ee",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cc7c28c9-4484-4516-ab83-72d9e2c2544c",
+          "frames": [
+            {
+              "id": "1e308319-564a-4590-9b4e-300f638fd333",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b4741560-b8d8-4aaa-8eb6-42204f46f285",
+          "frames": [
+            {
+              "id": "1553ddd0-ccd0-4632-bf97-d8707838c63e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "563fc969-4d32-4471-810e-5ed96cc1d916",
+          "frames": [
+            {
+              "id": "0e71034b-5a9d-4633-9446-2b34003a8103",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "79b42f4f-c8d2-4044-925a-2adae27cb5c8",
+          "frames": [
+            {
+              "id": "394e8da4-57ca-440b-9de2-00b2f7425503",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c37b181a-807b-4ee6-a403-229024099f69",
+          "frames": [
+            {
+              "id": "6421fb9c-5672-4d42-ab9f-8d33d938de63",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "HPBar4.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "codex-generated"
+}

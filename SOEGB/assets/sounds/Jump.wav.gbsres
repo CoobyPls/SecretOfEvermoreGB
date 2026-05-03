@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "a0b0e593-0793-4962-b0d7-61e5086fabcb",
+  "name": "Jump.wav",
+  "symbol": "sound_jump_wav",
+  "type": "wav",
+  "filename": "Jump.wav"
+}

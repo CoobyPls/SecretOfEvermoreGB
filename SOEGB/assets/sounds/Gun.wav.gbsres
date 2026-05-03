@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "6349dce8-92a0-4dd5-88a3-44f5b40eb614",
+  "name": "Gun.wav",
+  "symbol": "sound_gun_wav",
+  "type": "wav",
+  "filename": "Gun.wav"
+}

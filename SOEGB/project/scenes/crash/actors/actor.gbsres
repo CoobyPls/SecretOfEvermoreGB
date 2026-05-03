@@ -33,16 +33,6 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "10",
-              "value": {
-                "type": "true"
-              }
-            },
-            "id": "8d69720b-def2-4e1f-bfc0-28be9264d6d6"
-          },
-          {
             "command": "EVENT_TEXT",
             "args": {
               "text": [
@@ -84,6 +74,23 @@
               }
             },
             "id": "a6d5eb62-a3c9-463f-93af-dbad8c700f46"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "10",
+              "value": {
+                "type": "false"
+              }
+            },
+            "id": "1224d09b-247e-4a25-a766-d1213a130208"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "02942783-a73b-44e8-906d-fe64953eec93"
           }
         ],
         "false": []

@@ -47,14 +47,29 @@
       "symbol": "var_dogdir"
     },
     {
-      "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
-      "name": "Local 0",
-      "symbol": "var_local_1"
+      "id": "9",
+      "name": "PlayerHP",
+      "symbol": "var_playerhp"
     },
     {
       "id": "10",
       "name": "FirstPit",
       "symbol": "var_firstpit"
+    },
+    {
+      "id": "11",
+      "name": "PlayerInvuln",
+      "symbol": "var_playerinvuln"
+    },
+    {
+      "id": "12",
+      "name": "RaptorPitIntro",
+      "symbol": "var_raptorpitintro"
+    },
+    {
+      "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
+      "name": "Local 0",
+      "symbol": "var_local_1"
     }
   ],
   "constants": []
