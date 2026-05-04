@@ -5,7 +5,12 @@
   "symbol": "script_1",
   "description": "",
   "variables": {},
-  "actors": {},
+  "actors": {
+    "74513cba-2293-48b7-88fb-0b54768a5745": {
+      "id": "74513cba-2293-48b7-88fb-0b54768a5745",
+      "name": "Actor ⍒"
+    }
+  },
   "script": [
     {
       "id": "879128e9-0978-4fe8-8732-800aab83affc",
@@ -219,6 +224,83 @@
                     ],
                     "false": []
                   }
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "variable",
+                      "value": "2"
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_RATE_LIMIT",
+                        "args": {
+                          "variable": "L4",
+                          "units": "time",
+                          "time": {
+                            "type": "number",
+                            "value": 0.25
+                          },
+                          "frames": {
+                            "type": "number",
+                            "value": 15
+                          }
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
+                              "args": {
+                                "actorId": "player",
+                                "operator": "<",
+                                "distance": {
+                                  "type": "number",
+                                  "value": 3
+                                },
+                                "otherActorId": "74513cba-2293-48b7-88fb-0b54768a5745",
+                                "__collapseElse": true,
+                                "__disableElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_DEC_VALUE",
+                                    "args": {
+                                      "variable": "3"
+                                    },
+                                    "id": "ba0b39bc-4f46-4e80-8c95-e234546642c1"
+                                  },
+                                  {
+                                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                                    "args": {
+                                      "type": "crash",
+                                      "priority": "medium",
+                                      "pitch": 4,
+                                      "frequency": 200,
+                                      "duration": 0.25,
+                                      "wait": false,
+                                      "effect": 0
+                                    },
+                                    "id": "e26f8f3e-84e8-428d-8a81-27a0617e45c8"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "5d81548a-985c-4556-bd60-79b02397ea90"
+                            }
+                          ]
+                        },
+                        "id": "12c036b8-f9ad-402d-9ce0-cf1502a34ec1"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "codex-raptor-melee-hit-check"
                 }
               ],
               "false": []

@@ -16,7 +16,33 @@
   "symbol": "scene_2",
   "x": 368,
   "y": 136,
-  "script": [],
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "591bb98a-b799-448f-b30a-64ba0f4047f6"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-enable-attack-if-dog-joined"
+    }
+  ],
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],

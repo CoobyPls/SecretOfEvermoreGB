@@ -1,21 +1,25 @@
 {
   "_resourceType": "actor",
   "id": "5ea4f773-694b-4563-81cd-dc2f8ea9b8ba",
+  "_index": 1,
+  "symbol": "actor_hp_bar_fire_eyes_vill",
+  "prefabId": "",
   "name": "HP Bar",
+  "coordinateType": "tiles",
+  "x": 0,
+  "y": 16,
   "frame": 0,
   "animate": false,
   "spriteSheetId": "cb247264-5551-4581-b66a-a15147134992",
-  "prefabId": "",
+  "paletteId": "",
   "direction": "down",
   "moveSpeed": 1,
   "animSpeed": 15,
-  "paletteId": "",
   "isPinned": true,
   "persistent": false,
   "collisionGroup": "",
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
-  "symbol": "actor_hp_bar_fire_eyes_vill",
   "script": [],
   "startScript": [
     {
@@ -367,9 +371,5 @@
   ],
   "hit1Script": [],
   "hit2Script": [],
-  "hit3Script": [],
-  "coordinateType": "tiles",
-  "x": 0,
-  "y": 16,
-  "_index": 1
+  "hit3Script": []
 }

@@ -1,0 +1,385 @@
+﻿{
+    "_resourceType":  "actor",
+    "id":  "0551f3b6-efc0-4111-9dec-9284cb9eca36",
+    "name":  "HP Bar",
+    "frame":  0,
+    "animate":  false,
+    "spriteSheetId":  "cb247264-5551-4581-b66a-a15147134992",
+    "prefabId":  "",
+    "direction":  "down",
+    "moveSpeed":  1,
+    "animSpeed":  15,
+    "paletteId":  "",
+    "isPinned":  true,
+    "persistent":  false,
+    "collisionGroup":  "",
+    "collisionExtraFlags":  [
+
+                            ],
+    "prefabScriptOverrides":  {
+
+                              },
+    "symbol":  "actor_hp_bar_raptor_pit",
+    "script":  null,
+    "startScript":  [
+                        {
+                            "command":  "EVENT_IF",
+                            "args":  {
+                                         "condition":  {
+                                                           "type":  "gt",
+                                                           "valueA":  {
+                                                                          "type":  "variable",
+                                                                          "value":  "9"
+                                                                      },
+                                                           "valueB":  {
+                                                                          "type":  "number",
+                                                                          "value":  4
+                                                                      }
+                                                       },
+                                         "__collapseElse":  false,
+                                         "__disableElse":  false
+                                     },
+                            "children":  {
+                                             "true":  [
+                                                          {
+                                                              "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                              "args":  {
+                                                                           "actorId":  "$self$",
+                                                                           "spriteSheetId":  "cb247264-5551-4581-b66a-a15147134992"
+                                                                       },
+                                                              "id":  "73a2973e-7220-4751-be2d-cdda4925c19c"
+                                                          }
+                                                      ],
+                                             "false":  [
+                                                           {
+                                                               "command":  "EVENT_IF",
+                                                               "args":  {
+                                                                            "condition":  {
+                                                                                              "type":  "eq",
+                                                                                              "valueA":  {
+                                                                                                             "type":  "variable",
+                                                                                                             "value":  "9"
+                                                                                                         },
+                                                                                              "valueB":  {
+                                                                                                             "type":  "number",
+                                                                                                             "value":  4
+                                                                                                         }
+                                                                                          },
+                                                                            "__collapseElse":  false,
+                                                                            "__disableElse":  false
+                                                                        },
+                                                               "children":  {
+                                                                                "true":  [
+                                                                                             {
+                                                                                                 "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                 "args":  {
+                                                                                                              "actorId":  "$self$",
+                                                                                                              "spriteSheetId":  "55e8d0d5-2812-4c08-96a6-48f17779811e"
+                                                                                                          },
+                                                                                                 "id":  "ddd4a582-04e2-479d-9ad5-00a88a1734ac"
+                                                                                             }
+                                                                                         ],
+                                                                                "false":  [
+                                                                                              {
+                                                                                                  "command":  "EVENT_IF",
+                                                                                                  "args":  {
+                                                                                                               "condition":  {
+                                                                                                                                 "type":  "eq",
+                                                                                                                                 "valueA":  {
+                                                                                                                                                "type":  "variable",
+                                                                                                                                                "value":  "9"
+                                                                                                                                            },
+                                                                                                                                 "valueB":  {
+                                                                                                                                                "type":  "number",
+                                                                                                                                                "value":  3
+                                                                                                                                            }
+                                                                                                                             },
+                                                                                                               "__collapseElse":  false,
+                                                                                                               "__disableElse":  false
+                                                                                                           },
+                                                                                                  "children":  {
+                                                                                                                   "true":  [
+                                                                                                                                {
+                                                                                                                                    "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                    "args":  {
+                                                                                                                                                 "actorId":  "$self$",
+                                                                                                                                                 "spriteSheetId":  "df2a57d6-4571-4f74-b356-cb53c8bcb381"
+                                                                                                                                             },
+                                                                                                                                    "id":  "82ecdabb-fedb-4179-8870-389e754c5172"
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                   "false":  [
+                                                                                                                                 {
+                                                                                                                                     "command":  "EVENT_IF",
+                                                                                                                                     "args":  {
+                                                                                                                                                  "condition":  {
+                                                                                                                                                                    "type":  "eq",
+                                                                                                                                                                    "valueA":  {
+                                                                                                                                                                                   "type":  "variable",
+                                                                                                                                                                                   "value":  "9"
+                                                                                                                                                                               },
+                                                                                                                                                                    "valueB":  {
+                                                                                                                                                                                   "type":  "number",
+                                                                                                                                                                                   "value":  2
+                                                                                                                                                                               }
+                                                                                                                                                                },
+                                                                                                                                                  "__collapseElse":  false,
+                                                                                                                                                  "__disableElse":  false
+                                                                                                                                              },
+                                                                                                                                     "children":  {
+                                                                                                                                                      "true":  [
+                                                                                                                                                                   {
+                                                                                                                                                                       "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                                                       "args":  {
+                                                                                                                                                                                    "actorId":  "$self$",
+                                                                                                                                                                                    "spriteSheetId":  "a1f0aefb-194f-4835-94f9-8c3febc7932b"
+                                                                                                                                                                                },
+                                                                                                                                                                       "id":  "d7e408d3-edfd-419f-a00f-b624778b0ddb"
+                                                                                                                                                                   }
+                                                                                                                                                               ],
+                                                                                                                                                      "false":  [
+                                                                                                                                                                    {
+                                                                                                                                                                        "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                                                        "args":  {
+                                                                                                                                                                                     "actorId":  "$self$",
+                                                                                                                                                                                     "spriteSheetId":  "7c39e744-5251-4983-877b-c4c03944630e"
+                                                                                                                                                                                 },
+                                                                                                                                                                        "id":  "4ca4d02c-f492-46fc-a1f0-bba679112aa4"
+                                                                                                                                                                    }
+                                                                                                                                                                ]
+                                                                                                                                                  },
+                                                                                                                                     "id":  "bf2d1cb4-3178-4c13-843f-1e887cc38a30"
+                                                                                                                                 }
+                                                                                                                             ]
+                                                                                                               },
+                                                                                                  "id":  "2512ca83-5e7c-4cc8-9b05-3bdf2bd10e04"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                               "id":  "fed3dd2a-da2f-45a8-9b2e-68656e675ade"
+                                                           }
+                                                       ]
+                                         },
+                            "id":  "af71fffc-e0e7-4080-952e-e340423cb423"
+                        },
+                        {
+                            "command":  "EVENT_VARIABLE_MATH",
+                            "args":  {
+                                         "vectorX":  "L2",
+                                         "operation":  "set",
+                                         "other":  "var",
+                                         "vectorY":  "9",
+                                         "value":  0,
+                                         "minValue":  0,
+                                         "maxValue":  32767,
+                                         "clamp":  false
+                                     },
+                            "id":  "7dcc9435-248b-4a54-a151-5ca7d95c2bc0"
+                        }
+                    ],
+    "updateScript":  [
+                         {
+                             "command":  "EVENT_RATE_LIMIT",
+                             "args":  {
+                                          "variable":  "L0",
+                                          "units":  "time",
+                                          "time":  {
+                                                       "type":  "number",
+                                                       "value":  0.3
+                                                   },
+                                          "frames":  {
+                                                         "type":  "number",
+                                                         "value":  18
+                                                     }
+                                      },
+                             "children":  {
+                                              "true":  [
+                                                           {
+                                                               "command":  "EVENT_IF_VALUE_COMPARE",
+                                                               "args":  {
+                                                                            "vectorX":  "L2",
+                                                                            "operator":  "!=",
+                                                                            "vectorY":  "9",
+                                                                            "__collapseElse":  true,
+                                                                            "__disableElse":  true
+                                                                        },
+                                                               "children":  {
+                                                                                "true":  [
+                                                                                             {
+                                                                                                 "command":  "EVENT_IF",
+                                                                                                 "args":  {
+                                                                                                              "condition":  {
+                                                                                                                                "type":  "gt",
+                                                                                                                                "valueA":  {
+                                                                                                                                               "type":  "variable",
+                                                                                                                                               "value":  "9"
+                                                                                                                                           },
+                                                                                                                                "valueB":  {
+                                                                                                                                               "type":  "number",
+                                                                                                                                               "value":  4
+                                                                                                                                           }
+                                                                                                                            },
+                                                                                                              "__collapseElse":  false,
+                                                                                                              "__disableElse":  false
+                                                                                                          },
+                                                                                                 "children":  {
+                                                                                                                  "true":  [
+                                                                                                                               {
+                                                                                                                                   "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                   "args":  {
+                                                                                                                                                "actorId":  "$self$",
+                                                                                                                                                "spriteSheetId":  "cb247264-5551-4581-b66a-a15147134992"
+                                                                                                                                            },
+                                                                                                                                   "id":  "87e74172-a0dd-43c8-b711-bc1c80768ef4"
+                                                                                                                               }
+                                                                                                                           ],
+                                                                                                                  "false":  [
+                                                                                                                                {
+                                                                                                                                    "command":  "EVENT_IF",
+                                                                                                                                    "args":  {
+                                                                                                                                                 "condition":  {
+                                                                                                                                                                   "type":  "eq",
+                                                                                                                                                                   "valueA":  {
+                                                                                                                                                                                  "type":  "variable",
+                                                                                                                                                                                  "value":  "9"
+                                                                                                                                                                              },
+                                                                                                                                                                   "valueB":  {
+                                                                                                                                                                                  "type":  "number",
+                                                                                                                                                                                  "value":  4
+                                                                                                                                                                              }
+                                                                                                                                                               },
+                                                                                                                                                 "__collapseElse":  false,
+                                                                                                                                                 "__disableElse":  false
+                                                                                                                                             },
+                                                                                                                                    "children":  {
+                                                                                                                                                     "true":  [
+                                                                                                                                                                  {
+                                                                                                                                                                      "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                                                      "args":  {
+                                                                                                                                                                                   "actorId":  "$self$",
+                                                                                                                                                                                   "spriteSheetId":  "55e8d0d5-2812-4c08-96a6-48f17779811e"
+                                                                                                                                                                               },
+                                                                                                                                                                      "id":  "334cf175-f5bb-40d4-8654-2149df9d4575"
+                                                                                                                                                                  }
+                                                                                                                                                              ],
+                                                                                                                                                     "false":  [
+                                                                                                                                                                   {
+                                                                                                                                                                       "command":  "EVENT_IF",
+                                                                                                                                                                       "args":  {
+                                                                                                                                                                                    "condition":  {
+                                                                                                                                                                                                      "type":  "eq",
+                                                                                                                                                                                                      "valueA":  {
+                                                                                                                                                                                                                     "type":  "variable",
+                                                                                                                                                                                                                     "value":  "9"
+                                                                                                                                                                                                                 },
+                                                                                                                                                                                                      "valueB":  {
+                                                                                                                                                                                                                     "type":  "number",
+                                                                                                                                                                                                                     "value":  3
+                                                                                                                                                                                                                 }
+                                                                                                                                                                                                  },
+                                                                                                                                                                                    "__collapseElse":  false,
+                                                                                                                                                                                    "__disableElse":  false
+                                                                                                                                                                                },
+                                                                                                                                                                       "children":  {
+                                                                                                                                                                                        "true":  [
+                                                                                                                                                                                                     {
+                                                                                                                                                                                                         "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                                                                                         "args":  {
+                                                                                                                                                                                                                      "actorId":  "$self$",
+                                                                                                                                                                                                                      "spriteSheetId":  "df2a57d6-4571-4f74-b356-cb53c8bcb381"
+                                                                                                                                                                                                                  },
+                                                                                                                                                                                                         "id":  "292dbb02-fc72-4c45-bdff-c1d2bea712bb"
+                                                                                                                                                                                                     }
+                                                                                                                                                                                                 ],
+                                                                                                                                                                                        "false":  [
+                                                                                                                                                                                                      {
+                                                                                                                                                                                                          "command":  "EVENT_IF",
+                                                                                                                                                                                                          "args":  {
+                                                                                                                                                                                                                       "condition":  {
+                                                                                                                                                                                                                                         "type":  "eq",
+                                                                                                                                                                                                                                         "valueA":  {
+                                                                                                                                                                                                                                                        "type":  "variable",
+                                                                                                                                                                                                                                                        "value":  "9"
+                                                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                                         "valueB":  {
+                                                                                                                                                                                                                                                        "type":  "number",
+                                                                                                                                                                                                                                                        "value":  2
+                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                     },
+                                                                                                                                                                                                                       "__collapseElse":  false,
+                                                                                                                                                                                                                       "__disableElse":  false
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                          "children":  {
+                                                                                                                                                                                                                           "true":  [
+                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                                            "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                                                                                                                            "args":  {
+                                                                                                                                                                                                                                                         "actorId":  "$self$",
+                                                                                                                                                                                                                                                         "spriteSheetId":  "a1f0aefb-194f-4835-94f9-8c3febc7932b"
+                                                                                                                                                                                                                                                     },
+                                                                                                                                                                                                                                            "id":  "bf098165-73d0-40fe-8c01-c6336d79e9b9"
+                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                    ],
+                                                                                                                                                                                                                           "false":  [
+                                                                                                                                                                                                                                         {
+                                                                                                                                                                                                                                             "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                                                                                                                             "args":  {
+                                                                                                                                                                                                                                                          "actorId":  "$self$",
+                                                                                                                                                                                                                                                          "spriteSheetId":  "7c39e744-5251-4983-877b-c4c03944630e"
+                                                                                                                                                                                                                                                      },
+                                                                                                                                                                                                                                             "id":  "22783712-1fbc-4c94-803a-1d2c8ae44ed1"
+                                                                                                                                                                                                                                         }
+                                                                                                                                                                                                                                     ]
+                                                                                                                                                                                                                       },
+                                                                                                                                                                                                          "id":  "ca25f3ab-702c-430b-835a-bc802f463a3b"
+                                                                                                                                                                                                      }
+                                                                                                                                                                                                  ]
+                                                                                                                                                                                    },
+                                                                                                                                                                       "id":  "92f351d1-a794-41fb-985c-c9338b9739b4"
+                                                                                                                                                                   }
+                                                                                                                                                               ]
+                                                                                                                                                 },
+                                                                                                                                    "id":  "25a3d4e0-747c-481c-b4b9-91184e6f63e9"
+                                                                                                                                }
+                                                                                                                            ]
+                                                                                                              },
+                                                                                                 "id":  "55f1456a-dfc9-44c3-ba54-cff1c3388f8b"
+                                                                                             },
+                                                                                             {
+                                                                                                 "command":  "EVENT_VARIABLE_MATH",
+                                                                                                 "args":  {
+                                                                                                              "vectorX":  "L2",
+                                                                                                              "operation":  "set",
+                                                                                                              "other":  "var",
+                                                                                                              "vectorY":  "9",
+                                                                                                              "value":  0,
+                                                                                                              "minValue":  0,
+                                                                                                              "maxValue":  32767,
+                                                                                                              "clamp":  false
+                                                                                                          },
+                                                                                                 "id":  "9d6d5045-c5c0-4abb-9384-a64c44455af7"
+                                                                                             }
+                                                                                         ],
+                                                                                "false":  null
+                                                                            },
+                                                               "id":  "d822d855-9b3e-426a-8ddf-a1e47582354a"
+                                                           }
+                                                       ]
+                                          },
+                             "id":  "6bc1ad7b-0dcb-4921-aa58-6fe47387ce84"
+                         }
+                     ],
+    "hit1Script":  [
+
+                   ],
+    "hit2Script":  [
+
+                   ],
+    "hit3Script":  [
+
+                   ],
+    "coordinateType":  "tiles",
+    "x":  0,
+    "y":  16,
+    "_index":  2
+}

@@ -659,7 +659,7 @@
   "canvasHeight": 32,
   "boundsX": 0,
   "boundsY": -8,
-  "boundsWidth": 16,
+  "boundsWidth": 24,
   "boundsHeight": 16,
   "animSpeed": 15,
   "filename": "raptorspritesheet.png",

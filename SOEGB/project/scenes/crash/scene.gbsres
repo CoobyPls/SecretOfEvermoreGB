@@ -2,21 +2,46 @@
   "_resourceType": "scene",
   "id": "6e83a9df-9d21-45bd-bbd9-6353b9fed8fe",
   "_index": 0,
-  "name": "Crash",
-  "backgroundId": "a7d722ee-e726-4f41-ae88-7e1dbbaa2653",
-  "tilesetId": "",
-  "width": 20,
-  "height": 18,
   "type": "TOPDOWN",
-  "colorModeOverride": "none",
-  "paletteIds": [],
-  "spritePaletteIds": [],
-  "collisions": "0f6+008+0fc+008+0f8+0010+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f6+00e+0f6+00e+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f2a+",
-  "autoFadeSpeed": 2,
+  "name": "Crash",
   "symbol": "scene_1",
   "x": 184,
   "y": 488,
+  "width": 20,
+  "height": 18,
+  "backgroundId": "a7d722ee-e726-4f41-ae88-7e1dbbaa2653",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 2,
+  "playerSpriteSheetId": "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd",
   "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "591bb98a-b799-448f-b30a-64ba0f4047f6"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-enable-attack-if-dog-joined"
+    },
     {
       "command": "EVENT_SET_VALUE",
       "args": {
@@ -90,5 +115,5 @@
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],
-  "playerSpriteSheetId": "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd"
+  "collisions": "0f6+008+0fc+008+0f8+0010+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f6+00e+0f6+00e+0f4+0010+0f4+0010+0f4+0010+0f4+0010+0f2a+"
 }

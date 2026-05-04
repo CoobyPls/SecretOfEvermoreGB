@@ -1,21 +1,25 @@
 {
   "_resourceType": "actor",
   "id": "6625c953-a9fd-4c45-9293-64d84d2eeef6",
+  "_index": 1,
+  "symbol": "actor_hp_bar_jungle_path_1",
+  "prefabId": "",
   "name": "HP Bar",
+  "coordinateType": "tiles",
+  "x": 0,
+  "y": 16,
   "frame": 0,
   "animate": false,
   "spriteSheetId": "cb247264-5551-4581-b66a-a15147134992",
-  "prefabId": "",
+  "paletteId": "",
   "direction": "down",
   "moveSpeed": 1,
   "animSpeed": 15,
-  "paletteId": "",
   "isPinned": true,
   "persistent": false,
   "collisionGroup": "",
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
-  "symbol": "actor_hp_bar_jungle_path_1",
   "script": [],
   "startScript": [
     {
@@ -367,9 +371,5 @@
   ],
   "hit1Script": [],
   "hit2Script": [],
-  "hit3Script": [],
-  "coordinateType": "tiles",
-  "x": 0,
-  "y": 16,
-  "_index": 1
+  "hit3Script": []
 }

@@ -11,6 +11,28 @@
   "height": 1,
   "script": [
     {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "6",
+        "value": {
+          "type": "number",
+          "value": 7
+        }
+      },
+      "id": "a0b14f16-de2b-47b4-b051-6ebd72cabbd2"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "7",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "19b508a1-e550-48a8-b8ed-892b2176dbca"
+    },
+    {
       "command": "EVENT_SWITCH_SCENE",
       "args": {
         "sceneId": "c59e0e01-511d-4f63-a391-37af3e0bf038",

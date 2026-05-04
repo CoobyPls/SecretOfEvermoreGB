@@ -1,0 +1,59 @@
+﻿{
+    "_resourceType":  "trigger",
+    "id":  "2bcfa772-f044-4da4-b6cb-43cabd7c9635",
+    "name":  "",
+    "prefabId":  "",
+    "x":  26,
+    "y":  0,
+    "symbol":  "trigger_2",
+    "prefabScriptOverrides":  {
+
+                              },
+    "width":  4,
+    "height":  1,
+    "script":  [
+                   {
+                       "command":  "EVENT_SET_VALUE",
+                       "args":  {
+                                    "variable":  "6",
+                                    "value":  {
+                                                  "type":  "number",
+                                                  "value":  7
+                                              }
+                                },
+                       "id":  "55c7a7c4-db16-4574-a34b-7f1f4b8a8df0"
+                   },
+                   {
+                       "command":  "EVENT_SET_VALUE",
+                       "args":  {
+                                    "variable":  "7",
+                                    "value":  {
+                                                  "type":  "number",
+                                                  "value":  30
+                                              }
+                                },
+                       "id":  "f6a8a274-5922-443a-b6d1-86b0111f6bff"
+                   },
+                   {
+                       "command":  "EVENT_SWITCH_SCENE",
+                       "args":  {
+                                    "sceneId":  "c59e0e01-511d-4f63-a391-37af3e0bf038",
+                                    "x":  {
+                                              "type":  "number",
+                                              "value":  7
+                                          },
+                                    "y":  {
+                                              "type":  "number",
+                                              "value":  29
+                                          },
+                                    "direction":  "",
+                                    "fadeSpeed":  "2"
+                                },
+                       "id":  "ccef7f83-af17-44d3-b62a-fef87710bf88"
+                   }
+               ],
+    "leaveScript":  [
+
+                    ],
+    "_index":  1
+}

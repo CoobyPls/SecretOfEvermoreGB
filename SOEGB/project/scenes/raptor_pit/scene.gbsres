@@ -2,21 +2,46 @@
   "_resourceType": "scene",
   "id": "c59e0e01-511d-4f63-a391-37af3e0bf038",
   "_index": 2,
-  "name": "Raptor Pit",
-  "backgroundId": "a085a431-b541-46f1-83b1-ae056623b1af",
-  "tilesetId": "",
-  "width": 20,
-  "height": 32,
   "type": "TOPDOWN",
-  "colorModeOverride": "none",
-  "paletteIds": [],
-  "spritePaletteIds": [],
-  "collisions": "0f6+004+0f6+004+0f6+004+0f6+004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f6+004+0f6+004+0f6+004+0f6+004+",
-  "autoFadeSpeed": 1,
+  "name": "Raptor Pit",
   "symbol": "scene_3",
   "x": 694.4,
   "y": 100,
+  "width": 20,
+  "height": 32,
+  "backgroundId": "a085a431-b541-46f1-83b1-ae056623b1af",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "playerSpriteSheetId": "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd",
   "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "591bb98a-b799-448f-b30a-64ba0f4047f6"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-enable-attack-if-dog-joined"
+    },
     {
       "command": "EVENT_IF",
       "args": {
@@ -217,6 +242,39 @@
                         "id": "448852ad-e846-46bb-b7f1-93979d246410"
                       },
                       {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "6",
+                          "value": {
+                            "type": "number",
+                            "value": 45
+                          }
+                        },
+                        "id": "502ac5bd-e5f9-4a6a-8940-154540df7580"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "7",
+                          "value": {
+                            "type": "number",
+                            "value": 62
+                          }
+                        },
+                        "id": "75a60498-42ed-41ca-84cf-e2e94aa5ece3"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "9",
+                          "value": {
+                            "type": "number",
+                            "value": 5
+                          }
+                        },
+                        "id": "9b4194a7-bec2-4d10-aa0c-76cd911cca80"
+                      },
+                      {
                         "command": "EVENT_SWITCH_SCENE",
                         "args": {
                           "sceneId": "9a2f2286-3d4c-4954-9d18-7a8a20635f4d",
@@ -262,8 +320,7 @@
                                   "value": -2
                                 },
                                 "collideWith": [
-                                  "walls",
-                                  "actors"
+                                  "walls"
                                 ],
                                 "lockDirection": [],
                                 "moveType": "horizontal"
@@ -302,8 +359,7 @@
                                   "value": 2
                                 },
                                 "collideWith": [
-                                  "walls",
-                                  "actors"
+                                  "walls"
                                 ],
                                 "lockDirection": [],
                                 "moveType": "horizontal"
@@ -342,8 +398,7 @@
                                   "value": 0
                                 },
                                 "collideWith": [
-                                  "walls",
-                                  "actors"
+                                  "walls"
                                 ],
                                 "lockDirection": [],
                                 "moveType": "horizontal"
@@ -382,8 +437,7 @@
                                   "value": 0
                                 },
                                 "collideWith": [
-                                  "walls",
-                                  "actors"
+                                  "walls"
                                 ],
                                 "lockDirection": [],
                                 "moveType": "horizontal"
@@ -436,5 +490,5 @@
   ],
   "playerHit2Script": [],
   "playerHit3Script": [],
-  "playerSpriteSheetId": "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd"
+  "collisions": "0f6+004+0f6+004+0f6+004+0f6+004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f6+004+0f6+004+0f6+004+0f6+004+"
 }

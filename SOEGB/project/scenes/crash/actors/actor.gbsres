@@ -1,21 +1,25 @@
 {
   "_resourceType": "actor",
   "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2",
+  "_index": 0,
+  "symbol": "actor_2",
+  "prefabId": "",
   "name": "",
+  "coordinateType": "tiles",
+  "x": 14,
+  "y": 14,
   "frame": 0,
   "animate": false,
   "spriteSheetId": "c0ac5970-21d3-46e0-b657-42005413185a",
-  "prefabId": "",
+  "paletteId": "",
   "direction": "right",
   "moveSpeed": 1,
   "animSpeed": 15,
-  "paletteId": "",
   "isPinned": false,
   "persistent": false,
   "collisionGroup": "",
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
-  "symbol": "actor_2",
   "script": [
     {
       "command": "EVENT_IF",
@@ -104,7 +108,55 @@
       "args": {
         "actorId": "$self$"
       },
-      "id": "a6a6c0a9-c3ad-4d35-b841-1cf31bee6664"
+      "id": "08030d21-fbcf-419b-8838-120c69363a84"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "1ca0bd25-3627-4b37-ba9e-e57596eee5bc"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "variable",
+                "value": "6"
+              },
+              "y": {
+                "type": "variable",
+                "value": "7"
+              },
+              "units": "tiles"
+            },
+            "id": "5a4340e4-5524-49bb-a770-b71d820d8f4b"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "cae6e3ce-1b7c-4ffa-800d-21b152c31470"
+          }
+        ]
+      },
+      "id": "bb62b371-70d3-43b4-93d3-a557fccf1257"
     }
   ],
   "updateScript": [
@@ -115,7 +167,8 @@
           "type": "variable",
           "value": "1"
         },
-        "__collapseElse": true
+        "__collapseElse": true,
+        "__disableElse": true
       },
       "children": {
         "true": [
@@ -123,13 +176,14 @@
             "command": "EVENT_RATE_LIMIT",
             "args": {
               "variable": "L0",
+              "units": "time",
               "time": {
                 "type": "number",
                 "value": 1
               },
               "frames": {
                 "type": "number",
-                "value": 1
+                "value": 60
               }
             },
             "children": {
@@ -137,13 +191,13 @@
                 {
                   "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
                   "args": {
-                    "actorId": "player",
+                    "actorId": "$self$",
                     "operator": ">",
                     "distance": {
                       "type": "number",
-                      "value": 0
+                      "value": 2
                     },
-                    "otherActorId": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2",
+                    "otherActorId": "player",
                     "__collapseElse": true,
                     "__disableElse": true
                   },
@@ -170,21 +224,21 @@
                           "lockDirection": [],
                           "moveType": "horizontal"
                         },
-                        "id": "5eca70d3-9075-41f0-b3a1-96667c000ccc"
+                        "id": "5eb4af34-fde8-4de7-b93e-d01aaf28a3d6"
                       }
                     ],
                     "false": []
                   },
-                  "id": "493105f1-28ea-4d4d-aae9-16456e4dfa68"
+                  "id": "be6275fa-ee4d-42a8-931d-f2d684069a7f"
                 }
               ]
             },
-            "id": "59cb8b6f-6560-4030-805f-d333cac298d4"
+            "id": "2944cdb4-42c5-4900-8fe1-7e348a0787f1"
           }
         ],
         "false": []
       },
-      "id": "53900fda-feb8-409d-829b-82ced809dc42"
+      "id": "ac374a13-6df3-48a2-9790-e5051b6b9323"
     }
   ],
   "hit1Script": [
@@ -209,9 +263,5 @@
     }
   ],
   "hit2Script": [],
-  "hit3Script": [],
-  "coordinateType": "tiles",
-  "x": 14,
-  "y": 14,
-  "_index": 0
+  "hit3Script": []
 }
