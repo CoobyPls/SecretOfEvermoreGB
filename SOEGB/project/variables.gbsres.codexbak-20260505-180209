@@ -1,0 +1,94 @@
+﻿{
+    "_resourceType":  "variables",
+    "variables":  [
+                      {
+                          "id":  "0",
+                          "name":  "Intro",
+                          "symbol":  "var_intro"
+                      },
+                      {
+                          "id":  "1",
+                          "name":  "DogJoined",
+                          "symbol":  "var_dogjoined"
+                      },
+                      {
+                          "id":  "2",
+                          "name":  "RaptorFight",
+                          "symbol":  "var_raptorfight_0"
+                      },
+                      {
+                          "id":  "3",
+                          "name":  "Enemy1HP",
+                          "symbol":  "var_enemy1hp"
+                      },
+                      {
+                          "id":  "4",
+                          "name":  "PlayerX",
+                          "symbol":  "var_playerx"
+                      },
+                      {
+                          "id":  "5",
+                          "name":  "PlayerY",
+                          "symbol":  "var_playery"
+                      },
+                      {
+                          "id":  "6",
+                          "name":  "DogX",
+                          "symbol":  "var_dogx"
+                      },
+                      {
+                          "id":  "7",
+                          "name":  "DogY",
+                          "symbol":  "var_dogy"
+                      },
+                      {
+                          "id":  "8",
+                          "name":  "DogDir",
+                          "symbol":  "var_dogdir"
+                      },
+                      {
+                          "id":  "9",
+                          "name":  "PlayerHP",
+                          "symbol":  "var_playerhp"
+                      },
+                      {
+                          "id":  "10",
+                          "name":  "FirstPit",
+                          "symbol":  "var_firstpit"
+                      },
+                      {
+                          "id":  "11",
+                          "name":  "PlayerInvuln",
+                          "symbol":  "var_playerinvuln"
+                      },
+                      {
+                          "id":  "12",
+                          "name":  "RaptorPitIntro",
+                          "symbol":  "var_raptorpitintro"
+                      },
+                      {
+                          "id":  "13",
+                          "name":  "PlayerMaxHP",
+                          "symbol":  "var_playermaxhp"
+                      },
+                      {
+                          "id":  "14",
+                          "name":  "EquippedIcon",
+                          "symbol":  "var_equippedicon"
+                      },
+                      {
+                          "id":  "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
+                          "name":  "Local 0",
+                          "symbol":  "var_local_1"
+                      },
+                      {
+                          "id":  "15",
+                          "name":  "RaptorInvuln",
+                          "symbol":  "var_raptorinvuln"
+                      }
+                  ],
+    "constants":  [
+
+                  ]
+}
+

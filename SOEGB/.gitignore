@@ -1,4 +1,4 @@
-build/
+﻿build/
 cache/
 
 *.bak
@@ -6,3 +6,6 @@ cache/
 *.icloud
 
 user_settings.gbsres
+
+codex_backups/
+
