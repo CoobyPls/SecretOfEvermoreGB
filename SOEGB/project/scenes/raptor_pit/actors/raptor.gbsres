@@ -1,23 +1,44 @@
 {
   "_resourceType": "actor",
   "id": "74513cba-2293-48b7-88fb-0b54768a5745",
-  "name": "Raptor",
-  "frame": 0,
-  "animate": false,
-  "spriteSheetId": "c5ba29d5-bcf6-4370-9481-23ed3a66be9c",
+  "_index": 0,
+  "symbol": "actor_1",
   "prefabId": "",
+  "name": "Raptor",
+  "coordinateType": "tiles",
+  "x": 10,
+  "y": 14,
+  "frame": 0,
+  "animate": true,
+  "spriteSheetId": "544594e2-1698-4730-aaf2-1fc0b78ebaa8",
+  "paletteId": "",
   "direction": "down",
   "moveSpeed": 1,
-  "animSpeed": 15,
-  "paletteId": "",
+  "animSpeed": 5,
   "isPinned": false,
   "persistent": false,
-  "collisionGroup": "1",
+  "collisionGroup": "",
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
-  "symbol": "actor_1",
   "script": [],
   "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-raptor-collisions-off"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "15",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-reset-raptor-invuln"
+    },
     {
       "command": "EVENT_IF",
       "args": {
@@ -25,8 +46,10 @@
           "type": "variable",
           "value": "10"
         },
-        "__collapseElse": false
+        "__collapseElse": false,
+        "__disableElse": false
       },
+      "id": "codex-raptor-start-gate",
       "children": {
         "true": [
           {
@@ -34,14 +57,14 @@
             "args": {
               "actorId": "$self$"
             },
-            "id": "473440b6-bdb6-435f-9de8-3324c5c62567"
+            "id": "codex-raptor-hide-if-done"
           },
           {
             "command": "EVENT_ACTOR_DEACTIVATE",
             "args": {
               "actorId": "$self$"
             },
-            "id": "0eb35296-aa33-437a-ace8-495cb83bc0a3"
+            "id": "codex-raptor-deactivate-if-done"
           }
         ],
         "false": [
@@ -53,7 +76,7 @@
                 "type": "false"
               }
             },
-            "id": "5420994a-f40b-430f-8aa6-a45327dfc867"
+            "id": "codex-raptor-clear-player-iframes"
           },
           {
             "command": "EVENT_SET_VALUE",
@@ -63,7 +86,7 @@
                 "type": "true"
               }
             },
-            "id": "33ff1c39-5f99-4c25-b99c-04d5170849ee"
+            "id": "codex-raptor-start-fight"
           },
           {
             "command": "EVENT_SET_VALUE",
@@ -71,28 +94,27 @@
               "variable": "3",
               "value": {
                 "type": "number",
-                "value": 5
+                "value": 6
               }
             },
-            "id": "2237b78a-761f-47d4-a546-96a33880d674"
+            "id": "codex-raptor-hp-six"
           },
           {
             "command": "EVENT_ACTOR_ACTIVATE",
             "args": {
               "actorId": "$self$"
             },
-            "id": "ce16bb41-0fe0-42dd-8b56-7b61899e7f9e"
+            "id": "codex-raptor-activate"
           },
           {
             "command": "EVENT_ACTOR_SHOW",
             "args": {
               "actorId": "$self$"
             },
-            "id": "1b3f6ef5-45a0-486c-9e65-3e8c94ab2b4f"
+            "id": "codex-raptor-show"
           }
         ]
-      },
-      "id": "e80cf7b7-3929-49f2-a3fc-e57f870dd225"
+      }
     }
   ],
   "updateScript": [
@@ -106,113 +128,414 @@
         "__collapseElse": true,
         "__disableElse": true
       },
+      "id": "codex-raptor-lunge-wrapper",
       "children": {
         "true": [
           {
-            "command": "EVENT_IF",
+            "command": "EVENT_IF_VALUE",
             "args": {
-              "condition": {
-                "type": "eq",
-                "valueA": {
-                  "type": "variable",
-                  "value": "3"
-                },
-                "valueB": {
-                  "type": "number",
-                  "value": 0
-                }
-              },
+              "variable": "3",
+              "operator": ">",
+              "comparator": 0,
               "__collapseElse": true,
               "__disableElse": true
             },
+            "id": "codex-raptor-lunge-if-alive",
             "children": {
               "true": [
                 {
-                  "command": "EVENT_SET_VALUE",
+                  "command": "EVENT_RATE_LIMIT",
                   "args": {
-                    "variable": "10",
-                    "value": {
-                      "type": "true"
-                    }
-                  },
-                  "id": "6954b951-c2b5-4ff9-802c-257184e8e760"
-                },
-                {
-                  "command": "EVENT_SET_VALUE",
-                  "args": {
-                    "variable": "2",
-                    "value": {
-                      "type": "false"
-                    }
-                  },
-                  "id": "15fbe933-5294-4279-83a3-895d2896cb60"
-                },
-                {
-                  "command": "EVENT_SET_VALUE",
-                  "args": {
-                    "variable": "9",
-                    "value": {
+                    "variable": "L0",
+                    "units": "time",
+                    "time": {
                       "type": "number",
-                      "value": 5
+                      "value": 1.15
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 69
                     }
                   },
-                  "id": "5161b1da-4518-4203-ba94-0d83b19853ca"
-                },
-                {
-                  "command": "EVENT_TEXT",
-                  "args": {
-                    "text": [
-                      "Wow! That was\nsome welcome!"
-                    ],
-                    "__section": "text",
-                    "avatarId": "",
-                    "minHeight": 4,
-                    "maxHeight": 7,
-                    "textX": 1,
-                    "textY": 1,
-                    "textHeight": 5,
-                    "position": "bottom",
-                    "clearPrevious": true,
-                    "showFrame": "true",
-                    "speedIn": -1,
-                    "speedOut": -1,
-                    "closeWhen": "key",
-                    "closeButton": "a",
-                    "closeDelayTime": 0.5,
-                    "closeDelayFrames": 30
-                  },
-                  "id": "fc7696b0-9013-4a68-969e-08ab7da11add"
-                },
-                {
-                  "command": "EVENT_ACTOR_HIDE",
-                  "args": {
-                    "actorId": "$self$"
-                  },
-                  "id": "5b8b8dbf-a4f6-45d6-a189-22853f1df0c5"
-                },
-                {
-                  "command": "EVENT_ACTOR_DEACTIVATE",
-                  "args": {
-                    "actorId": "$self$"
-                  },
-                  "id": "2d85fde9-6529-4122-a24b-2baceb9ab381"
+                  "id": "codex-raptor-lunge-rate",
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
+                        "args": {
+                          "actorId": "$self$",
+                          "operator": ">",
+                          "distance": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "otherActorId": "player",
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "id": "codex-raptor-lunge-if-away",
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_TO",
+                              "args": {
+                                "__section": "movement",
+                                "actorId": "$self$",
+                                "x": {
+                                  "type": "property",
+                                  "target": "player",
+                                  "property": "xpos"
+                                },
+                                "y": {
+                                  "type": "property",
+                                  "target": "player",
+                                  "property": "ypos"
+                                },
+                                "collideWith": [],
+                                "lockDirection": [],
+                                "moveType": "horizontal"
+                              },
+                              "id": "codex-raptor-lunge-toward-player"
+                            }
+                          ],
+                          "false": []
+                        }
+                      }
+                    ]
+                  }
                 }
               ],
               "false": []
-            },
-            "id": "3718a719-34db-4d88-a3eb-234cdd762431"
+            }
           }
         ],
         "false": []
+      }
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "2"
+        },
+        "__collapseElse": true,
+        "__disableElse": true
       },
-      "id": "59e6805a-6e4b-4b58-b490-75940cd0ca58"
+      "id": "codex-raptor-player-damage-wrapper",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_VALUE",
+            "args": {
+              "variable": "3",
+              "operator": ">",
+              "comparator": 0,
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "id": "codex-raptor-player-damage-if-alive",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_RATE_LIMIT",
+                  "args": {
+                    "variable": "L1",
+                    "units": "time",
+                    "time": {
+                      "type": "number",
+                      "value": 0.2
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 12
+                    }
+                  },
+                  "id": "codex-raptor-player-damage-rate",
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "not",
+                            "value": {
+                              "type": "variable",
+                              "value": "11"
+                            }
+                          },
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "id": "codex-raptor-player-if-not-invuln",
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
+                              "args": {
+                                "actorId": "$self$",
+                                "operator": "<",
+                                "distance": {
+                                  "type": "number",
+                                  "value": 2
+                                },
+                                "otherActorId": "player",
+                                "__collapseElse": true,
+                                "__disableElse": true
+                              },
+                              "id": "codex-raptor-player-damage-range",
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "true"
+                                      }
+                                    },
+                                    "id": "codex-raptor-player-iframes-on"
+                                  },
+                                  {
+                                    "command": "EVENT_DEC_VALUE",
+                                    "args": {
+                                      "variable": "9"
+                                    },
+                                    "id": "codex-raptor-hit-player-hp-down"
+                                  },
+                                  {
+                                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                                    "args": {
+                                      "type": "crash",
+                                      "wait": false,
+                                      "priority": "medium",
+                                      "duration": 0.1,
+                                      "frequency": 220,
+                                      "pitch": 4
+                                    },
+                                    "id": "codex-raptor-hit-player-sound"
+                                  },
+                                  {
+                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                    "args": {
+                                      "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+                                    },
+                                    "id": "codex-raptor-hit-player-hud"
+                                  },
+                                  {
+                                    "command": "EVENT_IF_VALUE",
+                                    "args": {
+                                      "variable": "9",
+                                      "operator": "<=",
+                                      "comparator": 0,
+                                      "__collapseElse": true,
+                                      "__disableElse": true
+                                    },
+                                    "id": "codex-raptor-loss-if-playerhp-zero",
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "10",
+                                            "value": {
+                                              "type": "true"
+                                            }
+                                          },
+                                          "id": "codex-raptor-loss-set-firstpit"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "2",
+                                            "value": {
+                                              "type": "false"
+                                            }
+                                          },
+                                          "id": "codex-raptor-loss-fight-off"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "11",
+                                            "value": {
+                                              "type": "false"
+                                            }
+                                          },
+                                          "id": "codex-raptor-loss-player-iframes-off"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "15",
+                                            "value": {
+                                              "type": "false"
+                                            }
+                                          },
+                                          "id": "codex-raptor-loss-raptor-iframes-off"
+                                        },
+                                        {
+                                          "command": "EVENT_TEXT",
+                                          "args": {
+                                            "text": [
+                                              "The raptor knocks\nyou through the\nbrush!"
+                                            ],
+                                            "__section": "text",
+                                            "avatarId": "",
+                                            "minHeight": 4,
+                                            "maxHeight": 7,
+                                            "textX": 1,
+                                            "textY": 1,
+                                            "textHeight": 5,
+                                            "position": "bottom",
+                                            "clearPrevious": true,
+                                            "showFrame": "true",
+                                            "speedIn": -1,
+                                            "speedOut": -1,
+                                            "closeWhen": "key",
+                                            "closeButton": "a",
+                                            "closeDelayTime": 0.5,
+                                            "closeDelayFrames": 30
+                                          },
+                                          "id": "codex-raptor-loss-text"
+                                        },
+                                        {
+                                          "command": "EVENT_CALL_CUSTOM_EVENT",
+                                          "args": {
+                                            "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+                                          },
+                                          "id": "codex-raptor-loss-hud-open"
+                                        },
+                                        {
+                                          "command": "EVENT_CALL_CUSTOM_EVENT",
+                                          "args": {
+                                            "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+                                          },
+                                          "id": "codex-raptor-loss-hud-update-before-heal"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "6",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 45
+                                            }
+                                          },
+                                          "id": "codex-raptor-loss-set-playerx"
+                                        },
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "7",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 62
+                                            }
+                                          },
+                                          "id": "codex-raptor-loss-set-playery"
+                                        },
+                                        {
+                                          "command": "EVENT_VARIABLE_MATH",
+                                          "args": {
+                                            "vectorX": "9",
+                                            "operation": "set",
+                                            "other": "var",
+                                            "vectorY": "13",
+                                            "value": 0,
+                                            "minValue": 0,
+                                            "maxValue": 32767,
+                                            "clamp": false
+                                          },
+                                          "id": "codex-raptor-loss-heal-to-max"
+                                        },
+                                        {
+                                          "command": "EVENT_CALL_CUSTOM_EVENT",
+                                          "args": {
+                                            "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+                                          },
+                                          "id": "codex-raptor-loss-hud-after-heal"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_HIDE",
+                                          "args": {
+                                            "actorId": "$self$"
+                                          },
+                                          "id": "codex-raptor-loss-hide"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_DEACTIVATE",
+                                          "args": {
+                                            "actorId": "$self$"
+                                          },
+                                          "id": "codex-raptor-loss-deactivate"
+                                        },
+                                        {
+                                          "command": "EVENT_SWITCH_SCENE",
+                                          "args": {
+                                            "sceneId": "9a2f2286-3d4c-4954-9d18-7a8a20635f4d",
+                                            "x": {
+                                              "type": "number",
+                                              "value": 45
+                                            },
+                                            "y": {
+                                              "type": "number",
+                                              "value": 61
+                                            },
+                                            "direction": "",
+                                            "fadeSpeed": "2"
+                                          },
+                                          "id": "codex-raptor-loss-switch-village"
+                                        }
+                                      ],
+                                      "false": []
+                                    }
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 1
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 60
+                                      }
+                                    },
+                                    "id": "codex-raptor-player-iframes-wait"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "11",
+                                      "value": {
+                                        "type": "false"
+                                      }
+                                    },
+                                    "id": "codex-raptor-player-iframes-off"
+                                  }
+                                ],
+                                "false": []
+                              }
+                            }
+                          ],
+                          "false": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "false": []
+            }
+          }
+        ],
+        "false": []
+      }
     }
   ],
   "hit1Script": [],
   "hit2Script": [],
-  "hit3Script": [],
-  "coordinateType": "tiles",
-  "x": 10,
-  "y": 14,
-  "_index": 0
+  "hit3Script": []
 }

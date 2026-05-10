@@ -21,6 +21,76 @@
       "command": "EVENT_IF",
       "args": {
         "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "13"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 5
+              }
+            },
+            "id": "be82e8c9-ccd1-446c-a0d2-445cf77e1987"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 32
+              }
+            },
+            "id": "392686bc-04b1-46df-ab72-90df4ba0c2ef"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "9",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "13",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            },
+            "id": "7574c53d-3909-433f-9b10-ccfce8233f60"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-init-hud-defaults"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+      },
+      "id": "82bfc7e4-3386-482e-8f7d-ac3963891915"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+      },
+      "id": "c49f10df-7ae0-422a-9639-f748f42afa74"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
           "type": "variable",
           "value": "1"
         },
@@ -35,23 +105,12 @@
             "args": {
               "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
             },
-            "id": "591bb98a-b799-448f-b30a-64ba0f4047f6"
+            "id": "caa84686-2e32-4b0a-80b6-7e776e2e5a43"
           }
         ],
         "false": []
       },
       "id": "codex-enable-attack-if-dog-joined"
-    },
-    {
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "9",
-        "value": {
-          "type": "number",
-          "value": 5
-        }
-      },
-      "id": "7d719ea8-a9ee-4bcb-804a-8ebd831abfff"
     },
     {
       "command": "EVENT_IF",
@@ -95,6 +154,20 @@
               "closeDelayFrames": 30
             },
             "id": "262d4008-349a-43ab-bcca-67b8eb537bcf"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+            },
+            "id": "codex-hud-after-text-open"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "codex-hud-after-text-update"
           },
           {
             "command": "EVENT_SET_VALUE",

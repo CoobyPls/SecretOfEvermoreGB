@@ -1,0 +1,10 @@
+{
+  "_resourceType": "font",
+  "id": "3e955952-59e7-43dc-b10c-3efafd0d37d1",
+  "name": "condensed-mini-hud",
+  "symbol": "font_condensed_mini_hud",
+  "width": 128,
+  "height": 112,
+  "mapping": {},
+  "filename": "condensed-mini-hud.png"
+}

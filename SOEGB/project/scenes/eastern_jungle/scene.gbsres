@@ -1,0 +1,119 @@
+{
+  "_resourceType": "scene",
+  "id": "d4314ad7-3876-4995-b3cf-b4cce7116d54",
+  "_index": 4,
+  "type": "TOPDOWN",
+  "name": "Eastern Jungle",
+  "symbol": "scene_5",
+  "x": 1432,
+  "y": 400,
+  "width": 48,
+  "height": 32,
+  "backgroundId": "f20dfe55-2612-460f-ae4c-2532e6be8fb5",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "13"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 5
+              }
+            },
+            "id": "be82e8c9-ccd1-446c-a0d2-445cf77e1987"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 32
+              }
+            },
+            "id": "392686bc-04b1-46df-ab72-90df4ba0c2ef"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "9",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "13",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            },
+            "id": "7574c53d-3909-433f-9b10-ccfce8233f60"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-init-hud-defaults"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+      },
+      "id": "5faf06ef-4633-42a1-8a74-18b4622c7f5c"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+      },
+      "id": "492e6f72-6e55-452b-b07b-98fd24be7398"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "caa84686-2e32-4b0a-80b6-7e776e2e5a43"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-enable-attack-if-dog-joined"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "0f8+008+0f6+001a+0f8+008+0f6+001a+0f8+008+0f6+00e+0f14+008+0f6+00e+0f14+00c+0f8+008+0f8+004+0f8+00c+0f8+004+0fc+004+0f8+00e+0f2+002+0f2+004+0f6+00a+0f8+00e+0f2+002+0f2+004+0f4+00c+0f4+001c+0f4+00c+0f4+002c+0f4+002c+0f4+002c+0f4+00a+0f4+001e+0f4+00a+0f4+001e+0f4+004+0fa+001e+0f4+004+0fa+0026+0fa+0026+0fa+0046+0f8+0028+0f2+006+0f4+0024+0f2+006+0f4+0024+0f2+006+0f4+0024+0f2+006+0f4+001c+0fa+006+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+006+0fc+001c+0f2+006+0f2+006+0f4+001c+0f2+006+0f2+006+0f4+001c+0f2+006+0f2+006+"
+}

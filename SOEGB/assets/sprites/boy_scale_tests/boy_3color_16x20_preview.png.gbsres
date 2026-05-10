@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "8bb3591d-cff7-469b-801c-ae58ebe1320a",
+  "name": "boy_scale_tests/boy_3color_16x20_preview",
+  "symbol": "sprite_boy_scale_tests_boy__1",
+  "states": [
+    {
+      "id": "50dde45a-8bc6-43ff-a61b-96c06dc59ad3",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "53873a5c-61c1-4813-a32b-f72ad7de6bc4",
+          "frames": [
+            {
+              "id": "410c9359-f2ce-45bf-bf85-bd8a29835bb8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "92517991-ec07-42f2-ac81-e8400744d6ec",
+          "frames": [
+            {
+              "id": "8cb16ea3-9ae8-4866-aef1-0a2a3f224358",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6db61a9f-92f2-4d0c-ba61-e5a8c7bba2c4",
+          "frames": [
+            {
+              "id": "8fa29b0e-ba60-49c6-92b6-3dd3c63e2e21",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5d1632a4-0460-4cbc-899c-7b5295dd2c8d",
+          "frames": [
+            {
+              "id": "9f5a9b71-8645-4db8-8f8b-0cfe6f12cae0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "41ad5674-7e9d-4001-aecc-bcb6c66e1317",
+          "frames": [
+            {
+              "id": "2235978c-b5db-4f32-9501-383f49e018cc",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f47f8315-0e40-4c95-9ec7-27a4e5ca45f5",
+          "frames": [
+            {
+              "id": "57bcb4c7-c666-4769-872f-0d605fa80ffb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a3218ae3-41ee-4152-94db-6bf3ce879064",
+          "frames": [
+            {
+              "id": "52ee9a9c-8047-49cd-a193-f1b54eef96d0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3cd29cde-7407-4ad3-84e6-168e4a72cc07",
+          "frames": [
+            {
+              "id": "a4455041-fbe0-4dae-962b-05a66b654762",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "boy_scale_tests/boy_3color_16x20_preview.png",
+  "width": 384,
+  "height": 640,
+  "checksum": "1847c247b15838e0b640fedd17632f08c8062ec1"
+}

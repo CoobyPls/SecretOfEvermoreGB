@@ -1,0 +1,30 @@
+{
+  "_resourceType": "script",
+  "id": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642",
+  "name": "Open HUD",
+  "symbol": "script_open_hud",
+  "description": "Shows the two-line GBVM overlay HUD area.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
+      "args": {
+        "speedIn": -3,
+        "speedOut": -3,
+        "speed": 0,
+        "allowFastForward": false
+      },
+      "id": "80df88d8-c82a-495c-9aee-d6f82376cbbd"
+    },
+    {
+      "command": "EVENT_OVERLAY_SHOW",
+      "args": {
+        "color": "white",
+        "x": 0,
+        "y": 16
+      },
+      "id": "eada542d-f1ae-4149-9ff5-05eeef20a4a8"
+    }
+  ]
+}

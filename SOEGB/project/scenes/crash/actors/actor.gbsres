@@ -70,6 +70,20 @@
             "id": "e12ebdc0-f207-43c0-a733-f21ff26ec080"
           },
           {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+            },
+            "id": "codex-hud-after-text-open"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "codex-hud-after-text-update"
+          },
+          {
             "command": "EVENT_SET_VALUE",
             "args": {
               "variable": "1",
@@ -78,6 +92,46 @@
               }
             },
             "id": "a6d5eb62-a3c9-463f-93af-dbad8c700f46"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "29",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "7ff8df0b-6f4f-49d0-869c-cfa898528232"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "30",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "1b221129-8741-4024-bc3b-83ddbb99f716"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 141
+              }
+            },
+            "id": "codex-hud-dog-bone-icon"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "codex-hud-dog-update"
           },
           {
             "command": "EVENT_SET_VALUE",

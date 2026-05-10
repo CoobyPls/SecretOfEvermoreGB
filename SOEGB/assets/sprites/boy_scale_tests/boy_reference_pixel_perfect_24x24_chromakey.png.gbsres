@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "a6928ed2-3468-456b-911d-22f0b62ac275",
+  "name": "boy_scale_tests/boy_reference_pixel_perfect_24x24_chromakey",
+  "symbol": "sprite_boy_scale_tests_boy__3",
+  "states": [
+    {
+      "id": "24bfa7cf-e147-4bc2-a441-469852269a94",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "d34ccf04-8df8-4fa8-911a-6fbdba1df617",
+          "frames": [
+            {
+              "id": "4df9323e-2498-445f-87c5-0c78e3de4432",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "abd17e29-a25a-4167-8684-20b3126bbca4",
+          "frames": [
+            {
+              "id": "4c920ff3-41ca-4d92-9cf7-400946daed8f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9e8eae0d-02b9-4506-9520-1adffa1b1b64",
+          "frames": [
+            {
+              "id": "54b21104-3c73-4ca3-ae5d-6dd175f2b415",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "537ffcbb-7115-4f00-94ed-0534940d2953",
+          "frames": [
+            {
+              "id": "75aefa19-e781-4b90-9fc6-f5acdc971f5f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0379287d-45a6-4459-b56f-ad65e0fbc5c0",
+          "frames": [
+            {
+              "id": "02b50179-5fc7-44ba-8f91-2c0e6baae022",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ae233698-2aff-427a-818e-0001d03cd72d",
+          "frames": [
+            {
+              "id": "3887c034-c08d-417d-866e-dcca39601b45",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "29c3af9b-4738-4e17-9bc9-4762ba2b483d",
+          "frames": [
+            {
+              "id": "dec715aa-267b-4cd9-9dcd-6657f92543e4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a01731ef-93f7-4d6f-bb04-b5b3d2f3269e",
+          "frames": [
+            {
+              "id": "72086283-5d0d-4900-87a7-9b49a6cc2358",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "boy_scale_tests/boy_reference_pixel_perfect_24x24_chromakey.png",
+  "width": 144,
+  "height": 96,
+  "checksum": "2ad9e5042c2844b8a41e016589abf42f9c7f95e3"
+}

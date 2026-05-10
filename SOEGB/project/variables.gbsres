@@ -67,6 +67,106 @@
       "symbol": "var_raptorpitintro"
     },
     {
+      "id": "13",
+      "name": "PlayerMaxHP",
+      "symbol": "var_playermaxhp"
+    },
+    {
+      "id": "14",
+      "name": "EquippedIcon",
+      "symbol": "var_equippedicon"
+    },
+    {
+      "id": "15",
+      "name": "RaptorInvuln",
+      "symbol": "var_raptorinvuln"
+    },
+    {
+      "name": "JunglePathFight",
+      "id": "16",
+      "symbol": "var_junglepathfight"
+    },
+    {
+      "name": "Mosquito1HP",
+      "id": "17",
+      "symbol": "var_mosquito1hp"
+    },
+    {
+      "name": "Mosquito1Dead",
+      "id": "18",
+      "symbol": "var_mosquito1dead"
+    },
+    {
+      "name": "Mosquito1Invuln",
+      "id": "19",
+      "symbol": "var_mosquito1invuln"
+    },
+    {
+      "name": "Skeeto2HP",
+      "id": "20",
+      "symbol": "var_skeeto2hp"
+    },
+    {
+      "name": "Mosquito2Dead",
+      "id": "21",
+      "symbol": "var_mosquito2dead"
+    },
+    {
+      "name": "Skeeto2Invuln",
+      "id": "22",
+      "symbol": "var_skeeto2invuln"
+    },
+    {
+      "name": "SnapPlant1HP",
+      "id": "23",
+      "symbol": "var_snapplant1hp"
+    },
+    {
+      "name": "SnapPlant1Dead",
+      "id": "24",
+      "symbol": "var_snapplant1dead"
+    },
+    {
+      "name": "SnapPlant1Invuln",
+      "id": "25",
+      "symbol": "var_snapplant1invuln"
+    },
+    {
+      "id": "26",
+      "name": "SnapPlant2HP",
+      "symbol": "var_snapplant2hp"
+    },
+    {
+      "id": "27",
+      "name": "SnapPlant2Invuln",
+      "symbol": "var_snapplant2invuln"
+    },
+    {
+      "id": "28",
+      "name": "PlantAttackActive",
+      "symbol": "var_plantattackactive"
+    },
+    {
+      "id": "29",
+      "name": "CurrentWeapon",
+      "symbol": "var_currentweapon"
+    },
+    {
+      "id": "30",
+      "name": "CurrentDamage",
+      "symbol": "var_currentdamage"
+    },
+    {
+      "id": "31",
+      "name": "AttackPulse",
+      "symbol": "var_attackpulse"
+    },
+    {
+      "id": "32",
+      "name": "SnapPlant2Dead",
+      "symbol": "var_snapplant2dead"
+    },
+    {
       "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
       "name": "Local 0",
       "symbol": "var_local_1"
