@@ -1,0 +1,85 @@
+{
+  "_resourceType": "actor",
+  "id": "cbcfeb64-f9f5-4fae-890d-155dfee774db",
+  "name": "DogConcept",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "3b756d3e-7b08-4dd7-8506-07f05131da99",
+  "prefabId": "bdec97b4-3087-4593-a0da-a585308b2fdd",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {
+    "2f80a298-3259-400f-9747-4154979bdad8": {
+      "id": "2f80a298-3259-400f-9747-4154979bdad8",
+      "args": {
+        "time": {
+          "type": "number",
+          "value": 0.25
+        }
+      }
+    },
+    "60702e67-3ecf-4990-99cc-64c06ed033ff": {
+      "id": "60702e67-3ecf-4990-99cc-64c06ed033ff",
+      "args": {
+        "__section": "movement",
+        "x": {
+          "type": "sub",
+          "valueA": {
+            "type": "property",
+            "target": "player",
+            "property": "xpos"
+          },
+          "valueB": {
+            "type": "add",
+            "valueA": {
+              "type": "property",
+              "target": "$self$",
+              "property": "xpos"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 1
+            }
+          }
+        },
+        "y": {
+          "type": "sub",
+          "valueA": {
+            "type": "property",
+            "target": "player",
+            "property": "ypos"
+          },
+          "valueB": {
+            "type": "add",
+            "valueA": {
+              "type": "property",
+              "target": "$self$",
+              "property": "ypos"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "symbol": "actor_5",
+  "script": [],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 8,
+  "y": 43,
+  "_index": 0
+}

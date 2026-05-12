@@ -1,0 +1,213 @@
+{
+  "_resourceType": "actor",
+  "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9",
+  "name": "",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "544594e2-1698-4730-aaf2-1fc0b78ebaa8",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_6",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "L2",
+        "value": {
+          "type": "number",
+          "value": 4
+        }
+      },
+      "id": "0976eacd-3afe-4a9d-9d93-6475b64c4e8d"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "L0",
+        "units": "time",
+        "time": {
+          "type": "number",
+          "value": 1
+        },
+        "frames": {
+          "type": "number",
+          "value": 69
+        }
+      },
+      "id": "cf644738-2d52-46da-9cde-f5c92924714c",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_VALUE",
+            "args": {
+              "variable": "L2",
+              "operator": ">",
+              "comparator": 0,
+              "__collapseElse": true,
+              "__disableElse": false
+            },
+            "id": "5c50ddbe-3764-4a06-b31b-0c06410b0ecf",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "__section": "movement",
+                    "actorId": "0",
+                    "x": {
+                      "type": "div",
+                      "valueA": {
+                        "type": "sub",
+                        "valueA": {
+                          "type": "property",
+                          "target": "player",
+                          "property": "xpos"
+                        },
+                        "valueB": {
+                          "type": "property",
+                          "target": "$self$",
+                          "property": "xpos"
+                        }
+                      },
+                      "valueB": {
+                        "type": "abs",
+                        "value": {
+                          "type": "sub",
+                          "valueA": {
+                            "type": "property",
+                            "target": "player",
+                            "property": "xpos"
+                          },
+                          "valueB": {
+                            "type": "property",
+                            "target": "$self$",
+                            "property": "xpos"
+                          }
+                        }
+                      }
+                    },
+                    "y": {
+                      "type": "div",
+                      "valueA": {
+                        "type": "sub",
+                        "valueA": {
+                          "type": "property",
+                          "target": "player",
+                          "property": "ypos"
+                        },
+                        "valueB": {
+                          "type": "property",
+                          "target": "$self$",
+                          "property": "ypos"
+                        }
+                      },
+                      "valueB": {
+                        "type": "abs",
+                        "value": {
+                          "type": "sub",
+                          "valueA": {
+                            "type": "property",
+                            "target": "player",
+                            "property": "ypos"
+                          },
+                          "valueB": {
+                            "type": "property",
+                            "target": "$self$",
+                            "property": "ypos"
+                          }
+                        }
+                      }
+                    },
+                    "collideWith": [
+                      "walls"
+                    ],
+                    "lockDirection": [],
+                    "moveType": "vertical",
+                    "__collapse": false
+                  },
+                  "id": "497d1e1c-fc16-4a8b-b727-5790911535f2"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_EFFECTS",
+                  "args": {
+                    "effect": "splitOut",
+                    "actorId": "$self$",
+                    "distance": 20,
+                    "speed": 2,
+                    "time": 0.5,
+                    "frames": 30
+                  },
+                  "id": "da957a8f-3418-4f1b-a58f-57a4db68a14f"
+                },
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "912b60d6-7777-48a8-be2c-f7c2d43f3c06"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "1bb8f193-5d69-4c80-b76d-5d5309af0e38"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "0aab140a-ddc5-4f2b-962f-9a585b7a8c56",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V2]$": {
+          "type": "number",
+          "value": 1
+        },
+        "$actor[1]$": "player",
+        "$actor[0]$": "$self$"
+      },
+      "id": "a76278bc-e6ee-40fe-9c5f-7c34affb6720"
+    }
+  ],
+  "coordinateType": "tiles",
+  "x": 46,
+  "y": 47,
+  "_index": 1
+}

@@ -9,7 +9,7 @@
   "moveSpeed": 1,
   "animSpeed": 15,
   "persistent": false,
-  "collisionGroup": "",
+  "collisionGroup": "1",
   "collisionExtraFlags": [],
   "script": [],
   "startScript": [
@@ -51,7 +51,8 @@
                 "type": "variable",
                 "value": "7"
               },
-              "units": "tiles"
+              "units": "tiles",
+              "__comment": true
             },
             "id": "22329934-9a8f-4110-86ac-4031eda43479"
           }
@@ -109,32 +110,88 @@
                     },
                     "otherActorId": "player",
                     "__collapseElse": true,
-                    "__disableElse": true
+                    "__disableElse": true,
+                    "__collapse": false
                   },
                   "children": {
                     "true": [
                       {
-                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
                         "args": {
                           "__section": "movement",
-                          "actorId": "$self$",
+                          "actorId": "0",
                           "x": {
-                            "type": "property",
-                            "target": "player",
-                            "property": "xpos"
+                            "type": "div",
+                            "valueA": {
+                              "type": "sub",
+                              "valueA": {
+                                "type": "property",
+                                "target": "player",
+                                "property": "xpos"
+                              },
+                              "valueB": {
+                                "type": "property",
+                                "target": "$self$",
+                                "property": "xpos"
+                              }
+                            },
+                            "valueB": {
+                              "type": "abs",
+                              "value": {
+                                "type": "sub",
+                                "valueA": {
+                                  "type": "property",
+                                  "target": "player",
+                                  "property": "xpos"
+                                },
+                                "valueB": {
+                                  "type": "property",
+                                  "target": "$self$",
+                                  "property": "xpos"
+                                }
+                              }
+                            }
                           },
                           "y": {
-                            "type": "property",
-                            "target": "player",
-                            "property": "ypos"
+                            "type": "div",
+                            "valueA": {
+                              "type": "sub",
+                              "valueA": {
+                                "type": "property",
+                                "target": "player",
+                                "property": "ypos"
+                              },
+                              "valueB": {
+                                "type": "property",
+                                "target": "$self$",
+                                "property": "ypos"
+                              }
+                            },
+                            "valueB": {
+                              "type": "abs",
+                              "value": {
+                                "type": "sub",
+                                "valueA": {
+                                  "type": "property",
+                                  "target": "player",
+                                  "property": "ypos"
+                                },
+                                "valueB": {
+                                  "type": "property",
+                                  "target": "$self$",
+                                  "property": "ypos"
+                                }
+                              }
+                            }
                           },
                           "collideWith": [
                             "walls"
                           ],
                           "lockDirection": [],
-                          "moveType": "horizontal"
+                          "moveType": "vertical",
+                          "__collapse": false
                         },
-                        "id": "1e44819c-603e-4685-903c-26b3b80509c6"
+                        "id": "60702e67-3ecf-4990-99cc-64c06ed033ff"
                       }
                     ],
                     "false": []

@@ -1,11 +1,11 @@
 {
   "_resourceType": "settings",
   "startSceneId": "e319ae28-39f0-4927-a34c-93d1bb4b65f7",
-  "startX": 3,
-  "startY": 4,
+  "startX": 10,
+  "startY": 8,
   "startMoveSpeed": 1,
   "startAnimSpeed": 15,
-  "startDirection": "down",
+  "startDirection": "right",
   "showCollisionExtraTiles": false,
   "showCollisionTileValues": false,
   "collisionLayerOpacity": 50,
@@ -183,6 +183,27 @@
           "angleVariable": "0",
           "targetActorId": "$self$",
           "initialOffset": 0
+        }
+      },
+      "a75144ef-2abb-4ee0-8c59-de1807d39401": {
+        "id": "a75144ef-2abb-4ee0-8c59-de1807d39401",
+        "name": "BoneMeleeHorizontal",
+        "groups": [
+          "projectile"
+        ],
+        "args": {
+          "spriteSheetId": "a9e63566-3dc7-4bad-8e7d-975eb489853c",
+          "spriteStateId": "",
+          "speed": 0,
+          "animSpeed": 127,
+          "lifeTime": 0.75,
+          "loopAnim": false,
+          "destroyOnHit": false,
+          "collisionGroup": "3",
+          "collisionMask": [
+            "1",
+            "2"
+          ]
         }
       }
     },

@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "bb243487-3172-4dc5-aebc-5dc14ae18039",
+  "name": "bone_melee_projectile",
+  "symbol": "sprite_bone_melee_projectil_3",
+  "states": [
+    {
+      "id": "f5f50221-8a38-4a3a-a56a-f18bc4f15820",
+      "name": "",
+      "animationType": "multi",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "7d4b0edc-ee08-41ee-9ba7-a28a77a3a2ad",
+          "frames": [
+            {
+              "id": "36364013-308c-4afd-973b-f717938bbc20",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fca5ab7e-0f24-428d-b19c-353dd1ac562a",
+          "frames": [
+            {
+              "id": "cb9a6788-4b19-49b3-8026-25feabe81ca3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "58cc28ab-2872-4b8f-9d54-474ba741b573",
+          "frames": [
+            {
+              "id": "db43876a-d6ba-4e06-ac17-f146bb52e0ca",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5433e9fe-ba60-4504-b9ff-104d36d5d582",
+          "frames": [
+            {
+              "id": "a2a41ece-6fef-46d7-953b-97725f686f99",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1806064f-589b-4c71-8f71-fd9837c04c06",
+          "frames": [
+            {
+              "id": "6a0808e7-e370-4569-99d4-661ce585d221",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c3488998-d4b2-4a58-8ffc-a58d3c079ce1",
+          "frames": [
+            {
+              "id": "ce4eff9d-41a0-4336-a491-58ded1655408",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5461d474-96d1-401d-af43-6e16f7da7115",
+          "frames": [
+            {
+              "id": "d3e4c47e-c7d7-4135-90a2-9adc057208fd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "606dff1c-6058-443a-a6be-abad77f4b2be",
+          "frames": [
+            {
+              "id": "727c0b98-ca33-42d8-b027-15ada7bddee5",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "bone_melee_projectile.png",
+  "width": 32,
+  "height": 48,
+  "checksum": "ea7a4dad656fd7fa4d4522e6397569b45a01c65e"
+}

@@ -170,6 +170,36 @@
       "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
       "name": "Local 0",
       "symbol": "var_local_1"
+    },
+    {
+      "id": "f9ed08cd-58bf-41a4-8be1-18bcf68573d7__L0",
+      "name": "IframeTimer",
+      "symbol": "var_iframetimer"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp"
+    },
+    {
+      "id": "f9ed08cd-58bf-41a4-8be1-18bcf68573d7__L1",
+      "name": "AttackTimer",
+      "symbol": "var_attacktimer"
+    },
+    {
+      "id": "33",
+      "name": "AttackRate",
+      "symbol": "var_attackrate"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval"
     }
   ],
   "constants": []
