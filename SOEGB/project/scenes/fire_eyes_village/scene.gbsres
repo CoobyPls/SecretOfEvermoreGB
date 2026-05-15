@@ -2,7 +2,7 @@
   "_resourceType": "scene",
   "id": "9a2f2286-3d4c-4954-9d18-7a8a20635f4d",
   "_index": 3,
-  "type": "TOPDOWN",
+  "type": "ADVENTURE",
   "name": "Fire Eye's Village",
   "symbol": "scene_4",
   "x": 880,
@@ -15,7 +15,7 @@
   "paletteIds": [],
   "spritePaletteIds": [],
   "autoFadeSpeed": 1,
-  "playerSpriteSheetId": "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd",
+  "playerSpriteSheetId": "48cca6ed-daa9-4497-bacc-a30ffc3ec91f",
   "script": [
     {
       "command": "EVENT_IF",

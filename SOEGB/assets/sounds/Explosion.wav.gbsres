@@ -1,8 +1,0 @@
-{
-  "_resourceType": "sound",
-  "id": "af81dc94-87a7-46ae-af6f-5d35f1935cf4",
-  "name": "Explosion.wav",
-  "symbol": "sound_explosion_wav",
-  "type": "wav",
-  "filename": "Explosion.wav"
-}

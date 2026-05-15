@@ -1,0 +1,175 @@
+{
+  "_resourceType": "script",
+  "id": "b2e37397-1f1f-47fa-95d5-b2cba8bf8460",
+  "name": "PlayerTakeDamage",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "PlayerIframeTime",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "DamageTaken",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Player"
+    },
+    "1": {
+      "id": "1",
+      "name": "Attacker"
+    }
+  },
+  "symbol": "script_7",
+  "script": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "V0",
+        "time": {
+          "type": "number",
+          "value": 1
+        },
+        "frames": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "9",
+              "operation": "sub",
+              "other": "var",
+              "vectorY": "V1",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "3994bf80-968c-41d8-ba90-326d7b84b543"
+          },
+          {
+            "command": "EVENT_TEXT_SET_SOUND_EFFECT",
+            "args": {
+              "type": "crash",
+              "pitch": 4,
+              "frequency": 300,
+              "duration": 1,
+              "effect": 0
+            },
+            "id": "33ed6ed6-de7d-4374-842a-a2f4a15027d2"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "__section": "movement",
+              "actorId": "0",
+              "x": {
+                "type": "div",
+                "valueA": {
+                  "type": "sub",
+                  "valueA": {
+                    "type": "property",
+                    "target": "0",
+                    "property": "xpos"
+                  },
+                  "valueB": {
+                    "type": "property",
+                    "target": "1",
+                    "property": "xpos"
+                  }
+                },
+                "valueB": {
+                  "type": "abs",
+                  "value": {
+                    "type": "sub",
+                    "valueA": {
+                      "type": "property",
+                      "target": "0",
+                      "property": "xpos"
+                    },
+                    "valueB": {
+                      "type": "property",
+                      "target": "1",
+                      "property": "xpos"
+                    }
+                  }
+                }
+              },
+              "y": {
+                "type": "div",
+                "valueA": {
+                  "type": "sub",
+                  "valueA": {
+                    "type": "property",
+                    "target": "0",
+                    "property": "ypos"
+                  },
+                  "valueB": {
+                    "type": "property",
+                    "target": "1",
+                    "property": "ypos"
+                  }
+                },
+                "valueB": {
+                  "type": "abs",
+                  "value": {
+                    "type": "sub",
+                    "valueA": {
+                      "type": "property",
+                      "target": "0",
+                      "property": "ypos"
+                    },
+                    "valueB": {
+                      "type": "property",
+                      "target": "1",
+                      "property": "ypos"
+                    }
+                  }
+                }
+              },
+              "collideWith": [
+                "walls",
+                "actors"
+              ],
+              "lockDirection": [
+                "x",
+                "y"
+              ],
+              "moveType": "diagonal",
+              "__collapse": false,
+              "__comment": false
+            },
+            "id": "4ec1019c-227d-4ba7-9608-339c76e823e1"
+          },
+          {
+            "command": "EVENT_ACTOR_EMOTE",
+            "args": {
+              "actorId": "0",
+              "emoteId": "9df5f63f-ea47-447e-9b14-cb2dbafb697d",
+              "__comment": false
+            },
+            "id": "c23b32d7-2dbf-4638-8531-9b86c07ed79d"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "a115c4da-2ec3-43bc-835c-e55b27a6c3a1"
+          }
+        ]
+      },
+      "id": "26706589-480b-4d8b-a52a-429c5a74c239"
+    }
+  ]
+}

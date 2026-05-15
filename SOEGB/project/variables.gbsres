@@ -12,26 +12,6 @@
       "symbol": "var_dogjoined"
     },
     {
-      "id": "2",
-      "name": "RaptorFight",
-      "symbol": "var_raptorfight_0"
-    },
-    {
-      "id": "3",
-      "name": "Enemy1HP",
-      "symbol": "var_enemy1hp"
-    },
-    {
-      "id": "4",
-      "name": "PlayerX",
-      "symbol": "var_playerx"
-    },
-    {
-      "id": "5",
-      "name": "PlayerY",
-      "symbol": "var_playery"
-    },
-    {
       "id": "6",
       "name": "DogX",
       "symbol": "var_dogx"
@@ -42,19 +22,9 @@
       "symbol": "var_dogy"
     },
     {
-      "id": "8",
-      "name": "DogDir",
-      "symbol": "var_dogdir"
-    },
-    {
       "id": "9",
       "name": "PlayerHP",
       "symbol": "var_playerhp"
-    },
-    {
-      "id": "10",
-      "name": "FirstPit",
-      "symbol": "var_firstpit"
     },
     {
       "id": "11",
@@ -77,76 +47,6 @@
       "symbol": "var_equippedicon"
     },
     {
-      "id": "15",
-      "name": "RaptorInvuln",
-      "symbol": "var_raptorinvuln"
-    },
-    {
-      "name": "JunglePathFight",
-      "id": "16",
-      "symbol": "var_junglepathfight"
-    },
-    {
-      "name": "Mosquito1HP",
-      "id": "17",
-      "symbol": "var_mosquito1hp"
-    },
-    {
-      "name": "Mosquito1Dead",
-      "id": "18",
-      "symbol": "var_mosquito1dead"
-    },
-    {
-      "name": "Mosquito1Invuln",
-      "id": "19",
-      "symbol": "var_mosquito1invuln"
-    },
-    {
-      "name": "Skeeto2HP",
-      "id": "20",
-      "symbol": "var_skeeto2hp"
-    },
-    {
-      "name": "Mosquito2Dead",
-      "id": "21",
-      "symbol": "var_mosquito2dead"
-    },
-    {
-      "name": "Skeeto2Invuln",
-      "id": "22",
-      "symbol": "var_skeeto2invuln"
-    },
-    {
-      "name": "SnapPlant1HP",
-      "id": "23",
-      "symbol": "var_snapplant1hp"
-    },
-    {
-      "name": "SnapPlant1Dead",
-      "id": "24",
-      "symbol": "var_snapplant1dead"
-    },
-    {
-      "name": "SnapPlant1Invuln",
-      "id": "25",
-      "symbol": "var_snapplant1invuln"
-    },
-    {
-      "id": "26",
-      "name": "SnapPlant2HP",
-      "symbol": "var_snapplant2hp"
-    },
-    {
-      "id": "27",
-      "name": "SnapPlant2Invuln",
-      "symbol": "var_snapplant2invuln"
-    },
-    {
-      "id": "28",
-      "name": "PlantAttackActive",
-      "symbol": "var_plantattackactive"
-    },
-    {
       "id": "29",
       "name": "CurrentWeapon",
       "symbol": "var_currentweapon"
@@ -162,14 +62,179 @@
       "symbol": "var_attackpulse"
     },
     {
-      "id": "32",
-      "name": "SnapPlant2Dead",
-      "symbol": "var_snapplant2dead"
-    },
-    {
       "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
       "name": "Local 0",
       "symbol": "var_local_1"
+    },
+    {
+      "id": "f9ed08cd-58bf-41a4-8be1-18bcf68573d7__L0",
+      "name": "IframeTimer",
+      "symbol": "var_iframetimer"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp"
+    },
+    {
+      "id": "f9ed08cd-58bf-41a4-8be1-18bcf68573d7__L1",
+      "name": "AttackTimer",
+      "symbol": "var_attacktimer"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval"
+    },
+    {
+      "id": "e1187dff-4512-4a05-8dcd-2e83b0f1f332__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_0"
+    },
+    {
+      "id": "e1187dff-4512-4a05-8dcd-2e83b0f1f332__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_0"
+    },
+    {
+      "id": "e1187dff-4512-4a05-8dcd-2e83b0f1f332__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_0"
+    },
+    {
+      "id": "62f3aada-af9f-41f5-be5c-91af6d0c6f67__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer"
+    },
+    {
+      "id": "62f3aada-af9f-41f5-be5c-91af6d0c6f67__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer"
+    },
+    {
+      "id": "62f3aada-af9f-41f5-be5c-91af6d0c6f67__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp"
+    },
+    {
+      "id": "62f3aada-af9f-41f5-be5c-91af6d0c6f67__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir"
+    },
+    {
+      "id": "86ed8ea9-b00f-4061-8bd6-b56742a352f3__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_0"
+    },
+    {
+      "id": "86ed8ea9-b00f-4061-8bd6-b56742a352f3__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_0"
+    },
+    {
+      "id": "86ed8ea9-b00f-4061-8bd6-b56742a352f3__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_0"
+    },
+    {
+      "id": "86ed8ea9-b00f-4061-8bd6-b56742a352f3__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_0"
+    },
+    {
+      "id": "2",
+      "name": "Flower1HP",
+      "symbol": "var_flower1hp"
+    },
+    {
+      "id": "3",
+      "name": "Variable633",
+      "symbol": "var_variable633"
+    },
+    {
+      "id": "4",
+      "name": "PlantBrain1",
+      "symbol": "var_plantbrain1"
+    },
+    {
+      "id": "5",
+      "name": "PlantIframetimer",
+      "symbol": "var_plantiframetimer"
+    },
+    {
+      "id": "8",
+      "name": "Plantdir1",
+      "symbol": "var_plantdir1"
+    },
+    {
+      "id": "3370c171-d007-4483-86bd-d3e8e7a3c80d__L0",
+      "name": "Local 0",
+      "symbol": "var_local_0"
+    },
+    {
+      "id": "777f4c81-893d-4372-9ae8-1dea911500a3__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_1"
+    },
+    {
+      "id": "777f4c81-893d-4372-9ae8-1dea911500a3__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_1"
+    },
+    {
+      "id": "777f4c81-893d-4372-9ae8-1dea911500a3__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_1"
+    },
+    {
+      "id": "777f4c81-893d-4372-9ae8-1dea911500a3__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_1"
+    },
+    {
+      "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_0"
+    },
+    {
+      "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_0"
+    },
+    {
+      "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_0"
+    },
+    {
+      "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_0"
+    },
+    {
+      "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer"
+    },
+    {
+      "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer"
+    },
+    {
+      "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp"
+    },
+    {
+      "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir"
     }
   ],
   "constants": []

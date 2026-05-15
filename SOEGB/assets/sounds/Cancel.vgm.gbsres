@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "05ae52aa-d5cf-4d13-8f9a-3e3b86ee4a54",
+  "name": "Cancel.vgm",
+  "symbol": "sound_cancel_vgm",
+  "type": "vgm",
+  "filename": "Cancel.vgm"
+}

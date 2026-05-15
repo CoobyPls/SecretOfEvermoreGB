@@ -18,7 +18,9 @@
   "isPinned": false,
   "persistent": false,
   "collisionGroup": "",
-  "collisionExtraFlags": [],
+  "collisionExtraFlags": [
+    "solid"
+  ],
   "prefabScriptOverrides": {},
   "script": [
     {
@@ -36,6 +38,19 @@
       },
       "children": {
         "true": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "a46aeee7-f758-4305-bf54-901991f7e52c",
+              "priority": "high",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": true,
+              "effect": 0
+            },
+            "id": "5ee883ae-bac8-4509-b8c9-4cf10e42e3be"
+          },
           {
             "command": "EVENT_TEXT",
             "args": {
@@ -132,16 +147,6 @@
               "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
             },
             "id": "codex-hud-dog-update"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "10",
-              "value": {
-                "type": "false"
-              }
-            },
-            "id": "1224d09b-247e-4a25-a766-d1213a130208"
           },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",

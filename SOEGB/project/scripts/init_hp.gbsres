@@ -1,0 +1,95 @@
+{
+  "_resourceType": "script",
+  "id": "2edea723-1eee-4f4b-920f-7994029f47bc",
+  "name": "Init HP",
+  "description": "This script sets up the health bar and sets HP to variable amount.",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_5",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "13"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 32
+              }
+            },
+            "id": "31179090-e332-4793-a6f1-ff2f6fddf682"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "9",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "13",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            },
+            "id": "70c8f77d-8b73-4375-bcab-c5f2fdf244b9"
+          }
+        ],
+        "false": []
+      },
+      "id": "6b344b65-1b87-472f-98b6-ef0c2926157e"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+      },
+      "id": "15c06e7c-1718-469f-85c0-78febff805b0"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+      },
+      "id": "b3572fff-0133-4338-8f71-3e9c697b86dc"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "fb7748e4-4848-4b65-b6bb-b31550bbc00d"
+          }
+        ],
+        "false": []
+      },
+      "id": "a6e370cf-d62c-4876-a2ba-528ac27f147e"
+    }
+  ]
+}

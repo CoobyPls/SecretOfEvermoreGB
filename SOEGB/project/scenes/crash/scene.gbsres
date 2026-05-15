@@ -2,7 +2,7 @@
   "_resourceType": "scene",
   "id": "6e83a9df-9d21-45bd-bbd9-6353b9fed8fe",
   "_index": 0,
-  "type": "TOPDOWN",
+  "type": "ADVENTURE",
   "name": "Crash",
   "symbol": "scene_1",
   "x": 184,
@@ -15,7 +15,7 @@
   "paletteIds": [],
   "spritePaletteIds": [],
   "autoFadeSpeed": 2,
-  "playerSpriteSheetId": "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd",
+  "playerSpriteSheetId": "48cca6ed-daa9-4497-bacc-a30ffc3ec91f",
   "script": [
     {
       "command": "EVENT_IF",
@@ -136,9 +136,9 @@
                 "Wait a sec- Where\nam I? Where's my\ndog? ",
                 "Here, pupster!"
               ],
-              "__section": "text",
+              "__section": "layout",
               "avatarId": "",
-              "minHeight": 6,
+              "minHeight": 5,
               "maxHeight": 7,
               "textX": 1,
               "textY": 1,

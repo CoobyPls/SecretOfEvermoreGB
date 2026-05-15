@@ -7,7 +7,7 @@
     {
       "id": "372d491c-2530-4bca-83f0-842108b5f924",
       "name": "",
-      "animationType": "multi_movement",
+      "animationType": "multi",
       "flipLeft": true,
       "animations": [
         {
@@ -2017,7 +2017,7 @@
     {
       "id": "codex-snap-state-3133c14e-b0da-42a8-8a1d-035ecd586652",
       "name": "Snap",
-      "animationType": "multi_movement",
+      "animationType": "multi",
       "flipLeft": true,
       "animations": [
         {
@@ -3984,13 +3984,13 @@
   ],
   "numTiles": 48,
   "canvasOriginX": 0,
-  "canvasOriginY": 0,
+  "canvasOriginY": -8,
   "canvasWidth": 48,
-  "canvasHeight": 32,
-  "boundsX": 0,
-  "boundsY": -8,
-  "boundsWidth": 16,
-  "boundsHeight": 16,
+  "canvasHeight": 48,
+  "boundsX": -5,
+  "boundsY": -20,
+  "boundsWidth": 24,
+  "boundsHeight": 24,
   "animSpeed": 3,
   "filename": "WimpyFlower.png",
   "width": 192,

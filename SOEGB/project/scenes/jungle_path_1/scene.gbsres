@@ -2,7 +2,7 @@
   "_resourceType": "scene",
   "id": "01c0b4b0-a1c9-42da-8cc2-b322250e38dc",
   "_index": 1,
-  "type": "TOPDOWN",
+  "type": "ADVENTURE",
   "name": "Jungle Path 1",
   "symbol": "scene_2",
   "x": 368,
@@ -15,18 +15,8 @@
   "paletteIds": [],
   "spritePaletteIds": [],
   "autoFadeSpeed": 1,
-  "playerSpriteSheetId": "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd",
+  "playerSpriteSheetId": "48cca6ed-daa9-4497-bacc-a30ffc3ec91f",
   "script": [
-    {
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "28",
-        "value": {
-          "type": "false"
-        }
-      },
-      "id": "ff2f902e-1730-4fd0-a3cc-f6b5cdecf58b"
-    },
     {
       "command": "EVENT_IF",
       "args": {

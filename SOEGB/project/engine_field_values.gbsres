@@ -24,6 +24,14 @@
     {
       "id": "SHOOTER_WALL_COLLISION_GROUP",
       "value": "COLLISION_GROUP_NONE"
+    },
+    {
+      "id": "topdown_grid",
+      "value": 8
+    },
+    {
+      "id": "ADVENTURE_BLANK_ANIM",
+      "value": ""
     }
   ]
 }

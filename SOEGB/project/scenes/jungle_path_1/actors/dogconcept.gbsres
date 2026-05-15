@@ -19,7 +19,14 @@
   "persistent": false,
   "collisionGroup": "",
   "collisionExtraFlags": [],
-  "prefabScriptOverrides": {},
+  "prefabScriptOverrides": {
+    "1e44819c-603e-4685-903c-26b3b80509c6": {
+      "id": "1e44819c-603e-4685-903c-26b3b80509c6",
+      "args": {
+        "__section": "movement"
+      }
+    }
+  },
   "script": [],
   "startScript": [],
   "updateScript": [],

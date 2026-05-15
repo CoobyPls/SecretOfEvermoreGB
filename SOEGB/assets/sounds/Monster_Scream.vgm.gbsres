@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "8f5d9375-b516-4d32-89bc-755225f3ff91",
+  "name": "Monster_Scream.vgm",
+  "symbol": "sound_monster_scream_vgm",
+  "type": "vgm",
+  "filename": "Monster_Scream.vgm"
+}

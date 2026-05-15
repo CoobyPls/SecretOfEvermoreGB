@@ -1,35 +1,35 @@
 {
   "_resourceType": "settings",
   "startSceneId": "e319ae28-39f0-4927-a34c-93d1bb4b65f7",
-  "startX": 3,
-  "startY": 4,
+  "startX": 10,
+  "startY": 8,
   "startMoveSpeed": 1,
   "startAnimSpeed": 15,
-  "startDirection": "down",
+  "startDirection": "right",
   "showCollisionExtraTiles": false,
   "showCollisionTileValues": false,
   "collisionLayerOpacity": 50,
   "sgbEnabled": false,
   "customHead": "",
   "defaultBackgroundPaletteIds": [
-    "default-bg-1",
-    "default-bg-2",
-    "default-bg-3",
-    "default-bg-4",
-    "default-bg-5",
-    "default-bg-6",
     "dmg",
-    "default-ui"
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg"
   ],
   "defaultSpritePaletteIds": [
-    "default-sprite",
-    "default-sprite",
-    "default-sprite",
-    "default-sprite",
-    "default-sprite",
-    "default-sprite",
-    "default-sprite",
-    "default-sprite"
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg",
+    "dmg"
   ],
   "defaultSpritePaletteId": "default-sprite",
   "defaultUIPaletteId": "default-ui",
@@ -55,7 +55,7 @@
   "defaultPlayerSprites": {
     "TOPDOWN": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
     "PLATFORM": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
-    "ADVENTURE": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
+    "ADVENTURE": "48cca6ed-daa9-4497-bacc-a30ffc3ec91f",
     "SHMUP": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
     "POINTNCLICK": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
     "LOGO": "581d34d0-9591-4e6e-a609-1d94f203b0cd"
@@ -99,7 +99,7 @@
   "customControlsSelect": [
     "Shift"
   ],
-  "colorMode": "mono",
+  "colorMode": "color",
   "colorCorrection": "default",
   "generateDebugFilesEnabled": false,
   "compilerPreset": 3000,
@@ -184,6 +184,27 @@
           "targetActorId": "$self$",
           "initialOffset": 0
         }
+      },
+      "a75144ef-2abb-4ee0-8c59-de1807d39401": {
+        "id": "a75144ef-2abb-4ee0-8c59-de1807d39401",
+        "name": "BoneMeleeHorizontal",
+        "groups": [
+          "projectile"
+        ],
+        "args": {
+          "spriteSheetId": "a9e63566-3dc7-4bad-8e7d-975eb489853c",
+          "spriteStateId": "",
+          "speed": 0,
+          "animSpeed": 127,
+          "lifeTime": 0.75,
+          "loopAnim": false,
+          "destroyOnHit": false,
+          "collisionGroup": "3",
+          "collisionMask": [
+            "1",
+            "2"
+          ]
+        }
       }
     },
     "EVENT_ACTOR_MOVE_TO": {
@@ -219,7 +240,7 @@
   "openBuildFolderOnExport": true,
   "showRomUsageAfterBuild": false,
   "romFilename": "SecretOfEvermoreGB",
-  "defaultSceneTypeId": "TOPDOWN",
+  "defaultSceneTypeId": "ADVENTURE",
   "disabledSceneTypeIds": [],
   "autoTileFlipEnabled": true
 }
