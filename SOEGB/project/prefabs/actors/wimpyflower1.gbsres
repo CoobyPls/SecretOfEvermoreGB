@@ -9,7 +9,7 @@
   "animSpeed": 15,
   "paletteId": "",
   "persistent": false,
-  "collisionGroup": "1",
+  "collisionGroup": "2",
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
   "_index": 2,
@@ -153,6 +153,19 @@
                                           "children": {}
                                         },
                                         {
+                                          "command": "EVENT_SOUND_PLAY_EFFECT",
+                                          "args": {
+                                            "type": "beep",
+                                            "priority": "medium",
+                                            "pitch": 4,
+                                            "frequency": 200,
+                                            "duration": 0.5,
+                                            "wait": true,
+                                            "effect": 0
+                                          },
+                                          "id": "7996dab2-8151-4742-aedb-81617a3d7070"
+                                        },
+                                        {
                                           "command": "EVENT_LAUNCH_PROJECTILE",
                                           "args": {
                                             "__section": "projectile",
@@ -263,7 +276,7 @@
                                               "type": "direction",
                                               "value": "up"
                                             },
-                                            "__collapse": true
+                                            "__collapse": false
                                           },
                                           "id": "d812a797-b170-4630-aec1-421347c7f1f2",
                                           "children": {}
@@ -288,6 +301,19 @@
                                           },
                                           "id": "a218a582-b99a-4ae2-b484-ceaeb67ed39c",
                                           "children": {}
+                                        },
+                                        {
+                                          "command": "EVENT_SOUND_PLAY_EFFECT",
+                                          "args": {
+                                            "type": "beep",
+                                            "priority": "medium",
+                                            "pitch": 4,
+                                            "frequency": 200,
+                                            "duration": 0.5,
+                                            "wait": true,
+                                            "effect": 0
+                                          },
+                                          "id": "4efbcd31-9ed9-4a51-ada8-ce05e3e2e6bb"
                                         },
                                         {
                                           "command": "EVENT_LAUNCH_PROJECTILE",
@@ -427,6 +453,19 @@
                                           "children": {}
                                         },
                                         {
+                                          "command": "EVENT_SOUND_PLAY_EFFECT",
+                                          "args": {
+                                            "type": "beep",
+                                            "priority": "medium",
+                                            "pitch": 4,
+                                            "frequency": 200,
+                                            "duration": 0.5,
+                                            "wait": true,
+                                            "effect": 0
+                                          },
+                                          "id": "c2d67dcd-dc44-49dc-9526-88e2d19ebc13"
+                                        },
+                                        {
                                           "command": "EVENT_LAUNCH_PROJECTILE",
                                           "args": {
                                             "__section": "projectile",
@@ -451,7 +490,7 @@
                                             "collisionMask": [
                                               "player"
                                             ],
-                                            "__collapse": false
+                                            "__collapse": true
                                           },
                                           "id": "5be0f666-91fb-4a68-82ea-672c83b92f66",
                                           "children": {}
@@ -562,6 +601,19 @@
                                           },
                                           "id": "5317cfcb-3b85-4241-a6ea-066c122292a3",
                                           "children": {}
+                                        },
+                                        {
+                                          "command": "EVENT_SOUND_PLAY_EFFECT",
+                                          "args": {
+                                            "type": "beep",
+                                            "priority": "medium",
+                                            "pitch": 4,
+                                            "frequency": 200,
+                                            "duration": 0.5,
+                                            "wait": true,
+                                            "effect": 0
+                                          },
+                                          "id": "f1dcfd13-98fd-47f7-bdc4-6a180b2b7fd4"
                                         },
                                         {
                                           "command": "EVENT_LAUNCH_PROJECTILE",
@@ -729,7 +781,7 @@
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "customEventId": "0aab140a-ddc5-4f2b-962f-9a585b7a8c56",
+        "customEventId": "c9e6b1db-1f69-4c2d-b034-7afd3271de10",
         "$variable[V0]$": {
           "type": "variable",
           "value": "L1"

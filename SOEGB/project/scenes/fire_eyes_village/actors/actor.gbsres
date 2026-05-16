@@ -1,10 +1,10 @@
 {
   "_resourceType": "actor",
-  "id": "e1187dff-4512-4a05-8dcd-2e83b0f1f332",
+  "id": "4ee74930-d297-4f9c-a149-3876719db200",
   "name": "",
   "frame": 0,
   "animate": false,
-  "spriteSheetId": "544594e2-1698-4730-aaf2-1fc0b78ebaa8",
+  "spriteSheetId": "4c97cfa0-1e76-4fb2-ac07-1fc7c4e5d2cb",
   "prefabId": "",
   "direction": "down",
   "moveSpeed": 1,
@@ -12,204 +12,121 @@
   "paletteId": "",
   "isPinned": false,
   "persistent": false,
-  "collisionGroup": "1",
+  "collisionGroup": "",
   "collisionExtraFlags": [
     "solid"
   ],
   "prefabScriptOverrides": {},
-  "symbol": "actor_1",
-  "script": [],
-  "startScript": [
+  "symbol": "actor_13",
+  "script": [
     {
-      "command": "EVENT_SET_VALUE",
+      "command": "EVENT_IF",
       "args": {
-        "variable": "L2",
-        "value": {
-          "type": "number",
-          "value": 4
-        }
-      },
-      "id": "cfd9e54b-4cd4-42d7-8b2d-251f7d804b0c"
-    }
-  ],
-  "updateScript": [
-    {
-      "command": "EVENT_RATE_LIMIT",
-      "args": {
-        "variable": "L0",
-        "units": "time",
-        "time": {
-          "type": "number",
-          "value": 1
+        "condition": {
+          "type": "variable",
+          "value": "15"
         },
-        "frames": {
-          "type": "number",
-          "value": 69
-        }
+        "__collapseElse": false
       },
-      "id": "60210de3-ff19-4638-8ed5-b10196ddaaa2",
       "children": {
         "true": [
           {
-            "command": "EVENT_IF_VALUE",
+            "command": "EVENT_TEXT",
             "args": {
-              "variable": "L2",
-              "operator": ">",
-              "comparator": 0,
-              "__collapseElse": true,
-              "__disableElse": false
-            },
-            "id": "e7e9c87d-efa5-4bfa-8892-2244a526bc6d",
-            "children": {
-              "true": [
-                {
-                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                  "args": {
-                    "__section": "movement",
-                    "actorId": "0",
-                    "x": {
-                      "type": "div",
-                      "valueA": {
-                        "type": "sub",
-                        "valueA": {
-                          "type": "property",
-                          "target": "player",
-                          "property": "xpos"
-                        },
-                        "valueB": {
-                          "type": "property",
-                          "target": "$self$",
-                          "property": "xpos"
-                        }
-                      },
-                      "valueB": {
-                        "type": "abs",
-                        "value": {
-                          "type": "sub",
-                          "valueA": {
-                            "type": "property",
-                            "target": "player",
-                            "property": "xpos"
-                          },
-                          "valueB": {
-                            "type": "property",
-                            "target": "$self$",
-                            "property": "xpos"
-                          }
-                        }
-                      }
-                    },
-                    "y": {
-                      "type": "div",
-                      "valueA": {
-                        "type": "sub",
-                        "valueA": {
-                          "type": "property",
-                          "target": "player",
-                          "property": "ypos"
-                        },
-                        "valueB": {
-                          "type": "property",
-                          "target": "$self$",
-                          "property": "ypos"
-                        }
-                      },
-                      "valueB": {
-                        "type": "abs",
-                        "value": {
-                          "type": "sub",
-                          "valueA": {
-                            "type": "property",
-                            "target": "player",
-                            "property": "ypos"
-                          },
-                          "valueB": {
-                            "type": "property",
-                            "target": "$self$",
-                            "property": "ypos"
-                          }
-                        }
-                      }
-                    },
-                    "collideWith": [
-                      "walls"
-                    ],
-                    "lockDirection": [],
-                    "moveType": "vertical",
-                    "__collapse": false
-                  },
-                  "id": "c98e4604-deff-4a5f-9360-d9faf0ddede4"
-                }
+              "text": [
+                "Looks like you \nmopped up those\ndinos, thanks! \n",
+                "They've had South\nJungle blocked for\nweeks!",
+                "Chief will want to\ntalk to y- Wait...\nDon't I know you?"
               ],
-              "false": [
-                {
-                  "command": "EVENT_ACTOR_EFFECTS",
-                  "args": {
-                    "effect": "splitOut",
-                    "actorId": "$self$",
-                    "distance": 20,
-                    "speed": 2,
-                    "time": 0.5,
-                    "frames": 30
-                  },
-                  "id": "e5bdbf0a-8cdb-4ba0-a017-56f7988775ab"
-                },
-                {
-                  "command": "EVENT_ACTOR_DEACTIVATE",
-                  "args": {
-                    "actorId": "$self$"
-                  },
-                  "id": "4ac8d890-8cc2-43f0-9ea2-269b4fa92cbf"
-                },
-                {
-                  "command": "EVENT_ACTOR_SET_POSITION",
-                  "args": {
-                    "actorId": "$self$",
-                    "x": {
-                      "type": "number",
-                      "value": 0
-                    },
-                    "y": {
-                      "type": "number",
-                      "value": 0
-                    }
-                  },
-                  "id": "6a556384-beac-40cb-961e-37bd408b63c3"
-                }
-              ]
-            }
+              "__section": "behavior",
+              "avatarId": "",
+              "minHeight": 5,
+              "maxHeight": 5,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "74da6331-a9e8-4845-955e-2954fbee3236"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+            },
+            "id": "d39a8ff1-c68e-4499-948d-48c802ec33b6"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "5b008c8e-32d8-4cf0-92b4-dc922bf94580"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Yikes, those scaly\npunks really gave\nyou the works, eh?",
+                "Lucky that beast\ndragged you in by \nyour clothes!",
+                "You should stock\nup before you go\nback out!",
+                "Sure be a shame\nif you AND your \nmoney get eaten!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 5,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "4976ab99-5611-4167-b7a2-54c3725427d0"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+            },
+            "id": "137b636f-7ba9-4a04-9f44-8b17ccf343c8"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "e75d7049-c3f8-4496-afdd-ab38c2ff46e7"
           }
         ]
-      }
+      },
+      "id": "4a319558-b640-4533-a3f5-63fa4cb9c0a2"
     }
   ],
+  "startScript": [],
+  "updateScript": [],
   "hit1Script": [],
   "hit2Script": [],
-  "hit3Script": [
-    {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "0aab140a-ddc5-4f2b-962f-9a585b7a8c56",
-        "$variable[V0]$": {
-          "type": "variable",
-          "value": "L1"
-        },
-        "$variable[V1]$": {
-          "type": "variable",
-          "value": "L2"
-        },
-        "$variable[V2]$": {
-          "type": "number",
-          "value": 1
-        },
-        "$actor[1]$": "player",
-        "$actor[0]$": "$self$"
-      },
-      "id": "75840019-5deb-40fd-94c9-43c8af3d66a1"
-    }
-  ],
+  "hit3Script": [],
   "coordinateType": "tiles",
-  "x": 17,
-  "y": 48,
+  "x": 46,
+  "y": 55,
   "_index": 1
 }

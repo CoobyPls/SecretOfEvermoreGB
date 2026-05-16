@@ -1,0 +1,88 @@
+{
+  "_resourceType": "script",
+  "id": "c9e6b1db-1f69-4c2d-b034-7afd3271de10",
+  "name": "TakeDamageRooted",
+  "description": "Reusable enemy damage script for rooted or static enemies that should NOT be knocked back.\n\nUse this for plants, turrets, rocks, or any enemy that should stay planted when hit. Moving enemies like Skeeto can keep using TakeDamage.\n\nIframeTimeRef - actor-local timer variable used by Rate Limit so this enemy cannot be damaged every single frame. Give each enemy its own iframe/timer local.\n\nSelfHP - the enemy HP variable to subtract from. Pass this by reference so the enemy actor actually loses HP.\n\nDamageTaken - how much HP to subtract for this hit. For the bone right now this is usually 1.\n\nSelf - the enemy being damaged. Used only for the hit emote here. This script does not move Self.\n\nAttacker - the actor or player that caused the hit. Kept as an argument for consistency with TakeDamage, but this no-knockback version does not use it for movement.\n\nWhat it does: Rate Limit -> subtract DamageTaken from SelfHP -> play hit sound -> show hit emote.\nWhat it intentionally does NOT do: no Move Actor Relative, no knockback, no position changes.",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "IframeTimeRef",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "SelfHP",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "DamageTaken",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Self"
+    }
+  },
+  "symbol": "script_8",
+  "script": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "V0",
+        "time": {
+          "type": "number",
+          "value": 1
+        },
+        "frames": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "V1",
+              "operation": "sub",
+              "other": "var",
+              "vectorY": "V2",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "25105143-c33b-4a62-866f-2607da35d246"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "e29b389f-cafc-4305-b2dd-bc83816a6835",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": true,
+              "effect": 0
+            },
+            "id": "cbd5396d-7ea2-469a-bfc2-57d5c1f7a11b"
+          },
+          {
+            "command": "EVENT_ACTOR_EMOTE",
+            "args": {
+              "actorId": "0",
+              "emoteId": "56423c9c-dca0-4f5b-ad92-28e9660d50f1",
+              "__comment": false
+            },
+            "id": "82025511-7889-44bb-957c-bc8b0b5b25f8"
+          }
+        ]
+      },
+      "id": "b51d979e-20a8-4edf-9509-929b096be32b"
+    }
+  ]
+}

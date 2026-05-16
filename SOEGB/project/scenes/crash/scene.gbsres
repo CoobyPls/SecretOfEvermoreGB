@@ -5,8 +5,8 @@
   "type": "ADVENTURE",
   "name": "Crash",
   "symbol": "scene_1",
-  "x": 184,
-  "y": 488,
+  "x": 288,
+  "y": 200,
   "width": 20,
   "height": 18,
   "backgroundId": "a7d722ee-e726-4f41-ae88-7e1dbbaa2653",
@@ -38,7 +38,7 @@
               "variable": "13",
               "value": {
                 "type": "number",
-                "value": 5
+                "value": 10
               }
             },
             "id": "be82e8c9-ccd1-446c-a0d2-445cf77e1987"

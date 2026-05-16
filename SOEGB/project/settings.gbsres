@@ -205,6 +205,38 @@
             "2"
           ]
         }
+      },
+      "9d87424d-c591-4271-9602-c9ed4b2e4b1b": {
+        "id": "9d87424d-c591-4271-9602-c9ed4b2e4b1b",
+        "name": "GenericHit",
+        "groups": [
+          "projectile",
+          "source",
+          "direction"
+        ],
+        "args": {
+          "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
+          "spriteStateId": "",
+          "speed": 1,
+          "animSpeed": 15,
+          "lifeTime": 0.2,
+          "loopAnim": false,
+          "destroyOnHit": true,
+          "collisionGroup": "3",
+          "collisionMask": [
+            "player"
+          ],
+          "actorId": "$self$",
+          "x": 0,
+          "y": 0,
+          "directionType": "actor",
+          "otherActorId": "$self$",
+          "direction": "right",
+          "angle": 0,
+          "angleVariable": "L0",
+          "targetActorId": "$self$",
+          "initialOffset": 0
+        }
       }
     },
     "EVENT_ACTOR_MOVE_TO": {

@@ -32,6 +32,10 @@
     {
       "id": "ADVENTURE_BLANK_ANIM",
       "value": ""
+    },
+    {
+      "id": "INPUT_ADVENTURE_INTERACT",
+      "value": "INPUT_B"
     }
   ]
 }

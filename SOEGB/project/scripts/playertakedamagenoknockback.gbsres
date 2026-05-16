@@ -1,0 +1,97 @@
+{
+  "_resourceType": "script",
+  "id": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+  "name": "PlayerTakeDamageNoKnockback",
+  "description": "Reusable player damage script for hazard/projectile hits that should NOT push the player.\n\nUse this for plant vine hurtboxes, traps, poison clouds, fire tiles, or any enemy attack where damage should happen but knockback might cause clipping or feel bad.\n\nDamageTaken - how much HP to subtract from PlayerHP. For basic enemies this is usually 1.\n\nWhat it does: checks PlayerInvuln -> turns invulnerability on -> subtracts DamageTaken from PlayerHP -> updates the HUD -> waits 0.65 seconds -> turns invulnerability off.\n\nWhat it intentionally does NOT do: no Move Actor Relative, no knockback, no forced player movement.\n\nIf you later want knockback, use PlayerTakeDamage instead, or add a Move Actor Relative after the HP/HUD update using an attacker actor as the direction source.",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "DamageTaken",
+      "passByReference": false
+    }
+  },
+  "actors": {},
+  "symbol": "script_9",
+  "script": [
+    {
+      "command": "EVENT_IF_FALSE",
+      "args": {
+        "variable": "11",
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "id": "99fb3dd5-def3-4211-b3a0-3f7ec4027ad8",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "11",
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "3cddc2ee-e891-4197-9210-c01089461b13"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "9",
+              "operation": "sub",
+              "other": "var",
+              "vectorY": "V0",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "d6b8344a-48c3-4e77-8465-40a1aea28e55"
+          },
+          {
+            "command": "EVENT_TEXT_SET_SOUND_EFFECT",
+            "args": {
+              "type": "crash",
+              "pitch": 4,
+              "frequency": 300,
+              "duration": 1,
+              "effect": 0
+            },
+            "id": "b116c1c2-e8d5-454c-b254-80f578bcab57"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "dedc7421-0837-4531-97c9-d80961cf7583"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": {
+                "type": "number",
+                "value": 0.65
+              },
+              "frames": {
+                "type": "number",
+                "value": 39
+              }
+            },
+            "id": "695440fb-028b-4f51-9871-ff71ae1fb7e6"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "11",
+              "value": {
+                "type": "false"
+              }
+            },
+            "id": "448719f1-ecfe-4589-b8b1-14a07c360b0a"
+          }
+        ],
+        "false": []
+      }
+    }
+  ]
+}

@@ -14,7 +14,95 @@
   "persistent": false,
   "collisionGroup": "1",
   "collisionExtraFlags": [],
-  "prefabScriptOverrides": {},
+  "prefabScriptOverrides": {
+    "30087ed1-d2c3-47fb-a76c-15edea6459df": {
+      "id": "30087ed1-d2c3-47fb-a76c-15edea6459df",
+      "args": {
+        "distance": {
+          "type": "number",
+          "value": 4
+        }
+      }
+    },
+    "24344bc7-057c-4554-956b-9f6a53133443": {
+      "id": "24344bc7-057c-4554-956b-9f6a53133443",
+      "args": {
+        "__section": "projectile",
+        "directionType": "actor",
+        "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
+        "spriteStateId": "",
+        "actorId": "$self$",
+        "x": 0,
+        "y": 0,
+        "otherActorId": "$self$",
+        "direction": "right",
+        "angle": 0,
+        "angleVariable": "L0",
+        "targetActorId": "$self$",
+        "speed": 1,
+        "animSpeed": 15,
+        "lifeTime": 0.2,
+        "initialOffset": 0,
+        "loopAnim": false,
+        "destroyOnHit": true,
+        "collisionGroup": "3",
+        "collisionMask": [
+          "player"
+        ],
+        "__collapse": false,
+        "__presetId": "9d87424d-c591-4271-9602-c9ed4b2e4b1b"
+      }
+    },
+    "28fbbb48-1348-41ed-9877-60a08954f9af": {
+      "id": "28fbbb48-1348-41ed-9877-60a08954f9af",
+      "args": {
+        "__section": "projectile",
+        "directionType": "actor",
+        "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde"
+      }
+    },
+    "5be0f666-91fb-4a68-82ea-672c83b92f66": {
+      "id": "5be0f666-91fb-4a68-82ea-672c83b92f66",
+      "args": {
+        "__section": "projectile",
+        "directionType": "actor",
+        "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde"
+      }
+    },
+    "953f7c86-d541-4174-a256-7dd5ecbaa07c": {
+      "id": "953f7c86-d541-4174-a256-7dd5ecbaa07c",
+      "args": {
+        "__section": "projectile",
+        "directionType": "actor",
+        "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde"
+      }
+    },
+    "7996dab2-8151-4742-aedb-81617a3d7070": {
+      "id": "7996dab2-8151-4742-aedb-81617a3d7070",
+      "args": {
+        "type": "ce4850e0-1ba6-465a-9584-a3afcc5e090a"
+      }
+    },
+    "4efbcd31-9ed9-4a51-ada8-ce05e3e2e6bb": {
+      "id": "4efbcd31-9ed9-4a51-ada8-ce05e3e2e6bb",
+      "args": {
+        "pitch": 3,
+        "type": "ce4850e0-1ba6-465a-9584-a3afcc5e090a"
+      }
+    },
+    "c2d67dcd-dc44-49dc-9526-88e2d19ebc13": {
+      "id": "c2d67dcd-dc44-49dc-9526-88e2d19ebc13",
+      "args": {
+        "type": "ce4850e0-1ba6-465a-9584-a3afcc5e090a"
+      }
+    },
+    "f1dcfd13-98fd-47f7-bdc4-6a180b2b7fd4": {
+      "id": "f1dcfd13-98fd-47f7-bdc4-6a180b2b7fd4",
+      "args": {
+        "type": "ce4850e0-1ba6-465a-9584-a3afcc5e090a"
+      }
+    }
+  },
   "symbol": "actor_8",
   "script": [],
   "startScript": [
@@ -696,7 +784,7 @@
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "customEventId": "0aab140a-ddc5-4f2b-962f-9a585b7a8c56",
+        "customEventId": "c9e6b1db-1f69-4c2d-b034-7afd3271de10",
         "$variable[V0]$": {
           "type": "variable",
           "value": "L1"

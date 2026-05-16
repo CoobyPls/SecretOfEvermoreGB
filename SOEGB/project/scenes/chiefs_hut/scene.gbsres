@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "18d425d2-604d-4415-9f9a-1298917ede17",
+  "_index": 7,
+  "name": "Chief's Hut",
+  "backgroundId": "29ab343f-3529-4eba-8370-48c3406470f5",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_8",
+  "x": 1264,
+  "y": 30,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

@@ -155,7 +155,7 @@
                           "angle": 0,
                           "angleVariable": "0",
                           "targetActorId": "player",
-                          "speed": 2,
+                          "speed": 3,
                           "animSpeed": 255,
                           "lifeTime": 0.3,
                           "initialOffset": 0,

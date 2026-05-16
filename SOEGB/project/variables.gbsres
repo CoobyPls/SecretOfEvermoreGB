@@ -12,6 +12,26 @@
       "symbol": "var_dogjoined"
     },
     {
+      "id": "2",
+      "name": "Flower1HP",
+      "symbol": "var_flower1hp"
+    },
+    {
+      "id": "3",
+      "name": "Variable633",
+      "symbol": "var_variable633"
+    },
+    {
+      "id": "4",
+      "name": "PlantBrain1",
+      "symbol": "var_plantbrain1"
+    },
+    {
+      "id": "5",
+      "name": "PlantIframetimer",
+      "symbol": "var_plantiframetimer"
+    },
+    {
       "id": "6",
       "name": "DogX",
       "symbol": "var_dogx"
@@ -20,6 +40,11 @@
       "id": "7",
       "name": "DogY",
       "symbol": "var_dogy"
+    },
+    {
+      "id": "8",
+      "name": "Plantdir1",
+      "symbol": "var_plantdir1"
     },
     {
       "id": "9",
@@ -45,6 +70,11 @@
       "id": "14",
       "name": "EquippedIcon",
       "symbol": "var_equippedicon"
+    },
+    {
+      "id": "15",
+      "name": "RaptorDefeated",
+      "symbol": "var_raptordefeated"
     },
     {
       "id": "29",
@@ -147,31 +177,6 @@
       "symbol": "var_skeetowanderdir_0"
     },
     {
-      "id": "2",
-      "name": "Flower1HP",
-      "symbol": "var_flower1hp"
-    },
-    {
-      "id": "3",
-      "name": "Variable633",
-      "symbol": "var_variable633"
-    },
-    {
-      "id": "4",
-      "name": "PlantBrain1",
-      "symbol": "var_plantbrain1"
-    },
-    {
-      "id": "5",
-      "name": "PlantIframetimer",
-      "symbol": "var_plantiframetimer"
-    },
-    {
-      "id": "8",
-      "name": "Plantdir1",
-      "symbol": "var_plantdir1"
-    },
-    {
       "id": "3370c171-d007-4483-86bd-d3e8e7a3c80d__L0",
       "name": "Local 0",
       "symbol": "var_local_0"
@@ -199,42 +204,57 @@
     {
       "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L0",
       "name": "SkeetoMoveTimer",
-      "symbol": "var_skeetomovetimer_0"
+      "symbol": "var_skeetomovetimer_2"
     },
     {
       "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L1",
       "name": "SkeetoIframeTimer",
-      "symbol": "var_skeetoiframetimer_0"
+      "symbol": "var_skeetoiframetimer_2"
     },
     {
       "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L2",
       "name": "SkeetoHP",
-      "symbol": "var_skeetohp_0"
+      "symbol": "var_skeetohp_2"
     },
     {
       "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L3",
       "name": "SkeetoWanderDir",
-      "symbol": "var_skeetowanderdir_0"
+      "symbol": "var_skeetowanderdir_2"
     },
     {
       "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L0",
       "name": "SkeetoMoveTimer",
-      "symbol": "var_skeetomovetimer"
+      "symbol": "var_skeetomovetimer_3"
     },
     {
       "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L1",
       "name": "SkeetoIframeTimer",
-      "symbol": "var_skeetoiframetimer"
+      "symbol": "var_skeetoiframetimer_3"
     },
     {
       "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L2",
       "name": "SkeetoHP",
-      "symbol": "var_skeetohp"
+      "symbol": "var_skeetohp_3"
     },
     {
       "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L3",
       "name": "SkeetoWanderDir",
-      "symbol": "var_skeetowanderdir"
+      "symbol": "var_skeetowanderdir_3"
+    },
+    {
+      "id": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_1"
+    },
+    {
+      "id": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_1"
+    },
+    {
+      "id": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_1"
     }
   ],
   "constants": []

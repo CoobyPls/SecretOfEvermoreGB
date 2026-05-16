@@ -5,8 +5,8 @@
   "type": "ADVENTURE",
   "name": "Eastern Jungle",
   "symbol": "scene_5",
-  "x": 1432,
-  "y": 400,
+  "x": 264,
+  "y": 600,
   "width": 48,
   "height": 32,
   "backgroundId": "f20dfe55-2612-460f-ae4c-2532e6be8fb5",
@@ -37,7 +37,7 @@
               "variable": "13",
               "value": {
                 "type": "number",
-                "value": 5
+                "value": 10
               }
             },
             "id": "be82e8c9-ccd1-446c-a0d2-445cf77e1987"
