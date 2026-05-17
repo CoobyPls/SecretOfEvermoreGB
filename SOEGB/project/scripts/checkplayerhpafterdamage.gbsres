@@ -1,0 +1,102 @@
+{
+  "_resourceType": "script",
+  "id": "7ab6b3a7-bd03-4644-83c4-b7647b5d5b79",
+  "name": "CheckPlayerHPAfterDamage",
+  "description": "Reusable follow-up after any player damage.\n\nCall this after PlayerHP changes. If HP is 0 or less, it hides the HUD overlay and sends the player to the GAME OVER logo scene. If HP is still above 0, it updates the HUD and plays Low_Health when HP is 3, 2, or 1.\n\nImportant: death is checked before HUD redraw so the Game Over screen does not get stuck with HP 00/10 over it.",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_check_player_hp_afte",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "9"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_OVERLAY_HIDE",
+            "args": {},
+            "id": "codex-checkhp-hide-overlay-before-gameover"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "6c19107b-a448-464a-aac2-f3add8b014ec",
+              "x": {
+                "type": "number",
+                "value": 10
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "direction": "",
+              "fadeSpeed": 2
+            },
+            "id": "codex-checkhp-game-over"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "codex-checkhp-update-hud"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "lte",
+                "valueA": {
+                  "type": "variable",
+                  "value": "9"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "6c95dcf2-6502-4d30-bb0f-18a093c54dab",
+                    "priority": "high",
+                    "pitch": 4,
+                    "frequency": 200,
+                    "duration": 0.5,
+                    "wait": false,
+                    "effect": 0
+                  },
+                  "id": "codex-checkhp-low-health"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-checkhp-at-low-range"
+          }
+        ]
+      },
+      "id": "codex-checkhp-zero-or-less"
+    }
+  ]
+}

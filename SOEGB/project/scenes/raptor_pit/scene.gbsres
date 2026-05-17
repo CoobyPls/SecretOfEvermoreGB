@@ -5,8 +5,8 @@
   "type": "ADVENTURE",
   "name": "Raptor Pit",
   "symbol": "scene_3",
-  "x": 536,
-  "y": 320,
+  "x": 60,
+  "y": 384,
   "width": 20,
   "height": 32,
   "backgroundId": "a085a431-b541-46f1-83b1-ae056623b1af",
@@ -204,7 +204,7 @@
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "customEventId": "b2e37397-1f1f-47fa-95d5-b2cba8bf8460",
+        "customEventId": "3fbf8fa1-df64-4ff5-a197-6795a0c75cf8",
         "$variable[V0]$": {
           "type": "variable",
           "value": "11"
@@ -215,94 +215,7 @@
         },
         "$actor[1]$": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4"
       },
-      "id": "afb77489-1491-4605-821f-64b1c4f9139c"
-    },
-    {
-      "command": "EVENT_IF",
-      "args": {
-        "condition": {
-          "type": "lte",
-          "valueA": {
-            "type": "variable",
-            "value": "9"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 0
-          }
-        },
-        "__collapseElse": true,
-        "__disableElse": true
-      },
-      "id": "cfd66c43-42e2-4ba2-846b-61f761fed317",
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_TEXT",
-            "args": {
-              "text": [
-                "The jungle goes\nquiet..."
-              ],
-              "__section": "text",
-              "avatarId": "",
-              "minHeight": 4,
-              "maxHeight": 7,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30
-            },
-            "id": "df3fb43f-6482-4f60-8c2c-9f85bf1a2558"
-          },
-          {
-            "command": "EVENT_VARIABLE_MATH",
-            "args": {
-              "vectorX": "9",
-              "operation": "set",
-              "other": "var",
-              "vectorY": "13",
-              "value": 0,
-              "minValue": 0,
-              "maxValue": 32767,
-              "clamp": false
-            },
-            "id": "6de20b8f-3eb0-4df5-965b-b89845c7a5f7"
-          },
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
-            },
-            "id": "731e6001-2c75-472a-a79e-fbd7a1e6ad68"
-          },
-          {
-            "command": "EVENT_SWITCH_SCENE",
-            "args": {
-              "sceneId": "9a2f2286-3d4c-4954-9d18-7a8a20635f4d",
-              "x": {
-                "type": "number",
-                "value": 45
-              },
-              "y": {
-                "type": "number",
-                "value": 61
-              },
-              "direction": "",
-              "fadeSpeed": "2"
-            },
-            "id": "63d40b78-86af-43e8-b017-4da08f1871f7"
-          }
-        ],
-        "false": []
-      }
+      "id": "codex-raptor-pit-player-hit-loss-to-chief"
     }
   ],
   "playerHit2Script": [],

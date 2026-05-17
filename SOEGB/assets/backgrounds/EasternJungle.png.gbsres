@@ -3,10 +3,10 @@
   "id": "f20dfe55-2612-460f-ae4c-2532e6be8fb5",
   "name": "EasternJungle",
   "symbol": "bg_easternjungle",
-  "tileColors": "",
+  "tileColors": "00660+",
   "filename": "EasternJungle.png",
   "width": 48,
-  "height": 32,
+  "height": 34,
   "imageWidth": 384,
-  "imageHeight": 256
+  "imageHeight": 272
 }

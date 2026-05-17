@@ -121,7 +121,15 @@
     }
   ],
   "startScript": [],
-  "updateScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "2f4c3ce8-0b03-4aa2-9a85-817f6f73cf4e"
+      },
+      "id": "c2aec2d2-cb4d-446d-882b-9acdf930dc14"
+    }
+  ],
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],

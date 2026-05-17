@@ -1,0 +1,217 @@
+{
+  "_resourceType": "script",
+  "id": "2f4c3ce8-0b03-4aa2-9a85-817f6f73cf4e",
+  "name": "NPC Wander",
+  "description": "Reusable simple wander behavior for townsfolk, harmless critters, and basic NPCs.\n\nUse it in an actor's On Update script. It rate-limits itself, picks a random direction, and moves the chosen actor 1 tile.\n\nWanderTimer - actor-local timer variable used by Rate Limit. Each wandering actor should get its own local timer, usually Local 0.\n\nWanderDir - actor-local scratch variable used to store the random direction 0-3. Each wandering actor should get its own local direction variable, usually Local 1.\n\nNPC - the actor that should wander. Usually pass Self.\n\nTiming: this tries to move once every 0.65 seconds. Slower values feel more relaxed; faster values can make the scene busy.\n\nCollision: movement collides with walls and actors, so NPCs should not walk through the player or other actors.\n\nDirection map: 0 = down, 1 = up, 2 = left, 3 = right.\n\nWhat it does: Rate Limit -> randomize WanderDir -> move NPC one tile in that direction.\nWhat it does not do: no HP checks, no damage, no death handling, no dialogue. Put those around this call if needed.",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "WanderTimer",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "WanderDir",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "NPC"
+    }
+  },
+  "symbol": "script_10",
+  "script": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "V0",
+        "units": "time",
+        "time": {
+          "type": "number",
+          "value": 0.65
+        },
+        "frames": {
+          "type": "number",
+          "value": 39
+        },
+        "__collapse": false
+      },
+      "id": "a6a0a766-87ad-4935-a5e9-376d8e42203d",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "V1",
+              "operation": "set",
+              "other": "rnd",
+              "vectorY": "V1",
+              "value": "1",
+              "minValue": "0",
+              "maxValue": 3
+            },
+            "id": "d825e615-f682-47ba-b59c-b2fdad796d73"
+          },
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "V1",
+              "choices": 4,
+              "__collapseCase0": false,
+              "value0": 0,
+              "__collapseCase1": false,
+              "value1": 1,
+              "__collapseCase2": false,
+              "value2": 2,
+              "__collapseCase3": false,
+              "value3": 3,
+              "__collapseCase4": false,
+              "value4": 4,
+              "__collapseCase5": false,
+              "value5": 5,
+              "__collapseCase6": false,
+              "value6": 6,
+              "__collapseCase7": false,
+              "value7": 7,
+              "__collapseCase8": false,
+              "value8": 8,
+              "__collapseCase9": false,
+              "value9": 9,
+              "__collapseCase10": false,
+              "value10": 10,
+              "__collapseCase11": false,
+              "value11": 11,
+              "__collapseCase12": false,
+              "value12": 12,
+              "__collapseCase13": false,
+              "value13": 13,
+              "__collapseCase14": false,
+              "value14": 14,
+              "__collapseCase15": false,
+              "value15": 15,
+              "__collapseElse": false
+            },
+            "id": "a5070f2f-e034-4dc1-a576-2c092990dec9",
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "__section": "movement",
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "collideWith": [
+                      "walls",
+                      "actors"
+                    ],
+                    "lockDirection": [],
+                    "moveType": "vertical",
+                    "__collapse": false
+                  },
+                  "id": "e2f4a2d8-62ab-42fa-84fa-b9a458200569"
+                }
+              ],
+              "true1": [
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "__section": "movement",
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": -1
+                    },
+                    "collideWith": [
+                      "walls",
+                      "actors"
+                    ],
+                    "lockDirection": [],
+                    "moveType": "vertical",
+                    "__collapse": false
+                  },
+                  "id": "91fdcbf0-2ca9-4061-9a5c-04768740a6fc"
+                }
+              ],
+              "true2": [
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "__section": "movement",
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": -1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "collideWith": [
+                      "walls",
+                      "actors"
+                    ],
+                    "lockDirection": [],
+                    "moveType": "horizontal",
+                    "__collapse": false
+                  },
+                  "id": "cde28178-3c51-4c7b-95b4-0935252220b6"
+                }
+              ],
+              "true3": [
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "__section": "movement",
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "collideWith": [
+                      "walls",
+                      "actors"
+                    ],
+                    "lockDirection": [],
+                    "moveType": "horizontal",
+                    "__collapse": false
+                  },
+                  "id": "a00a9ba5-4c2c-4a81-a3a4-ff0ce6718e2a"
+                }
+              ],
+              "true4": [],
+              "true5": [],
+              "true6": [],
+              "true7": [],
+              "true8": [],
+              "true9": [],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": []
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

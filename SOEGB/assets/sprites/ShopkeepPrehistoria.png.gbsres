@@ -575,7 +575,7 @@
     }
   ],
   "numTiles": 24,
-  "canvasOriginX": 7,
+  "canvasOriginX": 0,
   "canvasOriginY": 0,
   "canvasWidth": 32,
   "canvasHeight": 32,

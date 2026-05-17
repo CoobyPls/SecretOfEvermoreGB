@@ -52,6 +52,11 @@
       "symbol": "var_playerhp"
     },
     {
+      "id": "10",
+      "name": "VillageLadyWander",
+      "symbol": "var_villageladywander_0"
+    },
+    {
       "id": "11",
       "name": "PlayerInvuln",
       "symbol": "var_playerinvuln"
@@ -255,6 +260,106 @@
       "id": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4__L0",
       "name": "RaptorMoveInterval",
       "symbol": "var_raptormoveinterval_1"
+    },
+    {
+      "id": "c575458e-4927-457d-b83a-cc0e1471fac8__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_4"
+    },
+    {
+      "id": "c575458e-4927-457d-b83a-cc0e1471fac8__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_4"
+    },
+    {
+      "id": "c575458e-4927-457d-b83a-cc0e1471fac8__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_4"
+    },
+    {
+      "id": "c575458e-4927-457d-b83a-cc0e1471fac8__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_4"
+    },
+    {
+      "id": "346deb5d-e60e-40ba-ade6-76014447fe8d__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_5"
+    },
+    {
+      "id": "346deb5d-e60e-40ba-ade6-76014447fe8d__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_5"
+    },
+    {
+      "id": "346deb5d-e60e-40ba-ade6-76014447fe8d__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_5"
+    },
+    {
+      "id": "346deb5d-e60e-40ba-ade6-76014447fe8d__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_5"
+    },
+    {
+      "id": "de6e99f3-9de9-4801-b884-a4d6a70ba7aa__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_6"
+    },
+    {
+      "id": "de6e99f3-9de9-4801-b884-a4d6a70ba7aa__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_6"
+    },
+    {
+      "id": "de6e99f3-9de9-4801-b884-a4d6a70ba7aa__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_6"
+    },
+    {
+      "id": "de6e99f3-9de9-4801-b884-a4d6a70ba7aa__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_6"
+    },
+    {
+      "id": "28cbf467-5b44-4220-b7eb-872052311b6c__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_7"
+    },
+    {
+      "id": "28cbf467-5b44-4220-b7eb-872052311b6c__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_7"
+    },
+    {
+      "id": "28cbf467-5b44-4220-b7eb-872052311b6c__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_7"
+    },
+    {
+      "id": "28cbf467-5b44-4220-b7eb-872052311b6c__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_7"
+    },
+    {
+      "id": "ba0952d3-a376-4be8-8001-fd7e97725072__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_8"
+    },
+    {
+      "id": "ba0952d3-a376-4be8-8001-fd7e97725072__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_8"
+    },
+    {
+      "id": "ba0952d3-a376-4be8-8001-fd7e97725072__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_8"
+    },
+    {
+      "id": "ba0952d3-a376-4be8-8001-fd7e97725072__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_8"
     }
   ],
   "constants": []

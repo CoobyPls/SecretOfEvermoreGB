@@ -61,9 +61,9 @@
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+              "customEventId": "7ab6b3a7-bd03-4644-83c4-b7647b5d5b79"
             },
-            "id": "dedc7421-0837-4531-97c9-d80961cf7583"
+            "id": "codex-call-check-player-hp-after-damage"
           },
           {
             "command": "EVENT_WAIT",

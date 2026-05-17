@@ -1,20 +1,21 @@
 {
   "_resourceType": "scene",
-  "id": "d4314ad7-3876-4995-b3cf-b4cce7116d54",
-  "_index": 4,
-  "type": "ADVENTURE",
-  "name": "Eastern Jungle",
-  "symbol": "scene_5",
-  "x": 240,
-  "y": 384,
-  "width": 48,
-  "height": 34,
-  "backgroundId": "f20dfe55-2612-460f-ae4c-2532e6be8fb5",
+  "id": "a1d461af-c287-4fcd-9931-f3deae3b408d",
+  "_index": 9,
+  "name": "Quicksand Field",
+  "backgroundId": "0f78d149-2ce7-4adb-85e4-5b8626156e02",
   "tilesetId": "",
+  "width": 32,
+  "height": 64,
+  "type": "ADVENTURE",
   "colorModeOverride": "none",
   "paletteIds": [],
   "spritePaletteIds": [],
+  "collisions": "001e+0f2+001e+0f2+001e+0f2+006+0fe+00a+0f2+006+0f10+008+0f18+008+0f1a+006+0f16+002+0f4+004+0f6+008+0f7+004+0f3+006+0f4+008+0f7+004+0f3+0014+0f4+006+0f2+0014+0f4+006+0f2+0014+0f4+006+0f2+004+0f2+00e+0f4+006+0f2+004+0f2+00e+0fc+004+0f2+00e+0fc+004+0fa+0010+0f2+004+0f2+006+0f2+0010+0f2+004+0f2+006+0f2+0010+0f2+004+0f2+006+0f2+0010+0f2+004+0f2+006+0f2+004+0f8+004+0f2+004+0f2+006+0f2+004+0f8+004+0f2+004+0f2+006+0f2+004+0f8+004+0f2+004+0f2+006+0f2+004+0f8+004+0f2+004+0f2+004+0f4+004+0f8+004+0f2+004+0f2+004+0f4+004+0f8+004+0f2+004+0f2+004+0f2+006+0f8+004+0f2+004+0f2+004+0f2+006+0f8+004+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0fc+008+0f2+004+0f2+00e+0f2+008+0f2+004+0f2+00e+0f2+008+0f2+004+0f2+00e+0f2+008+0f2+004+0f2+004+0fc+008+0f2+004+0f2+004+0fc+008+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+004+0f2+004+0f2+0012+0f2+00a+0f2+0012+0f2+00a+0f2+0012+0f2+00a+0f2+0012+0f2+00a+0f9+00b+0f2+0012+0f2+00a+0f4+0010+0f2+00a+0f6+00e+0f2+00a+0fa+004+0f8+00c+0f8+004+0f8+00c+0f8+004+0f6+0014+0f2+004+0f6+0014+0f2+001e+0f2+001e+0f2+001a+0f2+002+0f2+001a+0f2+002+0f2+001a+0f2+002+0f2+001a+0f2+002+0f7+0019+0f8+0018+",
   "autoFadeSpeed": 1,
+  "symbol": "scene_10",
+  "x": 646,
+  "y": 596,
   "script": [
     {
       "command": "EVENT_IF",
@@ -41,7 +42,7 @@
                 "value": 10
               }
             },
-            "id": "codex-set-68df7c36-d1ba-4a1b-8397-afff60398ba7"
+            "id": "codex-set-f27a3934-c5b3-474f-ba58-538a1219ab96"
           },
           {
             "command": "EVENT_SET_VALUE",
@@ -52,7 +53,7 @@
                 "value": 32
               }
             },
-            "id": "codex-set-7211845a-0a14-4425-9c8f-25c4cb8c8d67"
+            "id": "codex-set-68991718-458f-4d5f-a70f-8d84b514ff3d"
           },
           {
             "command": "EVENT_VARIABLE_MATH",
@@ -66,26 +67,26 @@
               "maxValue": 32767,
               "clamp": false
             },
-            "id": "codex-varset-e35eb4b7-a577-43b4-877b-b055ac00f649"
+            "id": "codex-varset-c634612d-2628-4e96-a6ef-85f3e768a0a7"
           }
         ],
         "false": []
       },
-      "id": "codex-if-90f4a471-a055-45a8-a08f-9f82dd4bfbac"
+      "id": "codex-if-56f9bb68-3c5e-46fa-917e-0b357e48148e"
     },
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
         "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
       },
-      "id": "codex-call-a539e2af-1222-4c04-8e84-be95df1bdbd0"
+      "id": "codex-call-0ec454d6-9f4f-44c7-b680-65d17ffd0993"
     },
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
         "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
       },
-      "id": "codex-call-a8bd7706-caad-4ccd-967d-932631074188"
+      "id": "codex-call-d9141308-f675-4496-96c5-45a62fcba9a4"
     },
     {
       "command": "EVENT_IF",
@@ -105,12 +106,12 @@
             "args": {
               "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
             },
-            "id": "codex-call-c5a5468a-137d-43dd-b3ab-7562f01766f0"
+            "id": "codex-call-8c8dffe0-8ef5-4363-9fa2-0305e0cc0f7f"
           }
         ],
         "false": []
       },
-      "id": "codex-if-452918f7-2159-4bb4-a982-25e336ea74f0"
+      "id": "codex-if-3f7a9e31-dc83-482f-853e-39c3cf3a4ae4"
     }
   ],
   "playerHit1Script": [
@@ -123,7 +124,7 @@
           "value": 1
         }
       },
-      "id": "codex-call-5348626a-ec4f-4158-9d86-451a06472562"
+      "id": "codex-call-704e7d83-231a-41d8-98ec-e4dc9d3fe07d"
     }
   ],
   "playerHit2Script": [],
@@ -137,9 +138,8 @@
           "value": 1
         }
       },
-      "id": "codex-call-c338af43-e993-4a1c-96d1-cf7857a6c14a"
+      "id": "codex-call-f7112f55-b764-42da-8769-03418cedc603"
     }
   ],
-  "collisions": "0f8+008+0f6+001a+0f8+008+0f6+001a+0f8+008+0f6+001a+0f8+008+0f6+001a+0f8+00c+0f2+00e+0f14+00c+0f2+00e+0f14+00c+0f8+008+0f8+004+0f8+00c+0f8+004+0fc+004+0f4+0012+0f!004+0f!004+0f6+00a+0f4+0012+0f!004+0f!004+0f4+00c+0f4+001c+0f4+00c+0f4+002c+0f4+00a+0f4+001e+0f4+00a+0f4+001e+0f4+004+0fa+001e+0f4+004+0fa+0026+0fa+0026+0fa+0026+0fa+0026+0fa+0046+0f8+0028+0f2+006+0f4+0024+0f2+006+0f4+0024+0f2+006+0f4+0024+0f2+006+0f4+001c+0fa+006+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+006+0fc+001c+0f2+006+0f2+006+0f4+001c+0f2+006+0f2+006+0f4+001c+0f2+006+0f2+006+",
   "playerSpriteSheetId": "48cca6ed-daa9-4497-bacc-a30ffc3ec91f"
 }

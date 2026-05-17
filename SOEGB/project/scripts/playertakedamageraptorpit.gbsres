@@ -1,8 +1,8 @@
 {
   "_resourceType": "script",
-  "id": "b2e37397-1f1f-47fa-95d5-b2cba8bf8460",
-  "name": "PlayerTakeDamage",
-  "description": "Reusable player damage script with knockback.\n\nUse this when an enemy physically hits the player and should push him away from the attacker.\n\nPlayerIframeTime - rate-limit/invulnerability timer variable.\nDamageTaken - HP amount to subtract.\nActor 1 Attacker - enemy/hurtbox used as the knockback source.\n\nFlow: rate limit -> subtract HP -> bump player away from attacker -> show hurt emote -> call CheckPlayerHPAfterDamage. That checker updates the HUD, plays Low_Health at 3/2/1 HP, and sends the player to GAME OVER at 0 HP.",
+  "id": "3fbf8fa1-df64-4ff5-a197-6795a0c75cf8",
+  "name": "PlayerTakeDamageRaptorPit",
+  "description": "Raptor Pit only player damage script.\n\nUse this only for the raptor fight. It keeps the normal knockback/hurt behavior, but it does NOT send the player to the Game Over screen at 0 HP.\n\nIf PlayerHP drops to 0 or less here, the script restores PlayerHP from PlayerMaxHP and switches to Chief's Hut at X 13 / Y 5. If PlayerHP stays above 0, it calls CheckPlayerHPAfterDamage so the HUD and low-health sound still work.\n\nReason this exists: Raptor Pit has a story loss state instead of a true death state.",
   "variables": {
     "V0": {
       "id": "V0",
@@ -25,7 +25,7 @@
       "name": "Attacker"
     }
   },
-  "symbol": "script_7",
+  "symbol": "script_player_take_damage_r",
   "script": [
     {
       "command": "EVENT_RATE_LIMIT",
