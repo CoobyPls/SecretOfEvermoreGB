@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "608720ca-8de7-4a41-b794-c78222f4132f",
+  "_index": 10,
+  "name": "Northern Jungle 1",
+  "backgroundId": "ca23f18e-9486-4657-81a3-2d82c70ac211",
+  "tilesetId": "",
+  "width": 48,
+  "height": 44,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "0f2+0022+0f2+008+0f4+0022+0f2+008+0f4+006+0f8+00a+0f4+004+0f4+008+0f4+006+0f8+00a+0f4+004+0f4+008+0fc+004+0f10+004+0f4+008+0fc+004+0f10+004+0f4+008+0fc+00c+0fe+00a+0f5+004+0f3+00c+0fe+00a+0f5+004+0f!0014+0f8+00a+0f4+001a+0f2+004+0f2+00a+0f4+001a+0f2+004+0f2+008+0f6+002a+0f6+002a+0f6+002a+0f6+002c+0f4+002c+0f4+008+0f8+001c+0f4+008+0f8+001c+0f14+001a+0f16+001a+0f10+001a+0f16+001a+0f10+0020+0f10+0020+0fc+0026+0fa+0026+0fa+00e+0f4+004+0fa+00a+0f6+00e+0f4+004+0fa+00a+0f6+00e+0f14+00a+0f4+00e+0f14+00a+0f4+0010+0f8+004+0f6+00a+0f4+0010+0f8+004+0f6+00a+0f4+0012+0f4+008+0f4+00a+0f4+0012+0f4+008+0f4+00a+0f4+006+0f6+0012+0f6+006+0f6+006+0f6+0012+0f6+006+0f6+004+0fc+00e+0f12+004+0fc+00e+0f12+004+0fe+00a+0f14+004+0fe+00a+0f14+004+0f2c+004+0f2c+004+0f2c+004+0f2a+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_11",
+  "x": 1418,
+  "y": 100,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}
