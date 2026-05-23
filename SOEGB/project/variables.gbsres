@@ -97,6 +97,91 @@
       "symbol": "var_attackpulse"
     },
     {
+      "name": "MammothRaptor1MoveTimer",
+      "id": "32",
+      "symbol": "var_mammothraptor1movetimer"
+    },
+    {
+      "name": "MammothRaptor1IframeTimer",
+      "id": "33",
+      "symbol": "var_mammothraptor1iframetim"
+    },
+    {
+      "name": "MammothRaptor1HP",
+      "id": "34",
+      "symbol": "var_mammothraptor1hp"
+    },
+    {
+      "name": "MammothRaptor1Defeated",
+      "id": "35",
+      "symbol": "var_mammothraptor1defeated"
+    },
+    {
+      "name": "MammothRaptor2MoveTimer",
+      "id": "36",
+      "symbol": "var_mammothraptor2movetimer"
+    },
+    {
+      "name": "MammothRaptor2IframeTimer",
+      "id": "37",
+      "symbol": "var_mammothraptor2iframetim"
+    },
+    {
+      "name": "MammothRaptor2HP",
+      "id": "38",
+      "symbol": "var_mammothraptor2hp"
+    },
+    {
+      "name": "MammothRaptor2Defeated",
+      "id": "39",
+      "symbol": "var_mammothraptor2defeated"
+    },
+    {
+      "name": "MammothRaptor3MoveTimer",
+      "id": "40",
+      "symbol": "var_mammothraptor3movetimer"
+    },
+    {
+      "name": "MammothRaptor3IframeTimer",
+      "id": "41",
+      "symbol": "var_mammothraptor3iframetim"
+    },
+    {
+      "name": "MammothRaptor3HP",
+      "id": "42",
+      "symbol": "var_mammothraptor3hp"
+    },
+    {
+      "name": "MammothRaptor3Defeated",
+      "id": "43",
+      "symbol": "var_mammothraptor3defeated"
+    },
+    {
+      "id": "44",
+      "name": "MenuChoice",
+      "symbol": "var_menuchoice"
+    },
+    {
+      "id": "45",
+      "name": "MenuSelectedItem",
+      "symbol": "var_menuselecteditem"
+    },
+    {
+      "id": "46",
+      "name": "MenuAssignSlot",
+      "symbol": "var_menuassignslot"
+    },
+    {
+      "id": "47",
+      "name": "EquippedAItem",
+      "symbol": "var_equippedaitem"
+    },
+    {
+      "id": "48",
+      "name": "EquippedBItem",
+      "symbol": "var_equippedbitem"
+    },
+    {
       "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
       "name": "Local 0",
       "symbol": "var_local_1"
@@ -440,6 +525,66 @@
       "id": "752f279a-4918-4866-b35f-0787a93bc513__L3",
       "name": "SkeetoWanderDir",
       "symbol": "var_skeetowanderdir_12"
+    },
+    {
+      "id": "631e451c-8041-4ff4-a5b7-fbd55151470f__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_2"
+    },
+    {
+      "id": "631e451c-8041-4ff4-a5b7-fbd55151470f__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_2"
+    },
+    {
+      "id": "631e451c-8041-4ff4-a5b7-fbd55151470f__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_2"
+    },
+    {
+      "id": "d380bbd9-22f1-47af-b6b5-9e3b07742105__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_3"
+    },
+    {
+      "id": "d380bbd9-22f1-47af-b6b5-9e3b07742105__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_3"
+    },
+    {
+      "id": "d380bbd9-22f1-47af-b6b5-9e3b07742105__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_3"
+    },
+    {
+      "id": "ff916c56-1e64-4062-95b1-f85de8458e0b__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_4"
+    },
+    {
+      "id": "ff916c56-1e64-4062-95b1-f85de8458e0b__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_4"
+    },
+    {
+      "id": "ff916c56-1e64-4062-95b1-f85de8458e0b__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_4"
+    },
+    {
+      "id": "0d1c14f2-e517-4ce6-ae19-697363210979__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_5"
+    },
+    {
+      "id": "0d1c14f2-e517-4ce6-ae19-697363210979__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_5"
+    },
+    {
+      "id": "0d1c14f2-e517-4ce6-ae19-697363210979__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_5"
     }
   ],
   "constants": []

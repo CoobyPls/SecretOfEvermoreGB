@@ -14,10 +14,126 @@
   "collisions": "0f2+0022+0f2+008+0f4+0022+0f2+008+0f4+006+0f8+00a+0f4+004+0f4+008+0f4+006+0f8+00a+0f4+004+0f4+008+0fc+004+0f10+004+0f4+008+0fc+004+0f10+004+0f4+008+0fc+00c+0fe+00a+0f5+004+0f3+00c+0fe+00a+0f5+004+0f!0014+0f8+00a+0f4+001a+0f2+004+0f2+00a+0f4+001a+0f2+004+0f2+008+0f6+002a+0f6+002a+0f6+002a+0f6+002c+0f4+002c+0f4+008+0f8+001c+0f4+008+0f8+001c+0f14+001a+0f16+001a+0f10+001a+0f16+001a+0f10+0020+0f10+0020+0fc+0026+0fa+0026+0fa+00e+0f4+004+0fa+00a+0f6+00e+0f4+004+0fa+00a+0f6+00e+0f14+00a+0f4+00e+0f14+00a+0f4+0010+0f8+004+0f6+00a+0f4+0010+0f8+004+0f6+00a+0f4+0012+0f4+008+0f4+00a+0f4+0012+0f4+008+0f4+00a+0f4+006+0f6+0012+0f6+006+0f6+006+0f6+0012+0f6+006+0f6+004+0fc+00e+0f12+004+0fc+00e+0f12+004+0fe+00a+0f14+004+0fe+00a+0f14+004+0f2c+004+0f2c+004+0f2c+004+0f2a+",
   "autoFadeSpeed": 1,
   "symbol": "scene_11",
-  "x": 1418,
-  "y": 100,
-  "script": [],
-  "playerHit1Script": [],
+  "x": 704,
+  "y": 30,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "id": "codex-northern-jungle-1-init-hud-defaults-if-needed",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "13"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "id": "codex-northern-jungle-1-init-player-max-hp",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            }
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "id": "codex-northern-jungle-1-init-equipped-icon",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 32
+              }
+            }
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "id": "codex-northern-jungle-1-init-current-hp-from-max",
+            "args": {
+              "vectorX": "9",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "13",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            }
+          }
+        ],
+        "false": []
+      }
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "id": "codex-northern-jungle-1-force-dogjoined-for-combat-test",
+      "args": {
+        "variable": "1",
+        "value": {
+          "type": "true"
+        },
+        "__comment": true
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-open-hud",
+      "args": {
+        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-update-hud",
+      "args": {
+        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-install-attack-input",
+      "args": {
+        "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+      }
+    }
+  ],
+  "playerHit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-contact-damage",
+      "args": {
+        "customEventId": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 1
+        },
+        "__comment": true
+      }
+    }
+  ],
   "playerHit2Script": [],
-  "playerHit3Script": []
+  "playerHit3Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-projectile-damage",
+      "args": {
+        "customEventId": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 1
+        },
+        "__comment": true
+      }
+    }
+  ]
 }

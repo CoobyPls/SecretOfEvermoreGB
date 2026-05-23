@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "b9d39fd2-8e2a-4934-bcaf-e805ae3de653",
+  "name": "MenuOmnitopia",
+  "symbol": "bg_menuomnitopia",
+  "tileColors": "",
+  "filename": "MenuOmnitopia.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

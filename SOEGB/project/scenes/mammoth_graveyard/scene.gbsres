@@ -1,0 +1,126 @@
+{
+  "_resourceType": "scene",
+  "id": "772e0eb7-cc20-4ee7-9ddf-3509c8a091ad",
+  "_index": 11,
+  "name": "Mammoth Graveyard",
+  "backgroundId": "32944fec-94e1-46f6-85fd-ac0dd71eee74",
+  "tilesetId": "",
+  "width": 64,
+  "height": 32,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "0f82+001b+0f6+00a+0f4+00d+0f4+001b+0f6+001b+0f4+00c+0f4+00c+0f4+001c+0f4+00c+0f4+00b+0f6+001b+0f4+001b+0f2+002+0f2+001b+0f4+001a+0f2+004+0f2+001a+0f4+001a+0f2+004+0f2+001a+0f4+00d+0f2+00b+0f2+004+0f2+00b+0f2+00d+0f4+00d+0f2+00b+0f2+004+0f2+00b+0f2+00d+0f4+00d+0f2+001e+0f2+00d+0f4+00d+0f2+001e+0f2+00d+0f4+00c+0f4+001c+0f4+00c+0f4+00c+0f4+001c+0f4+00c+0f4+003c+0f4+008+0f8+0020+0f4+008+0f4+005+0fc+001c+0f8+007+0f4+005+0fc+001c+0f8+007+0f4+005+0fc+00c+0f2+00e+0f8+007+0f4+005+0fc+00c+0f2+00c+0fa+007+0f4+005+0fc+00c+0f2+00c+0fa+007+0f4+005+0fb+00d+0f2+00c+0f9+008+0f4+005+0fb+00c+0f4+00b+0f9+008+0f4+005+0fb+00c+0f4+00b+0f9+008+0f4+007+0f9+006+0f3+0014+0f7+008+0f4+0014+0f6+006+0f4+0018+0f4+0014+0f6+004+0f7+0017+0f4+0012+0f8+004+0f7+0017+0f4+0012+0f8+004+0f7+0017+0f8+00e+0f7+005+0f7+0013+0fc+00e+0f7+001f+0f6+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_12",
+  "x": 1096,
+  "y": 48,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "id": "codex-mammoth-graveyard-init-hud-defaults-if-needed",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "13"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "id": "codex-mammoth-graveyard-init-player-max-hp",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            }
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "id": "codex-mammoth-graveyard-init-equipped-icon",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 32
+              }
+            }
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "id": "codex-mammoth-graveyard-init-current-hp-from-max",
+            "args": {
+              "vectorX": "9",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "13",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            }
+          }
+        ],
+        "false": []
+      }
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "id": "codex-mammoth-graveyard-force-dogjoined-for-combat-test",
+      "args": {
+        "variable": "1",
+        "value": {
+          "type": "true"
+        },
+        "__comment": true
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-mammoth-graveyard-open-hud",
+      "args": {
+        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-mammoth-graveyard-update-hud",
+      "args": {
+        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-mammoth-graveyard-install-attack-input",
+      "args": {
+        "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+      }
+    }
+  ],
+  "playerHit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-mammoth-graveyard-raptor-contact-damage",
+      "args": {
+        "customEventId": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 1
+        },
+        "__comment": true
+      }
+    }
+  ],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

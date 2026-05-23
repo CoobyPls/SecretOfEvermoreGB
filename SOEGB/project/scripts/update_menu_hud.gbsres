@@ -1,0 +1,36 @@
+{
+  "_resourceType": "script",
+  "id": "c4ef61a1-e7fb-485c-a5cc-455efe7587a2",
+  "name": "Update Menu HUD",
+  "symbol": "script_update_menu_hud",
+  "description": "Redraws the Menu scene top HUD values: current HP, max HP, and the equipped icon character.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "id": "codex-menu-hud-gbvm-redraw",
+      "args": {
+        "script": "VM_LOAD_TEXT 3\n.dw VAR_PLAYERHP\n.dw VAR_PLAYERMAXHP\n.dw VAR_EQUIPPEDICON\n.asciz \"\\002\\002\\003\\001\\001HP %D2/%D2\\003\\021\\001%c\"\nVM_DISPLAY_TEXT",
+        "references": [
+          {
+            "type": "variable",
+            "id": "9"
+          },
+          {
+            "type": "variable",
+            "id": "13"
+          },
+          {
+            "type": "variable",
+            "id": "14"
+          },
+          {
+            "type": "font",
+            "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+          }
+        ]
+      }
+    }
+  ]
+}

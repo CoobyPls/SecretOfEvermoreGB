@@ -14,8 +14,8 @@
   "collisions": "00168+",
   "autoFadeSpeed": 1,
   "symbol": "scene_9",
-  "x": 272,
-  "y": 48,
+  "x": 104,
+  "y": 224,
   "script": [
     {
       "command": "EVENT_OVERLAY_HIDE",

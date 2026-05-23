@@ -1,0 +1,361 @@
+{
+  "_resourceType": "actorPrefab",
+  "id": "0f7b0f46-d9df-4c56-9d89-cc0de0a1e001",
+  "name": "Raptor - regular local 6HP chaser",
+  "frame": 0,
+  "animate": true,
+  "spriteSheetId": "544594e2-1698-4730-aaf2-1fc0b78ebaa8",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "persistent": false,
+  "collisionGroup": "1",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "description": "Regular reusable raptor enemy. L0 chase timer; L1 iframe timer; L2 HP. Starts awake with collisions on, steps toward the player with relative-position checks, deals contact damage through the scene Player Hit 1 script, takes player attack damage through Hit 3, and deactivates at zero local HP. No global defeated flag or activation switch.",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "id": "codex-regular-raptor-init-local-hp",
+      "args": {
+        "variable": "L2",
+        "value": {
+          "type": "number",
+          "value": 6
+        },
+        "__comment": true,
+        "__collapse": true
+      }
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "id": "codex-regular-raptor-clear-chase-timer",
+      "args": {
+        "variable": "L0",
+        "value": {
+          "type": "number",
+          "value": 0
+        },
+        "__comment": true
+      }
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "id": "codex-regular-raptor-clear-iframe-timer",
+      "args": {
+        "variable": "L1",
+        "value": {
+          "type": "number",
+          "value": 0
+        },
+        "__comment": true
+      }
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+      "id": "codex-regular-raptor-enable-contact-collision",
+      "args": {
+        "actorId": "$self$",
+        "__comment": true
+      }
+    },
+    {
+      "command": "EVENT_ACTOR_SHOW",
+      "id": "codex-regular-raptor-show-awake",
+      "args": {
+        "actorId": "$self$",
+        "__comment": true
+      }
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "id": "codex-regular-raptor-chase-rate",
+      "args": {
+        "variable": "L0",
+        "units": "time",
+        "time": {
+          "type": "number",
+          "value": 0.45
+        },
+        "frames": {
+          "type": "number",
+          "value": 27
+        },
+        "__comment": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_VALUE",
+            "id": "codex-regular-raptor-alive-check",
+            "args": {
+              "variable": "L2",
+              "operator": ">",
+              "comparator": 0,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__comment": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "id": "codex-regular-raptor-player-above-step-up",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "up",
+                    "otherActorId": "$self$",
+                    "__collapseElse": true,
+                    "__disableElse": true,
+                    "__comment": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "id": "codex-regular-raptor-step-up",
+                        "args": {
+                          "__section": "movement",
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": -1
+                          },
+                          "collideWith": [
+                            "walls",
+                            "actors"
+                          ],
+                          "lockDirection": [],
+                          "moveType": "vertical",
+                          "__comment": true
+                        }
+                      }
+                    ],
+                    "false": []
+                  }
+                },
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "id": "codex-regular-raptor-player-below-step-down",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "down",
+                    "otherActorId": "$self$",
+                    "__collapseElse": true,
+                    "__disableElse": true,
+                    "__comment": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "id": "codex-regular-raptor-step-down",
+                        "args": {
+                          "__section": "movement",
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "collideWith": [
+                            "walls",
+                            "actors"
+                          ],
+                          "lockDirection": [],
+                          "moveType": "vertical",
+                          "__comment": true
+                        }
+                      }
+                    ],
+                    "false": []
+                  }
+                },
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "id": "codex-regular-raptor-player-left-step-left",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "left",
+                    "otherActorId": "$self$",
+                    "__collapseElse": true,
+                    "__disableElse": true,
+                    "__comment": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "id": "codex-regular-raptor-step-left",
+                        "args": {
+                          "__section": "movement",
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": -1
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "collideWith": [
+                            "walls",
+                            "actors"
+                          ],
+                          "lockDirection": [],
+                          "moveType": "horizontal",
+                          "__comment": true
+                        }
+                      }
+                    ],
+                    "false": []
+                  }
+                },
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "id": "codex-regular-raptor-player-right-step-right",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "right",
+                    "otherActorId": "$self$",
+                    "__collapseElse": true,
+                    "__disableElse": true,
+                    "__comment": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "id": "codex-regular-raptor-step-right",
+                        "args": {
+                          "__section": "movement",
+                          "actorId": "$self$",
+                          "x": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "collideWith": [
+                            "walls",
+                            "actors"
+                          ],
+                          "lockDirection": [],
+                          "moveType": "horizontal",
+                          "__comment": true
+                        }
+                      }
+                    ],
+                    "false": []
+                  }
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "id": "codex-regular-raptor-disable-hitbox-on-death",
+                  "args": {
+                    "actorId": "$self$",
+                    "__comment": true
+                  }
+                },
+                {
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "id": "codex-regular-raptor-death-sfx",
+                  "args": {
+                    "type": "e29b389f-cafc-4305-b2dd-bc83816a6835",
+                    "priority": "medium",
+                    "pitch": 4,
+                    "frequency": 200,
+                    "duration": 0.5,
+                    "wait": false,
+                    "effect": 0,
+                    "__comment": true
+                  }
+                },
+                {
+                  "command": "EVENT_ACTOR_EFFECTS",
+                  "id": "codex-regular-raptor-death-splitout",
+                  "args": {
+                    "effect": "splitOut",
+                    "actorId": "$self$",
+                    "distance": 20,
+                    "speed": 2,
+                    "time": 0.35,
+                    "frames": 21,
+                    "__comment": true
+                  }
+                },
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "id": "codex-regular-raptor-deactivate-dead",
+                  "args": {
+                    "actorId": "$self$",
+                    "__comment": true
+                  }
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "id": "codex-regular-raptor-park-dead-offscreen",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "__comment": true
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-regular-raptor-take-player-attack-damage",
+      "args": {
+        "customEventId": "0aab140a-ddc5-4f2b-962f-9a585b7a8c56",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V2]$": {
+          "type": "number",
+          "value": 1
+        },
+        "$actor[1]$": "player",
+        "$actor[0]$": "$self$",
+        "__comment": true
+      }
+    }
+  ],
+  "_index": 3
+}

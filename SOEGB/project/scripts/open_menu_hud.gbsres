@@ -1,0 +1,31 @@
+{
+  "_resourceType": "script",
+  "id": "4d7e25b1-4a63-4923-93c4-2a603a3f2119",
+  "name": "Open Menu HUD",
+  "symbol": "script_open_menu_hud",
+  "description": "Shows an instant overlay at the top of the Menu scene so the baked menu HUD strip can display live values.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
+      "id": "codex-menu-hud-text-instant",
+      "args": {
+        "speedIn": -3,
+        "speedOut": -3,
+        "speed": 0,
+        "allowFastForward": false
+      }
+    },
+    {
+      "command": "EVENT_OVERLAY_SHOW",
+      "id": "codex-menu-hud-show-top-overlay",
+      "args": {
+        "color": "white",
+        "x": 0,
+        "y": 0,
+        "__comment": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "6bb86bc2-2a4b-4358-b08b-520734de382e",
+  "_index": 12,
+  "name": "Menu",
+  "backgroundId": "aa286c7f-802f-4f7c-b882-878dac594ac9",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_13",
+  "x": 104,
+  "y": 384,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

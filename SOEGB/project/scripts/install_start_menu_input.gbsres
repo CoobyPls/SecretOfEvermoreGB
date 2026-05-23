@@ -1,0 +1,10 @@
+{
+  "_resourceType": "script",
+  "id": "b3900278-94ee-4e75-9c74-7c3810a82ca6",
+  "name": "Install Start Menu Input",
+  "symbol": "script_install_start_menu_i",
+  "description": "Disabled rollback copy. The previous scene-stack menu entry script is backed up because it blocked project loading.",
+  "variables": {},
+  "actors": {},
+  "script": []
+}
