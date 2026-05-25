@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "c550eeaf-f6df-4c6f-a58c-c37161031006",
+  "_index": 12,
+  "symbol": "actor_menu_hud_dog_current_",
+  "prefabId": "",
+  "name": "Menu HUD - Dog HP Current Tens",
+  "coordinateType": "tiles",
+  "x": 3,
+  "y": 1,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "0ad51c8c-299b-4be2-bf4e-fb0575508e51",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-dog-current-tens-no-collision"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "description": "Live Dog HP display digit at row 2 after the baked-in Dog HP: label. Renders the tens digit of DogHP from MenuDogHPTensTile."
+}

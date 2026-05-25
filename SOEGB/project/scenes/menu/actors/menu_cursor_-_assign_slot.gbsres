@@ -1,0 +1,45 @@
+{
+  "_resourceType": "actor",
+  "id": "18bd256f-4fe1-4b55-8a31-30f4132f094f",
+  "_index": 3,
+  "symbol": "actor_menu_assignment_curso",
+  "prefabId": "",
+  "name": "Menu Cursor - Assign Slot",
+  "coordinateType": "tiles",
+  "x": 15,
+  "y": 2,
+  "frame": 0,
+  "animate": true,
+  "spriteSheetId": "990bbb74-4881-42e0-9404-9a48da7191a0",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 7,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-assignment-cursor-no-collision"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-assignment-cursor-start-hidden"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "description": "Animated assignment cursor. It flashes only after A selects Bone or Petal, then MenuAssignSlot value 0 points at A and value 1 points at B."
+}

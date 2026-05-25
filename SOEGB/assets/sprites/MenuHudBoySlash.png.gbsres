@@ -1,5 +1,116 @@
 {
-  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e21", "name": "Menu HUD Boy Slash", "symbol": "sprite_menu_hud_boy_slash",
-  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e22", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e23", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e24", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e25", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
-  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudBoySlash.png", "width": 8, "height": 8
+  "_resourceType": "sprite",
+  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e21",
+  "name": "Menu HUD Boy Slash",
+  "symbol": "sprite_menu_hud_boy_slash",
+  "states": [
+    {
+      "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e22",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e23",
+          "frames": [
+            {
+              "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e24",
+              "tiles": [
+                {
+                  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e25",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "e5a6e318-8e88-4375-afa7-18a35b0358f5",
+          "frames": [
+            {
+              "id": "9af1bdec-f5da-4213-addb-ac1e0da83bcb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e3dfdb79-b991-4aec-adcd-29eba6154443",
+          "frames": [
+            {
+              "id": "c9ca4998-177e-4498-9d7a-dd61645032b3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d53efb2f-6949-45d0-ab3d-ec3ba1649923",
+          "frames": [
+            {
+              "id": "82503bf2-6425-4236-b0e3-0408f8d56cc5",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "52a58d06-6106-4301-a823-b02356a2dca5",
+          "frames": [
+            {
+              "id": "d078fec9-191e-4104-9e56-cbfa5d201cb3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fa14941a-75fd-4b76-9565-1b3d7f345e91",
+          "frames": [
+            {
+              "id": "8abd9b4f-b972-4021-b06c-ad7348bad6b1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "21eff1dd-29d4-4b7a-bc37-ab823ab49091",
+          "frames": [
+            {
+              "id": "5ba44e7e-d617-483c-8381-2919343fb56b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d492198d-9f61-4afb-808a-000a02abf851",
+          "frames": [
+            {
+              "id": "ccec3925-22b6-40e5-bae8-72673c1edff9",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudBoySlash.png",
+  "width": 8,
+  "height": 8,
+  "checksum": ""
 }

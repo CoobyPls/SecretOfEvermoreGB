@@ -1,9 +1,9 @@
 {
   "_resourceType": "script",
   "id": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd",
-  "name": "Attack",
+  "name": "Install Equipped Item Inputs",
   "symbol": "script_1",
-  "description": "",
+  "description": "Installs gameplay A and B button handlers that invoke the item assigned to the corresponding menu bracket.",
   "variables": {},
   "actors": {},
   "script": [
@@ -16,538 +16,213 @@
         "override": true,
         "__scriptTabs": "press"
       },
-      "id": "codex-install-clean-attack-input",
+      "id": "codex-equipped-a-install-input",
       "children": {
         "true": [
           {
             "command": "EVENT_IF",
             "args": {
               "condition": {
-                "type": "variable",
-                "value": "1"
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "47"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
               },
               "__collapseElse": true,
-              "__disableElse": true,
-              "__collapse": false
+              "__disableElse": false
             },
-            "id": "codex-attack-only-if-dog-joined",
             "children": {
               "true": [
                 {
-                  "command": "EVENT_SET_INPUT_SCRIPT",
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
                   "args": {
-                    "input": [
-                      "left",
-                      "up",
-                      "down",
-                      "right"
-                    ],
-                    "override": true,
-                    "__scriptTabs": "press"
+                    "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc700"
                   },
-                  "children": {
-                    "true": []
-                  },
-                  "id": "d2ae88c2-dcad-4da6-87ea-5122379d3e5f"
-                },
-                {
-                  "command": "EVENT_SOUND_PLAY_EFFECT",
-                  "args": {
-                    "type": "c06eb998-8c63-4d08-9518-af7c67765e37",
-                    "wait": false,
-                    "priority": "medium",
-                    "duration": 0.05,
-                    "frequency": 900,
-                    "pitch": 3
-                  },
-                  "id": "codex-attack-pulse-swing-sound"
-                },
-                {
-                  "command": "EVENT_IF_ACTOR_DIRECTION",
-                  "args": {
-                    "actorId": "player",
-                    "direction": {
-                      "type": "direction",
-                      "value": "down"
-                    },
-                    "__collapseElse": true,
-                    "__disableElse": true
-                  },
-                  "id": "codex-if-facing-up-d1858709-ea41-4023-b970-792f0d7c426f",
-                  "children": {
-                    "true": [
-                      {
-                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 7,
-                          "__collapse": false
-                        },
-                        "id": "08fbca65-65cd-415b-9c5d-a597510236e8"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "Attack",
-                          "loopAnim": false,
-                          "__collapse": false
-                        },
-                        "id": "f7f2a2df-efa2-4436-9548-73bcd5ee851e"
-                      },
-                      {
-                        "command": "EVENT_WAIT",
-                        "args": {
-                          "time": {
-                            "type": "number",
-                            "value": 0.3
-                          },
-                          "frames": {
-                            "type": "number",
-                            "value": 1
-                          },
-                          "__collapse": false
-                        },
-                        "id": "e7f6837c-8869-4317-9bcb-1474a4a40ef4"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 15
-                        },
-                        "id": "d98dc084-680b-46b3-ab5e-f88dbe92ce32"
-                      },
-                      {
-                        "command": "EVENT_REMOVE_INPUT_SCRIPT",
-                        "args": {
-                          "input": [
-                            "right",
-                            "down",
-                            "up",
-                            "left"
-                          ]
-                        },
-                        "id": "fc69d52d-9497-4113-99de-cee528359e23"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "",
-                          "loopAnim": true,
-                          "__collapse": false
-                        },
-                        "id": "279c5cd2-c69b-4b3c-9fdd-c0f30efa2c96"
-                      },
-                      {
-                        "command": "EVENT_LAUNCH_PROJECTILE",
-                        "args": {
-                          "__section": "projectile",
-                          "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
-                          "spriteStateId": "",
-                          "actorId": "player",
-                          "x": 6,
-                          "y": -15,
-                          "directionType": "actor",
-                          "otherActorId": "player",
-                          "direction": "down",
-                          "angle": 0,
-                          "angleVariable": "0",
-                          "targetActorId": "player",
-                          "speed": 3,
-                          "animSpeed": 255,
-                          "lifeTime": 0.3,
-                          "initialOffset": 0,
-                          "loopAnim": true,
-                          "destroyOnHit": true,
-                          "collisionGroup": "3",
-                          "collisionMask": [
-                            "1",
-                            "2"
-                          ],
-                          "__presetId": "codex-bone-up",
-                          "__collapse": false
-                        },
-                        "id": "codex-bone-up-84c13c10-9bba-4d60-a691-2e7ac04bdf70"
-                      }
-                    ],
-                    "false": []
-                  }
-                },
-                {
-                  "command": "EVENT_IF_ACTOR_DIRECTION",
-                  "args": {
-                    "actorId": "player",
-                    "direction": {
-                      "type": "direction",
-                      "value": "right"
-                    },
-                    "__collapseElse": true,
-                    "__disableElse": true
-                  },
-                  "id": "codex-if-facing-right-440d32cc-ad40-405d-a8f0-6a3145aab4ca",
-                  "children": {
-                    "true": [
-                      {
-                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 7
-                        },
-                        "id": "888e4d89-6925-4805-b647-8061faf9c887"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "Attack",
-                          "loopAnim": false,
-                          "__collapse": false
-                        },
-                        "id": "509d2aa5-a33d-40ba-8c2b-a3e3040bc9ca"
-                      },
-                      {
-                        "command": "EVENT_WAIT",
-                        "args": {
-                          "time": {
-                            "type": "number",
-                            "value": 0.5
-                          },
-                          "frames": {
-                            "type": "number",
-                            "value": 1
-                          },
-                          "__collapse": true
-                        },
-                        "id": "f02bc037-0f19-4c16-9cce-e7e061669e2e"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 15
-                        },
-                        "id": "e4336d4c-8694-42ce-904f-b7ef1bf4f2f6"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "",
-                          "loopAnim": true,
-                          "__collapse": false
-                        },
-                        "id": "1545235d-f388-45cf-9967-6ff010dcba02"
-                      },
-                      {
-                        "command": "EVENT_REMOVE_INPUT_SCRIPT",
-                        "args": {
-                          "input": [
-                            "right",
-                            "down",
-                            "up",
-                            "left"
-                          ]
-                        },
-                        "id": "7d1a5dfc-439b-4c16-8e01-fa87c93c5aa7"
-                      },
-                      {
-                        "command": "EVENT_LAUNCH_PROJECTILE",
-                        "args": {
-                          "__section": "projectile",
-                          "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
-                          "spriteStateId": "",
-                          "actorId": "player",
-                          "x": 18,
-                          "y": -4,
-                          "directionType": "actor",
-                          "otherActorId": "player",
-                          "direction": "down",
-                          "angle": 0,
-                          "angleVariable": "0",
-                          "targetActorId": "player",
-                          "speed": 2,
-                          "animSpeed": 255,
-                          "lifeTime": 0.3,
-                          "initialOffset": 0,
-                          "loopAnim": true,
-                          "destroyOnHit": false,
-                          "collisionGroup": "3",
-                          "collisionMask": [
-                            "1",
-                            "2"
-                          ],
-                          "__presetId": "codex-bone-right",
-                          "__collapse": false
-                        },
-                        "id": "codex-bone-right-3035eef4-646f-469f-8b21-8c537b5b6fb0"
-                      }
-                    ],
-                    "false": []
-                  }
-                },
-                {
-                  "command": "EVENT_IF_ACTOR_DIRECTION",
-                  "args": {
-                    "actorId": "player",
-                    "direction": {
-                      "type": "direction",
-                      "value": "left"
-                    },
-                    "__collapseElse": true,
-                    "__disableElse": true
-                  },
-                  "id": "codex-if-facing-left-39a9a72a-7bc6-4d46-81c1-645d68b259cb",
-                  "children": {
-                    "true": [
-                      {
-                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 7
-                        },
-                        "id": "9eb907f1-de22-4e55-8a3a-04ca552472d3"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "Attack",
-                          "loopAnim": false,
-                          "__collapse": false
-                        },
-                        "id": "05b6aec3-793b-4028-a5a6-c75340f38bd6"
-                      },
-                      {
-                        "command": "EVENT_WAIT",
-                        "args": {
-                          "time": {
-                            "type": "number",
-                            "value": 0.5
-                          },
-                          "frames": {
-                            "type": "number",
-                            "value": 1
-                          },
-                          "__collapse": true
-                        },
-                        "id": "4dec855d-caab-4de6-9511-b2f34bf8f798"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 15
-                        },
-                        "id": "347fd0ff-4e02-4801-bf72-a32b0dcf3f5a"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "",
-                          "loopAnim": true,
-                          "__collapse": false
-                        },
-                        "id": "cfcd0ebd-2e25-4a89-850e-6be2ee8d95ac"
-                      },
-                      {
-                        "command": "EVENT_REMOVE_INPUT_SCRIPT",
-                        "args": {
-                          "input": [
-                            "right",
-                            "down",
-                            "up",
-                            "left"
-                          ]
-                        },
-                        "id": "6d4f20a6-a452-4e86-a785-1902f68e4a3c"
-                      },
-                      {
-                        "command": "EVENT_LAUNCH_PROJECTILE",
-                        "args": {
-                          "__section": "projectile",
-                          "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
-                          "spriteStateId": "",
-                          "actorId": "player",
-                          "x": -6,
-                          "y": 2,
-                          "directionType": "actor",
-                          "otherActorId": "player",
-                          "direction": "down",
-                          "angle": 0,
-                          "angleVariable": "0",
-                          "targetActorId": "player",
-                          "speed": 2,
-                          "animSpeed": 255,
-                          "lifeTime": 0.3,
-                          "initialOffset": 0,
-                          "loopAnim": true,
-                          "destroyOnHit": false,
-                          "collisionGroup": "3",
-                          "collisionMask": [
-                            "1",
-                            "2"
-                          ],
-                          "__presetId": "codex-bone-left",
-                          "__collapse": false
-                        },
-                        "id": "codex-bone-left-582f7309-93f8-43bb-8e41-bd566ddd4240"
-                      }
-                    ],
-                    "false": []
-                  }
-                },
-                {
-                  "command": "EVENT_IF_ACTOR_DIRECTION",
-                  "args": {
-                    "actorId": "player",
-                    "direction": {
-                      "type": "direction",
-                      "value": "up"
-                    },
-                    "__collapseElse": true,
-                    "__disableElse": true,
-                    "__collapse": false
-                  },
-                  "id": "codex-if-facing-down-cdeee265-76e0-4404-b346-335e45f3300f",
-                  "children": {
-                    "true": [
-                      {
-                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 7
-                        },
-                        "id": "99fc01fb-a860-4dca-adad-fed984f5d4e2"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "Attack",
-                          "loopAnim": false,
-                          "__collapse": false
-                        },
-                        "id": "639ba8a6-4b5b-447c-9fd2-b2f15b75a571"
-                      },
-                      {
-                        "command": "EVENT_WAIT",
-                        "args": {
-                          "time": {
-                            "type": "number",
-                            "value": 0.5
-                          },
-                          "frames": {
-                            "type": "number",
-                            "value": 1
-                          },
-                          "__collapse": true
-                        },
-                        "id": "31f0d7c3-868b-4fd5-8faa-e5858d5fcff1"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                        "args": {
-                          "actorId": "$self$",
-                          "speed": 15
-                        },
-                        "id": "3c1c09a4-b3da-49fa-a6a2-df1216f0f798"
-                      },
-                      {
-                        "command": "EVENT_REMOVE_INPUT_SCRIPT",
-                        "args": {
-                          "input": [
-                            "right",
-                            "down",
-                            "up",
-                            "left"
-                          ]
-                        },
-                        "id": "0b2209ad-c5a9-46e4-ad4a-0958a0e3d2a2"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_STATE",
-                        "args": {
-                          "actorId": "$self$",
-                          "spriteStateId": "",
-                          "loopAnim": true,
-                          "__collapse": false
-                        },
-                        "id": "b01ef2a0-12cb-4f0b-85b3-9758e8b9d0b8"
-                      },
-                      {
-                        "command": "EVENT_LAUNCH_PROJECTILE",
-                        "args": {
-                          "__section": "projectile",
-                          "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
-                          "spriteStateId": "",
-                          "actorId": "player",
-                          "x": 10,
-                          "y": 15,
-                          "directionType": "actor",
-                          "otherActorId": "player",
-                          "direction": "down",
-                          "angle": 0,
-                          "angleVariable": "0",
-                          "targetActorId": "player",
-                          "speed": 2,
-                          "animSpeed": 255,
-                          "lifeTime": 0.3,
-                          "initialOffset": 0,
-                          "loopAnim": true,
-                          "destroyOnHit": false,
-                          "collisionGroup": "3",
-                          "collisionMask": [
-                            "1",
-                            "2"
-                          ],
-                          "__presetId": "codex-bone-down"
-                        },
-                        "id": "codex-bone-down-291ba7a3-c1b2-41c5-9399-6d36996caa77"
-                      }
-                    ],
-                    "false": []
-                  }
-                },
-                {
-                  "command": "EVENT_SET_VALUE",
-                  "args": {
-                    "variable": "31",
-                    "value": {
-                      "type": "true"
-                    }
-                  },
-                  "id": "codex-attack-pulse-on"
-                },
-                {
-                  "command": "EVENT_WAIT",
-                  "args": {
-                    "time": {
-                      "type": "number",
-                      "value": 0.36
-                    },
-                    "frames": {
-                      "type": "number",
-                      "value": 22
-                    }
-                  },
-                  "id": "codex-attack-pulse-window"
-                },
-                {
-                  "command": "EVENT_SET_VALUE",
-                  "args": {
-                    "variable": "31",
-                    "value": {
-                      "type": "false"
-                    }
-                  },
-                  "id": "codex-attack-pulse-off"
+                  "id": "codex-equipped-a-use-bone"
                 }
               ],
-              "false": []
-            }
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "47"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 2
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "43f552a8-acde-4208-9cde-e8ce57062f1c"
+                        },
+                        "id": "codex-equipped-a-use-petal"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "47"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 3
+                            }
+                          },
+                          "__collapseElse": true,
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "c57d4cff-f7d6-4e8a-a8b1-61e8034834e9"
+                              },
+                              "id": "codex-equipped-a-use-nectar"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "codex-equipped-a-if-nectar-equipped"
+                      }
+                    ]
+                  },
+                  "id": "codex-equipped-a-if-petal-equipped"
+                }
+              ]
+            },
+            "id": "codex-equipped-a-if-bone-equipped"
+          }
+        ]
+      }
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "b"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "id": "codex-equipped-b-install-input",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "48"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc700"
+                  },
+                  "id": "codex-equipped-b-use-bone"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "48"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 2
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "43f552a8-acde-4208-9cde-e8ce57062f1c"
+                        },
+                        "id": "codex-equipped-b-use-petal"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "48"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 3
+                            }
+                          },
+                          "__collapseElse": true,
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "c57d4cff-f7d6-4e8a-a8b1-61e8034834e9"
+                              },
+                              "id": "codex-equipped-b-use-nectar"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "codex-equipped-b-if-nectar-equipped"
+                      }
+                    ]
+                  },
+                  "id": "codex-equipped-b-if-petal-equipped"
+                }
+              ]
+            },
+            "id": "codex-equipped-b-if-bone-equipped"
           }
         ]
       }

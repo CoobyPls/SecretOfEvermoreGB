@@ -1,0 +1,43 @@
+{
+  "_resourceType": "sprite",
+  "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc100",
+  "name": "Menu Talon Digits",
+  "symbol": "sprite_menu_dynamic_info",
+  "states": [
+    {
+      "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc101",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc102",
+          "frames": [
+            {
+              "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc103",
+              "tiles": [
+                { "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc110", "x": 0, "y": 0, "sliceX": 48, "sliceY": 0, "flipX": false, "flipY": false, "palette": 0, "paletteIndex": 0, "objPalette": "OBP0", "priority": false },
+                { "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc111", "x": 8, "y": 0, "sliceX": 56, "sliceY": 0, "flipX": false, "flipY": false, "palette": 0, "paletteIndex": 0, "objPalette": "OBP0", "priority": false },
+                { "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc112", "x": 16, "y": 0, "sliceX": 64, "sliceY": 0, "flipX": false, "flipY": false, "palette": 0, "paletteIndex": 0, "objPalette": "OBP0", "priority": false }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 3,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 24,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 24,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuDynamicInfo.png",
+  "width": 256,
+  "height": 8,
+  "checksum": ""
+}

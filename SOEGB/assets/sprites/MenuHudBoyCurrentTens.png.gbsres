@@ -1,5 +1,116 @@
 {
-  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e01", "name": "Menu HUD Boy Current Tens", "symbol": "sprite_menu_hud_boy_current_tens",
-  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e02", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e03", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e04", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e05", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
-  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudBoyCurrentTens.png", "width": 8, "height": 8
+  "_resourceType": "sprite",
+  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e01",
+  "name": "Menu HUD Boy Current Tens",
+  "symbol": "sprite_menu_hud_boy_current_0",
+  "states": [
+    {
+      "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e02",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e03",
+          "frames": [
+            {
+              "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e04",
+              "tiles": [
+                {
+                  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e05",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "e754bed5-ac0f-4f16-aa73-2472168db12e",
+          "frames": [
+            {
+              "id": "b657f627-b89d-4e0f-8d42-15a79068bafd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c538dd9b-6b39-4141-8a7c-1a4973af668b",
+          "frames": [
+            {
+              "id": "36a29678-d62d-4ad5-9520-d43d0c1aff7e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a6ac76bb-101d-45fa-a426-a84a049629d1",
+          "frames": [
+            {
+              "id": "ad32c540-97b2-4887-920a-13303522de6f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "62d083dc-6b4b-4cc5-846f-a972704c70ea",
+          "frames": [
+            {
+              "id": "9ba32d63-e807-49d3-9b7e-5f0b89ab54bb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3396e6c5-1f9e-4d9a-9706-28962e9291dc",
+          "frames": [
+            {
+              "id": "91b5334a-e3fe-4687-892d-4cdb3261dba9",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "475b87cd-c3a2-42af-82cb-9b7e6e340d4e",
+          "frames": [
+            {
+              "id": "e93558f6-97f6-499d-8e0d-f254067bf850",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "57bff329-9927-4d75-b5af-0a1a63d94e55",
+          "frames": [
+            {
+              "id": "3aff519d-b3a2-4e3f-90b4-37cb8605432d",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudBoyCurrentTens.png",
+  "width": 8,
+  "height": 8,
+  "checksum": ""
 }

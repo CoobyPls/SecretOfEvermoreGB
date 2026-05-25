@@ -17,6 +17,7 @@
 #include "input.h"
 #include "events.h"
 #include "simulate_input.h"
+#include "menu_pause_snapshot.h"
 #include "data_manager.h"
 #include "music_manager.h"
 #include "fade_manager.h"
@@ -134,7 +135,12 @@ void process_VM(void) {
                         // load scene
                         far_ptr_t scene;
                         ReadBankedFarPtr(&scene, vm_exception_params_offset, vm_exception_params_bank);
-                        fade_in = !(load_scene(scene.ptr, scene.bank, TRUE));
+                        if (menu_pause_restore_pending) {
+                            fade_in = !(load_scene(scene.ptr, scene.bank, FALSE));
+                            menu_pause_restore();
+                        } else {
+                            fade_in = !(load_scene(scene.ptr, scene.bank, TRUE));
+                        }
                         break;
                     }
                     case EXCEPTION_SAVE: {

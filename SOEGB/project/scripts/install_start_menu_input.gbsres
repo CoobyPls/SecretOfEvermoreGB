@@ -19,6 +19,20 @@
       "children": {
         "true": [
           {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "f4cb2e82-470a-4a91-9819-85b525a47945",
+              "priority": "medium",
+              "wait": false
+            },
+            "id": "codex-menu-play-open-sound"
+          },
+          {
+            "command": "EVENT_MENU_PAUSE_CAPTURE",
+            "args": {},
+            "id": "codex-menu-capture-live-gameplay-state"
+          },
+          {
             "command": "EVENT_SCENE_PUSH_STATE",
             "args": {},
             "id": "codex-menu-store-gameplay-state-native"

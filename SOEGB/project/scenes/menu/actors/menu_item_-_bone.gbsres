@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "e0df2b30-6af2-4b15-8717-2a8c835b0711",
+  "_index": 0,
+  "symbol": "actor_menu_bone_item",
+  "prefabId": "",
+  "name": "Menu Item - Bone",
+  "coordinateType": "tiles",
+  "x": 3,
+  "y": 6,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f07befb6-98a4-4542-8005-8a6f447afb1b",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-bone-display-no-collision"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "description": "Menu display actor only. The 16x16 Bone icon is selectable from the upper inventory panel; MenuSelectedItem value 1 identifies Bone while assigning it to A or B."
+}

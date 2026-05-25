@@ -1,0 +1,201 @@
+{
+  "_resourceType": "script",
+  "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+  "name": "Normalize Menu Browse Item",
+  "symbol": "script_normalize_menu_browse_item",
+  "description": "After browse movement, skips item rows whose actor has moved into an A/B slot or whose consumable count is empty.",
+  "variables": {},
+  "actors": {
+    "0": { "id": "0", "name": "Browse Cursor" }
+  },
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 0 } }, "__collapseElse": true, "__disableElse": true },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": false, "__disableElse": false },
+            "children": {
+              "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 1 } }, "id": "codex-menu-skip-bone-assigned-a-1" }],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": true, "__disableElse": true },
+                  "children": { "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 1 } }, "id": "codex-menu-skip-bone-assigned-b-1" }], "false": [] },
+                  "id": "codex-menu-check-bone-b-1"
+                }
+              ]
+            },
+            "id": "codex-menu-check-bone-a-1"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-normalize-bone-pass-1"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": true, "__disableElse": true },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": { "condition": { "type": "not", "value": { "type": "variable", "value": "20" } }, "__collapseElse": false, "__disableElse": false },
+            "children": {
+              "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-skip-petal-empty-1" }],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": false, "__disableElse": false },
+                  "children": {
+                    "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-skip-petal-assigned-a-1" }],
+                    "false": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": true, "__disableElse": true },
+                        "children": { "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-skip-petal-assigned-b-1" }], "false": [] },
+                        "id": "codex-menu-check-petal-b-1"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-check-petal-a-1"
+                }
+              ]
+            },
+            "id": "codex-menu-check-petal-available-1"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-normalize-petal-pass-1"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": true, "__disableElse": true },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": { "condition": { "type": "not", "value": { "type": "variable", "value": "54" } }, "__collapseElse": false, "__disableElse": false },
+            "children": {
+              "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 0 } }, "id": "codex-menu-skip-nectar-empty-1" }],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 3 } }, "__collapseElse": false, "__disableElse": false },
+                  "children": {
+                    "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 0 } }, "id": "codex-menu-skip-nectar-assigned-a-1" }],
+                    "false": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 3 } }, "__collapseElse": true, "__disableElse": true },
+                        "children": { "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 0 } }, "id": "codex-menu-skip-nectar-assigned-b-1" }], "false": [] },
+                        "id": "codex-menu-check-nectar-b-1"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-check-nectar-a-1"
+                }
+              ]
+            },
+            "id": "codex-menu-check-nectar-available-1"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-normalize-nectar-pass-1"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 0 } }, "__collapseElse": true, "__disableElse": true },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": false, "__disableElse": false },
+            "children": {
+              "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 1 } }, "id": "codex-menu-skip-bone-assigned-a-2" }],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": true, "__disableElse": true },
+                  "children": { "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 1 } }, "id": "codex-menu-skip-bone-assigned-b-2" }], "false": [] },
+                  "id": "codex-menu-check-bone-b-2"
+                }
+              ]
+            },
+            "id": "codex-menu-check-bone-a-2"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-normalize-bone-pass-2"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": true, "__disableElse": true },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": { "condition": { "type": "not", "value": { "type": "variable", "value": "20" } }, "__collapseElse": false, "__disableElse": false },
+            "children": {
+              "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-skip-petal-empty-2" }],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": false, "__disableElse": false },
+                  "children": {
+                    "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-skip-petal-assigned-a-2" }],
+                    "false": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": true, "__disableElse": true },
+                        "children": { "true": [{ "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-skip-petal-assigned-b-2" }], "false": [] },
+                        "id": "codex-menu-check-petal-b-2"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-check-petal-a-2"
+                }
+              ]
+            },
+            "id": "codex-menu-check-petal-available-2"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-normalize-petal-pass-2"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": false, "__disableElse": false },
+      "children": {
+        "true": [
+          { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 2 }, "y": { "type": "number", "value": 9 }, "units": "tiles" }, "id": "codex-menu-browse-visible-petal" },
+          { "command": "EVENT_GBVM_SCRIPT", "args": { "script": "VM_OVERLAY_CLEAR 0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\001ITEM: Heals 5 HP\"\nVM_DISPLAY_TEXT", "references": [{ "type": "font", "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf" }] }, "id": "codex-menu-browse-visible-petal-description" }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": false, "__disableElse": false },
+            "children": {
+              "true": [
+                { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 2 }, "y": { "type": "number", "value": 12 }, "units": "tiles" }, "id": "codex-menu-browse-visible-nectar" },
+                { "command": "EVENT_GBVM_SCRIPT", "args": { "script": "VM_OVERLAY_CLEAR 0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\001\\001ITEM: Heals 10 HP\"\nVM_DISPLAY_TEXT", "references": [{ "type": "font", "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf" }] }, "id": "codex-menu-browse-visible-nectar-description" }
+              ],
+              "false": [
+                { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 2 }, "y": { "type": "number", "value": 6 }, "units": "tiles" }, "id": "codex-menu-browse-visible-bone" },
+                { "command": "EVENT_GBVM_SCRIPT", "args": { "script": "VM_OVERLAY_CLEAR 0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\001\\001WPN: Sword - 1 DMG\"\nVM_DISPLAY_TEXT", "references": [{ "type": "font", "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf" }] }, "id": "codex-menu-browse-visible-bone-description" }
+              ]
+            },
+            "id": "codex-menu-browse-visible-nectar-or-bone"
+          }
+        ]
+      },
+      "id": "codex-menu-browse-render-normalized-choice"
+    }
+  ]
+}

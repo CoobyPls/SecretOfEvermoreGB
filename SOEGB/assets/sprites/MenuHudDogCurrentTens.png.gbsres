@@ -1,5 +1,116 @@
 {
-  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e51", "name": "Menu HUD Dog Current Tens", "symbol": "sprite_menu_hud_dog_current_tens",
-  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e52", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e53", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e54", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e55", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
-  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudDogCurrentTens.png", "width": 8, "height": 8
+  "_resourceType": "sprite",
+  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e51",
+  "name": "Menu HUD Dog Current Tens",
+  "symbol": "sprite_menu_hud_dog_current_0",
+  "states": [
+    {
+      "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e52",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e53",
+          "frames": [
+            {
+              "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e54",
+              "tiles": [
+                {
+                  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e55",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ca280085-9026-4406-a681-bc57f2d95c99",
+          "frames": [
+            {
+              "id": "d0e86a1b-d112-4e40-9c19-1f17827b6abd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "110fbc60-9d3a-4cc0-8045-3610b9359eed",
+          "frames": [
+            {
+              "id": "c65fc8b4-0cdc-40b7-975d-e3a4e9d39627",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d205fea0-734c-4bf9-9725-11515bf78d69",
+          "frames": [
+            {
+              "id": "75ba5b4f-1814-43ce-80a1-c571ba3c67a6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3a2b42bf-ac96-425d-9b9e-dea3c14ae20f",
+          "frames": [
+            {
+              "id": "11e02df2-e205-440f-8ee4-3e57078fe2e2",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e6623a73-325d-45d5-a680-21853ad5dbd4",
+          "frames": [
+            {
+              "id": "b86bd5d7-2fd4-4eb1-afeb-d77227fcaed6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fd3136bb-7d9d-4db2-9a44-b069a5871703",
+          "frames": [
+            {
+              "id": "d38f4a35-7ec7-4f4e-82e8-38bfb5d39a5d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "22a2ad02-4adc-4738-b4c1-7d81387268e5",
+          "frames": [
+            {
+              "id": "4dc1a6b4-31a9-4515-8f9f-aa783c5ac0f4",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudDogCurrentTens.png",
+  "width": 8,
+  "height": 8,
+  "checksum": ""
 }

@@ -1,5 +1,116 @@
 {
-  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e41", "name": "Menu HUD Boy Max Ones", "symbol": "sprite_menu_hud_boy_max_ones",
-  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e42", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e43", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e44", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e45", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
-  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudBoyMaxOnes.png", "width": 8, "height": 8
+  "_resourceType": "sprite",
+  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e41",
+  "name": "Menu HUD Boy Max Ones",
+  "symbol": "sprite_menu_hud_boy_max_one",
+  "states": [
+    {
+      "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e42",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e43",
+          "frames": [
+            {
+              "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e44",
+              "tiles": [
+                {
+                  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e45",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "94790fa3-f4f0-4cdb-8f9a-7184986fcc0e",
+          "frames": [
+            {
+              "id": "c6760350-6b50-41b4-8ca4-22eed1229752",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6ba06d1a-363f-41a6-8e9e-dc16abb0811b",
+          "frames": [
+            {
+              "id": "8d0ea1f1-32ad-41fe-80e0-510ea4841902",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1770fd07-6060-4549-b7ec-ce97412e0d52",
+          "frames": [
+            {
+              "id": "e980665f-7758-4818-b9c3-34f9d91635c3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9f9e5528-9f76-4f24-8c68-d79e5503fb15",
+          "frames": [
+            {
+              "id": "75a2a896-3b52-47f8-9ebb-699489885fef",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c92006c0-055e-4009-8941-b9ea75e53885",
+          "frames": [
+            {
+              "id": "0e7cf385-fb3c-43ac-9fd1-f926af6616eb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "24bd4b6e-f73a-40c7-88fe-dc8222f40792",
+          "frames": [
+            {
+              "id": "10025275-be89-4687-9714-28bbdf867612",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "811bd7ae-3e1b-4250-9a83-4c0a6f78e415",
+          "frames": [
+            {
+              "id": "7a42744a-4d3a-49fc-b233-742bf38c66b5",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudBoyMaxOnes.png",
+  "width": 8,
+  "height": 8,
+  "checksum": ""
 }

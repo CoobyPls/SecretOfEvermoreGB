@@ -1,5 +1,116 @@
 {
-  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e31", "name": "Menu HUD Boy Max Tens", "symbol": "sprite_menu_hud_boy_max_tens",
-  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e32", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e33", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e34", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e35", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
-  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudBoyMaxTens.png", "width": 8, "height": 8
+  "_resourceType": "sprite",
+  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e31",
+  "name": "Menu HUD Boy Max Tens",
+  "symbol": "sprite_menu_hud_boy_max_ten",
+  "states": [
+    {
+      "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e32",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e33",
+          "frames": [
+            {
+              "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e34",
+              "tiles": [
+                {
+                  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e35",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "76fbe3a6-a31a-4422-8824-bc9c4b74f3a7",
+          "frames": [
+            {
+              "id": "b627a846-d59f-470c-ae5f-66ff586c39fb",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "acc60a1f-9c07-4273-8c7d-7ad6d89ebe24",
+          "frames": [
+            {
+              "id": "5777a5f1-5747-494f-a012-d02f6c7117fd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3c4c652f-e7b2-4256-8ffd-e61181b56552",
+          "frames": [
+            {
+              "id": "9d429c3f-9ed4-4605-ac54-3f5496e04fcd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "04872591-4205-4fee-9c92-72f3136b532a",
+          "frames": [
+            {
+              "id": "910494a6-3fac-4686-adee-01aabb3c6fff",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8353637f-9796-4569-9c48-2d8f5cdb56fb",
+          "frames": [
+            {
+              "id": "f265a5d2-b28f-40e4-b99c-d111aab5f4a5",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "56d47f9e-7488-4ef4-bfeb-62c424e370d8",
+          "frames": [
+            {
+              "id": "11f09dad-e5f3-405e-89f9-92b310683c6e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9919e87d-ab31-43bf-8ff6-de3fb250c257",
+          "frames": [
+            {
+              "id": "2780534e-90e2-4e56-9553-6d265c70c6a6",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudBoyMaxTens.png",
+  "width": 8,
+  "height": 8,
+  "checksum": ""
 }

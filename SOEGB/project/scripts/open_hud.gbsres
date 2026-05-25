@@ -3,7 +3,7 @@
   "id": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642",
   "name": "Open HUD",
   "symbol": "script_open_hud",
-  "description": "Shows the gameplay HUD overlay and installs the Start-button pause menu entry point while the player is in gameplay scenes.",
+  "description": "Shows the persistent two-row gameplay HUD matching the Menu header's party and A/B-slot content, then installs the Start-button pause menu entry point.",
   "variables": {},
   "actors": {},
   "script": [
@@ -24,7 +24,122 @@
         "x": 0,
         "y": 16
       },
-      "id": "eada542d-f1ae-4149-9ff5-05eeef20a4a8"
+      "id": "codex-gameplay-show-two-row-bottom-hud-overlay"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "50"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "47",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "codex-gameplay-default-a-item-bone"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "50",
+              "value": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "codex-gameplay-default-a-icon-bone"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-gameplay-seed-a-slot-from-menu-model"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "51"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "51",
+              "value": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "codex-gameplay-default-b-icon-empty"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-gameplay-seed-b-slot-from-menu-model"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "57"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "56",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            },
+            "id": "codex-gameplay-default-dog-hp"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "57",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            },
+            "id": "codex-gameplay-default-dog-max-hp"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-gameplay-seed-dog-health"
     },
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",

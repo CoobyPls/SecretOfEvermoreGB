@@ -32,6 +32,69 @@
               ]
             }
           ]
+        },
+        {
+          "id": "1a72c494-3f97-488e-b296-3d7e446937c6",
+          "frames": [
+            {
+              "id": "0fea4548-c1d3-4ef0-b322-4b6bb6bfdda8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "968029f1-fcd5-436e-9d29-bf717fb77217",
+          "frames": [
+            {
+              "id": "d8691c76-68dc-42c3-8dd3-66bb527d0de6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "bc6b115f-aeae-4255-92dc-3107d6164201",
+          "frames": [
+            {
+              "id": "92b7c289-8868-48c5-9010-50f95821769c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a2419d2d-86dc-4290-ae71-7022bef4c856",
+          "frames": [
+            {
+              "id": "7e899dc9-bc5c-4c1f-8201-894c7109e0ab",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3f79de56-2f77-41ad-88cf-d1a92a12f164",
+          "frames": [
+            {
+              "id": "45dd2c83-8966-4909-95c4-7d5c2ba6cab6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "14d570f3-f8f0-41f2-94fe-c8ba9b422efd",
+          "frames": [
+            {
+              "id": "fb6b2d92-3e91-4520-b51e-8850814965fc",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6ee2c7da-2ffd-4a6e-9187-de5b974a5d6d",
+          "frames": [
+            {
+              "id": "bec7f32a-45ec-49d0-9680-f29188cac611",
+              "tiles": []
+            }
+          ]
         }
       ]
     }
@@ -48,5 +111,6 @@
   "animSpeed": 15,
   "filename": "MenuHudSlotA.png",
   "width": 8,
-  "height": 8
+  "height": 8,
+  "checksum": ""
 }

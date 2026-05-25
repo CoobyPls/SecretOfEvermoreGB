@@ -1,5 +1,116 @@
 {
-  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e91", "name": "Menu HUD Dog Max Ones", "symbol": "sprite_menu_hud_dog_max_ones",
-  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e92", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e93", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e94", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e95", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
-  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudDogMaxOnes.png", "width": 8, "height": 8
+  "_resourceType": "sprite",
+  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e91",
+  "name": "Menu HUD Dog Max Ones",
+  "symbol": "sprite_menu_hud_dog_max_one",
+  "states": [
+    {
+      "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e92",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e93",
+          "frames": [
+            {
+              "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e94",
+              "tiles": [
+                {
+                  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e95",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "e840f318-f46c-4872-8eba-7d07fc65cec8",
+          "frames": [
+            {
+              "id": "0cb1dbb7-fa3c-43c5-b88b-d5767469c043",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b7ad7ca9-f7e5-4bb9-b739-c733cf56895e",
+          "frames": [
+            {
+              "id": "9d91bff0-33d3-4a93-8db5-6948b8033402",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0b1ff0a7-2026-4a82-ac9d-c92c80256adb",
+          "frames": [
+            {
+              "id": "9875fd45-070a-4f6e-999e-b545db93aa10",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c70b77f6-0298-419d-b385-eaa9058639e8",
+          "frames": [
+            {
+              "id": "1e11c5d3-6d9e-44de-9461-6910b7c49fd3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9355337f-d239-402c-a8f1-a81920a600e8",
+          "frames": [
+            {
+              "id": "ad6a6f4a-05a6-4019-9eb3-024e1d1e8e1b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "16ec3c93-bca2-4bb6-ba9b-2f52219a4b5c",
+          "frames": [
+            {
+              "id": "d1724a8c-713c-4636-a73a-a9cf2725e708",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7b6953cb-2065-4650-831a-cf3aef068a8e",
+          "frames": [
+            {
+              "id": "69654737-3970-413f-9339-c0012ca0b51e",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudDogMaxOnes.png",
+  "width": 8,
+  "height": 8,
+  "checksum": ""
 }

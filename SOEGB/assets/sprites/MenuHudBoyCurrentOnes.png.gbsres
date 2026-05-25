@@ -1,5 +1,116 @@
 {
-  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e11", "name": "Menu HUD Boy Current Ones", "symbol": "sprite_menu_hud_boy_current_ones",
-  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e12", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e13", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e14", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e15", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
-  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudBoyCurrentOnes.png", "width": 8, "height": 8
+  "_resourceType": "sprite",
+  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e11",
+  "name": "Menu HUD Boy Current Ones",
+  "symbol": "sprite_menu_hud_boy_current",
+  "states": [
+    {
+      "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e12",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e13",
+          "frames": [
+            {
+              "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e14",
+              "tiles": [
+                {
+                  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e15",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "00921605-66be-4fa7-b318-a6562c7b2a8c",
+          "frames": [
+            {
+              "id": "65de16f5-62d8-429d-8824-cb45e05b28a6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f07695fc-f6e8-4a51-8982-2c13fbcd4114",
+          "frames": [
+            {
+              "id": "9314a31a-2bfb-4194-ae59-9d0965c56065",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c1810141-bd1e-469a-b6fe-7f375f7c4269",
+          "frames": [
+            {
+              "id": "0efd6676-408a-4273-821a-09ad4d8525f8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "439e826c-b27b-4215-98ff-4b008fcd8fd2",
+          "frames": [
+            {
+              "id": "575dc29b-5deb-4d27-ad28-5f044385cfc4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3f0ee125-1224-4c32-b908-4e3e91d48ec4",
+          "frames": [
+            {
+              "id": "99c130f8-199b-4cdc-b8f1-323da110ab3d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b5dd789a-2545-4b84-a95d-0aac28884d32",
+          "frames": [
+            {
+              "id": "9ea3ffc8-1763-4e31-84a6-f234060ed291",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "bfbaabea-4118-4262-b0bf-5d068e98c58b",
+          "frames": [
+            {
+              "id": "b6ba9911-a561-47c1-997d-cf8573b082cd",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudBoyCurrentOnes.png",
+  "width": 8,
+  "height": 8,
+  "checksum": ""
 }

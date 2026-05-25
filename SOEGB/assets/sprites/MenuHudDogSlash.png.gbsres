@@ -1,5 +1,116 @@
 {
-  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e71", "name": "Menu HUD Dog Slash", "symbol": "sprite_menu_hud_dog_slash",
-  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e72", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e73", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e74", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e75", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
-  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudDogSlash.png", "width": 8, "height": 8
+  "_resourceType": "sprite",
+  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e71",
+  "name": "Menu HUD Dog Slash",
+  "symbol": "sprite_menu_hud_dog_slash",
+  "states": [
+    {
+      "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e72",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e73",
+          "frames": [
+            {
+              "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e74",
+              "tiles": [
+                {
+                  "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e75",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6ecd9dd8-44c6-4bad-bd36-43b9330abcea",
+          "frames": [
+            {
+              "id": "c58d87e1-755c-41a5-b2ef-87879d049f45",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "31d1f8bb-babc-4b8e-b76a-f6e28eabfe35",
+          "frames": [
+            {
+              "id": "45a17e2a-3685-44ad-9d03-f5795a820c65",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e61d7a2d-6c1e-4b14-ac74-b4193ee38f60",
+          "frames": [
+            {
+              "id": "b9039e92-6f09-4732-9ea3-929b62075b99",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "57bb398e-4f41-45d1-bc93-b6966444083d",
+          "frames": [
+            {
+              "id": "e124e1e5-ccee-427d-9b4a-acee30c7a8d8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a756b66c-0316-47a1-97fa-f29b171566de",
+          "frames": [
+            {
+              "id": "a37c2729-ad69-407e-9227-05c2ed890e51",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e1ba35c8-52b2-48a5-b20a-ace261941388",
+          "frames": [
+            {
+              "id": "079fa238-3a87-4ab1-b432-3bbcd2acbdb0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e005c605-8e94-4363-9396-ca5dcd18d7da",
+          "frames": [
+            {
+              "id": "69fd664b-f4f4-4d00-be58-2aa5825d3f02",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudDogSlash.png",
+  "width": 8,
+  "height": 8,
+  "checksum": ""
 }

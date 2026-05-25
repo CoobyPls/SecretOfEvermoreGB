@@ -302,6 +302,41 @@
       "symbol": "var_menudogmaxhponestile"
     },
     {
+      "id": "66",
+      "name": "GameplayAIconChar",
+      "symbol": "var_gameplayaiconchar"
+    },
+    {
+      "id": "67",
+      "name": "GameplayBIconChar",
+      "symbol": "var_gameplaybiconchar"
+    },
+    {
+      "id": "68",
+      "name": "MenuPetalCountTile",
+      "symbol": "var_menupetalcounttile"
+    },
+    {
+      "id": "69",
+      "name": "MenuNectarCountTile",
+      "symbol": "var_menunectarcounttile"
+    },
+    {
+      "id": "70",
+      "name": "MenuTalonHundredsTile",
+      "symbol": "var_menutalonhundredstile"
+    },
+    {
+      "id": "71",
+      "name": "MenuTalonTensTile",
+      "symbol": "var_menutalonstenstile"
+    },
+    {
+      "id": "72",
+      "name": "MenuTalonOnesTile",
+      "symbol": "var_menutalononestile"
+    },
+    {
       "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
       "name": "Local 0",
       "symbol": "var_local_1"

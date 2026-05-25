@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "c550eeaf-f6df-4c6f-a58c-c37161031007",
+  "_index": 13,
+  "symbol": "actor_menu_hud_dog_current__0",
+  "prefabId": "",
+  "name": "Menu HUD - Dog HP Current Ones",
+  "coordinateType": "tiles",
+  "x": 4,
+  "y": 1,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "0ad51c8c-299b-4be2-bf4e-fb0575508e61",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-dog-current-ones-no-collision"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "description": "Live Dog HP display digit. Renders the ones digit of DogHP from MenuDogHPOnesTile."
+}
