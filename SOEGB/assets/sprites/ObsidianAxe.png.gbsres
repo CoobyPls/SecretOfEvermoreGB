@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "3c34371f-c84f-4c3c-abb6-f2d7401ff7e2",
+  "name": "ObsidianAxe",
+  "symbol": "sprite_obsidianaxe",
+  "states": [
+    {
+      "id": "91d5e387-6d4a-4407-8238-aed986659006",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "ffbb5ae2-bf07-4b6f-88f6-b005e3c6a624",
+          "frames": [
+            {
+              "id": "c33a7422-3878-44f1-a210-1e3bf5c4f3e8",
+              "tiles": [
+                {
+                  "id": "8592d1a0-3fe4-4564-ad06-42e6db61c8d5",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "d701177e-635f-4e38-a553-049bd4b3b6c4",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4044ab64-59ac-47e8-a79f-cf998878ace1",
+          "frames": [
+            {
+              "id": "e8054682-3298-4e2f-b790-c2383f589352",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "3be18606-aa8b-46bd-91d3-86b5fd1d925d",
+          "frames": [
+            {
+              "id": "61518e46-2afc-4d4c-8e90-c2fa4a07f324",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "602921b3-4d7c-461a-afb0-0446ac9cca45",
+          "frames": [
+            {
+              "id": "63f49b0c-db94-44fb-a925-8004f656a1d9",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9ee21fb7-28a7-4812-a299-0439c8b6df02",
+          "frames": [
+            {
+              "id": "cc34a792-477a-4464-891e-8e9182564883",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "64708e7e-6ab6-4c8a-9fb4-b16e991ceba5",
+          "frames": [
+            {
+              "id": "33ceeb35-47bc-4625-b295-54fbd06eb084",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "53091298-a704-419c-9f14-d5d09e75a647",
+          "frames": [
+            {
+              "id": "5a880f1e-53c0-4933-9e9e-4d3451729ad2",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "db5bc06a-de95-4266-8d24-56f924fb4f42",
+          "frames": [
+            {
+              "id": "d8807593-eb70-4e4e-a578-99f3879a70b4",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "ObsidianAxe.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "c39982074b831c08a819e98844a05aac75c6a66c"
+}

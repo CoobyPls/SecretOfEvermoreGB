@@ -39,13 +39,6 @@
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
-      },
-      "id": "codex-hud-after-text-open"
-    },
-    {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
         "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
       },
       "id": "codex-hud-after-text-update"

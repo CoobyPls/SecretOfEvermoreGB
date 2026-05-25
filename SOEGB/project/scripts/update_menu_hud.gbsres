@@ -3,7 +3,7 @@
   "id": "c4ef61a1-e7fb-485c-a5cc-455efe7587a2",
   "name": "Update Menu HUD",
   "symbol": "script_update_menu_hud",
-  "description": "Redraws the Menu scene top HUD values: current HP, max HP, and the equipped icon character.",
+  "description": "Deprecated for the scene-based menu until values can render without a full-screen overlay. Font mapping is retained for later use: GBS Mono HUD Petal=127, Bone=141, empty box=142, Talon=143, Nectar=156.",
   "variables": {},
   "actors": {},
   "script": [
@@ -11,7 +11,7 @@
       "command": "EVENT_GBVM_SCRIPT",
       "id": "codex-menu-hud-gbvm-redraw",
       "args": {
-        "script": "VM_LOAD_TEXT 3\n.dw VAR_PLAYERHP\n.dw VAR_PLAYERMAXHP\n.dw VAR_EQUIPPEDICON\n.asciz \"\\002\\002\\003\\001\\001HP %D2/%D2\\003\\021\\001%c\"\nVM_DISPLAY_TEXT",
+        "script": "VM_LOAD_TEXT 8\n.dw VAR_PLAYERHP\n.dw VAR_PLAYERMAXHP\n.dw VAR_EQUIPPEDAICON\n.dw VAR_EQUIPPEDBICON\n.dw VAR_MENUTALONICON\n.dw VAR_PLAYERTALONS\n.dw VAR_MENUPETALICON\n.dw VAR_ITEMNUMPETAL\n.asciz \"\\002\\002\\003\\001\\001HP %D2/%D2\\003\\016\\001%c\\003\\022\\001%c\\003\\016\\004%c%D3\\003\\006\\011%c%D2\"\nVM_DISPLAY_TEXT",
         "references": [
           {
             "type": "variable",
@@ -23,7 +23,27 @@
           },
           {
             "type": "variable",
-            "id": "14"
+            "id": "50"
+          },
+          {
+            "type": "variable",
+            "id": "51"
+          },
+          {
+            "type": "variable",
+            "id": "52"
+          },
+          {
+            "type": "variable",
+            "id": "19"
+          },
+          {
+            "type": "variable",
+            "id": "53"
+          },
+          {
+            "type": "variable",
+            "id": "20"
           },
           {
             "type": "font",

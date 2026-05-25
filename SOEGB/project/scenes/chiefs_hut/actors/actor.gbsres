@@ -16,7 +16,119 @@
   "collisionExtraFlags": [],
   "prefabScriptOverrides": {},
   "symbol": "actor_16",
-  "script": [],
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "15"
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Well I'll be!\nAn outsider! At a\ntime like this?",
+                "Wait, I know those\neyes! Elizabeth\ngrew up, it seems!",
+                "What a pleasant\nsurprise! However\nyour timimg...",
+                "It could not have\nbeen any worse had\nyou scripted it!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 5,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "28c3e1c1-238f-4a28-80a0-d26dc89c94db"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_TO",
+            "args": {
+              "__section": "movement",
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 5
+              },
+              "y": {
+                "type": "number",
+                "value": 7
+              },
+              "collideWith": [
+                "walls"
+              ],
+              "lockDirection": [],
+              "moveType": "horizontal"
+            },
+            "id": "dae82026-bc3f-422a-9867-2bfae699204f"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_DIRECTION",
+            "args": {
+              "actorId": "$self$",
+              "direction": {
+                "type": "direction",
+                "value": "right"
+              }
+            },
+            "id": "f81ccdf5-ffbe-43da-a735-88af499b9b9b"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Since the Chief \nand those with\nher departed,\nall that plagued",
+                "Evermore's early\nexistence did too.\nMany peaceful\ncycles have passed",
+                "since then.\n\nHowever, all at \nonce very recently",
+                "Evermore seemed \nto shift. Surely\nyou can see as\nwell for yourself!",
+                "With that, dangers\nreturned as well. \nOur path to the \nBugmuck has been",
+                "barricaded by\nboulders, and a\ngreat chasm.\nIf you are to",
+                "traverse any more\nof Evermore than\nthis village, you\nwill need to go",
+                "North from here,\nthrough the old\nMammoth Graveyard\nto the swamps,",
+                "and procure some\nMud Peppers. They\nhave interesting\nproperties which",
+                "will allow us to \nclear the boulders\nblocking the \nBugmuck, and",
+                "anywhere else!\nGood Luck, child\nof Fire Eyes."
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "c57d458f-57e5-4bda-8be1-77d2bff87c92"
+          }
+        ],
+        "false": []
+      },
+      "id": "df5cde42-82c0-4282-b725-fd4580e72c66"
+    }
+  ],
   "startScript": [],
   "updateScript": [],
   "hit1Script": [],

@@ -3,7 +3,7 @@
   "id": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642",
   "name": "Open HUD",
   "symbol": "script_open_hud",
-  "description": "Shows the two-line GBVM overlay HUD area.",
+  "description": "Shows the gameplay HUD overlay and installs the Start-button pause menu entry point while the player is in gameplay scenes.",
   "variables": {},
   "actors": {},
   "script": [
@@ -25,6 +25,13 @@
         "y": 16
       },
       "id": "eada542d-f1ae-4149-9ff5-05eeef20a4a8"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b3900278-94ee-4e75-9c74-7c3810a82ca6"
+      },
+      "id": "codex-gameplay-install-start-menu-input"
     }
   ]
 }

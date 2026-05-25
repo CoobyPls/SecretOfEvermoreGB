@@ -3,8 +3,46 @@
   "id": "b3900278-94ee-4e75-9c74-7c3810a82ca6",
   "name": "Install Start Menu Input",
   "symbol": "script_install_start_menu_i",
-  "description": "Disabled rollback copy. The previous scene-stack menu entry script is backed up because it blocked project loading.",
+  "description": "Gameplay pause-menu entry point. Attaches Start using GB Studio's native scene stack: store current gameplay scene state, then fade into Menu. No extended stack plugin is used.",
   "variables": {},
   "actors": {},
-  "script": []
+  "script": [
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SCENE_PUSH_STATE",
+            "args": {},
+            "id": "codex-menu-store-gameplay-state-native"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "6bb86bc2-2a4b-4358-b08b-520734de382e",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "direction": "down",
+              "fadeSpeed": "2"
+            },
+            "id": "codex-menu-fade-to-menu-scene"
+          }
+        ]
+      },
+      "id": "codex-menu-attach-start-button"
+    }
+  ]
 }

@@ -23,7 +23,8 @@
           "type": "number",
           "value": 3
         },
-        "__comment": true
+        "__comment": false,
+        "__collapse": false
       },
       "id": "7f06a65d-8f18-49e2-b355-2fcffcf75436",
       "children": {}
@@ -32,7 +33,8 @@
       "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
       "args": {
         "actorId": "$self$",
-        "__comment": true
+        "__comment": false,
+        "__collapse": false
       },
       "id": "9c2e3cb8-ed47-49b6-919b-4048923a813f",
       "children": {}
@@ -41,7 +43,7 @@
       "command": "EVENT_ACTOR_SHOW",
       "args": {
         "actorId": "$self$",
-        "__comment": true
+        "__comment": false
       },
       "id": "cb70a6ce-9584-459b-b664-c67c10f1f7bc",
       "children": {}
@@ -60,7 +62,7 @@
           "type": "number",
           "value": 1
         },
-        "__comment": true
+        "__comment": false
       },
       "children": {
         "true": [
@@ -72,7 +74,7 @@
               "comparator": 0,
               "__collapseElse": false,
               "__disableElse": false,
-              "__comment": true
+              "__comment": false
             },
             "id": "61d35765-be9f-4f06-8c36-00c2e8ffa5c5",
             "children": {
@@ -80,7 +82,7 @@
                 {
                   "command": "EVENT_GROUP",
                   "args": {
-                    "__comment": true
+                    "__comment": false
                   },
                   "children": {
                     "true": [
@@ -94,8 +96,8 @@
                             "value": 3
                           },
                           "otherActorId": "$self$",
-                          "__collapseElse": true,
-                          "__comment": true
+                          "__collapseElse": false,
+                          "__comment": false
                         },
                         "children": {
                           "true": [
@@ -116,7 +118,7 @@
                                 "__collapseElse": true,
                                 "__collapse": false,
                                 "__disableElse": true,
-                                "__comment": true
+                                "__comment": false
                               },
                               "children": {
                                 "true": [
@@ -124,7 +126,7 @@
                                     "command": "EVENT_GROUP",
                                     "args": {
                                       "__collapse": false,
-                                      "__comment": true
+                                      "__comment": false
                                     },
                                     "children": {
                                       "true": [
@@ -136,8 +138,8 @@
                                               "type": "direction",
                                               "value": "left"
                                             },
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "ef86fd72-a969-4d4e-94f1-f53943faa5ef",
                                           "children": {}
@@ -148,7 +150,7 @@
                                             "actorId": "$self$",
                                             "speed": 15,
                                             "__collapse": false,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "5a937a65-f2a5-4dfc-bb69-1aa6d79c30c3",
                                           "children": {}
@@ -159,8 +161,8 @@
                                             "actorId": "$self$",
                                             "spriteStateId": "Snap",
                                             "loopAnim": false,
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "c0164733-62dd-468a-a5db-b0da9a36f8d4",
                                           "children": {}
@@ -175,7 +177,7 @@
                                             "duration": 0.5,
                                             "wait": true,
                                             "effect": 0,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "7996dab2-8151-4742-aedb-81617a3d7070"
                                         },
@@ -205,7 +207,7 @@
                                               "player"
                                             ],
                                             "__collapse": false,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "24344bc7-057c-4554-956b-9f6a53133443",
                                           "children": {}
@@ -221,8 +223,8 @@
                                               "type": "number",
                                               "value": 1
                                             },
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "0c2a36e7-b6ce-4164-af8b-ee6d0941699c",
                                           "children": {}
@@ -232,8 +234,8 @@
                                           "args": {
                                             "actorId": "$self$",
                                             "speed": 15,
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "a7f102e3-2071-4ca2-8405-25a87f951dd8",
                                           "children": {}
@@ -244,8 +246,8 @@
                                             "actorId": "$self$",
                                             "spriteStateId": "",
                                             "loopAnim": false,
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "1eab36af-6d70-402c-a08d-22291e81d5d0",
                                           "children": {}
@@ -276,7 +278,7 @@
                                 "__collapseElse": true,
                                 "__collapse": false,
                                 "__disableElse": true,
-                                "__comment": true
+                                "__comment": false
                               },
                               "children": {
                                 "true": [
@@ -284,7 +286,7 @@
                                     "command": "EVENT_GROUP",
                                     "args": {
                                       "__collapse": false,
-                                      "__comment": true
+                                      "__comment": false
                                     },
                                     "children": {
                                       "true": [
@@ -297,7 +299,7 @@
                                               "value": "up"
                                             },
                                             "__collapse": false,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "d812a797-b170-4630-aec1-421347c7f1f2",
                                           "children": {}
@@ -308,7 +310,7 @@
                                             "actorId": "$self$",
                                             "speed": 15,
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "4bec6e92-8caa-401e-92da-6ab51c8ddaa2",
                                           "children": {}
@@ -320,7 +322,7 @@
                                             "spriteStateId": "Snap",
                                             "loopAnim": false,
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "a218a582-b99a-4ae2-b484-ceaeb67ed39c",
                                           "children": {}
@@ -335,7 +337,7 @@
                                             "duration": 0.5,
                                             "wait": true,
                                             "effect": 0,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "4efbcd31-9ed9-4a51-ada8-ce05e3e2e6bb"
                                         },
@@ -365,7 +367,7 @@
                                               "player"
                                             ],
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "28fbbb48-1348-41ed-9877-60a08954f9af",
                                           "children": {}
@@ -382,7 +384,7 @@
                                               "value": 1
                                             },
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "48613ad3-d511-42da-a44b-29928fdc5a3b",
                                           "children": {}
@@ -393,7 +395,7 @@
                                             "actorId": "$self$",
                                             "speed": 15,
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "352f4902-5054-433c-9b30-b5281c1e328b",
                                           "children": {}
@@ -405,7 +407,7 @@
                                             "spriteStateId": "",
                                             "loopAnim": false,
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "5c321998-0645-401e-96d8-63029dda436f",
                                           "children": {}
@@ -436,7 +438,7 @@
                                 "__collapseElse": true,
                                 "__collapse": false,
                                 "__disableElse": true,
-                                "__comment": true
+                                "__comment": false
                               },
                               "children": {
                                 "true": [
@@ -444,7 +446,7 @@
                                     "command": "EVENT_GROUP",
                                     "args": {
                                       "__collapse": false,
-                                      "__comment": true
+                                      "__comment": false
                                     },
                                     "children": {
                                       "true": [
@@ -457,7 +459,7 @@
                                               "value": "down"
                                             },
                                             "__collapse": false,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "cdded820-7295-4560-8ac0-f769dd16d355",
                                           "children": {}
@@ -468,7 +470,7 @@
                                             "actorId": "$self$",
                                             "speed": 15,
                                             "__collapse": false,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "6e0f213f-457b-46ab-b56f-bc741b88875a",
                                           "children": {}
@@ -479,8 +481,8 @@
                                             "actorId": "$self$",
                                             "spriteStateId": "Snap",
                                             "loopAnim": false,
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "fe90ec87-6250-4cd9-a23c-0c19ac1cb161",
                                           "children": {}
@@ -495,7 +497,7 @@
                                             "duration": 0.5,
                                             "wait": true,
                                             "effect": 0,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "c2d67dcd-dc44-49dc-9526-88e2d19ebc13"
                                         },
@@ -524,8 +526,8 @@
                                             "collisionMask": [
                                               "player"
                                             ],
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "5be0f666-91fb-4a68-82ea-672c83b92f66",
                                           "children": {}
@@ -541,8 +543,8 @@
                                               "type": "number",
                                               "value": 1
                                             },
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "568b9eb6-4716-444f-a10a-81f36a60d567",
                                           "children": {}
@@ -552,8 +554,8 @@
                                           "args": {
                                             "actorId": "$self$",
                                             "speed": 15,
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "be2e7efe-f9c3-455e-ac22-713bb9fc9a93",
                                           "children": {}
@@ -564,8 +566,8 @@
                                             "actorId": "$self$",
                                             "spriteStateId": "",
                                             "loopAnim": false,
-                                            "__collapse": true,
-                                            "__comment": true
+                                            "__collapse": false,
+                                            "__comment": false
                                           },
                                           "id": "12d3c6d7-fc45-46e6-8d98-2865403006ba",
                                           "children": {}
@@ -596,7 +598,7 @@
                                 "__collapseElse": true,
                                 "__collapse": false,
                                 "__disableElse": true,
-                                "__comment": true
+                                "__comment": false
                               },
                               "children": {
                                 "true": [
@@ -604,7 +606,7 @@
                                     "command": "EVENT_GROUP",
                                     "args": {
                                       "__collapse": false,
-                                      "__comment": true
+                                      "__comment": false
                                     },
                                     "children": {
                                       "true": [
@@ -617,7 +619,7 @@
                                               "value": "right"
                                             },
                                             "__collapse": false,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "a7901f7b-6e34-4740-a8e4-0a97f3f3c118",
                                           "children": {}
@@ -628,7 +630,7 @@
                                             "actorId": "$self$",
                                             "speed": 15,
                                             "__collapse": false,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "66bde323-7fbc-45d5-ae07-7d408f3c779f",
                                           "children": {}
@@ -640,7 +642,7 @@
                                             "spriteStateId": "Snap",
                                             "loopAnim": false,
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "5317cfcb-3b85-4241-a6ea-066c122292a3",
                                           "children": {}
@@ -655,7 +657,7 @@
                                             "duration": 0.5,
                                             "wait": true,
                                             "effect": 0,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "f1dcfd13-98fd-47f7-bdc4-6a180b2b7fd4"
                                         },
@@ -685,7 +687,7 @@
                                               "player"
                                             ],
                                             "__collapse": false,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "953f7c86-d541-4174-a256-7dd5ecbaa07c",
                                           "children": {}
@@ -702,7 +704,7 @@
                                               "value": 1
                                             },
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "ec9c1ea3-9c7e-4fa3-8c9b-421bb4d9d465",
                                           "children": {}
@@ -713,7 +715,7 @@
                                             "actorId": "$self$",
                                             "speed": 15,
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "e9d8671d-b12b-4386-a653-dcc4c05b60af",
                                           "children": {}
@@ -725,7 +727,7 @@
                                             "spriteStateId": "",
                                             "loopAnim": false,
                                             "__collapse": true,
-                                            "__comment": true
+                                            "__comment": false
                                           },
                                           "id": "f7d9c186-1a21-4946-9baf-9fd03269a4e9",
                                           "children": {}
@@ -751,7 +753,7 @@
                                 "value": "0",
                                 "minValue": "0",
                                 "maxValue": 3,
-                                "__comment": true
+                                "__comment": false
                               },
                               "id": "codex-flower-reset-valid-attack-direction",
                               "children": {}
@@ -776,7 +778,7 @@
                     "duration": 0.5,
                     "wait": true,
                     "effect": 0,
-                    "__comment": true
+                    "__comment": false
                   },
                   "id": "57670517-c2d4-44ce-a779-c7fadfe33a59",
                   "children": {}
@@ -790,7 +792,7 @@
                     "speed": 2,
                     "time": 0.35,
                     "frames": 21,
-                    "__comment": true
+                    "__comment": false
                   },
                   "id": "2313b8b2-0904-42ec-a69c-c0f391d382cc",
                   "children": {}
@@ -799,7 +801,7 @@
                   "command": "EVENT_ACTOR_DEACTIVATE",
                   "args": {
                     "actorId": "$self$",
-                    "__comment": true
+                    "__comment": false
                   },
                   "id": "b13006b0-5c34-426e-8260-11d94fecf093",
                   "children": {}
@@ -816,7 +818,7 @@
                       "type": "number",
                       "value": 0
                     },
-                    "__comment": true
+                    "__comment": false
                   },
                   "id": "ffc2f27a-c257-4f20-b5fe-f314b2bcaf7d",
                   "children": {}
@@ -850,7 +852,8 @@
         },
         "$actor[1]$": "player",
         "$actor[0]$": "$self$",
-        "__comment": true
+        "__comment": false,
+        "__collapse": false
       },
       "id": "7e520613-1ba8-4ef7-b8eb-af0e9e9f00d2",
       "children": {}

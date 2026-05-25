@@ -1,0 +1,5 @@
+{
+  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e91", "name": "Menu HUD Dog Max Ones", "symbol": "sprite_menu_hud_dog_max_ones",
+  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e92", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e93", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e94", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e95", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
+  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudDogMaxOnes.png", "width": 8, "height": 8
+}

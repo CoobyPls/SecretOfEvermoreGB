@@ -16,7 +16,15 @@
   "symbol": "scene_8",
   "x": 272,
   "y": 224,
-  "script": [],
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b3900278-94ee-4e75-9c74-7c3810a82ca6"
+      },
+      "id": "codex-chiefs-hut-install-start-menu-input"
+    }
+  ],
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": []

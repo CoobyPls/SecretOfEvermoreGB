@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "1cff09b8-5f47-4634-87c4-954bab617dbd",
+  "name": "WoodenBow",
+  "symbol": "sprite_woodenbow",
+  "states": [
+    {
+      "id": "b6968e17-6df8-4ea0-9c6a-cc08cd184be9",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "36f1de24-ba8c-4a7c-807c-0e5f045d09f6",
+          "frames": [
+            {
+              "id": "f04ffeef-44c9-420e-91c3-f0ad0fbd2c33",
+              "tiles": [
+                {
+                  "id": "54332b30-4b43-4b82-a077-b3ee0e0820f6",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "23d38cfc-1b09-436f-a34b-0e8c5d2ce5e1",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "348f5832-d56a-40af-8b52-7512cc64a898",
+          "frames": [
+            {
+              "id": "da2b5751-4dc5-4901-b8f5-cf81fd9bf000",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "06bdae7c-bc1f-45ca-b950-8cab5567cd8e",
+          "frames": [
+            {
+              "id": "eb52db0e-f7fd-4fff-85dc-62b170ae7f72",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f459ce52-bb75-4c17-be5d-2c4b4a910978",
+          "frames": [
+            {
+              "id": "064d1884-5b2d-49b0-8422-3f9cbebbd4ef",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f9d9d87e-b255-4092-bcc2-48a6d503c0db",
+          "frames": [
+            {
+              "id": "e85a35c7-30cf-4e6c-b6f2-fd29978cf2aa",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "315e72aa-a777-42c5-9995-cf19248fa8cb",
+          "frames": [
+            {
+              "id": "fac7e144-6f0b-4973-89d2-8509f0bd12b1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7d6cbb5a-9394-457b-a93a-de46892f7080",
+          "frames": [
+            {
+              "id": "d71643bd-9550-4db4-8d64-538221c20b62",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1a03d3b7-851d-4e45-88b4-78459549a1ee",
+          "frames": [
+            {
+              "id": "a13863be-0ac4-4df1-be20-d2857397da96",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "WoodenBow.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "3e3592759ec6617588672c704b2bb516cf0e1001"
+}

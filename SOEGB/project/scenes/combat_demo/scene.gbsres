@@ -28,6 +28,13 @@
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {},
       "id": "bf188b2c-ad60-4568-8272-ecd6821c8ac6"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b3900278-94ee-4e75-9c74-7c3810a82ca6"
+      },
+      "id": "codex-combat-demo-install-start-menu-input"
     }
   ],
   "playerHit1Script": [

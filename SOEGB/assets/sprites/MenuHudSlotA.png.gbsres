@@ -1,0 +1,52 @@
+{
+  "_resourceType": "sprite",
+  "id": "83111ae0-1837-4f9a-ae83-a712f2797c74",
+  "name": "Menu HUD Slot A",
+  "symbol": "sprite_menu_hud_slot_a",
+  "states": [
+    {
+      "id": "3a0cc952-8764-45d8-9438-f70a538df54f",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "df01a407-fba8-44fe-81e1-452ca5d5bb98",
+          "frames": [
+            {
+              "id": "9392c58e-c3f0-4b66-8947-3148c8e01fac",
+              "tiles": [
+                {
+                  "id": "ad19bd40-c024-49c0-9a6b-65bb1169466c",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 8,
+  "boundsX": 0,
+  "boundsY": 0,
+  "boundsWidth": 8,
+  "boundsHeight": 8,
+  "animSpeed": 15,
+  "filename": "MenuHudSlotA.png",
+  "width": 8,
+  "height": 8
+}

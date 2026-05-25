@@ -1,0 +1,117 @@
+{
+  "_resourceType": "script",
+  "id": "c57d4cff-f7d6-4e8a-a8b1-61e8034834e9",
+  "name": "Use Item - Nectar Heal 10",
+  "symbol": "script_use_item_nectar_heal_10",
+  "description": "Consumable item action for Nectar. If at least one Nectar exists and PlayerHP is below PlayerMaxHP, consumes exactly one Nectar, heals 10 HP, clamps PlayerHP back down to PlayerMaxHP when needed, and redraws the gameplay HUD. At full HP or zero inventory it does nothing and does not consume an item.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "54"
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "9"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "13"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_DEC_VALUE",
+                  "args": {
+                    "variable": "54"
+                  },
+                  "id": "codex-nectar-consume-one"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "9",
+                    "operation": "add",
+                    "other": "val",
+                    "value": 10,
+                    "minValue": 0,
+                    "maxValue": 32767,
+                    "clamp": false
+                  },
+                  "id": "codex-nectar-heal-ten"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gt",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "9"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "13"
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "9",
+                          "operation": "set",
+                          "other": "var",
+                          "vectorY": "13",
+                          "value": 0,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": false
+                        },
+                        "id": "codex-nectar-clamp-to-max-hp"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "codex-nectar-if-overheal-cap"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+                  },
+                  "id": "codex-nectar-refresh-hud-after-heal"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-nectar-only-use-when-hurt"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-nectar-only-use-when-carried"
+    }
+  ]
+}

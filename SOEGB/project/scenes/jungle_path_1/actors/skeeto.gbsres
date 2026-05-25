@@ -5,14 +5,14 @@
   "frame": 0,
   "animate": true,
   "spriteSheetId": "58ebdd1f-db04-432a-b2eb-fe635bd01e9c",
-  "prefabId": "b1ca6475-cc74-4431-9ece-a66036e77154",
+  "prefabId": "",
   "direction": "down",
   "moveSpeed": 1,
   "animSpeed": 15,
   "paletteId": "",
   "isPinned": false,
   "persistent": false,
-  "collisionGroup": "1",
+  "collisionGroup": "",
   "collisionExtraFlags": [
     "solid"
   ],
@@ -29,21 +29,24 @@
           "value": 1
         }
       },
-      "id": "codex-skeeto-init-hp"
+      "id": "4766d8ba-c657-4de8-8076-595c2b638688",
+      "children": {}
     },
     {
       "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
       "args": {
         "actorId": "$self$"
       },
-      "id": "codex-skeeto-collisions-on"
+      "id": "c5d9c8bb-e6db-40f6-87d8-fb9090e1abc2",
+      "children": {}
     },
     {
       "command": "EVENT_ACTOR_SHOW",
       "args": {
         "actorId": "$self$"
       },
-      "id": "codex-skeeto-show"
+      "id": "d450df3a-7d35-4843-8faf-d2a5086391a7",
+      "children": {}
     }
   ],
   "updateScript": [
@@ -56,7 +59,7 @@
         "__collapseElse": false,
         "__disableElse": false
       },
-      "id": "codex-skeeto-if-alive",
+      "id": "b1667387-1113-41a9-acfb-6d334dcb4396",
       "children": {
         "true": [
           {
@@ -73,7 +76,7 @@
                 "value": 27
               }
             },
-            "id": "codex-skeeto-wander-rate",
+            "id": "46732035-4315-473a-9213-14792c6b1f3d",
             "children": {
               "true": [
                 {
@@ -87,7 +90,8 @@
                     "minValue": "0",
                     "maxValue": 3
                   },
-                  "id": "codex-skeeto-random-dir"
+                  "id": "5f4be3bf-6749-46b7-a509-a39acfa6d9c9",
+                  "children": {}
                 },
                 {
                   "command": "EVENT_SWITCH",
@@ -128,7 +132,7 @@
                     "value15": 15,
                     "__collapseElse": false
                   },
-                  "id": "codex-skeeto-wander-switch",
+                  "id": "c34cab84-2ee7-4671-87c6-bf163fd75ad8",
                   "children": {
                     "true0": [
                       {
@@ -151,7 +155,8 @@
                           "moveType": "vertical",
                           "__collapse": false
                         },
-                        "id": "codex-skeeto-wander-down"
+                        "id": "76c433bb-5016-4fd5-9d15-cc78e1de2e55",
+                        "children": {}
                       }
                     ],
                     "true1": [
@@ -175,7 +180,8 @@
                           "moveType": "vertical",
                           "__collapse": false
                         },
-                        "id": "codex-skeeto-wander-up"
+                        "id": "c7fd4308-a28a-44fd-a7b5-89f8e0d58773",
+                        "children": {}
                       }
                     ],
                     "true2": [
@@ -199,7 +205,8 @@
                           "moveType": "horizontal",
                           "__collapse": false
                         },
-                        "id": "codex-skeeto-wander-left"
+                        "id": "c479175d-aa17-471e-8359-525818c4ef25",
+                        "children": {}
                       }
                     ],
                     "true3": [
@@ -223,7 +230,8 @@
                           "moveType": "horizontal",
                           "__collapse": false
                         },
-                        "id": "codex-skeeto-wander-right"
+                        "id": "3ebd4540-e442-42ce-b568-5b0a95aa2289",
+                        "children": {}
                       }
                     ],
                     "true4": [],
@@ -257,7 +265,8 @@
               "wait": true,
               "effect": 0
             },
-            "id": "de762f29-78f2-4522-b959-3a08dd38887c"
+            "id": "adef90ce-eb58-4bbb-89eb-217225382ec2",
+            "children": {}
           },
           {
             "command": "EVENT_ACTOR_EFFECTS",
@@ -269,14 +278,16 @@
               "time": 0.35,
               "frames": 21
             },
-            "id": "codex-skeeto-death-effect"
+            "id": "635da4b1-f197-4dd5-8c32-d294222cb136",
+            "children": {}
           },
           {
             "command": "EVENT_ACTOR_DEACTIVATE",
             "args": {
               "actorId": "$self$"
             },
-            "id": "codex-skeeto-deactivate"
+            "id": "e389b9c5-6b1b-498d-8fe3-6f741392d5a1",
+            "children": {}
           },
           {
             "command": "EVENT_ACTOR_SET_POSITION",
@@ -291,7 +302,8 @@
                 "value": 0
               }
             },
-            "id": "codex-skeeto-move-offscreen"
+            "id": "854f3c45-f712-469c-8113-0d855eac6459",
+            "children": {}
           }
         ]
       }
@@ -319,7 +331,8 @@
         "$actor[1]$": "player",
         "$actor[0]$": "$self$"
       },
-      "id": "codex-skeeto-take-bone-hit"
+      "id": "7412b4ae-85a0-4b2d-83f6-f19e65a52455",
+      "children": {}
     }
   ],
   "coordinateType": "tiles",

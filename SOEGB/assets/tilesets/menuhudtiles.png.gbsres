@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "d7f59e36-a1c5-4b0d-9cff-f8d196af9756",
+  "name": "menuhudtiles",
+  "symbol": "tileset_menuhudtiles",
+  "width": 32,
+  "height": 1,
+  "imageWidth": 256,
+  "imageHeight": 8,
+  "filename": "menuhudtiles.png"
+}

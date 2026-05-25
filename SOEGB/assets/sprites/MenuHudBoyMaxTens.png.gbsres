@@ -1,0 +1,5 @@
+{
+  "_resourceType": "sprite", "id": "0ad51c8c-299b-4be2-bf4e-fb0575508e31", "name": "Menu HUD Boy Max Tens", "symbol": "sprite_menu_hud_boy_max_tens",
+  "states": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e32", "name": "", "animationType": "fixed", "flipLeft": true, "animations": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e33", "frames": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e34", "tiles": [{"id": "0ad51c8c-299b-4be2-bf4e-fb0575508e35", "x": 0, "y": 0, "sliceX": 0, "sliceY": 0, "palette": 0, "flipX": false, "flipY": false, "objPalette": "OBP0", "paletteIndex": 0, "priority": false}]}]}]}],
+  "numTiles": 1, "canvasOriginX": 0, "canvasOriginY": 0, "canvasWidth": 8, "canvasHeight": 8, "boundsX": 0, "boundsY": 0, "boundsWidth": 8, "boundsHeight": 8, "animSpeed": 15, "filename": "MenuHudBoyMaxTens.png", "width": 8, "height": 8
+}

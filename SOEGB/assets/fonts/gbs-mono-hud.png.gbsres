@@ -1,10 +1,13 @@
-{
-  "_resourceType": "font",
-  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf",
-  "name": "GBS Mono HUD",
-  "symbol": "font_gbs_mono_hud",
-  "width": 128,
-  "height": 112,
-  "mapping": {},
-  "filename": "gbs-mono-hud.png"
+﻿{
+    "_resourceType":  "font",
+    "id":  "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf",
+    "name":  "GBS Mono HUD",
+    "symbol":  "font_gbs_mono_hud",
+    "width":  128,
+    "height":  112,
+    "mapping":  {
+
+                },
+    "filename":  "gbs-mono-hud.png"
 }
+

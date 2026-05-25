@@ -18,7 +18,8 @@
       "args": {
         "variable": "11",
         "__collapseElse": true,
-        "__disableElse": true
+        "__disableElse": true,
+        "__collapse": true
       },
       "id": "99fb3dd5-def3-4211-b3a0-3f7ec4027ad8",
       "children": {

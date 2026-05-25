@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "e2bbd799-1de1-4c0d-8cbc-442d0db16db1",
+  "name": "Petal",
+  "symbol": "sprite_petal",
+  "states": [
+    {
+      "id": "452cf1a6-4bed-4ec2-8896-98a0e833e905",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "7c5726e2-ae01-48dd-a94b-a5bc0335bdb7",
+          "frames": [
+            {
+              "id": "ba8d3192-d6be-4b66-bf32-cb6796fe1a5a",
+              "tiles": [
+                {
+                  "id": "98f905fa-4224-448c-bb16-f1caf4be41c7",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "ee7c90db-6f0d-487b-84a9-7b3de6edfca7",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2063c67f-7f39-4fdb-bb46-1b1ea95222b9",
+          "frames": [
+            {
+              "id": "8b1622b3-761f-49f5-ab6a-ea8d3fc5acc5",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2454aa14-e774-45f4-9112-81357fad29d1",
+          "frames": [
+            {
+              "id": "48c4a24a-82a0-4c17-8c90-b095a0660fb2",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2675e627-86ea-4e08-9da2-3dcd8f36ae0f",
+          "frames": [
+            {
+              "id": "777736ca-0aa9-4f16-b9bb-4414aafebf41",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fabcfc34-cbf8-4d8a-8e28-3fa00cc143ea",
+          "frames": [
+            {
+              "id": "0579d10f-b379-4bc9-8f97-c2c132e44c2d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4c4b84c0-fd9d-4df8-8ff5-de1e65f97d82",
+          "frames": [
+            {
+              "id": "db98fa76-01ac-49aa-a019-f5735d04a9f0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "02aecc06-d16b-49c9-9497-e636b4968c60",
+          "frames": [
+            {
+              "id": "88ee528a-aedd-48e8-b14c-ff4f646d9206",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "aa3e66a9-be2e-4304-9dcc-ea7f1a000881",
+          "frames": [
+            {
+              "id": "e845cb4c-db71-4092-9d1d-9b6256ac0356",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Petal.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "9a51f4a1e7ed75cdba9963211c74a4ec6fa14b56"
+}
