@@ -53,20 +53,6 @@
       "id": "6b344b65-1b87-472f-98b6-ef0c2926157e"
     },
     {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
-      },
-      "id": "15c06e7c-1718-469f-85c0-78febff805b0"
-    },
-    {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
-      },
-      "id": "b3572fff-0133-4338-8f71-3e9c697b86dc"
-    },
-    {
       "command": "EVENT_IF",
       "args": {
         "condition": {

@@ -1,16 +1,16 @@
 {
   "_resourceType": "actor",
-  "id": "f4d3515d-a4c6-40fd-b624-74107825195f",
-  "_index": 6,
-  "symbol": "actor_menu_nectar_count",
+  "id": "d68b80cf-ccb6-494b-a7e9-6ca67ab0433a",
+  "_index": 5,
+  "symbol": "actor_menu_petal_count",
   "prefabId": "",
-  "name": "Menu Item - Nectar Count",
+  "name": "Menu Item - Petal Count",
   "coordinateType": "tiles",
   "x": 5,
-  "y": 12,
+  "y": 9,
   "frame": 0,
   "animate": false,
-  "spriteSheetId": "7b23e6b5-90aa-43be-bc11-095a6be85d87",
+  "spriteSheetId": "83111ae0-1837-4f9a-ae83-a712f2797c74",
   "paletteId": "",
   "direction": "down",
   "moveSpeed": 1,
@@ -27,12 +27,12 @@
       "args": {
         "actorId": "$self$"
       },
-      "id": "codex-menu-nectar-count-no-collision"
+      "id": "codex-menu-petal-count-no-collision"
     }
   ],
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "description": "Single-digit Nectar quantity beside the inventory Nectar icon. It hides while Nectar is assigned to A or B."
+  "description": "Single-digit Petal quantity beside the inventory Petal icon. It hides while Petal is assigned to A or B."
 }

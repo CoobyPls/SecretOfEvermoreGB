@@ -1,16 +1,16 @@
 {
   "_resourceType": "actor",
-  "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc200",
-  "_index": 18,
-  "symbol": "actor_menu_dynamic_info",
+  "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbd002",
+  "_index": 19,
+  "symbol": "actor_menu_inventory_petal",
   "prefabId": "",
-  "name": "Menu Talon Digits",
+  "name": "Menu Inventory Petal",
   "coordinateType": "tiles",
-  "x": 15,
-  "y": 6,
+  "x": 3,
+  "y": 9,
   "frame": 0,
   "animate": false,
-  "spriteSheetId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc100",
+  "spriteSheetId": "e2bbd799-1de1-4c0d-8cbc-442d0db16db1",
   "paletteId": "",
   "direction": "down",
   "moveSpeed": 1,
@@ -24,13 +24,15 @@
   "startScript": [
     {
       "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
-      "args": { "actorId": "$self$" },
-      "id": "codex-menu-dynamic-info-no-collision"
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-inventory-petal-no-collision"
     }
   ],
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "description": "Three-digit Talon counter displayed only in the Start Menu currency box."
+  "description": "Permanent stocked Petal listing. It hides when the player has no Petals."
 }

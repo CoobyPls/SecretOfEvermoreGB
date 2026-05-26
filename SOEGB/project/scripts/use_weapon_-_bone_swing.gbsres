@@ -2,7 +2,7 @@
   "_resourceType": "script",
   "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc700",
   "name": "Use Weapon - Bone Swing",
-  "symbol": "script_use_weapon_bone_swing",
+  "symbol": "script_use_weapon_bone_swin",
   "description": "Existing Bone weapon action extracted from Attack so either equipped input slot can invoke the same established sword behavior.",
   "variables": {},
   "actors": {},

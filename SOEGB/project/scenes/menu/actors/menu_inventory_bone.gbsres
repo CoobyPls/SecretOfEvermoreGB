@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbd001",
+  "_index": 18,
+  "symbol": "actor_menu_inventory_bone",
+  "prefabId": "",
+  "name": "Menu Inventory Bone",
+  "coordinateType": "tiles",
+  "x": 3,
+  "y": 6,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f07befb6-98a4-4542-8005-8a6f447afb1b",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-inventory-bone-no-collision"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "description": "Permanent owned Bone Crusher listing. The separate equipped item actor may also appear in A or B."
+}

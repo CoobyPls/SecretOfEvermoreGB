@@ -2,7 +2,7 @@
   "_resourceType": "script",
   "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc300",
   "name": "Update Menu Assignment Markers",
-  "symbol": "script_update_menu_assign_markers",
+  "symbol": "script_update_menu_assign_m",
   "description": "Clears and redraws A/B assignment letters beside the three Start Menu item icons using the shared dynamic-info actor.",
   "variables": {},
   "actors": {
@@ -14,40 +14,170 @@
   "script": [
     {
       "command": "XV_SPRITE_TILE_REPLACER",
-      "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 0 }, "target_tile_idx": { "type": "number", "value": 0 } },
+      "args": {
+        "actor": "0",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "number",
+          "value": 0
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
       "id": "codex-menu-clear-bone-a-marker"
     },
     {
       "command": "XV_SPRITE_TILE_REPLACER",
-      "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 0 }, "target_tile_idx": { "type": "number", "value": 1 } },
+      "args": {
+        "actor": "0",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "number",
+          "value": 0
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 1
+        }
+      },
       "id": "codex-menu-clear-bone-b-marker"
     },
     {
       "command": "XV_SPRITE_TILE_REPLACER",
-      "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 0 }, "target_tile_idx": { "type": "number", "value": 3 } },
+      "args": {
+        "actor": "0",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "number",
+          "value": 0
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 3
+        }
+      },
       "id": "codex-menu-clear-petal-a-marker"
     },
     {
       "command": "XV_SPRITE_TILE_REPLACER",
-      "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 0 }, "target_tile_idx": { "type": "number", "value": 4 } },
+      "args": {
+        "actor": "0",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "number",
+          "value": 0
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 4
+        }
+      },
       "id": "codex-menu-clear-petal-b-marker"
     },
     {
       "command": "XV_SPRITE_TILE_REPLACER",
-      "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 0 }, "target_tile_idx": { "type": "number", "value": 6 } },
+      "args": {
+        "actor": "0",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "number",
+          "value": 0
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 6
+        }
+      },
       "id": "codex-menu-clear-nectar-a-marker"
     },
     {
       "command": "XV_SPRITE_TILE_REPLACER",
-      "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 0 }, "target_tile_idx": { "type": "number", "value": 7 } },
+      "args": {
+        "actor": "0",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "number",
+          "value": 0
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 7
+        }
+      },
       "id": "codex-menu-clear-nectar-b-marker"
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": true, "__disableElse": true },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
-          { "command": "XV_SPRITE_TILE_REPLACER", "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 19 }, "target_tile_idx": { "type": "number", "value": 0 } }, "id": "codex-menu-render-bone-a-marker" }
+          {
+            "command": "XV_SPRITE_TILE_REPLACER",
+            "args": {
+              "actor": "0",
+              "vram_bank": {
+                "type": "number",
+                "value": 0
+              },
+              "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+              "tileset_tiles": "_tileset_menuhudtiles",
+              "source_tile_idx": {
+                "type": "number",
+                "value": 19
+              },
+              "target_tile_idx": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "codex-menu-render-bone-a-marker"
+          }
         ],
         "false": []
       },
@@ -55,10 +185,44 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": true, "__disableElse": true },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "48"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
-          { "command": "XV_SPRITE_TILE_REPLACER", "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 20 }, "target_tile_idx": { "type": "number", "value": 1 } }, "id": "codex-menu-render-bone-b-marker" }
+          {
+            "command": "XV_SPRITE_TILE_REPLACER",
+            "args": {
+              "actor": "0",
+              "vram_bank": {
+                "type": "number",
+                "value": 0
+              },
+              "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+              "tileset_tiles": "_tileset_menuhudtiles",
+              "source_tile_idx": {
+                "type": "number",
+                "value": 20
+              },
+              "target_tile_idx": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "codex-menu-render-bone-b-marker"
+          }
         ],
         "false": []
       },
@@ -66,10 +230,44 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": true, "__disableElse": true },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
-          { "command": "XV_SPRITE_TILE_REPLACER", "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 19 }, "target_tile_idx": { "type": "number", "value": 3 } }, "id": "codex-menu-render-petal-a-marker" }
+          {
+            "command": "XV_SPRITE_TILE_REPLACER",
+            "args": {
+              "actor": "0",
+              "vram_bank": {
+                "type": "number",
+                "value": 0
+              },
+              "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+              "tileset_tiles": "_tileset_menuhudtiles",
+              "source_tile_idx": {
+                "type": "number",
+                "value": 19
+              },
+              "target_tile_idx": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "codex-menu-render-petal-a-marker"
+          }
         ],
         "false": []
       },
@@ -77,10 +275,44 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": true, "__disableElse": true },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "48"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
-          { "command": "XV_SPRITE_TILE_REPLACER", "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 20 }, "target_tile_idx": { "type": "number", "value": 4 } }, "id": "codex-menu-render-petal-b-marker" }
+          {
+            "command": "XV_SPRITE_TILE_REPLACER",
+            "args": {
+              "actor": "0",
+              "vram_bank": {
+                "type": "number",
+                "value": 0
+              },
+              "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+              "tileset_tiles": "_tileset_menuhudtiles",
+              "source_tile_idx": {
+                "type": "number",
+                "value": 20
+              },
+              "target_tile_idx": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "codex-menu-render-petal-b-marker"
+          }
         ],
         "false": []
       },
@@ -88,10 +320,44 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 3 } }, "__collapseElse": true, "__disableElse": true },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
-          { "command": "XV_SPRITE_TILE_REPLACER", "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 19 }, "target_tile_idx": { "type": "number", "value": 6 } }, "id": "codex-menu-render-nectar-a-marker" }
+          {
+            "command": "XV_SPRITE_TILE_REPLACER",
+            "args": {
+              "actor": "0",
+              "vram_bank": {
+                "type": "number",
+                "value": 0
+              },
+              "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+              "tileset_tiles": "_tileset_menuhudtiles",
+              "source_tile_idx": {
+                "type": "number",
+                "value": 19
+              },
+              "target_tile_idx": {
+                "type": "number",
+                "value": 6
+              }
+            },
+            "id": "codex-menu-render-nectar-a-marker"
+          }
         ],
         "false": []
       },
@@ -99,10 +365,44 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 3 } }, "__collapseElse": true, "__disableElse": true },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "48"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
-          { "command": "XV_SPRITE_TILE_REPLACER", "args": { "actor": "0", "vram_bank": { "type": "number", "value": 0 }, "tileset_bank_tiles": "___bank_tileset_menuhudtiles", "tileset_tiles": "_tileset_menuhudtiles", "source_tile_idx": { "type": "number", "value": 20 }, "target_tile_idx": { "type": "number", "value": 7 } }, "id": "codex-menu-render-nectar-b-marker" }
+          {
+            "command": "XV_SPRITE_TILE_REPLACER",
+            "args": {
+              "actor": "0",
+              "vram_bank": {
+                "type": "number",
+                "value": 0
+              },
+              "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+              "tileset_tiles": "_tileset_menuhudtiles",
+              "source_tile_idx": {
+                "type": "number",
+                "value": 20
+              },
+              "target_tile_idx": {
+                "type": "number",
+                "value": 7
+              }
+            },
+            "id": "codex-menu-render-nectar-b-marker"
+          }
         ],
         "false": []
       },

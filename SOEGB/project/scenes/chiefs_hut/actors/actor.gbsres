@@ -24,38 +24,10 @@
           "type": "variable",
           "value": "15"
         },
-        "__collapseElse": true
+        "__collapseElse": false
       },
       "children": {
         "true": [
-          {
-            "command": "EVENT_TEXT",
-            "args": {
-              "text": [
-                "Well I'll be!\nAn outsider! At a\ntime like this?",
-                "Wait, I know those\neyes! Elizabeth\ngrew up, it seems!",
-                "What a pleasant\nsurprise! However\nyour timimg...",
-                "It could not have\nbeen any worse had\nyou scripted it!"
-              ],
-              "__section": "text",
-              "avatarId": "",
-              "minHeight": 5,
-              "maxHeight": 7,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30
-            },
-            "id": "28c3e1c1-238f-4a28-80a0-d26dc89c94db"
-          },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
@@ -152,7 +124,91 @@
             "id": "codex-chief-hut-update-hud-after-exposition-text"
           }
         ],
-        "false": []
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Well I'll be!\nAn outsider! At a\ntime like this?",
+                "Wait, I know those\neyes! Elizabeth\ngrew up, it seems!",
+                "What a pleasant\nsurprise! However\nyour timimg...",
+                "It could not have\nbeen any worse had\nyou scripted it!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 5,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "28c3e1c1-238f-4a28-80a0-d26dc89c94db"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {},
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ah, you're \nfinally awake!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "2dd7ea24-2014-459f-8235-ec8c48243882"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "__section": "movement",
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "collideWith": [
+                      "walls"
+                    ],
+                    "lockDirection": [],
+                    "moveType": "horizontal"
+                  },
+                  "id": "5b8dc415-7eb2-4d42-af77-f8c50a1fa10d"
+                }
+              ]
+            },
+            "id": "08a75a50-6c1e-4ca9-a862-bd02064105ef"
+          }
+        ]
       },
       "id": "df5cde42-82c0-4282-b725-fd4580e72c66"
     }

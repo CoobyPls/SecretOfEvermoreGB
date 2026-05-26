@@ -85,13 +85,6 @@
             "id": "e12ebdc0-f207-43c0-a733-f21ff26ec080"
           },
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
-            },
-            "id": "codex-hud-after-text-update"
-          },
-          {
             "command": "EVENT_SET_VALUE",
             "args": {
               "variable": "1",
@@ -133,6 +126,35 @@
               }
             },
             "id": "codex-hud-dog-bone-icon"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "47",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "codex-bone-crusher-equip-to-a"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "50",
+              "value": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "codex-bone-crusher-a-icon"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+            },
+            "id": "codex-open-hud-after-bone-crusher"
           },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",

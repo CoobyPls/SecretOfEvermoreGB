@@ -9,7 +9,9 @@
 #include "camera.h"
 #include "system.h"
 #include "trigger.h"
+#include "ui.h"
 #include "vm.h"
+#include "gameplay_hud_icons.h"
 #include "menu_pause_snapshot.h"
 
 extern projectile_t projectiles[MAX_PROJECTILES];
@@ -23,6 +25,7 @@ extern UBYTE last_trigger;
 #define MENU_PAUSE_GAMEPLAY_ACTORS 10
 #define MENU_PAUSE_SRAM_BANK 3
 #define MENU_PAUSE_SRAM_BASE ((menu_pause_state_t *)0xA000u)
+#define TEXT_BUFFER_LEN_BANK1 ((UBYTE)(0x100u - TEXT_BUFFER_START_BANK1))
 
 typedef struct menu_pause_state_t {
     actor_t actors[MENU_PAUSE_GAMEPLAY_ACTORS];
@@ -48,6 +51,14 @@ typedef struct menu_pause_state_t {
     UBYTE last_trigger_tx;
     UBYTE last_trigger_ty;
     UBYTE last_trigger;
+    UBYTE hud_window_tiles[40];
+    UBYTE hud_window_tile_data[TEXT_BUFFER_LEN * 16u];
+#ifdef CGB
+    UBYTE hud_window_attrs[40];
+    UBYTE hud_window_tile_data_bank1[TEXT_BUFFER_LEN_BANK1 * 16u];
+#endif
+    UBYTE win_pos_x;
+    UBYTE win_pos_y;
 } menu_pause_state_t;
 
 static UBYTE menu_pause_snapshot_valid;
@@ -85,6 +96,18 @@ void menu_pause_capture(SCRIPT_CTX * THIS) OLDCALL BANKED {
     paused->last_trigger_tx = last_trigger_tx;
     paused->last_trigger_ty = last_trigger_ty;
     paused->last_trigger = last_trigger;
+    get_win_tiles(0, 0, 20, 2, paused->hud_window_tiles);
+    get_win_data(TEXT_BUFFER_START, TEXT_BUFFER_LEN, paused->hud_window_tile_data);
+#ifdef CGB
+    if (_is_CGB) {
+        VBK_REG = 1;
+        get_win_tiles(0, 0, 20, 2, paused->hud_window_attrs);
+        get_win_data(TEXT_BUFFER_START_BANK1, TEXT_BUFFER_LEN_BANK1, paused->hud_window_tile_data_bank1);
+        VBK_REG = 0;
+    }
+#endif
+    paused->win_pos_x = win_pos_x;
+    paused->win_pos_y = win_pos_y;
     SWITCH_RAM_BANK(previous_ram_bank, RAM_BANKS_ONLY);
     menu_pause_snapshot_valid = TRUE;
     menu_pause_restore_pending = FALSE;
@@ -99,6 +122,8 @@ void menu_pause_request_restore(SCRIPT_CTX * THIS) OLDCALL BANKED {
 
 void menu_pause_restore(void) BANKED {
     UBYTE previous_ram_bank;
+    UBYTE i;
+    actor_t *actor;
     menu_pause_state_t *paused;
 
     if (!menu_pause_restore_pending || !menu_pause_snapshot_valid) {
@@ -122,15 +147,42 @@ void menu_pause_restore(void) BANKED {
     camera_y = paused->camera_y;
     memcpy(input_events, paused->input_events, sizeof(paused->input_events));
     memcpy(input_slots, paused->input_slots, sizeof(paused->input_slots));
+    for (i = 0; i != 8; ++i) {
+        input_events[i].handle = 0;
+    }
     memcpy(timer_events, paused->timer_events, sizeof(paused->timer_events));
     memcpy(timer_values, paused->timer_values, sizeof(paused->timer_values));
+    for (i = 0; i != MAX_CONCURRENT_TIMERS; ++i) {
+        timer_events[i].handle = 0;
+    }
     memcpy(projectiles, paused->projectiles, sizeof(paused->projectiles));
     projectiles_active_head = paused->projectiles_active_head;
     projectiles_inactive_head = paused->projectiles_inactive_head;
     last_trigger_tx = paused->last_trigger_tx;
     last_trigger_ty = paused->last_trigger_ty;
     last_trigger = paused->last_trigger;
+    set_win_data(TEXT_BUFFER_START, TEXT_BUFFER_LEN, paused->hud_window_tile_data);
+    set_win_tiles(0, 0, 20, 2, paused->hud_window_tiles);
+#ifdef CGB
+    if (_is_CGB) {
+        VBK_REG = 1;
+        set_win_data(TEXT_BUFFER_START_BANK1, TEXT_BUFFER_LEN_BANK1, paused->hud_window_tile_data_bank1);
+        set_win_tiles(0, 0, 20, 2, paused->hud_window_attrs);
+        VBK_REG = 0;
+    }
+#endif
+    ui_set_pos(paused->win_pos_x, paused->win_pos_y);
     SWITCH_RAM_BANK(previous_ram_bank, RAM_BANKS_ONLY);
+    actor = actors_active_head;
+    while (actor) {
+        actor->hscript_hit = SCRIPT_TERMINATED;
+        actor->hscript_update = SCRIPT_TERMINATED;
+        if (actor->script_update.bank) {
+            script_execute(actor->script_update.bank, actor->script_update.ptr, &(actor->hscript_update), 0);
+        }
+        actor = actor->next;
+    }
+    gameplay_hud_redraw_current_items();
     menu_pause_snapshot_valid = FALSE;
     menu_pause_restore_pending = FALSE;
 }

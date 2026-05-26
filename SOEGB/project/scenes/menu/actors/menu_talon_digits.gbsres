@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc200",
+  "_index": 17,
+  "symbol": "actor_menu_dynamic_info",
+  "prefabId": "",
+  "name": "Menu Talon Digits",
+  "coordinateType": "tiles",
+  "x": 16,
+  "y": 6,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc100",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-dynamic-info-no-collision"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "description": "Three-digit Talon counter displayed to the right of the talon icon in the Start Menu currency box."
+}

@@ -401,7 +401,7 @@
         },
         "$variable[V1]$": {
           "type": "variable",
-          "value": "22"
+          "value": "L2"
         },
         "$variable[V2]$": {
           "type": "number",
@@ -415,7 +415,7 @@
     {
       "command": "EVENT_IF_VALUE",
       "args": {
-        "variable": "22",
+        "variable": "L2",
         "operator": "<=",
         "comparator": 0,
         "__collapseElse": false,

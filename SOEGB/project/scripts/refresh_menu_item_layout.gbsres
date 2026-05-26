@@ -2,34 +2,104 @@
   "_resourceType": "script",
   "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc400",
   "name": "Refresh Menu Item Layout",
-  "symbol": "script_refresh_menu_item_layout",
+  "symbol": "script_refresh_menu_item_la",
   "description": "Moves each item between inventory and the A/B brackets. An item may occupy only one input slot; Petal and Nectar quantities display only while listed in inventory.",
   "variables": {},
   "actors": {
-    "0": { "id": "0", "name": "Bone" },
-    "1": { "id": "1", "name": "Petal" },
-    "2": { "id": "2", "name": "Nectar" },
-    "3": { "id": "3", "name": "Petal Count" },
-    "4": { "id": "4", "name": "Nectar Count" }
+    "0": {
+      "id": "0",
+      "name": "Bone"
+    },
+    "1": {
+      "id": "1",
+      "name": "Petal"
+    },
+    "2": {
+      "id": "2",
+      "name": "Nectar"
+    },
+    "3": {
+      "id": "3",
+      "name": "Petal Count"
+    },
+    "4": {
+      "id": "4",
+      "name": "Nectar Count"
+    }
   },
   "script": [
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "variable", "value": "45" }, "__collapseElse": true, "__disableElse": true },
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "45"
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
           {
             "command": "EVENT_IF",
-            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "46" }, "valueB": { "type": "number", "value": 0 } }, "__collapseElse": false, "__disableElse": false },
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "46"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
             "children": {
               "true": [
                 {
                   "command": "EVENT_IF",
-                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "variable", "value": "45" } }, "__collapseElse": true, "__disableElse": true },
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "48"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "45"
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
                   "children": {
                     "true": [
-                      { "command": "EVENT_SET_VALUE", "args": { "variable": "48", "value": { "type": "number", "value": 0 } }, "id": "codex-menu-unique-item-clear-b-item" },
-                      { "command": "EVENT_SET_VALUE", "args": { "variable": "51", "value": { "type": "number", "value": 4 } }, "id": "codex-menu-unique-item-clear-b-icon" }
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "48",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-unique-item-clear-b-item"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "51",
+                          "value": {
+                            "type": "number",
+                            "value": 4
+                          }
+                        },
+                        "id": "codex-menu-unique-item-clear-b-icon"
+                      }
                     ],
                     "false": []
                   },
@@ -39,11 +109,45 @@
               "false": [
                 {
                   "command": "EVENT_IF",
-                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "variable", "value": "45" } }, "__collapseElse": true, "__disableElse": true },
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "47"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "45"
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
                   "children": {
                     "true": [
-                      { "command": "EVENT_SET_VALUE", "args": { "variable": "47", "value": { "type": "number", "value": 0 } }, "id": "codex-menu-unique-item-clear-a-item" },
-                      { "command": "EVENT_SET_VALUE", "args": { "variable": "50", "value": { "type": "number", "value": 4 } }, "id": "codex-menu-unique-item-clear-a-icon" }
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "47",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-unique-item-clear-a-item"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "50",
+                          "value": {
+                            "type": "number",
+                            "value": 4
+                          }
+                        },
+                        "id": "codex-menu-unique-item-clear-a-icon"
+                      }
                     ],
                     "false": []
                   },
@@ -60,21 +164,94 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": false, "__disableElse": false },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
       "children": {
         "true": [
-          { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 12 }, "y": { "type": "number", "value": 0 }, "units": "tiles" }, "id": "codex-menu-bone-to-a-slot" }
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "0",
+              "x": {
+                "type": "number",
+                "value": 12
+              },
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "units": "tiles"
+            },
+            "id": "codex-menu-bone-to-a-slot"
+          }
         ],
         "false": [
           {
             "command": "EVENT_IF",
-            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": false, "__disableElse": false },
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "48"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
             "children": {
               "true": [
-                { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 17 }, "y": { "type": "number", "value": 0 }, "units": "tiles" }, "id": "codex-menu-bone-to-b-slot" }
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 17
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "units": "tiles"
+                  },
+                  "id": "codex-menu-bone-to-b-slot"
+                }
               ],
               "false": [
-                { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 3 }, "y": { "type": "number", "value": 6 }, "units": "tiles" }, "id": "codex-menu-bone-to-inventory" }
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "units": "tiles"
+                  },
+                  "id": "codex-menu-bone-to-inventory"
+                }
               ]
             },
             "id": "codex-menu-place-bone-b-or-list"
@@ -83,40 +260,189 @@
       },
       "id": "codex-menu-place-bone"
     },
-    { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "0" }, "id": "codex-menu-show-bone" },
+    {
+      "command": "EVENT_ACTOR_SHOW",
+      "args": {
+        "actorId": "0"
+      },
+      "id": "codex-menu-show-bone"
+    },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": false, "__disableElse": false },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
       "children": {
         "true": [
-          { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "1", "x": { "type": "number", "value": 12 }, "y": { "type": "number", "value": 0 }, "units": "tiles" }, "id": "codex-menu-petal-to-a-slot" },
-          { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "1" }, "id": "codex-menu-show-petal-in-a" },
-          { "command": "EVENT_ACTOR_HIDE", "args": { "actorId": "3" }, "id": "codex-menu-hide-petal-count-in-a" }
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "1",
+              "x": {
+                "type": "number",
+                "value": 12
+              },
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "units": "tiles"
+            },
+            "id": "codex-menu-petal-to-a-slot"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "1"
+            },
+            "id": "codex-menu-show-petal-in-a"
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "3"
+            },
+            "id": "codex-menu-show-petal-count-in-a"
+          }
         ],
         "false": [
           {
             "command": "EVENT_IF",
-            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": false, "__disableElse": false },
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "48"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
             "children": {
               "true": [
-                { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "1", "x": { "type": "number", "value": 17 }, "y": { "type": "number", "value": 0 }, "units": "tiles" }, "id": "codex-menu-petal-to-b-slot" },
-                { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "1" }, "id": "codex-menu-show-petal-in-b" },
-                { "command": "EVENT_ACTOR_HIDE", "args": { "actorId": "3" }, "id": "codex-menu-hide-petal-count-in-b" }
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "1",
+                    "x": {
+                      "type": "number",
+                      "value": 17
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "units": "tiles"
+                  },
+                  "id": "codex-menu-petal-to-b-slot"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "1"
+                  },
+                  "id": "codex-menu-show-petal-in-b"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "3"
+                  },
+                  "id": "codex-menu-show-petal-count-in-b"
+                }
               ],
               "false": [
                 {
                   "command": "EVENT_IF",
-                  "args": { "condition": { "type": "variable", "value": "20" }, "__collapseElse": false, "__disableElse": false },
+                  "args": {
+                    "condition": {
+                      "type": "variable",
+                      "value": "20"
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
                   "children": {
                     "true": [
-                      { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "1", "x": { "type": "number", "value": 3 }, "y": { "type": "number", "value": 9 }, "units": "tiles" }, "id": "codex-menu-petal-to-inventory" },
-                      { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "3", "x": { "type": "number", "value": 5 }, "y": { "type": "number", "value": 9 }, "units": "tiles" }, "id": "codex-menu-petal-count-to-inventory" },
-                      { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "1" }, "id": "codex-menu-show-petal-in-inventory" },
-                      { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "3" }, "id": "codex-menu-show-petal-count-in-inventory" }
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "1",
+                          "x": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-petal-to-inventory"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "3",
+                          "x": {
+                            "type": "number",
+                            "value": 5
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-petal-count-to-inventory"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SHOW",
+                        "args": {
+                          "actorId": "1"
+                        },
+                        "id": "codex-menu-hide-slot-petal-while-in-inventory"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "3"
+                        },
+                        "id": "codex-menu-show-sprite-petal-count-in-inventory"
+                      }
                     ],
                     "false": [
-                      { "command": "EVENT_ACTOR_HIDE", "args": { "actorId": "1" }, "id": "codex-menu-hide-empty-petal" },
-                      { "command": "EVENT_ACTOR_HIDE", "args": { "actorId": "3" }, "id": "codex-menu-hide-empty-petal-count" }
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "1"
+                        },
+                        "id": "codex-menu-hide-empty-petal"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "3"
+                        },
+                        "id": "codex-menu-hide-empty-petal-count"
+                      }
                     ]
                   },
                   "id": "codex-menu-show-unassigned-petal-only-if-stocked"
@@ -131,37 +457,180 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 3 } }, "__collapseElse": false, "__disableElse": false },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
       "children": {
         "true": [
-          { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "2", "x": { "type": "number", "value": 12 }, "y": { "type": "number", "value": 0 }, "units": "tiles" }, "id": "codex-menu-nectar-to-a-slot" },
-          { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "2" }, "id": "codex-menu-show-nectar-in-a" },
-          { "command": "EVENT_ACTOR_HIDE", "args": { "actorId": "4" }, "id": "codex-menu-hide-nectar-count-in-a" }
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "2",
+              "x": {
+                "type": "number",
+                "value": 12
+              },
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "units": "tiles"
+            },
+            "id": "codex-menu-nectar-to-a-slot"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "2"
+            },
+            "id": "codex-menu-show-nectar-in-a"
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "4"
+            },
+            "id": "codex-menu-show-nectar-count-in-a"
+          }
         ],
         "false": [
           {
             "command": "EVENT_IF",
-            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 3 } }, "__collapseElse": false, "__disableElse": false },
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "48"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
             "children": {
               "true": [
-                { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "2", "x": { "type": "number", "value": 17 }, "y": { "type": "number", "value": 0 }, "units": "tiles" }, "id": "codex-menu-nectar-to-b-slot" },
-                { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "2" }, "id": "codex-menu-show-nectar-in-b" },
-                { "command": "EVENT_ACTOR_HIDE", "args": { "actorId": "4" }, "id": "codex-menu-hide-nectar-count-in-b" }
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "2",
+                    "x": {
+                      "type": "number",
+                      "value": 17
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "units": "tiles"
+                  },
+                  "id": "codex-menu-nectar-to-b-slot"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "2"
+                  },
+                  "id": "codex-menu-show-nectar-in-b"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "4"
+                  },
+                  "id": "codex-menu-show-nectar-count-in-b"
+                }
               ],
               "false": [
                 {
                   "command": "EVENT_IF",
-                  "args": { "condition": { "type": "variable", "value": "54" }, "__collapseElse": false, "__disableElse": false },
+                  "args": {
+                    "condition": {
+                      "type": "variable",
+                      "value": "54"
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
                   "children": {
                     "true": [
-                      { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "2", "x": { "type": "number", "value": 3 }, "y": { "type": "number", "value": 12 }, "units": "tiles" }, "id": "codex-menu-nectar-to-inventory" },
-                      { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "4", "x": { "type": "number", "value": 5 }, "y": { "type": "number", "value": 12 }, "units": "tiles" }, "id": "codex-menu-nectar-count-to-inventory" },
-                      { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "2" }, "id": "codex-menu-show-nectar-in-inventory" },
-                      { "command": "EVENT_ACTOR_SHOW", "args": { "actorId": "4" }, "id": "codex-menu-show-nectar-count-in-inventory" }
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "2",
+                          "x": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-nectar-to-inventory"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "4",
+                          "x": {
+                            "type": "number",
+                            "value": 5
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-nectar-count-to-inventory"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SHOW",
+                        "args": {
+                          "actorId": "2"
+                        },
+                        "id": "codex-menu-hide-slot-nectar-while-in-inventory"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "4"
+                        },
+                        "id": "codex-menu-show-sprite-nectar-count-in-inventory"
+                      }
                     ],
                     "false": [
-                      { "command": "EVENT_ACTOR_HIDE", "args": { "actorId": "2" }, "id": "codex-menu-hide-empty-nectar" },
-                      { "command": "EVENT_ACTOR_HIDE", "args": { "actorId": "4" }, "id": "codex-menu-hide-empty-nectar-count" }
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "2"
+                        },
+                        "id": "codex-menu-hide-empty-nectar"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "4"
+                        },
+                        "id": "codex-menu-hide-empty-nectar-count"
+                      }
                     ]
                   },
                   "id": "codex-menu-show-unassigned-nectar-only-if-stocked"

@@ -74,20 +74,6 @@
       "id": "codex-init-hud-defaults"
     },
     {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
-      },
-      "id": "82bfc7e4-3386-482e-8f7d-ac3963891915"
-    },
-    {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
-      },
-      "id": "c49f10df-7ae0-422a-9639-f748f42afa74"
-    },
-    {
       "command": "EVENT_IF",
       "args": {
         "condition": {
@@ -154,13 +140,6 @@
               "closeDelayFrames": 30
             },
             "id": "262d4008-349a-43ab-bcca-67b8eb537bcf"
-          },
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
-            },
-            "id": "codex-hud-after-text-update"
           },
           {
             "command": "EVENT_SET_VALUE",

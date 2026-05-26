@@ -2,40 +2,117 @@
   "_resourceType": "script",
   "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc500",
   "name": "Focus Menu Browse Item",
-  "symbol": "script_focus_menu_browse_item",
+  "symbol": "script_focus_menu_browse_it",
   "description": "Places the solid menu cursor on the first stocked item not currently assigned to A or B, and redraws its description.",
   "variables": {},
   "actors": {
-    "0": { "id": "0", "name": "Browse Cursor" }
+    "0": {
+      "id": "0",
+      "name": "Browse Cursor"
+    }
   },
   "script": [
     {
       "command": "EVENT_SET_VALUE",
-      "args": { "variable": "44", "value": { "type": "number", "value": 1 } },
+      "args": {
+        "variable": "44",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
       "id": "codex-menu-focus-try-petal-first"
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "not", "value": { "type": "variable", "value": "20" } }, "__collapseElse": false, "__disableElse": false },
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "20"
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
       "children": {
         "true": [
-          { "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-focus-skip-empty-petal" }
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "44",
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "codex-menu-focus-skip-empty-petal"
+          }
         ],
         "false": [
           {
             "command": "EVENT_IF",
-            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": false, "__disableElse": false },
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "47"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
             "children": {
               "true": [
-                { "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-focus-skip-petal-in-a" }
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "44",
+                    "value": {
+                      "type": "number",
+                      "value": 2
+                    }
+                  },
+                  "id": "codex-menu-focus-skip-petal-in-a"
+                }
               ],
               "false": [
                 {
                   "command": "EVENT_IF",
-                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": true, "__disableElse": true },
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "48"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 2
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
                   "children": {
                     "true": [
-                      { "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 2 } }, "id": "codex-menu-focus-skip-petal-in-b" }
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "44",
+                          "value": {
+                            "type": "number",
+                            "value": 2
+                          }
+                        },
+                        "id": "codex-menu-focus-skip-petal-in-b"
+                      }
                     ],
                     "false": []
                   },
@@ -51,31 +128,113 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": true, "__disableElse": true },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "44"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
           {
             "command": "EVENT_IF",
-            "args": { "condition": { "type": "not", "value": { "type": "variable", "value": "54" } }, "__collapseElse": false, "__disableElse": false },
+            "args": {
+              "condition": {
+                "type": "not",
+                "value": {
+                  "type": "variable",
+                  "value": "54"
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
             "children": {
               "true": [
-                { "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 0 } }, "id": "codex-menu-focus-skip-empty-nectar" }
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "44",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-menu-focus-skip-empty-nectar"
+                }
               ],
               "false": [
                 {
                   "command": "EVENT_IF",
-                  "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "47" }, "valueB": { "type": "number", "value": 3 } }, "__collapseElse": false, "__disableElse": false },
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "47"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 3
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
                   "children": {
                     "true": [
-                      { "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 0 } }, "id": "codex-menu-focus-skip-nectar-in-a" }
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "44",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-focus-skip-nectar-in-a"
+                      }
                     ],
                     "false": [
                       {
                         "command": "EVENT_IF",
-                        "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "48" }, "valueB": { "type": "number", "value": 3 } }, "__collapseElse": true, "__disableElse": true },
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "48"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 3
+                            }
+                          },
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
                         "children": {
                           "true": [
-                            { "command": "EVENT_SET_VALUE", "args": { "variable": "44", "value": { "type": "number", "value": 0 } }, "id": "codex-menu-focus-skip-nectar-in-b" }
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "44",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-menu-focus-skip-nectar-in-b"
+                            }
                           ],
                           "false": []
                         },
@@ -96,24 +255,268 @@
     },
     {
       "command": "EVENT_IF",
-      "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 1 } }, "__collapseElse": false, "__disableElse": false },
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "44"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
       "children": {
         "true": [
-          { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 2 }, "y": { "type": "number", "value": 9 }, "units": "tiles" }, "id": "codex-menu-focus-cursor-on-petal" },
-          { "command": "EVENT_GBVM_SCRIPT", "args": { "script": "VM_OVERLAY_CLEAR 0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\001ITEM: Heals 5 HP\"\nVM_DISPLAY_TEXT", "references": [{ "type": "font", "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf" }] }, "id": "codex-menu-focus-description-petal" }
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "47"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "44",
+                    "value": {
+                      "type": "number",
+                      "value": 3
+                    }
+                  },
+                  "id": "codex-menu-focus-no-unassigned-item-after-bone-in-a"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "48"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "44",
+                          "value": {
+                            "type": "number",
+                            "value": 3
+                          }
+                        },
+                        "id": "codex-menu-focus-no-unassigned-item-after-bone-in-b"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "codex-menu-focus-check-bone-in-b"
+                }
+              ]
+            },
+            "id": "codex-menu-focus-check-bone-in-a"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-focus-validate-bone-when-needed"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "44"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "0",
+              "x": {
+                "type": "number",
+                "value": 2
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "units": "tiles"
+            },
+            "id": "codex-menu-focus-cursor-on-petal"
+          },
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002PETAL\\n\\003\\002\\003HEALS 5 HP\"\nVM_DISPLAY_TEXT",
+              "references": [
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-focus-description-petal"
+          }
         ],
         "false": [
           {
             "command": "EVENT_IF",
-            "args": { "condition": { "type": "eq", "valueA": { "type": "variable", "value": "44" }, "valueB": { "type": "number", "value": 2 } }, "__collapseElse": false, "__disableElse": false },
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "44"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
             "children": {
               "true": [
-                { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 2 }, "y": { "type": "number", "value": 12 }, "units": "tiles" }, "id": "codex-menu-focus-cursor-on-nectar" },
-                { "command": "EVENT_GBVM_SCRIPT", "args": { "script": "VM_OVERLAY_CLEAR 0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\001\\001ITEM: Heals 10 HP\"\nVM_DISPLAY_TEXT", "references": [{ "type": "font", "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf" }] }, "id": "codex-menu-focus-description-nectar" }
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 2
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "units": "tiles"
+                  },
+                  "id": "codex-menu-focus-cursor-on-nectar"
+                },
+                {
+                  "command": "EVENT_GBVM_SCRIPT",
+                  "args": {
+                    "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002NECTAR\\n\\003\\002\\003HEALS 10 HP\"\nVM_DISPLAY_TEXT",
+                    "references": [
+                      {
+                        "type": "font",
+                        "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-focus-description-nectar"
+                }
               ],
               "false": [
-                { "command": "EVENT_ACTOR_SET_POSITION", "args": { "actorId": "0", "x": { "type": "number", "value": 2 }, "y": { "type": "number", "value": 6 }, "units": "tiles" }, "id": "codex-menu-focus-cursor-on-bone" },
-                { "command": "EVENT_GBVM_SCRIPT", "args": { "script": "VM_OVERLAY_CLEAR 0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\001\\001WPN: Sword - 1 DMG\"\nVM_DISPLAY_TEXT", "references": [{ "type": "font", "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf" }] }, "id": "codex-menu-focus-description-bone" }
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "44"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 6
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-focus-cursor-on-bone"
+                      },
+                      {
+                        "command": "EVENT_GBVM_SCRIPT",
+                        "args": {
+                          "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BONE CRUSHER\\n\\003\\002\\003DMG: 1\"\nVM_DISPLAY_TEXT",
+                          "references": [
+                            {
+                              "type": "font",
+                              "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                            }
+                          ]
+                        },
+                        "id": "codex-menu-focus-description-bone"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "0"
+                        },
+                        "id": "codex-menu-focus-hide-cursor-with-no-list-items"
+                      },
+                      {
+                        "command": "EVENT_GBVM_SCRIPT",
+                        "args": {
+                          "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14",
+                          "references": []
+                        },
+                        "id": "codex-menu-focus-clear-description-with-no-list-items"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-focus-render-bone-or-empty-list"
+                }
               ]
             },
             "id": "codex-menu-focus-render-nectar-or-bone"

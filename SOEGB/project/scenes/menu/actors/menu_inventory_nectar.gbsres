@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbd003",
+  "_index": 20,
+  "symbol": "actor_menu_inventory_nectar",
+  "prefabId": "",
+  "name": "Menu Inventory Nectar",
+  "coordinateType": "tiles",
+  "x": 3,
+  "y": 12,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "207fffae-dd3a-4fe1-981b-c91fa2381d0e",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-inventory-nectar-no-collision"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "description": "Permanent stocked Nectar listing. It hides until the player owns Nectar."
+}

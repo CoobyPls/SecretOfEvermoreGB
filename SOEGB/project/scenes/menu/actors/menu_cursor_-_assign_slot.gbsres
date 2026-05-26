@@ -6,8 +6,8 @@
   "prefabId": "",
   "name": "Menu Cursor - Assign Slot",
   "coordinateType": "tiles",
-  "x": 15,
-  "y": 2,
+  "x": 10,
+  "y": 1,
   "frame": 0,
   "animate": true,
   "spriteSheetId": "990bbb74-4881-42e0-9404-9a48da7191a0",
@@ -41,5 +41,5 @@
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "description": "Animated assignment cursor. It flashes only after A selects Bone or Petal, then MenuAssignSlot value 0 points at A and value 1 points at B."
+  "description": "Animated assignment cursor. It flashes beside the header A/B brackets after selecting a usable item, then MenuAssignSlot value 0 points at A and value 1 points at B."
 }

@@ -2,7 +2,7 @@
   "_resourceType": "script",
   "id": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
   "name": "PlayerTakeDamageNoKnockback",
-  "description": "Reusable player damage script for hazard/projectile hits that should NOT push the player.\n\nUse this for plant vine hurtboxes, traps, poison clouds, fire tiles, or any enemy attack where damage should happen but knockback might cause clipping or feel bad.\n\nDamageTaken - how much HP to subtract from PlayerHP. For basic enemies this is usually 1.\n\nWhat it does: checks PlayerInvuln -> turns invulnerability on -> subtracts DamageTaken from PlayerHP -> updates the HUD -> waits 0.65 seconds -> turns invulnerability off.\n\nWhat it intentionally does NOT do: no Move Actor Relative, no knockback, no forced player movement.\n\nIf you later want knockback, use PlayerTakeDamage instead, or add a Move Actor Relative after the HP/HUD update using an attacker actor as the direction source.",
+  "description": "Reusable player damage script for hazard/projectile hits that should NOT push the player.\n\nUses PlayerInvuln as a numeric rate-limit timer so interrupted attack scripts cannot leave the player permanently immune to later enemies in the same room.",
   "variables": {
     "V0": {
       "id": "V0",
@@ -14,26 +14,22 @@
   "symbol": "script_9",
   "script": [
     {
-      "command": "EVENT_IF_FALSE",
+      "command": "EVENT_RATE_LIMIT",
       "args": {
         "variable": "11",
-        "__collapseElse": true,
-        "__disableElse": true,
+        "time": {
+          "type": "number",
+          "value": 0.65
+        },
+        "frames": {
+          "type": "number",
+          "value": 39
+        },
         "__collapse": true
       },
       "id": "99fb3dd5-def3-4211-b3a0-3f7ec4027ad8",
       "children": {
         "true": [
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "11",
-              "value": {
-                "type": "true"
-              }
-            },
-            "id": "3cddc2ee-e891-4197-9210-c01089461b13"
-          },
           {
             "command": "EVENT_VARIABLE_MATH",
             "args": {
@@ -65,30 +61,6 @@
               "customEventId": "7ab6b3a7-bd03-4644-83c4-b7647b5d5b79"
             },
             "id": "codex-call-check-player-hp-after-damage"
-          },
-          {
-            "command": "EVENT_WAIT",
-            "args": {
-              "time": {
-                "type": "number",
-                "value": 0.65
-              },
-              "frames": {
-                "type": "number",
-                "value": 39
-              }
-            },
-            "id": "695440fb-028b-4f51-9871-ff71ae1fb7e6"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "11",
-              "value": {
-                "type": "false"
-              }
-            },
-            "id": "448719f1-ecfe-4589-b8b1-14a07c360b0a"
           }
         ],
         "false": []
