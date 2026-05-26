@@ -51,6 +51,13 @@
   ],
   "updateScript": [
     {
+      "command": "EVENT_DOG_ENEMY_AGGRO_UPDATE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-skeeto-consider-dog-target"
+    },
+    {
       "command": "EVENT_IF_VALUE",
       "args": {
         "variable": "L2",

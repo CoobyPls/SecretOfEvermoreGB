@@ -29,6 +29,11 @@
       "children": {
         "true": [
           {
+            "command": "EVENT_NEW_GAME_RESET_STATE",
+            "args": {},
+            "id": "codex-title-start-reset-fresh-run-state"
+          },
+          {
             "command": "EVENT_SOUND_PLAY_EFFECT",
             "args": {
               "type": "0a9ae077-bc17-44f1-9bed-1435517e20e3",

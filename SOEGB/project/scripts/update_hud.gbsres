@@ -248,7 +248,7 @@
     {
       "command": "EVENT_GBVM_SCRIPT",
       "args": {
-        "script": "VM_SET_CONST VAR_MENUTALONHUNDREDSTILE, 128\nVM_SET_CONST VAR_MENUTALONSTENSTILE, 0\nVM_SET_CONST VAR_MENUTALONONESTILE, 0\nVM_LOAD_TILESET VAR_MENUTALONHUNDREDSTILE, ___bank_bg_menu, _bg_menu\nVM_OVERLAY_SET_MAP VAR_MENUTALONHUNDREDSTILE, VAR_MENUTALONSTENSTILE, VAR_MENUTALONONESTILE, ___bank_bg_menu, _bg_menu\nVM_LOAD_TEXT 4\n.dw VAR_PLAYERHP\n.dw VAR_PLAYERMAXHP\n.dw VAR_DOGHP\n.dw VAR_DOGMAXHP\n.asciz \"\\002\\002\\003\\004\\001%D2/%D2\\003\\004\\002%D2/%D2\"\nVM_DISPLAY_TEXT",
+        "script": "VM_SET_CONST VAR_MENUTALONHUNDREDSTILE, 128\nVM_SET_CONST VAR_MENUTALONSTENSTILE, 0\nVM_SET_CONST VAR_MENUTALONONESTILE, 0\nVM_LOAD_TILESET VAR_MENUTALONHUNDREDSTILE, ___bank_bg_menu, _bg_menu\nVM_OVERLAY_SET_MAP VAR_MENUTALONHUNDREDSTILE, VAR_MENUTALONSTENSTILE, VAR_MENUTALONONESTILE, ___bank_bg_menu, _bg_menu",
         "references": [
           {
             "type": "variable",
@@ -276,7 +276,12 @@
           }
         ]
       },
-      "id": "codex-gameplay-draw-authored-two-row-party-hud"
+      "id": "codex-gameplay-restore-authored-hud-map"
+    },
+    {
+      "command": "EVENT_GAMEPLAY_HUD_NUMBERS",
+      "args": {},
+      "id": "codex-gameplay-draw-authored-two-row-party-hud-numbers"
     },
     {
       "command": "EVENT_GAMEPLAY_HUD_ICONS",

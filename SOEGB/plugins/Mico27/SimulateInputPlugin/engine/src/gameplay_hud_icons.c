@@ -14,9 +14,9 @@
 #include "gameplay_hud_icons.h"
 
 #define HUD_EMPTY_TILE 131u
-#define HUD_A_ICON_TILE 176u
-#define HUD_B_ICON_TILE 180u
-#define MENU_DIGIT_TILE_BASE 184u
+#define HUD_A_ICON_TILE 151u
+#define HUD_B_ICON_TILE 155u
+#define MENU_DIGIT_TILE_BASE 159u
 
 BANKREF_EXTERN(tileset_menuhudtiles)
 extern const struct tileset_t tileset_menuhudtiles;
@@ -95,6 +95,30 @@ static void menu_draw_two_digits(UBYTE x, UBYTE y, UBYTE value) {
     digits[0] = menu_digit((UBYTE)(value / 10u));
     digits[1] = menu_digit((UBYTE)(value % 10u));
     set_bkg_tiles(x, y, 2, 1, digits);
+}
+
+static void gameplay_draw_two_digits(UBYTE x, UBYTE y, UBYTE value) {
+    UBYTE digits[2];
+
+    if (value > 99u) {
+        value = 99u;
+    }
+    digits[0] = menu_digit((UBYTE)(value / 10u));
+    digits[1] = menu_digit((UBYTE)(value % 10u));
+    set_win_tiles(x, y, 2, 1, digits);
+}
+
+void gameplay_hud_draw_numbers(SCRIPT_CTX * THIS) OLDCALL BANKED {
+    UBYTE slash_tile = (UBYTE)(MENU_DIGIT_TILE_BASE + 16u);
+
+    SetBankedBkgData(MENU_DIGIT_TILE_BASE, 17u, tileset_menuhudtiles.tiles, BANK(tileset_menuhudtiles));
+    gameplay_draw_two_digits(3u, 0u, (UBYTE)VM_GLOBAL(VAR_PLAYERHP));
+    gameplay_draw_two_digits(6u, 0u, (UBYTE)VM_GLOBAL(VAR_PLAYERMAXHP));
+    gameplay_draw_two_digits(3u, 1u, (UBYTE)VM_GLOBAL(VAR_DOGHP));
+    gameplay_draw_two_digits(6u, 1u, (UBYTE)VM_GLOBAL(VAR_DOGMAXHP));
+    set_win_tiles(5u, 0u, 1u, 1u, &slash_tile);
+    set_win_tiles(5u, 1u, 1u, 1u, &slash_tile);
+    THIS;
 }
 
 void menu_hud_draw_numbers(SCRIPT_CTX * THIS) OLDCALL BANKED {

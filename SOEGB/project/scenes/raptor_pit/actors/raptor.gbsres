@@ -61,7 +61,7 @@
               "variable": "22",
               "value": {
                 "type": "number",
-                "value": 3
+                "value": 4
               }
             },
             "id": "62b8999e-7e29-4351-97d3-69843a64a1d4"
@@ -421,7 +421,7 @@
         },
         "$variable[V1]$": {
           "type": "variable",
-          "value": "L2"
+          "value": "22"
         },
         "$variable[V2]$": {
           "type": "number",

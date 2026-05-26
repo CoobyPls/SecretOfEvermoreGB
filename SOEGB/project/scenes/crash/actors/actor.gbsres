@@ -97,6 +97,28 @@
           {
             "command": "EVENT_SET_VALUE",
             "args": {
+              "variable": "56",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            },
+            "id": "codex-dog-join-full-current-hp"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "57",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            },
+            "id": "codex-dog-join-full-max-hp"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
               "variable": "29",
               "value": {
                 "type": "number",

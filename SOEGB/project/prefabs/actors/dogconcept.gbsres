@@ -74,11 +74,34 @@
   ],
   "updateScript": [
     {
+      "command": "EVENT_DOG_COMPANION_UPDATE",
+      "args": {
+        "actorId": "$self$",
+        "attackScript": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "a46aeee7-f758-4305-bf54-901991f7e52c",
+              "priority": "medium",
+              "pitch": 6,
+              "frequency": 420,
+              "duration": 0.12,
+              "wait": false,
+              "effect": 0,
+              "__comment": false
+            },
+            "id": "codex-dog-bite-bark-sound"
+          }
+        ]
+      },
+      "id": "codex-dog-companion-controller"
+    },
+    {
       "command": "EVENT_IF",
       "args": {
         "condition": {
           "type": "variable",
-          "value": "1"
+          "value": "L9"
         },
         "__collapseElse": true,
         "__disableElse": true

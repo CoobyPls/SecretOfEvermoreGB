@@ -1839,11 +1839,6 @@
                   "id": "codex-menu-play-close-sound"
                 },
                 {
-                  "command": "EVENT_MENU_PAUSE_RESTORE",
-                  "args": {},
-                  "id": "codex-menu-restore-live-gameplay-state-on-close"
-                },
-                {
                   "command": "EVENT_SCENE_POP_STATE",
                   "args": {
                     "fadeSpeed": "2"
