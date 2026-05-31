@@ -18,8 +18,8 @@
     },
     {
       "id": "3",
-      "name": "Variable633",
-      "symbol": "var_variable633"
+      "name": "VillageJar4Open",
+      "symbol": "var_villagejar4open"
     },
     {
       "id": "4",
@@ -33,8 +33,8 @@
     },
     {
       "id": "6",
-      "name": "DogX",
-      "symbol": "var_dogx"
+      "name": "12",
+      "symbol": "var_12"
     },
     {
       "id": "7",
@@ -118,8 +118,33 @@
     },
     {
       "id": "23",
+      "name": "JP2JarOpen",
+      "symbol": "var_jp2jaropen"
+    },
+    {
+      "id": "24",
       "name": "CrashJar1Open",
       "symbol": "var_crashjar1open"
+    },
+    {
+      "id": "25",
+      "name": "NJJar3Open",
+      "symbol": "var_njjar3open_0"
+    },
+    {
+      "id": "26",
+      "name": "VillageJar1Open",
+      "symbol": "var_villagejar1open"
+    },
+    {
+      "id": "27",
+      "name": "VillageJar2Open",
+      "symbol": "var_villagejar2open"
+    },
+    {
+      "id": "28",
+      "name": "VillageJar3Open",
+      "symbol": "var_villagejar3open"
     },
     {
       "id": "29",
@@ -340,6 +365,146 @@
       "id": "72",
       "name": "MenuTalonOnesTile",
       "symbol": "var_menutalononestile"
+    },
+    {
+      "id": "73",
+      "name": "ItemNumBiscuit",
+      "symbol": "var_itemnumbiscuit"
+    },
+    {
+      "id": "74",
+      "name": "EJJar2Open",
+      "symbol": "var_ejjar2open"
+    },
+    {
+      "id": "75",
+      "name": "QPJar1Open",
+      "symbol": "var_qpjar1open"
+    },
+    {
+      "id": "76",
+      "name": "QPJar2Open",
+      "symbol": "var_qpjar2open"
+    },
+    {
+      "id": "77",
+      "name": "QPJar3Open",
+      "symbol": "var_qpjar3open"
+    },
+    {
+      "id": "78",
+      "name": "NJJar1Open",
+      "symbol": "var_njjar1open"
+    },
+    {
+      "id": "79",
+      "name": "NJJar2Open",
+      "symbol": "var_njjar2open"
+    },
+    {
+      "id": "80",
+      "name": "HasGrassVest",
+      "symbol": "var_hasgrassvest"
+    },
+    {
+      "id": "81",
+      "name": "HasLeatherWraps",
+      "symbol": "var_hasleatherwraps"
+    },
+    {
+      "id": "82",
+      "name": "HasFlintSpear",
+      "symbol": "var_hasflintspear"
+    },
+    {
+      "id": "83",
+      "name": "HasObsidianAxe",
+      "symbol": "var_hasobsidianaxe"
+    },
+    {
+      "id": "84",
+      "name": "HasFlashSpell",
+      "symbol": "var_hasflashspell"
+    },
+    {
+      "id": "85",
+      "name": "JP1JarOpen",
+      "symbol": "var_jp1jaropen"
+    },
+    {
+      "id": "86",
+      "name": "ShopChoice",
+      "symbol": "var_shopchoice"
+    },
+    {
+      "id": "87",
+      "name": "InputInteracted",
+      "symbol": "var_inputinteracted"
+    },
+    {
+      "id": "88",
+      "name": "ThraxxHP",
+      "symbol": "var_thraxxhp"
+    },
+    {
+      "id": "89",
+      "name": "ThraxxBossAction",
+      "symbol": "var_thraxxbossaction"
+    },
+    {
+      "id": "90",
+      "name": "ThraxxRibsOpen",
+      "symbol": "var_thraxxribsopen"
+    },
+    {
+      "id": "91",
+      "name": "ThraxxBrainTimer",
+      "symbol": "var_thraxxbraintimer"
+    },
+    {
+      "id": "92",
+      "name": "ThraxxOpenedLast",
+      "symbol": "var_thraxxopenedlast"
+    },
+    {
+      "id": "93",
+      "name": "ThraxxHeartLoops",
+      "symbol": "var_thraxxheartloops"
+    },
+    {
+      "id": "94",
+      "name": "ThraxxHeartIframe",
+      "symbol": "var_thraxxheartiframe"
+    },
+    {
+      "id": "95",
+      "name": "ThraxxAttackSide",
+      "symbol": "var_thraxxattackside"
+    },
+    {
+      "id": "96",
+      "name": "ThraxxNaturalClose",
+      "symbol": "var_thraxxnaturalclose"
+    },
+    {
+      "id": "97",
+      "name": "ThraxxStateStep",
+      "symbol": "var_thraxxstatestep"
+    },
+    {
+      "id": "98",
+      "name": "ThraxxOpenAttackRoll",
+      "symbol": "var_thraxxopenattackroll"
+    },
+    {
+      "id": "510",
+      "name": "EJJar1Open",
+      "symbol": "var_ejjar1open"
+    },
+    {
+      "id": "511",
+      "name": "VillageJar5Open",
+      "symbol": "var_villagejar5open"
     },
     {
       "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
@@ -740,6 +905,11 @@
       "id": "303c69ed-5de4-458e-bd72-65f93e80967e__L0",
       "name": "Local 0",
       "symbol": "var_local_2"
+    },
+    {
+      "id": "5771324d-fda0-4115-b1d9-e73f9df04e4a__L0",
+      "name": "BigBugFought",
+      "symbol": "var_bigbugfought"
     }
   ],
   "constants": []

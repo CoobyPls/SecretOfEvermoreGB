@@ -107,10 +107,10 @@
                     "variable": "44",
                     "value": {
                       "type": "number",
-                      "value": 0
+                      "value": 3
                     }
                   },
-                  "id": "codex-menu-skip-empty-nectar-only"
+                  "id": "codex-menu-skip-empty-nectar-to-biscuit"
                 }
               ],
               "false": []
@@ -121,6 +121,61 @@
         "false": []
       },
       "id": "codex-menu-normalize-nectar-stock"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "44"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "not",
+                "value": {
+                  "type": "variable",
+                  "value": "73"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "44",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-menu-skip-empty-biscuit-only"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-menu-check-biscuit-stock-only"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-normalize-biscuit-stock"
     },
     {
       "command": "EVENT_IF",
@@ -237,51 +292,112 @@
               ],
               "false": [
                 {
-                  "command": "EVENT_SET_VALUE",
+                  "command": "EVENT_IF",
                   "args": {
-                    "variable": "44",
-                    "value": {
-                      "type": "number",
-                      "value": 0
-                    }
-                  },
-                  "id": "codex-menu-normalize-fallback-to-bone"
-                },
-                {
-                  "command": "EVENT_ACTOR_SET_POSITION",
-                  "args": {
-                    "actorId": "0",
-                    "x": {
-                      "type": "number",
-                      "value": 2
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "44"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 3
+                      }
                     },
-                    "y": {
-                      "type": "number",
-                      "value": 6
-                    },
-                    "units": "tiles"
+                    "__collapseElse": false,
+                    "__disableElse": false
                   },
-                  "id": "codex-menu-cursor-on-owned-bone"
-                },
-                {
-                  "command": "EVENT_ACTOR_SHOW",
-                  "args": {
-                    "actorId": "0"
-                  },
-                  "id": "codex-menu-show-cursor-on-owned-bone"
-                },
-                {
-                  "command": "EVENT_GBVM_SCRIPT",
-                  "args": {
-                    "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BONE CRUSHER\\n\\003\\002\\003DMG: 1\"\nVM_DISPLAY_TEXT",
-                    "references": [
+                  "children": {
+                    "true": [
                       {
-                        "type": "font",
-                        "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 7
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-cursor-on-owned-biscuit"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SHOW",
+                        "args": {
+                          "actorId": "0"
+                        },
+                        "id": "codex-menu-show-cursor-on-owned-biscuit"
+                      },
+                      {
+                        "command": "EVENT_GBVM_SCRIPT",
+                        "args": {
+                          "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BISCUIT\\n\\003\\002\\003HEALS DOG\"\nVM_DISPLAY_TEXT",
+                          "references": [
+                            {
+                              "type": "font",
+                              "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                            }
+                          ]
+                        },
+                        "id": "codex-menu-description-owned-biscuit"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "44",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-normalize-fallback-to-bone"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 6
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-cursor-on-owned-bone"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SHOW",
+                        "args": {
+                          "actorId": "0"
+                        },
+                        "id": "codex-menu-show-cursor-on-owned-bone"
+                      },
+                      {
+                        "command": "EVENT_GBVM_SCRIPT",
+                        "args": {
+                          "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BONE CRUSHER\\n\\003\\002\\003DMG: 1\"\nVM_DISPLAY_TEXT",
+                          "references": [
+                            {
+                              "type": "font",
+                              "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                            }
+                          ]
+                        },
+                        "id": "codex-menu-description-owned-bone"
                       }
                     ]
                   },
-                  "id": "codex-menu-description-owned-bone"
+                  "id": "codex-menu-render-owned-biscuit-or-bone"
                 }
               ]
             },

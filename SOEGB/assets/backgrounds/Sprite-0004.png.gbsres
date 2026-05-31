@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "065eaea7-38be-49fe-b1a2-e87e36358c89",
+  "name": "Sprite-0004",
+  "symbol": "bg_sprite_0004",
+  "tileColors": "",
+  "filename": "Sprite-0004.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

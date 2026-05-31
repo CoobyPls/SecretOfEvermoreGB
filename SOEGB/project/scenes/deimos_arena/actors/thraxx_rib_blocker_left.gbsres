@@ -1,0 +1,116 @@
+{
+  "_resourceType": "actor",
+  "id": "deb748d1-a913-476d-b6fa-5f08c4db74c1",
+  "_index": 5,
+  "symbol": "actor_52",
+  "prefabId": "",
+  "name": "Thraxx Rib Blocker Left",
+  "coordinateType": "tiles",
+  "x": 9,
+  "y": 8,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 0,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [
+    "solid"
+  ],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-ribblock-event_actor_collisions_enable-961b33b5-cadf-47be-b1ee-adfee4af4018"
+    },
+    {
+      "command": "EVENT_ACTOR_SHOW",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-ribblock-event_actor_show-ac2ebb0d-713e-4384-ac05-f154fbbd499a"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "L0",
+        "units": "time",
+        "time": {
+          "type": "number",
+          "value": 0.15
+        },
+        "frames": {
+          "type": "number",
+          "value": 9
+        },
+        "__collapse": false
+      },
+      "id": "codex-thraxx-fix2-event_rate_limit-920ddeba-85a1-4d49-b6ec-1ca16bb94ddb",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "90"
+              },
+              "__collapseElse": true,
+              "__disableElse": false,
+              "__collapse": false
+            },
+            "id": "codex-thraxx-fix2-event_if-b2684399-92ff-42ce-9bac-684ead964a9e",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_collisions_disable-57e707df-2e4d-4b56-9f99-b2436f76c4c9"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_hide-6764cb3d-edeb-405a-bb7f-8ccb22931e56"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_collisions_enable-75aad293-db05-4c1f-b7a5-df4b7032c8bf"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_show-c0a5fdf8-335c-4be1-9695-fa696ee7a6a0"
+                }
+              ]
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

@@ -870,6 +870,6 @@
   "coordinateType": "tiles",
   "x": 5,
   "y": 7,
-  "_index": 2,
+  "_index": 3,
   "description": "Regular plant enemy notes: L0 attack timer; L1 iframe timer; L2 HP; L3 attack direction. Starts awake with collisions on, attacks when player is in range, takes rooted player-attack damage, and deactivates only when local HP reaches zero. No global activation flag."
 }

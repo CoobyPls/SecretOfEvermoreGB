@@ -20,33 +20,30 @@
       "children": {
         "true": [
           {
+            "command": "EVENT_GAMEPLAY_TRY_INTERACT",
+            "args": {
+              "result": "87"
+            },
+            "id": "codex-equipped-a-try-interact-first"
+          },
+          {
             "command": "EVENT_IF",
             "args": {
               "condition": {
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "47"
+                  "value": "87"
                 },
                 "valueB": {
-                  "type": "number",
-                  "value": 1
+                  "type": "false"
                 }
               },
               "__collapseElse": true,
-              "__disableElse": false
+              "__disableElse": true
             },
             "children": {
               "true": [
-                {
-                  "command": "EVENT_CALL_CUSTOM_EVENT",
-                  "args": {
-                    "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc700"
-                  },
-                  "id": "codex-equipped-a-use-bone"
-                }
-              ],
-              "false": [
                 {
                   "command": "EVENT_IF",
                   "args": {
@@ -58,7 +55,7 @@
                       },
                       "valueB": {
                         "type": "number",
-                        "value": 2
+                        "value": 1
                       }
                     },
                     "__collapseElse": true,
@@ -69,9 +66,9 @@
                       {
                         "command": "EVENT_CALL_CUSTOM_EVENT",
                         "args": {
-                          "customEventId": "43f552a8-acde-4208-9cde-e8ce57062f1c"
+                          "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc700"
                         },
-                        "id": "codex-equipped-a-use-petal"
+                        "id": "codex-equipped-a-use-bone"
                       }
                     ],
                     "false": [
@@ -86,7 +83,7 @@
                             },
                             "valueB": {
                               "type": "number",
-                              "value": 3
+                              "value": 2
                             }
                           },
                           "__collapseElse": true,
@@ -97,22 +94,87 @@
                             {
                               "command": "EVENT_CALL_CUSTOM_EVENT",
                               "args": {
-                                "customEventId": "c57d4cff-f7d6-4e8a-a8b1-61e8034834e9"
+                                "customEventId": "43f552a8-acde-4208-9cde-e8ce57062f1c"
                               },
-                              "id": "codex-equipped-a-use-nectar"
+                              "id": "codex-equipped-a-use-petal"
                             }
                           ],
-                          "false": []
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "47"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 3
+                                  }
+                                },
+                                "__collapseElse": true,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                    "args": {
+                                      "customEventId": "c57d4cff-f7d6-4e8a-a8b1-61e8034834e9"
+                                    },
+                                    "id": "codex-equipped-a-use-nectar"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "47"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 4
+                                        }
+                                      },
+                                      "__collapseElse": true,
+                                      "__disableElse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_CALL_CUSTOM_EVENT",
+                                          "args": {
+                                            "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc800"
+                                          },
+                                          "id": "codex-equipped-a-use-biscuit"
+                                        }
+                                      ],
+                                      "false": []
+                                    },
+                                    "id": "codex-equipped-a-if-biscuit-equipped"
+                                  }
+                                ]
+                              },
+                              "id": "codex-equipped-a-if-nectar-equipped"
+                            }
+                          ]
                         },
-                        "id": "codex-equipped-a-if-nectar-equipped"
+                        "id": "codex-equipped-a-if-petal-equipped"
                       }
                     ]
                   },
-                  "id": "codex-equipped-a-if-petal-equipped"
+                  "id": "codex-equipped-a-if-bone-equipped"
                 }
-              ]
+              ],
+              "false": []
             },
-            "id": "codex-equipped-a-if-bone-equipped"
+            "id": "codex-equipped-a-if-no-interaction-use-equipped"
           }
         ]
       }
@@ -130,33 +192,30 @@
       "children": {
         "true": [
           {
+            "command": "EVENT_GAMEPLAY_TRY_INTERACT",
+            "args": {
+              "result": "87"
+            },
+            "id": "codex-equipped-b-try-interact-first"
+          },
+          {
             "command": "EVENT_IF",
             "args": {
               "condition": {
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "48"
+                  "value": "87"
                 },
                 "valueB": {
-                  "type": "number",
-                  "value": 1
+                  "type": "false"
                 }
               },
               "__collapseElse": true,
-              "__disableElse": false
+              "__disableElse": true
             },
             "children": {
               "true": [
-                {
-                  "command": "EVENT_CALL_CUSTOM_EVENT",
-                  "args": {
-                    "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc700"
-                  },
-                  "id": "codex-equipped-b-use-bone"
-                }
-              ],
-              "false": [
                 {
                   "command": "EVENT_IF",
                   "args": {
@@ -168,7 +227,7 @@
                       },
                       "valueB": {
                         "type": "number",
-                        "value": 2
+                        "value": 1
                       }
                     },
                     "__collapseElse": true,
@@ -179,9 +238,9 @@
                       {
                         "command": "EVENT_CALL_CUSTOM_EVENT",
                         "args": {
-                          "customEventId": "43f552a8-acde-4208-9cde-e8ce57062f1c"
+                          "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc700"
                         },
-                        "id": "codex-equipped-b-use-petal"
+                        "id": "codex-equipped-b-use-bone"
                       }
                     ],
                     "false": [
@@ -196,7 +255,7 @@
                             },
                             "valueB": {
                               "type": "number",
-                              "value": 3
+                              "value": 2
                             }
                           },
                           "__collapseElse": true,
@@ -207,22 +266,87 @@
                             {
                               "command": "EVENT_CALL_CUSTOM_EVENT",
                               "args": {
-                                "customEventId": "c57d4cff-f7d6-4e8a-a8b1-61e8034834e9"
+                                "customEventId": "43f552a8-acde-4208-9cde-e8ce57062f1c"
                               },
-                              "id": "codex-equipped-b-use-nectar"
+                              "id": "codex-equipped-b-use-petal"
                             }
                           ],
-                          "false": []
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "48"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 3
+                                  }
+                                },
+                                "__collapseElse": true,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                    "args": {
+                                      "customEventId": "c57d4cff-f7d6-4e8a-a8b1-61e8034834e9"
+                                    },
+                                    "id": "codex-equipped-b-use-nectar"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "48"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 4
+                                        }
+                                      },
+                                      "__collapseElse": true,
+                                      "__disableElse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_CALL_CUSTOM_EVENT",
+                                          "args": {
+                                            "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc800"
+                                          },
+                                          "id": "codex-equipped-b-use-biscuit"
+                                        }
+                                      ],
+                                      "false": []
+                                    },
+                                    "id": "codex-equipped-b-if-biscuit-equipped"
+                                  }
+                                ]
+                              },
+                              "id": "codex-equipped-b-if-nectar-equipped"
+                            }
+                          ]
                         },
-                        "id": "codex-equipped-b-if-nectar-equipped"
+                        "id": "codex-equipped-b-if-petal-equipped"
                       }
                     ]
                   },
-                  "id": "codex-equipped-b-if-petal-equipped"
+                  "id": "codex-equipped-b-if-bone-equipped"
                 }
-              ]
+              ],
+              "false": []
             },
-            "id": "codex-equipped-b-if-bone-equipped"
+            "id": "codex-equipped-b-if-no-interaction-use-equipped"
           }
         ]
       }

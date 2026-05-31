@@ -2,7 +2,7 @@
   "_resourceType": "script",
   "id": "0aab140a-ddc5-4f2b-962f-9a585b7a8c56",
   "name": "TakeDamage",
-  "description": "This script holds the behaviour for when the \"self\" takes a hit. It works but is not ideal for situations when there are multiple attackers.\n\nIframeTimeRef - This is the variable used to set Next Call Time Variable. Each actor will need a different variable set as it holds when they can take damage again. Not to be confused with Time Interval which cannot be a variable. Time interval for the Iframe is 1 second.\n\nSelfHP - The HP variable to subtract from\n\nDamageTaken - The amount to subtract\n\nSelf - The actor being damaged\n\nAttacker - The actor that hit it",
+  "description": "Moving-enemy damage reaction: rate-limits hits, subtracts DamageTaken from SelfHP, plays the hit sound, and knocks Self away from Attacker.\n\nIframeTimeRef must be unique per enemy. The hit emote is intentionally omitted: sprite-heavy scenes such as Eastern Jungle already use nearly all sprite tiles, and loading the emote overflows into HUD tile memory.",
   "variables": {
     "V0": {
       "id": "V0",
@@ -157,15 +157,6 @@
               "__comment": false
             },
             "id": "d0d69939-96c7-4177-b539-86e6be02dc07"
-          },
-          {
-            "command": "EVENT_ACTOR_EMOTE",
-            "args": {
-              "actorId": "0",
-              "emoteId": "56423c9c-dca0-4f5b-ad92-28e9660d50f1",
-              "__comment": false
-            },
-            "id": "6fbe372b-dfd5-44ee-b196-1d502c8f34c3"
           }
         ]
       },

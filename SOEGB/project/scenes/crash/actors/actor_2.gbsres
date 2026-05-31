@@ -26,7 +26,7 @@
           "type": "eq",
           "valueA": {
             "type": "variable",
-            "value": "23"
+            "value": "24"
           },
           "valueB": {
             "type": "false"
@@ -71,7 +71,7 @@
           {
             "command": "EVENT_SET_VALUE",
             "args": {
-              "variable": "23",
+              "variable": "24",
               "value": {
                 "type": "true"
               }
@@ -109,7 +109,7 @@
       "args": {
         "condition": {
           "type": "variable",
-          "value": "23"
+          "value": "24"
         },
         "__collapseElse": true,
         "__disableElse": true

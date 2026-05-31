@@ -28,6 +28,8 @@
 #define DOG_RETREAT_REST_TIME       60u
 #define DOG_DECISION_DELAY          36u
 #define DOG_WINDUP_TIME             2u
+#define DOG_AXIS_HOLD_TIME          10u
+#define DOG_DIAGONAL_BAND           PX_TO_SUBPX(8u)
 #define SKEETO_ALERT_DISTANCE       PX_TO_SUBPX(32u)
 #define ENEMY_AGGRO_STEP            16u
 
@@ -39,6 +41,8 @@ static UBYTE dog_retreat_time;
 static UBYTE dog_retreat_rest_time;
 static UBYTE dog_decision_delay;
 static UBYTE dog_windup_time;
+static UBYTE dog_follow_axis;
+static UBYTE dog_follow_axis_time;
 static UBYTE dog_attack_script_bank;
 static UBYTE *dog_attack_script_ptr;
 
@@ -119,6 +123,41 @@ static void move_relative_to(actor_t *other, UBYTE away, UBYTE step) {
     }
 }
 
+static void move_toward_player(UBYTE step) {
+    UWORD dx = axis_distance(dog_actor->pos.x, PLAYER.pos.x);
+    UWORD dy = axis_distance(dog_actor->pos.y, PLAYER.pos.y);
+    direction_e horizontal = dog_actor->pos.x < PLAYER.pos.x ? DIR_RIGHT : DIR_LEFT;
+    direction_e vertical = dog_actor->pos.y < PLAYER.pos.y ? DIR_DOWN : DIR_UP;
+    UBYTE horizontal_first;
+
+    if (axis_distance(dx, dy) <= DOG_DIAGONAL_BAND) {
+        if (!dog_follow_axis_time) {
+            dog_follow_axis = (dx >= dy) ? 0u : 1u;
+            dog_follow_axis_time = DOG_AXIS_HOLD_TIME;
+        } else {
+            dog_follow_axis_time--;
+        }
+        horizontal_first = (dog_follow_axis == 0u);
+    } else {
+        dog_follow_axis_time = 0u;
+        horizontal_first = (dx >= dy);
+    }
+
+    if (horizontal_first) {
+        if (!try_step(horizontal, step)) {
+            try_step(vertical, step);
+            dog_follow_axis = 1u;
+            dog_follow_axis_time = 0u;
+        }
+    } else {
+        if (!try_step(vertical, step)) {
+            try_step(horizontal, step);
+            dog_follow_axis = 0u;
+            dog_follow_axis_time = 0u;
+        }
+    }
+}
+
 static UBYTE try_enemy_step(actor_t *enemy, actor_t *target, direction_e dir) {
     upoint16_t next = enemy->pos;
     actor_t *other;
@@ -188,11 +227,11 @@ static void approach_bite_line(actor_t *target) {
     }
 }
 
-static UBYTE try_place_near_player(direction_e dir) {
+static UBYTE try_place_near_player(direction_e dir, UBYTE distance) {
     upoint16_t next = PLAYER.pos;
     actor_t *other;
 
-    point_translate_dir(&next, dir, PX_TO_SUBPX(24u));
+    point_translate_dir(&next, dir, PX_TO_SUBPX(distance));
     if (blocked_by_wall(dog_actor, &next, dir)) return FALSE;
     if (bb_intersects(&dog_actor->bounds, &next, &PLAYER.bounds, &PLAYER.pos)) return FALSE;
     other = actor_overlapping_bb(&dog_actor->bounds, &next, dog_actor);
@@ -204,10 +243,14 @@ static UBYTE try_place_near_player(direction_e dir) {
 
 static UBYTE keep_dog_near_player(void) {
     if (dog_distance(dog_actor, &PLAYER) <= DOG_WARP_DISTANCE) return FALSE;
-    if (try_place_near_player(DIR_LEFT)) return TRUE;
-    if (try_place_near_player(DIR_RIGHT)) return TRUE;
-    if (try_place_near_player(DIR_UP)) return TRUE;
-    return try_place_near_player(DIR_DOWN);
+    if (try_place_near_player(DIR_LEFT, 24u)) return TRUE;
+    if (try_place_near_player(DIR_RIGHT, 24u)) return TRUE;
+    if (try_place_near_player(DIR_UP, 24u)) return TRUE;
+    if (try_place_near_player(DIR_DOWN, 24u)) return TRUE;
+    if (try_place_near_player(DIR_LEFT, 16u)) return TRUE;
+    if (try_place_near_player(DIR_RIGHT, 16u)) return TRUE;
+    if (try_place_near_player(DIR_UP, 16u)) return TRUE;
+    return try_place_near_player(DIR_DOWN, 16u);
 }
 
 static actor_t *pick_target(void) {
@@ -261,13 +304,15 @@ void dog_companion_update(SCRIPT_CTX *THIS) OLDCALL BANKED {
     UBYTE attack_script_bank = *(UBYTE *)VM_REF_TO_PTR(FN_ARG1);
     UBYTE *attack_script_ptr = *(UBYTE **)VM_REF_TO_PTR(FN_ARG2);
     actor_t *current_dog = actors + actor_index;
+    UBYTE new_dog_actor = current_dog != dog_actor;
 
     dog_attack_script_bank = attack_script_bank;
     dog_attack_script_ptr = attack_script_ptr;
-    if (current_dog != dog_actor) {
+    if (new_dog_actor) {
         dog_actor = current_dog;
         dog_target = NULL;
         dog_bite_cooldown = dog_hurt_cooldown = dog_retreat_time = dog_retreat_rest_time = dog_decision_delay = dog_windup_time = 0u;
+        dog_follow_axis = dog_follow_axis_time = 0u;
     }
     if (!VM_GLOBAL(VAR_DOGJOINED) || CHK_FLAG(dog_actor->flags, ACTOR_FLAG_HIDDEN | ACTOR_FLAG_DISABLED)) return;
 
@@ -275,7 +320,7 @@ void dog_companion_update(SCRIPT_CTX *THIS) OLDCALL BANKED {
         dog_target = NULL;
         dog_retreat_time = dog_retreat_rest_time = dog_windup_time = 0u;
         if (!keep_dog_near_player() && dog_distance(dog_actor, &PLAYER) > DOG_FOLLOW_DISTANCE) {
-            move_relative_to(&PLAYER, FALSE, DOG_KO_STEP);
+            move_toward_player(DOG_KO_STEP);
         } else {
             actor_set_anim_idle(dog_actor);
         }
@@ -345,7 +390,7 @@ void dog_companion_update(SCRIPT_CTX *THIS) OLDCALL BANKED {
     }
 
     if (dog_distance(dog_actor, &PLAYER) > DOG_FOLLOW_DISTANCE) {
-        move_relative_to(&PLAYER, FALSE, DOG_STEP);
+        move_toward_player(DOG_STEP);
     } else {
         actor_set_anim_idle(dog_actor);
     }
@@ -389,5 +434,6 @@ void new_game_reset_state(SCRIPT_CTX *THIS) OLDCALL BANKED {
     dog_target = NULL;
     dog_bite_cooldown = dog_hurt_cooldown = dog_retreat_time = 0u;
     dog_retreat_rest_time = dog_decision_delay = dog_windup_time = 0u;
+    dog_follow_axis = dog_follow_axis_time = 0u;
     THIS;
 }

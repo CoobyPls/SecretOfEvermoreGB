@@ -13,11 +13,131 @@
   "isPinned": false,
   "persistent": false,
   "collisionGroup": "",
-  "collisionExtraFlags": [],
+  "collisionExtraFlags": [
+    "solid"
+  ],
   "prefabScriptOverrides": {},
   "symbol": "actor_23",
-  "script": [],
-  "startScript": [],
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "75"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Found a Petal!\n"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "30dbb003-f8a3-4970-afeb-e7cb97f1e4a5"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "20",
+              "operation": "add",
+              "other": "val",
+              "vectorY": "L0",
+              "value": 1,
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "69d50de4-1b75-4488-976a-462761f8bb36"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "75",
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "a091624e-adf7-4c1b-86c1-d9999b9009c5"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open",
+              "loopAnim": false
+            },
+            "id": "bde5a678-374a-40c8-95ef-66a6f7df634c"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open",
+              "loopAnim": false
+            },
+            "id": "1982193b-edd8-4e8b-bc94-1175f0c3daf8"
+          }
+        ]
+      },
+      "id": "0c9ba28f-60da-4117-b047-bd43514a16e9"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "75"
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open",
+              "loopAnim": false
+            },
+            "id": "e0ad95c4-d239-4eae-ad6b-8bae7fc65ef0"
+          }
+        ],
+        "false": []
+      },
+      "id": "1a877ee3-3b55-4dfc-9bb2-5c469f87a18a"
+    }
+  ],
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [],

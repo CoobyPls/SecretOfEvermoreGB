@@ -3,7 +3,7 @@
   "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc400",
   "name": "Refresh Menu Item Layout",
   "symbol": "script_refresh_menu_item_la",
-  "description": "Moves each item between inventory and the A/B brackets. An item may occupy only one input slot; Petal and Nectar quantities display only while listed in inventory.",
+  "description": "Moves assignable items between inventory and the A/B brackets and shows stocked consumables. Biscuit uses item id 4 and displays in the second inventory column when owned.",
   "variables": {},
   "actors": {
     "0": {
@@ -25,6 +25,14 @@
     "4": {
       "id": "4",
       "name": "Nectar Count"
+    },
+    "5": {
+      "id": "5",
+      "name": "Biscuit"
+    },
+    "6": {
+      "id": "6",
+      "name": "Biscuit Count"
     }
   },
   "script": [
@@ -642,6 +650,68 @@
         ]
       },
       "id": "codex-menu-place-nectar"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "73"
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "5",
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 12
+              },
+              "units": "tiles"
+            },
+            "id": "codex-menu-biscuit-to-inventory"
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "5"
+            },
+            "id": "codex-menu-hide-biscuit-actor-background-draws-icon"
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "6"
+            },
+            "id": "codex-menu-biscuit-count-drawn-on-background"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "5"
+            },
+            "id": "codex-menu-hide-empty-biscuit"
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "6"
+            },
+            "id": "codex-menu-hide-empty-biscuit-count"
+          }
+        ]
+      },
+      "id": "codex-menu-show-stocked-biscuit"
     }
   ]
 }

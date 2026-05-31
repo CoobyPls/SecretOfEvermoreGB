@@ -2,15 +2,15 @@
   "_resourceType": "actor",
   "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbd003",
   "_index": 20,
-  "symbol": "actor_menu_inventory_nectar",
+  "symbol": "actor_menu_biscuit_count",
   "prefabId": "",
-  "name": "Menu Inventory Nectar",
+  "name": "Menu Item - Biscuit Count",
   "coordinateType": "tiles",
-  "x": 3,
+  "x": 10,
   "y": 12,
   "frame": 0,
   "animate": false,
-  "spriteSheetId": "207fffae-dd3a-4fe1-981b-c91fa2381d0e",
+  "spriteSheetId": "83111ae0-1837-4f9a-ae83-a712f2797c74",
   "paletteId": "",
   "direction": "down",
   "moveSpeed": 1,
@@ -27,12 +27,19 @@
       "args": {
         "actorId": "$self$"
       },
-      "id": "codex-menu-inventory-nectar-no-collision"
+      "id": "codex-menu-biscuit-count-no-collision"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-biscuit-count-hidden-on-start"
     }
   ],
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "description": "Permanent stocked Nectar listing. It hides until the player owns Nectar."
+  "description": "Single-digit Biscuit quantity beside the Biscuit icon; hidden until the player owns a Biscuit."
 }

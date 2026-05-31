@@ -2,15 +2,15 @@
   "_resourceType": "actor",
   "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbd002",
   "_index": 19,
-  "symbol": "actor_menu_inventory_petal",
+  "symbol": "actor_menu_biscuit_item",
   "prefabId": "",
-  "name": "Menu Inventory Petal",
+  "name": "Menu Item - Biscuit",
   "coordinateType": "tiles",
-  "x": 3,
-  "y": 9,
+  "x": 8,
+  "y": 12,
   "frame": 0,
   "animate": false,
-  "spriteSheetId": "e2bbd799-1de1-4c0d-8cbc-442d0db16db1",
+  "spriteSheetId": "cf2ea195-944d-471a-9696-d3b59825a886",
   "paletteId": "",
   "direction": "down",
   "moveSpeed": 1,
@@ -27,12 +27,19 @@
       "args": {
         "actorId": "$self$"
       },
-      "id": "codex-menu-inventory-petal-no-collision"
+      "id": "codex-menu-biscuit-display-no-collision"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-biscuit-hidden-on-start"
     }
   ],
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "description": "Permanent stocked Petal listing. It hides when the player has no Petals."
+  "description": "Menu display actor for Biscuit kept hidden; the inventory Biscuit icon is drawn directly onto the background so the full 2x2 image is never clipped by sprite limits."
 }

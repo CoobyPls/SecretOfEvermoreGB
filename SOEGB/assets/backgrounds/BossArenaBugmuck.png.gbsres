@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "cb59dcd9-93f5-4d62-a8df-0b617ce65c36",
+  "name": "BossArenaBugmuck",
+  "symbol": "bg_bossarenabugmuck",
+  "tileColors": "",
+  "filename": "BossArenaBugmuck.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

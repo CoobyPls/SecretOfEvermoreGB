@@ -1,0 +1,255 @@
+{
+  "_resourceType": "actor",
+  "id": "0cf4b596-5f79-4cf2-af56-32766e498df2",
+  "_index": 1,
+  "symbol": "actor_49",
+  "prefabId": "",
+  "name": "DogConcept",
+  "coordinateType": "tiles",
+  "x": 14,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "c0ac5970-21d3-46e0-b657-42005413185a",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "collisionExtraFlags": [
+    "solid"
+  ],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "6cc80485-85c3-4071-9402-3edb1be1d764",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "c8b97989-02af-4eb9-9e88-02fbd7ed3445",
+            "children": {}
+          },
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 16
+              },
+              "units": "tiles",
+              "__comment": false,
+              "__collapse": false
+            },
+            "id": "218a817c-2e19-4e56-bd14-7e4d8ae8e19a",
+            "children": {}
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "8c028711-02d8-4c57-bbd4-7d836db6a273",
+            "children": {}
+          }
+        ]
+      },
+      "id": "24297c6a-a992-4f3b-8831-50b5cf7794d3"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_DOG_COMPANION_UPDATE",
+      "args": {
+        "actorId": "$self$",
+        "attackScript": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "a46aeee7-f758-4305-bf54-901991f7e52c",
+              "priority": "medium",
+              "pitch": 6,
+              "frequency": 420,
+              "duration": 0.12,
+              "wait": false,
+              "effect": 0,
+              "__comment": false
+            },
+            "id": "codex-dog-bite-bark-sound"
+          }
+        ]
+      },
+      "id": "ea79e2bf-4fae-4713-970f-a5d80690cdc8",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "L9"
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_RATE_LIMIT",
+            "args": {
+              "variable": "L0",
+              "units": "time",
+              "time": {
+                "type": "number",
+                "value": 1
+              },
+              "frames": {
+                "type": "number",
+                "value": 60
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
+                  "args": {
+                    "actorId": "$self$",
+                    "operator": ">",
+                    "distance": {
+                      "type": "number",
+                      "value": 2
+                    },
+                    "otherActorId": "player",
+                    "__collapseElse": true,
+                    "__disableElse": true,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "__section": "movement",
+                          "actorId": "0",
+                          "x": {
+                            "type": "div",
+                            "valueA": {
+                              "type": "sub",
+                              "valueA": {
+                                "type": "property",
+                                "target": "player",
+                                "property": "xpos"
+                              },
+                              "valueB": {
+                                "type": "property",
+                                "target": "$self$",
+                                "property": "xpos"
+                              }
+                            },
+                            "valueB": {
+                              "type": "abs",
+                              "value": {
+                                "type": "sub",
+                                "valueA": {
+                                  "type": "property",
+                                  "target": "player",
+                                  "property": "xpos"
+                                },
+                                "valueB": {
+                                  "type": "property",
+                                  "target": "$self$",
+                                  "property": "xpos"
+                                }
+                              }
+                            }
+                          },
+                          "y": {
+                            "type": "div",
+                            "valueA": {
+                              "type": "sub",
+                              "valueA": {
+                                "type": "property",
+                                "target": "player",
+                                "property": "ypos"
+                              },
+                              "valueB": {
+                                "type": "property",
+                                "target": "$self$",
+                                "property": "ypos"
+                              }
+                            },
+                            "valueB": {
+                              "type": "abs",
+                              "value": {
+                                "type": "sub",
+                                "valueA": {
+                                  "type": "property",
+                                  "target": "player",
+                                  "property": "ypos"
+                                },
+                                "valueB": {
+                                  "type": "property",
+                                  "target": "$self$",
+                                  "property": "ypos"
+                                }
+                              }
+                            }
+                          },
+                          "collideWith": [
+                            "walls"
+                          ],
+                          "lockDirection": [],
+                          "moveType": "vertical",
+                          "__collapse": false
+                        },
+                        "id": "3bccdd89-08b4-4300-8253-479b50fa5e43",
+                        "children": {}
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "138b7e7d-5fa9-4385-87aa-1465cc0829e7"
+                }
+              ]
+            },
+            "id": "ca909e46-64de-4505-9312-42ec7f8f81de"
+          }
+        ],
+        "false": []
+      },
+      "id": "fcef2a95-063e-4f90-aef1-db50fadb96e2"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

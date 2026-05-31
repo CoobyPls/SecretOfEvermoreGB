@@ -10,6 +10,8 @@
 #include "data/sprite_petal_bank2_tileset.h"
 #include "data/sprite_nectar_tileset.h"
 #include "data/sprite_nectar_bank2_tileset.h"
+#include "data/sprite_biscuit_tileset.h"
+#include "data/sprite_biscuit_bank2_tileset.h"
 #include "data/game_globals.h"
 #include "gameplay_hud_icons.h"
 
@@ -17,6 +19,7 @@
 #define HUD_A_ICON_TILE 151u
 #define HUD_B_ICON_TILE 155u
 #define MENU_DIGIT_TILE_BASE 159u
+#define MENU_BISCUIT_TILE_BASE 176u
 
 BANKREF_EXTERN(tileset_menuhudtiles)
 extern const struct tileset_t tileset_menuhudtiles;
@@ -33,6 +36,10 @@ static const UBYTE hud_b_block[] = {
     (UBYTE)(HUD_B_ICON_TILE + 2u), (UBYTE)HUD_B_ICON_TILE,
     (UBYTE)(HUD_B_ICON_TILE + 3u), (UBYTE)(HUD_B_ICON_TILE + 1u)
 };
+static const UBYTE menu_biscuit_block[] = {
+    (UBYTE)(MENU_BISCUIT_TILE_BASE + 2u), (UBYTE)MENU_BISCUIT_TILE_BASE,
+    (UBYTE)(MENU_BISCUIT_TILE_BASE + 3u), (UBYTE)(MENU_BISCUIT_TILE_BASE + 1u)
+};
 
 static void load_icon_tiles(UBYTE first_tile, UBYTE item) {
     switch (item) {
@@ -47,6 +54,10 @@ static void load_icon_tiles(UBYTE first_tile, UBYTE item) {
         case 3:
             SetBankedBkgData(first_tile, 2, sprite_nectar_tileset.tiles, BANK(sprite_nectar_tileset));
             SetBankedBkgData(first_tile + 2u, 2, sprite_nectar_bank2_tileset.tiles, BANK(sprite_nectar_bank2_tileset));
+            break;
+        case 4:
+            SetBankedBkgData(first_tile, 2, sprite_biscuit_tileset.tiles, BANK(sprite_biscuit_tileset));
+            SetBankedBkgData(first_tile + 2u, 2, sprite_biscuit_bank2_tileset.tiles, BANK(sprite_biscuit_bank2_tileset));
             break;
     }
 }
@@ -126,8 +137,10 @@ void menu_hud_draw_numbers(SCRIPT_CTX * THIS) OLDCALL BANKED {
     UWORD talons = (UWORD)VM_GLOBAL(VAR_PLAYERTALONS);
     UBYTE petal_count = (UBYTE)VM_GLOBAL(VAR_ITEMNUMPETAL);
     UBYTE nectar_count = (UBYTE)VM_GLOBAL(VAR_ITEMNUMNECTAR);
+    UBYTE biscuit_count = (UBYTE)VM_GLOBAL(VAR_ITEMNUMBISCUIT);
     UBYTE talon_tiles[3];
     UBYTE count_tile;
+    UBYTE biscuit_clear[8];
 
     SetBankedBkgData(MENU_DIGIT_TILE_BASE, 17u, tileset_menuhudtiles.tiles, BANK(tileset_menuhudtiles));
     menu_draw_two_digits(3u, 0u, (UBYTE)VM_GLOBAL(VAR_PLAYERHP));
@@ -150,5 +163,22 @@ void menu_hud_draw_numbers(SCRIPT_CTX * THIS) OLDCALL BANKED {
     set_bkg_tiles(5u, 9u, 1u, 1u, &count_tile);
     count_tile = nectar_count ? menu_digit((UBYTE)((nectar_count > 9u) ? 9u : nectar_count)) : MENU_DIGIT_TILE_BASE;
     set_bkg_tiles(5u, 12u, 1u, 1u, &count_tile);
+
+    biscuit_clear[0] = MENU_DIGIT_TILE_BASE;
+    biscuit_clear[1] = MENU_DIGIT_TILE_BASE;
+    biscuit_clear[2] = MENU_DIGIT_TILE_BASE;
+    biscuit_clear[3] = MENU_DIGIT_TILE_BASE;
+    biscuit_clear[4] = MENU_DIGIT_TILE_BASE;
+    biscuit_clear[5] = MENU_DIGIT_TILE_BASE;
+    biscuit_clear[6] = MENU_DIGIT_TILE_BASE;
+    biscuit_clear[7] = MENU_DIGIT_TILE_BASE;
+    set_bkg_tiles(8u, 11u, 4u, 2u, biscuit_clear);
+    if (biscuit_count) {
+        SetBankedBkgData(MENU_BISCUIT_TILE_BASE, 2u, sprite_biscuit_tileset.tiles, BANK(sprite_biscuit_tileset));
+        SetBankedBkgData(MENU_BISCUIT_TILE_BASE + 2u, 2u, sprite_biscuit_bank2_tileset.tiles, BANK(sprite_biscuit_bank2_tileset));
+        set_bkg_tiles(8u, 11u, 2u, 2u, menu_biscuit_block);
+    }
+    count_tile = biscuit_count ? menu_digit((UBYTE)((biscuit_count > 9u) ? 9u : biscuit_count)) : MENU_DIGIT_TILE_BASE;
+    set_bkg_tiles(11u, 12u, 1u, 1u, &count_tile);
     THIS;
 }

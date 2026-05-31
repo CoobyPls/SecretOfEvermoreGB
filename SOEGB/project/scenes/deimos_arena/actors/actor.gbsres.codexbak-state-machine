@@ -1,0 +1,501 @@
+{
+  "_resourceType": "actor",
+  "id": "ee77e5ea-4b6d-43b2-884a-ea2be37c8342",
+  "name": "Thraxx Heart",
+  "frame": 0,
+  "animate": true,
+  "spriteSheetId": "337eb7cf-627c-4e57-a085-d2ad9d22578e",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0,
+  "animSpeed": 6,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "2",
+  "collisionExtraFlags": [
+    "solid"
+  ],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_32",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "88",
+        "value": {
+          "type": "number",
+          "value": 5
+        }
+      },
+      "id": "codex-thraxx-fix2-event_set_value-e8e22198-468b-43f9-abf0-21bb1fea4e85"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "90",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-thraxx-fix2-event_set_value-1c0f229d-1484-41de-8b81-1c91e104d8da"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "92",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-thraxx-fix2-event_set_value-89170f61-8bc2-4b97-994f-71437a959482"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "95",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-fix2-event_set_value-ac504a9a-ae86-4ed4-bd74-5b86977ff51a"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "96",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-thraxx-fix2-event_set_value-342b7ed1-5ecc-43cb-bb06-0160633d6a52"
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-fix2-event_actor_collisions_disable-64e9a4f6-72ed-46ab-94eb-36391409742c"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-fix2-event_actor_hide-52247c8c-f669-434b-9e38-1a632be64bc6"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "L0",
+        "units": "time",
+        "time": {
+          "type": "number",
+          "value": 0.15
+        },
+        "frames": {
+          "type": "number",
+          "value": 9
+        },
+        "__collapse": false
+      },
+      "id": "codex-thraxx-fix2-event_rate_limit-d4989d89-01a6-4c62-9355-e178db4d2172",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "96"
+              },
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
+            },
+            "id": "codex-thraxx-fix2-event_if-3f668aa4-a702-4df5-bd15-59ee19baf070",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operator": "<=",
+                    "distance": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "otherActorId": "$self$",
+                    "__collapseElse": true
+                  },
+                  "id": "codex-thraxx-fix2-event_if_actor_distance_from_actor-c191627a-a0ae-4d78-a300-728836ee2876",
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+                          "$variable[V0]$": {
+                            "type": "number",
+                            "value": 2
+                          }
+                        },
+                        "id": "codex-thraxx-fix2-event_call_custom_event-6b1d2933-dbb6-4239-8c7a-41a6784349e5"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "__section": "movement",
+                          "actorId": "player",
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "collideWith": [
+                            "walls",
+                            "actors"
+                          ],
+                          "lockDirection": [
+                            "x",
+                            "y"
+                          ],
+                          "moveType": "diagonal"
+                        },
+                        "id": "codex-thraxx-fix2-event_actor_move_relative-f7f3090e-e4f8-4be8-9dbd-aa914450bd04"
+                      }
+                    ],
+                    "false": []
+                  }
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "96",
+                    "value": {
+                      "type": "false"
+                    }
+                  },
+                  "id": "codex-thraxx-fix2-event_set_value-03bc6b03-24ac-4a99-80f9-c84adbc9777f"
+                }
+              ],
+              "false": []
+            }
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "90"
+              },
+              "__collapseElse": true,
+              "__disableElse": false,
+              "__collapse": false
+            },
+            "id": "codex-thraxx-fix2-event_if-51402dfd-2aa4-4916-ba24-5e139d1c6db0",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_collisions_enable-222a248c-ab0b-4799-9297-f1e7e8620362"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_show-60dda1d6-1243-4db9-8543-d9004ee1f2ff"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_collisions_disable-1f12a87e-ed0a-40e4-b8c0-1515b4a5b639"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_hide-fe945f32-6c3c-416d-9960-b497938b65a1"
+                }
+              ]
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "90"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "id": "codex-thraxx-slowribs-event_if-3899cd25-cec2-4847-9653-6ee8b8b0682a",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_RATE_LIMIT",
+            "args": {
+              "variable": "94",
+              "units": "time",
+              "time": {
+                "type": "number",
+                "value": 0.35
+              },
+              "frames": {
+                "type": "number",
+                "value": 21
+              },
+              "__collapse": false
+            },
+            "id": "codex-thraxx-slowribs-event_rate_limit-4ef05edd-c241-447f-87f9-ac10f68cc19c",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "e29b389f-cafc-4305-b2dd-bc83816a6835",
+                    "priority": "high",
+                    "pitch": 4,
+                    "frequency": 200,
+                    "duration": 0.5,
+                    "wait": false,
+                    "effect": 0
+                  },
+                  "id": "codex-thraxx-slowribs-event_sound_play_effect-25da6fdd-a002-4025-9222-760c3a1e2bf3"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "88",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "0",
+                    "value": "1",
+                    "minValue": "0",
+                    "maxValue": 32767,
+                    "clamp": false
+                  },
+                  "id": "codex-thraxx-slowribs-event_variable_math-f967d84b-1f7d-49e8-8f99-284ec7784a08"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "90",
+                    "value": {
+                      "type": "false"
+                    }
+                  },
+                  "id": "codex-thraxx-slowribs-event_set_value-508ae5c3-b52c-4469-b45e-1d572a43bd6a"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "92",
+                    "value": {
+                      "type": "true"
+                    }
+                  },
+                  "id": "codex-thraxx-slowribs-event_set_value-c45b70ae-ab68-4add-b54a-2c274330c3fc"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "96",
+                    "value": {
+                      "type": "false"
+                    }
+                  },
+                  "id": "codex-thraxx-slowribs-event_set_value-2883b252-46c4-4dfc-a730-7a2153599d73"
+                },
+                {
+                  "command": "EVENT_THRAXX_CHEST_FRAME",
+                  "args": {
+                    "frame": 0
+                  },
+                  "id": "codex-thraxx-slowribs-event_thraxx_chest_frame-46e33ba5-c1ec-4ead-acb7-375bae8b7330"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "__section": "movement",
+                    "actorId": "player",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 2
+                    },
+                    "collideWith": [
+                      "walls",
+                      "actors"
+                    ],
+                    "lockDirection": [
+                      "x",
+                      "y"
+                    ],
+                    "moveType": "vertical"
+                  },
+                  "id": "codex-thraxx-slowribs-event_actor_move_relative-09cccf27-d9bc-4e13-867a-5aa5bb75cc87"
+                },
+                {
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "8f5d9375-b516-4d32-89bc-755225f3ff91",
+                    "priority": "high",
+                    "pitch": 4,
+                    "frequency": 200,
+                    "duration": 0.5,
+                    "wait": false,
+                    "effect": 0
+                  },
+                  "id": "codex-thraxx-slowribs-event_sound_play_effect-f18cf71f-2f3d-4ad5-9f97-8fe500dab0bd"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "lte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "88"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true,
+                    "__collapse": false
+                  },
+                  "id": "codex-thraxx-slowribs-event_if-17431409-33b9-4531-b8e4-9ca2dc19c1e4",
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                        "args": {
+                          "type": "e29b389f-cafc-4305-b2dd-bc83816a6835",
+                          "priority": "high",
+                          "pitch": 4,
+                          "frequency": 200,
+                          "duration": 0.5,
+                          "wait": false,
+                          "effect": 0
+                        },
+                        "id": "codex-thraxx-slowribs-event_sound_play_effect-958df522-6687-4981-a537-5fc97d4dd561"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_EFFECTS",
+                        "args": {
+                          "effect": "splitOut",
+                          "actorId": "$self$",
+                          "distance": 20,
+                          "speed": 2,
+                          "time": 0.35,
+                          "frames": 21
+                        },
+                        "id": "codex-thraxx-slowribs-event_actor_effects-44e6b14f-0456-41cd-bc12-c0cd63adcc42"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_DEACTIVATE",
+                        "args": {
+                          "actorId": "$self$"
+                        },
+                        "id": "codex-thraxx-slowribs-event_actor_deactivate-53c45b77-9947-40ae-ac64-4848fd1b7174"
+                      }
+                    ],
+                    "false": []
+                  }
+                },
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                  },
+                  "id": "codex-thraxx-hitboxbrain-colloff-871505f6-b938-4ca8-b2ee-01c2c9d3073f"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                  },
+                  "id": "codex-thraxx-hitboxbrain-hide-efe5eee3-7efa-4c14-80bf-245e9e3721fa"
+                },
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                  },
+                  "id": "codex-thraxx-hitboxbrain-colloff-57452efd-0b3d-4e66-89df-c24f93bdd6be"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                  },
+                  "id": "codex-thraxx-hitboxbrain-hide-78433bbd-43ff-42c8-bf29-649ef023682f"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "89",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-thraxx-hitboxbrain-set-ff934b9a-f00e-47f4-b710-c1da93f5b849"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "95",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-thraxx-hitboxbrain-set-4aa32d23-b4f6-41fb-8032-d22d4056d3f7"
+                }
+              ],
+              "false": []
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "coordinateType": "tiles",
+  "x": 9,
+  "y": 8,
+  "_index": 4
+}

@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "b6074791-0078-4c5a-b877-a4f7cf80e6b5",
+  "name": "thraxx_arena_base",
+  "symbol": "bg_thraxx_arena_base",
+  "tileColors": "",
+  "filename": "thraxx_arena_base.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

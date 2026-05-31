@@ -67,6 +67,17 @@
             "id": "62b8999e-7e29-4351-97d3-69843a64a1d4"
           },
           {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L2",
+              "value": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "codex-raptor-init-local-hp"
+          },
+          {
             "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
             "args": {
               "actorId": "$self$"
@@ -421,7 +432,7 @@
         },
         "$variable[V1]$": {
           "type": "variable",
-          "value": "22"
+          "value": "L2"
         },
         "$variable[V2]$": {
           "type": "number",

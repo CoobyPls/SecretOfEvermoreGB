@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "7f02671c-b88a-414e-8a77-63349813fc3e",
+  "_index": 14,
+  "name": "Deimos' Arena",
+  "backgroundId": "b6074791-0078-4c5a-b877-a4f7cf80e6b5",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_15",
+  "x": 272,
+  "y": 384,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

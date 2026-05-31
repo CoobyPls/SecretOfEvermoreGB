@@ -18,29 +18,37 @@
   "symbol": "actor_16",
   "script": [
     {
-      "command": "EVENT_IF",
-      "args": {
-        "condition": {
-          "type": "variable",
-          "value": "15"
-        },
-        "__collapseElse": false
-      },
+      "command": "EVENT_GROUP",
+      "args": {},
       "children": {
         "true": [
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "command": "EVENT_TEXT",
             "args": {
-              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+              "text": [
+                "Well I'll be!\nAn outsider! At a\ntime like this?",
+                "Wait, I know those\neyes! Elizabeth\ngrew up, it seems!",
+                "What a pleasant\nsurprise! However\nyour timimg...",
+                "It could not have\nbeen any worse had\nyou scripted it!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 5,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
             },
-            "id": "codex-chief-hut-open-hud-after-intro-text"
-          },
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
-            },
-            "id": "codex-chief-hut-update-hud-after-intro-text"
+            "id": "6668116f-a7fb-4458-a00a-eb4c10ac19ce"
           },
           {
             "command": "EVENT_ACTOR_MOVE_TO",
@@ -61,7 +69,7 @@
               "lockDirection": [],
               "moveType": "horizontal"
             },
-            "id": "dae82026-bc3f-422a-9867-2bfae699204f"
+            "id": "5456d4bc-9323-4385-9a15-cb39288379d5"
           },
           {
             "command": "EVENT_ACTOR_SET_DIRECTION",
@@ -72,7 +80,7 @@
                 "value": "right"
               }
             },
-            "id": "f81ccdf5-ffbe-43da-a735-88af499b9b9b"
+            "id": "92605b73-ff25-4879-b735-df1df586aeb9"
           },
           {
             "command": "EVENT_TEXT",
@@ -107,110 +115,46 @@
               "closeDelayTime": 0.5,
               "closeDelayFrames": 30
             },
-            "id": "c57d458f-57e5-4bda-8be1-77d2bff87c92"
+            "id": "96a0e832-7c62-4280-b5d8-9d754028d2d6"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_TO",
+            "args": {
+              "__section": "movement",
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 7
+              },
+              "y": {
+                "type": "number",
+                "value": 5
+              },
+              "collideWith": [
+                "walls"
+              ],
+              "lockDirection": [],
+              "moveType": "horizontal"
+            },
+            "id": "71c2148b-0c5f-41e2-91ff-90487c507368"
           },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
               "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
             },
-            "id": "codex-chief-hut-open-hud-after-exposition-text"
+            "id": "d781de31-d9f3-42a8-bce3-c9d8d40f3b8c"
           },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
               "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
             },
-            "id": "codex-chief-hut-update-hud-after-exposition-text"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_TEXT",
-            "args": {
-              "text": [
-                "Well I'll be!\nAn outsider! At a\ntime like this?",
-                "Wait, I know those\neyes! Elizabeth\ngrew up, it seems!",
-                "What a pleasant\nsurprise! However\nyour timimg...",
-                "It could not have\nbeen any worse had\nyou scripted it!"
-              ],
-              "__section": "text",
-              "avatarId": "",
-              "minHeight": 5,
-              "maxHeight": 7,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30
-            },
-            "id": "28c3e1c1-238f-4a28-80a0-d26dc89c94db"
-          },
-          {
-            "command": "EVENT_GROUP",
-            "args": {},
-            "children": {
-              "true": [
-                {
-                  "command": "EVENT_TEXT",
-                  "args": {
-                    "text": [
-                      "Ah, you're \nfinally awake!"
-                    ],
-                    "__section": "text",
-                    "avatarId": "",
-                    "minHeight": 4,
-                    "maxHeight": 7,
-                    "textX": 1,
-                    "textY": 1,
-                    "textHeight": 5,
-                    "position": "bottom",
-                    "clearPrevious": true,
-                    "showFrame": "true",
-                    "speedIn": -1,
-                    "speedOut": -1,
-                    "closeWhen": "key",
-                    "closeButton": "a",
-                    "closeDelayTime": 0.5,
-                    "closeDelayFrames": 30
-                  },
-                  "id": "2dd7ea24-2014-459f-8235-ec8c48243882"
-                },
-                {
-                  "command": "EVENT_ACTOR_MOVE_TO",
-                  "args": {
-                    "__section": "movement",
-                    "actorId": "$self$",
-                    "x": {
-                      "type": "number",
-                      "value": 9
-                    },
-                    "y": {
-                      "type": "number",
-                      "value": 5
-                    },
-                    "collideWith": [
-                      "walls"
-                    ],
-                    "lockDirection": [],
-                    "moveType": "horizontal"
-                  },
-                  "id": "5b8dc415-7eb2-4d42-af77-f8c50a1fa10d"
-                }
-              ]
-            },
-            "id": "08a75a50-6c1e-4ca9-a862-bd02064105ef"
+            "id": "a6bbdb57-7218-43d2-a46f-fac2b067ca10"
           }
         ]
       },
-      "id": "df5cde42-82c0-4282-b725-fd4580e72c66"
+      "id": "8576a723-361b-4c0b-ad6c-1cad0e3ed9d6"
     }
   ],
   "startScript": [],

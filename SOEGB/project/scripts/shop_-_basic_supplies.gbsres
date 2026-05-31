@@ -1,0 +1,445 @@
+{
+  "_resourceType": "script",
+  "id": "f78c0a4e-d4e7-4958-b560-34a7dfed6a5e",
+  "name": "Shop - Basic Supplies",
+  "symbol": "script_shop_basic_supplies",
+  "description": "Reusable shopkeeper interaction. Offers Biscuit for 20 Talons, Petal for 20 Talons, or Nectar for 40 Talons using the Advanced Menu dialogue overlay. Call this script from any NPC interaction.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Need any supplies?\n"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "codex-shop-greeting"
+    },
+    {
+      "command": "PT_EVENT_ADVANCED_MENU",
+      "args": {
+        "variable": "86",
+        "items": 2,
+        "option_1_text": "Yes",
+        "option1_x": 1,
+        "option1_y": 1,
+        "option1_l": 0,
+        "option1_r": 0,
+        "option1_u": 2,
+        "option1_d": 2,
+        "option_2_text": "No",
+        "option2_x": 1,
+        "option2_y": 2,
+        "option2_l": 0,
+        "option2_r": 0,
+        "option2_u": 1,
+        "option2_d": 1,
+        "cancelOnLastOption": true,
+        "cancelOnB": true,
+        "setStartValue": false,
+        "width": 10,
+        "height": 5,
+        "position": "bottom",
+        "from": "bottom",
+        "clearPrevious": true,
+        "showFrame": true,
+        "speedIn": -1,
+        "speedOut": -1,
+        "keepVisible": false
+      },
+      "id": "codex-shop-yes-no-menu"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "86"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "PT_EVENT_ADVANCED_MENU",
+            "args": {
+              "variable": "86",
+              "items": 4,
+              "option_1_text": "Biscuit      20",
+              "option1_x": 1,
+              "option1_y": 1,
+              "option1_l": 0,
+              "option1_r": 0,
+              "option1_u": 4,
+              "option1_d": 2,
+              "option_2_text": "Petal        20",
+              "option2_x": 1,
+              "option2_y": 2,
+              "option2_l": 0,
+              "option2_r": 0,
+              "option2_u": 1,
+              "option2_d": 3,
+              "option_3_text": "Nectar       40",
+              "option3_x": 1,
+              "option3_y": 3,
+              "option3_l": 0,
+              "option3_r": 0,
+              "option3_u": 2,
+              "option3_d": 4,
+              "option_4_text": "Leave",
+              "option4_x": 1,
+              "option4_y": 4,
+              "option4_l": 0,
+              "option4_r": 0,
+              "option4_u": 3,
+              "option4_d": 1,
+              "cancelOnLastOption": true,
+              "cancelOnB": true,
+              "setStartValue": false,
+              "width": 20,
+              "height": 7,
+              "position": "bottom",
+              "from": "bottom",
+              "clearPrevious": true,
+              "showFrame": true,
+              "speedIn": -1,
+              "speedOut": -1,
+              "keepVisible": false
+            },
+            "id": "codex-shop-stock-menu"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "86"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "19"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 20
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "19",
+                          "operation": "sub",
+                          "other": "val",
+                          "value": 20,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": true
+                        },
+                        "id": "codex-shop-pay-biscuit"
+                      },
+                      {
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "73"
+                        },
+                        "id": "codex-shop-give-biscuit"
+                      },
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Bought a Biscuit!\n"
+                          ],
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a"
+                        },
+                        "id": "codex-shop-confirm-biscuit"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Not enough Talons.\n"
+                          ],
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a"
+                        },
+                        "id": "codex-shop-poor-biscuit"
+                      }
+                    ]
+                  },
+                  "id": "codex-shop-afford-biscuit"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-shop-chose-biscuit"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "86"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "19"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 20
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "19",
+                          "operation": "sub",
+                          "other": "val",
+                          "value": 20,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": true
+                        },
+                        "id": "codex-shop-pay-petal"
+                      },
+                      {
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "20"
+                        },
+                        "id": "codex-shop-give-petal"
+                      },
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Bought a Petal!\n"
+                          ],
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a"
+                        },
+                        "id": "codex-shop-confirm-petal"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Not enough Talons.\n"
+                          ],
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a"
+                        },
+                        "id": "codex-shop-poor-petal"
+                      }
+                    ]
+                  },
+                  "id": "codex-shop-afford-petal"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-shop-chose-petal"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "86"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gte",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "19"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 40
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "19",
+                          "operation": "sub",
+                          "other": "val",
+                          "value": 40,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": true
+                        },
+                        "id": "codex-shop-pay-nectar"
+                      },
+                      {
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "54"
+                        },
+                        "id": "codex-shop-give-nectar"
+                      },
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Bought a Nectar!\n"
+                          ],
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a"
+                        },
+                        "id": "codex-shop-confirm-nectar"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Not enough Talons.\n"
+                          ],
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a"
+                        },
+                        "id": "codex-shop-poor-nectar"
+                      }
+                    ]
+                  },
+                  "id": "codex-shop-afford-nectar"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-shop-chose-nectar"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-shop-player-wants-to-buy"
+    }
+  ]
+}

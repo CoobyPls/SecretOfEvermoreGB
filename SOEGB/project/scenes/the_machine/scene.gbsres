@@ -1,0 +1,29 @@
+{
+  "_resourceType": "scene",
+  "id": "4bd0ce2b-b87f-4227-95aa-337337e6957e",
+  "_index": 13,
+  "name": "The Machine",
+  "backgroundId": "61554bcf-df9e-4bfd-b911-589ee8567def",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_14",
+  "x": 216,
+  "y": 576,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "monoBGP": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

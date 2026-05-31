@@ -196,27 +196,27 @@
                   "children": {}
                 },
                 {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-mammoth-raptor1-disable-collisions-before-deactivate",
+                  "children": {}
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-mammoth-raptor1-hide-before-deactivate",
+                  "children": {}
+                },
+                {
                   "command": "EVENT_ACTOR_DEACTIVATE",
                   "args": {
                     "actorId": "$self$"
                   },
                   "id": "f9c97836-af15-4a83-9230-529bc5f2d839",
-                  "children": {}
-                },
-                {
-                  "command": "EVENT_ACTOR_SET_POSITION",
-                  "args": {
-                    "actorId": "$self$",
-                    "x": {
-                      "type": "number",
-                      "value": 0
-                    },
-                    "y": {
-                      "type": "number",
-                      "value": 0
-                    }
-                  },
-                  "id": "3a969d29-c8f5-4ebc-915e-24a89bc51190",
                   "children": {}
                 }
               ]
@@ -285,27 +285,27 @@
             "children": {}
           },
           {
+            "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "codex-mammoth-raptor1-disable-collisions-before-deactivate-2",
+            "children": {}
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "codex-mammoth-raptor1-hide-before-deactivate-2",
+            "children": {}
+          },
+          {
             "command": "EVENT_ACTOR_DEACTIVATE",
             "args": {
               "actorId": "$self$"
             },
             "id": "1e45e593-8445-4bd0-bcdc-3c23045f9a62",
-            "children": {}
-          },
-          {
-            "command": "EVENT_ACTOR_SET_POSITION",
-            "args": {
-              "actorId": "$self$",
-              "x": {
-                "type": "number",
-                "value": 0
-              },
-              "y": {
-                "type": "number",
-                "value": 0
-              }
-            },
-            "id": "4caa0d3d-7616-4f31-82b7-18df4b8bd864",
             "children": {}
           }
         ],

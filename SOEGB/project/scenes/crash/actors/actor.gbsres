@@ -230,12 +230,12 @@
             "args": {
               "actorId": "$self$",
               "x": {
-                "type": "variable",
-                "value": "6"
+                "type": "number",
+                "value": 14
               },
               "y": {
-                "type": "variable",
-                "value": "7"
+                "type": "number",
+                "value": 14
               },
               "units": "tiles"
             },
@@ -257,84 +257,26 @@
   ],
   "updateScript": [
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_DOG_COMPANION_UPDATE",
       "args": {
-        "condition": {
-          "type": "variable",
-          "value": "1"
-        },
-        "__collapseElse": true,
-        "__disableElse": true
-      },
-      "children": {
-        "true": [
+        "actorId": "$self$",
+        "attackScript": [
           {
-            "command": "EVENT_RATE_LIMIT",
+            "command": "EVENT_SOUND_PLAY_EFFECT",
             "args": {
-              "variable": "L0",
-              "units": "time",
-              "time": {
-                "type": "number",
-                "value": 1
-              },
-              "frames": {
-                "type": "number",
-                "value": 60
-              }
+              "type": "a46aeee7-f758-4305-bf54-901991f7e52c",
+              "priority": "medium",
+              "pitch": 6,
+              "frequency": 420,
+              "duration": 0.12,
+              "wait": false,
+              "effect": 0
             },
-            "children": {
-              "true": [
-                {
-                  "command": "EVENT_IF_ACTOR_DISTANCE_FROM_ACTOR",
-                  "args": {
-                    "actorId": "$self$",
-                    "operator": ">",
-                    "distance": {
-                      "type": "number",
-                      "value": 2
-                    },
-                    "otherActorId": "player",
-                    "__collapseElse": true,
-                    "__disableElse": true
-                  },
-                  "children": {
-                    "true": [
-                      {
-                        "command": "EVENT_ACTOR_MOVE_TO",
-                        "args": {
-                          "__section": "movement",
-                          "actorId": "$self$",
-                          "x": {
-                            "type": "property",
-                            "target": "player",
-                            "property": "xpos"
-                          },
-                          "y": {
-                            "type": "property",
-                            "target": "player",
-                            "property": "ypos"
-                          },
-                          "collideWith": [
-                            "walls"
-                          ],
-                          "lockDirection": [],
-                          "moveType": "horizontal"
-                        },
-                        "id": "5eb4af34-fde8-4de7-b93e-d01aaf28a3d6"
-                      }
-                    ],
-                    "false": []
-                  },
-                  "id": "be6275fa-ee4d-42a8-931d-f2d684069a7f"
-                }
-              ]
-            },
-            "id": "2944cdb4-42c5-4900-8fe1-7e348a0787f1"
+            "id": "codex-crash-dog-bite-bark-sound"
           }
-        ],
-        "false": []
+        ]
       },
-      "id": "ac374a13-6df3-48a2-9790-e5051b6b9323"
+      "id": "codex-crash-dog-companion-controller"
     }
   ],
   "hit1Script": [

@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "cf2ea195-944d-471a-9696-d3b59825a886",
+  "name": "Biscuit",
+  "symbol": "sprite_biscuit",
+  "states": [
+    {
+      "id": "7c4c2660-ab22-43b3-92ab-01237266e00c",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "a6ea3323-43cb-4936-8ef0-df19a0115879",
+          "frames": [
+            {
+              "id": "da3e50d9-8e71-4c95-bf00-725dce5078ca",
+              "tiles": [
+                {
+                  "id": "codex-biscuit-left-tile",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "codex-biscuit-right-tile",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "13e6d761-0458-4904-8f2f-0736eedee40d",
+          "frames": [
+            {
+              "id": "68668267-45ee-4886-9a0f-4a9fbf0ca022",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f361a273-2cec-4be9-b532-0dea302ca5cb",
+          "frames": [
+            {
+              "id": "400edba2-c4d0-478e-b70d-91d092e4dbd1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ad6a6f9c-202d-4868-91eb-c0dcff87a29b",
+          "frames": [
+            {
+              "id": "528ef9b4-9442-45b4-ab45-695abb2af063",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ce3b1639-ed6e-4bd5-8c65-037e8911f1dc",
+          "frames": [
+            {
+              "id": "0bc16462-f908-444b-8bcf-f39684e9216b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0f8e9832-368d-4d40-87a6-d1d4c10f283a",
+          "frames": [
+            {
+              "id": "a332a9fd-ab6a-48cd-8915-bce63f7b9c11",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "dd50132f-6914-4547-b646-7a99316370b5",
+          "frames": [
+            {
+              "id": "44816c5b-9f3e-47b2-9f5e-99eee1d5474f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8221c843-ab01-410a-8994-16a2f9cd155a",
+          "frames": [
+            {
+              "id": "1fdce70a-cb46-4359-9d60-51b359bb8b8b",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Biscuit.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "6d6b5533d847c40689f601c328627d37670fb95b"
+}

@@ -66,6 +66,7 @@ void process_VM(void) {
         switch (script_runner_update()) {
             case RUNNER_DONE:
             case RUNNER_IDLE: {                
+                menu_pause_restore();
                 input_update();
                 if (INPUT_SOFT_RESTART) {
                     // kill all threads and clear VM memory 
@@ -135,12 +136,7 @@ void process_VM(void) {
                         // load scene
                         far_ptr_t scene;
                         ReadBankedFarPtr(&scene, vm_exception_params_offset, vm_exception_params_bank);
-                        if (menu_pause_restore_pending) {
-                            fade_in = !(load_scene(scene.ptr, scene.bank, FALSE));
-                            menu_pause_restore();
-                        } else {
-                            fade_in = !(load_scene(scene.ptr, scene.bank, TRUE));
-                        }
+                        fade_in = !(load_scene(scene.ptr, scene.bank, TRUE));
                         break;
                     }
                     case EXCEPTION_SAVE: {

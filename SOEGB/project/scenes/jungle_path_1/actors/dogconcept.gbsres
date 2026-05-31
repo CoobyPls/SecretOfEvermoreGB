@@ -1,7 +1,7 @@
 {
   "_resourceType": "actor",
   "id": "77cefc67-7657-4368-b10a-30c8118fbdcf",
-  "_index": 0,
+  "_index": 1,
   "symbol": "actor_0",
   "prefabId": "bdec97b4-3087-4593-a0da-a585308b2fdd",
   "name": "DogConcept",

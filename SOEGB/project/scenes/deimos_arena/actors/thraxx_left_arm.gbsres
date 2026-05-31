@@ -1,0 +1,41 @@
+{
+  "_resourceType": "actor",
+  "id": "fbec2f16-1617-4825-9f32-ed0f70ad7e19",
+  "prefabId": "",
+  "coordinateType": "tiles",
+  "frame": 0,
+  "animate": false,
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 0,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_SET_FRAME",
+      "args": {
+        "actorId": "$self$",
+        "frame": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-hitboxbrain-actor_frame-f5ca416d-748a-4840-b45e-983fd24dc0f6"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "_index": 2,
+  "symbol": "actor_50",
+  "name": "Thraxx Left Arm",
+  "x": 8,
+  "y": 7,
+  "spriteSheetId": "cbd2e7ca-12bf-4fdb-bed3-da03823fd281"
+}

@@ -28,6 +28,11 @@
             "id": "codex-menu-play-open-sound"
           },
           {
+            "command": "EVENT_MENU_PAUSE_CAPTURE",
+            "args": {},
+            "id": "codex-menu-capture-gameplay-before-push"
+          },
+          {
             "command": "EVENT_SCENE_PUSH_STATE",
             "args": {},
             "id": "codex-menu-store-gameplay-state-native"

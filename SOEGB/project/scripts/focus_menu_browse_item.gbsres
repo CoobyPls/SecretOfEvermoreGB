@@ -359,6 +359,61 @@
           },
           "valueB": {
             "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "not",
+                "value": {
+                  "type": "variable",
+                  "value": "73"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "44",
+                    "value": {
+                      "type": "number",
+                      "value": 4
+                    }
+                  },
+                  "id": "codex-menu-focus-skip-empty-biscuit"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-menu-focus-check-biscuit-stock"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-focus-validate-biscuit-when-needed"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "44"
+          },
+          "valueB": {
+            "type": "number",
             "value": 1
           }
         },
@@ -499,19 +554,73 @@
                     ],
                     "false": [
                       {
-                        "command": "EVENT_ACTOR_HIDE",
+                        "command": "EVENT_IF",
                         "args": {
-                          "actorId": "0"
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "44"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 3
+                            }
+                          },
+                          "__collapseElse": false,
+                          "__disableElse": false
                         },
-                        "id": "codex-menu-focus-hide-cursor-with-no-list-items"
-                      },
-                      {
-                        "command": "EVENT_GBVM_SCRIPT",
-                        "args": {
-                          "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14",
-                          "references": []
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_SET_POSITION",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": 7
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 12
+                                },
+                                "units": "tiles"
+                              },
+                              "id": "codex-menu-focus-cursor-on-biscuit"
+                            },
+                            {
+                              "command": "EVENT_GBVM_SCRIPT",
+                              "args": {
+                                "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BISCUIT\\n\\003\\002\\003HEALS DOG\"\nVM_DISPLAY_TEXT",
+                                "references": [
+                                  {
+                                    "type": "font",
+                                    "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                                  }
+                                ]
+                              },
+                              "id": "codex-menu-focus-description-biscuit"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "0"
+                              },
+                              "id": "codex-menu-focus-hide-cursor-with-no-list-items"
+                            },
+                            {
+                              "command": "EVENT_GBVM_SCRIPT",
+                              "args": {
+                                "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14",
+                                "references": []
+                              },
+                              "id": "codex-menu-focus-clear-description-with-no-list-items"
+                            }
+                          ]
                         },
-                        "id": "codex-menu-focus-clear-description-with-no-list-items"
+                        "id": "codex-menu-focus-render-biscuit-or-empty-list"
                       }
                     ]
                   },

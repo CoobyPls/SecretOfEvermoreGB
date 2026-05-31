@@ -1,6 +1,6 @@
 {
   "_resourceType": "actor",
-  "id": "d439493f-a064-4e8f-8313-da695e71a463",
+  "id": "c5676e25-a29f-4ca2-bec1-0cbc176d0d73",
   "name": "",
   "frame": 0,
   "animate": false,
@@ -17,15 +17,133 @@
     "solid"
   ],
   "prefabScriptOverrides": {},
-  "symbol": "actor_10",
-  "script": [],
-  "startScript": [],
+  "symbol": "actor_11",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "85"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Found 40 Talons!\n"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "2fee2e32-1ae6-4316-b0b6-62a906d3dd50"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "19",
+              "operation": "add",
+              "other": "val",
+              "vectorY": "L0",
+              "value": 40,
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "d63e28e3-e976-4064-b1cc-b06e93dfe4c5"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "85",
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "06e157cb-6373-4228-acd5-049b66f68b62"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open",
+              "loopAnim": false
+            },
+            "id": "96260c2a-70a1-42dd-8616-b6b5f298e505"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open",
+              "loopAnim": false
+            },
+            "id": "aa002bd6-f167-435d-8af2-7fdc801c8f99"
+          }
+        ]
+      },
+      "id": "5f4d01bb-0578-4f33-88b6-d52fd27d8bb1"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "85"
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open",
+              "loopAnim": false
+            },
+            "id": "c8b86f8e-7776-4e3d-86f2-7865d9f42d85"
+          }
+        ],
+        "false": []
+      },
+      "id": "7d1673fb-9a55-4208-a340-c3888e120dd1"
+    }
+  ],
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
   "coordinateType": "tiles",
-  "x": 3,
-  "y": 20,
-  "_index": 3
+  "x": 27,
+  "y": 28,
+  "_index": 0
 }
