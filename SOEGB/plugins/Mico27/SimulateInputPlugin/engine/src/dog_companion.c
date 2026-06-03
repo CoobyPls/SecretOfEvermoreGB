@@ -50,6 +50,10 @@ extern projectile_t *projectiles_active_head;
 
 static void take_damage_from(actor_t *attacker);
 
+UBYTE dog_companion_is_actor(actor_t *actor) BANKED {
+    return actor && actor == dog_actor;
+}
+
 static UWORD axis_distance(UWORD a, UWORD b) {
     return a > b ? a - b : b - a;
 }

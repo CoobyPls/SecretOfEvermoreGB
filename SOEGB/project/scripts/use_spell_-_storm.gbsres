@@ -1,0 +1,27 @@
+{
+  "_resourceType": "script",
+  "id": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700001",
+  "name": "Use Spell - Storm",
+  "symbol": "script_use_spell_storm",
+  "description": "First-pass Storm spell. Plays Shock.vgm and calls the native auto-target event, which rolls 1-2 damage and runs the nearest valid enemy hit script. Ingredients are intentionally not checked yet.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SOUND_PLAY_EFFECT",
+      "args": {
+        "type": "24102c2d-88dc-480e-9f36-bf6d929390cf",
+        "priority": "medium",
+        "wait": false
+      },
+      "id": "codex-storm-play-shock-vgm"
+    },
+    {
+      "command": "EVENT_STORM_CAST_NEAREST",
+      "args": {
+        "__collapse": false
+      },
+      "id": "codex-storm-cast-nearest"
+    }
+  ]
+}

@@ -201,6 +201,16 @@
                   "id": "codex-raptor-loss-update-hud"
                 },
                 {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "193",
+                    "value": {
+                      "type": "true"
+                    }
+                  },
+                  "id": "codex-raptor-loss-set-strongheart-wake-pending"
+                },
+                {
                   "command": "EVENT_SWITCH_SCENE",
                   "args": {
                     "sceneId": "18d425d2-604d-4415-9f9a-1298917ede17",

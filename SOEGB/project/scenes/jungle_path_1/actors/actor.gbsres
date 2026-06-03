@@ -93,6 +93,22 @@
               "loopAnim": false
             },
             "id": "96260c2a-70a1-42dd-8616-b6b5f298e505"
+          },
+          {
+            "id": "codex-jungle_path_1-actor-open-hud-after-jar",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642",
+              "__collapse": true
+            }
+          },
+          {
+            "id": "codex-jungle_path_1-actor-update-hud-after-jar",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18",
+              "__collapse": true
+            }
           }
         ],
         "false": [

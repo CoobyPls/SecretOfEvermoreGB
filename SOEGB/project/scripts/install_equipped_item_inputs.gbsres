@@ -155,7 +155,39 @@
                                           "id": "codex-equipped-a-use-biscuit"
                                         }
                                       ],
-                                      "false": []
+                                      "false": [
+                                        {
+                                          "command": "EVENT_IF",
+                                          "args": {
+                                            "condition": {
+                                              "type": "eq",
+                                              "valueA": {
+                                                "type": "variable",
+                                                "value": "47"
+                                              },
+                                              "valueB": {
+                                                "type": "number",
+                                                "value": 5
+                                              }
+                                            },
+                                            "__collapseElse": false,
+                                            "__disableElse": false
+                                          },
+                                          "id": "codex-equipped-storm-branch-19e87ae590a-3",
+                                          "children": {
+                                            "true": [
+                                              {
+                                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                "args": {
+                                                  "customEventId": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700001"
+                                                },
+                                                "id": "codex-call-storm-19e87ae590a-2"
+                                              }
+                                            ],
+                                            "false": []
+                                          }
+                                        }
+                                      ]
                                     },
                                     "id": "codex-equipped-a-if-biscuit-equipped"
                                   }
@@ -327,7 +359,39 @@
                                           "id": "codex-equipped-b-use-biscuit"
                                         }
                                       ],
-                                      "false": []
+                                      "false": [
+                                        {
+                                          "command": "EVENT_IF",
+                                          "args": {
+                                            "condition": {
+                                              "type": "eq",
+                                              "valueA": {
+                                                "type": "variable",
+                                                "value": "48"
+                                              },
+                                              "valueB": {
+                                                "type": "number",
+                                                "value": 5
+                                              }
+                                            },
+                                            "__collapseElse": false,
+                                            "__disableElse": false
+                                          },
+                                          "id": "codex-equipped-storm-branch-19e87ae590a-5",
+                                          "children": {
+                                            "true": [
+                                              {
+                                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                "args": {
+                                                  "customEventId": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700001"
+                                                },
+                                                "id": "codex-call-storm-19e87ae590a-4"
+                                              }
+                                            ],
+                                            "false": []
+                                          }
+                                        }
+                                      ]
                                     },
                                     "id": "codex-equipped-b-if-biscuit-equipped"
                                   }

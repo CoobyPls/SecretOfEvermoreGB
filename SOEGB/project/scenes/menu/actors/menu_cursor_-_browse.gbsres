@@ -1,7 +1,7 @@
 {
   "_resourceType": "actor",
   "id": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
-  "_index": 2,
+  "_index": 3,
   "symbol": "actor_menu_browse_cursor",
   "prefabId": "",
   "name": "Menu Cursor - Browse",
@@ -34,5 +34,5 @@
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "description": "Solid cursor used while browsing items. MenuChoice value 0 places it on Bone; value 1 places it on Petal. It hides while an item is awaiting A/B assignment."
+  "description": "Solid cursor used while browsing items. MenuChoice values: 0 Bone, 1 Petal, 2 Nectar, 3 Biscuit, 4 Storm. It hides while an item is awaiting A/B assignment."
 }

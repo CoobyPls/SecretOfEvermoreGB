@@ -1,7 +1,7 @@
 {
   "_resourceType": "actor",
   "id": "f4d3515d-a4c6-40fd-b624-74107825195f",
-  "_index": 6,
+  "_index": 7,
   "symbol": "actor_menu_nectar_count",
   "prefabId": "",
   "name": "Menu Item - Nectar Count",

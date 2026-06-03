@@ -3,6 +3,7 @@
 #include <gbdk/platform.h>
 
 #include "vm.h"
+#include "bankdata.h"
 #include "gbs_types.h"
 #include "data/sprite_bonemenu_tileset.h"
 #include "data/sprite_bonemenu_bank2_tileset.h"
@@ -14,6 +15,9 @@
 #include "data/sprite_biscuit_bank2_tileset.h"
 #include "data/game_globals.h"
 #include "gameplay_hud_icons.h"
+
+BANKREF(gameplay_hud_icons)
+BANKREF_EXTERN(gameplay_hud_icons)
 
 #define HUD_EMPTY_TILE 131u
 #define HUD_A_ICON_TILE 151u
@@ -28,18 +32,31 @@ static const UBYTE hud_empty_block[] = {
     HUD_EMPTY_TILE, HUD_EMPTY_TILE,
     HUD_EMPTY_TILE, HUD_EMPTY_TILE
 };
-static const UBYTE hud_a_block[] = {
-    (UBYTE)(HUD_A_ICON_TILE + 2u), (UBYTE)HUD_A_ICON_TILE,
-    (UBYTE)(HUD_A_ICON_TILE + 3u), (UBYTE)(HUD_A_ICON_TILE + 1u)
-};
-static const UBYTE hud_b_block[] = {
-    (UBYTE)(HUD_B_ICON_TILE + 2u), (UBYTE)HUD_B_ICON_TILE,
-    (UBYTE)(HUD_B_ICON_TILE + 3u), (UBYTE)(HUD_B_ICON_TILE + 1u)
-};
 static const UBYTE menu_biscuit_block[] = {
     (UBYTE)(MENU_BISCUIT_TILE_BASE + 2u), (UBYTE)MENU_BISCUIT_TILE_BASE,
     (UBYTE)(MENU_BISCUIT_TILE_BASE + 3u), (UBYTE)(MENU_BISCUIT_TILE_BASE + 1u)
 };
+static const UBYTE storm_icon_hud_tiles[] = {
+    0x01, 0x01, 0x03, 0x02, 0x02, 0x00, 0x06, 0x04, 0x04, 0x00, 0x0c, 0x08, 0x08, 0x00, 0x18, 0x10,
+    0xfc, 0xfc, 0x0c, 0x04, 0x18, 0x08, 0x30, 0x10, 0x60, 0x20, 0xc0, 0x40, 0xfc, 0xfc, 0x0c, 0x04,
+    0x18, 0x10, 0x1f, 0x1f, 0x00, 0x00, 0x01, 0x01, 0x01, 0x01, 0x03, 0x02, 0x03, 0x03, 0x02, 0x02,
+    0x0c, 0x04, 0x98, 0x88, 0xb0, 0x90, 0x60, 0x20, 0xc0, 0x40, 0x80, 0x80, 0x00, 0x00, 0x00, 0x00
+};
+
+static void make_icon_block(UBYTE first_tile, UBYTE item, UBYTE *block) {
+    if (item == 5u) {
+        block[0] = first_tile;
+        block[1] = first_tile + 1u;
+        block[2] = first_tile + 2u;
+        block[3] = first_tile + 3u;
+        return;
+    }
+
+    block[0] = first_tile + 2u;
+    block[1] = first_tile;
+    block[2] = first_tile + 3u;
+    block[3] = first_tile + 1u;
+}
 
 static void load_icon_tiles(UBYTE first_tile, UBYTE item) {
     switch (item) {
@@ -59,22 +76,49 @@ static void load_icon_tiles(UBYTE first_tile, UBYTE item) {
             SetBankedBkgData(first_tile, 2, sprite_biscuit_tileset.tiles, BANK(sprite_biscuit_tileset));
             SetBankedBkgData(first_tile + 2u, 2, sprite_biscuit_bank2_tileset.tiles, BANK(sprite_biscuit_bank2_tileset));
             break;
+        case 5:
+            SetBankedBkgData(first_tile, 4, storm_icon_hud_tiles, BANK(gameplay_hud_icons));
+            break;
     }
 }
 
 static void draw_item_icons(UBYTE a_item, UBYTE b_item) {
+    UBYTE block[4];
+
     if (a_item) {
         load_icon_tiles(HUD_A_ICON_TILE, a_item);
-        set_win_tiles(12, 0, 2, 2, hud_a_block);
+        make_icon_block(HUD_A_ICON_TILE, a_item, block);
+        set_win_tiles(12, 0, 2, 2, block);
     } else {
         set_win_tiles(12, 0, 2, 2, hud_empty_block);
     }
 
     if (b_item) {
         load_icon_tiles(HUD_B_ICON_TILE, b_item);
-        set_win_tiles(17, 0, 2, 2, hud_b_block);
+        make_icon_block(HUD_B_ICON_TILE, b_item, block);
+        set_win_tiles(17, 0, 2, 2, block);
     } else {
         set_win_tiles(17, 0, 2, 2, hud_empty_block);
+    }
+}
+
+static void draw_menu_item_icons(UBYTE a_item, UBYTE b_item) {
+    UBYTE block[4];
+
+    if (a_item) {
+        load_icon_tiles(HUD_A_ICON_TILE, a_item);
+        make_icon_block(HUD_A_ICON_TILE, a_item, block);
+        set_bkg_tiles(12, 0, 2, 2, block);
+    } else {
+        set_bkg_tiles(12, 0, 2, 2, hud_empty_block);
+    }
+
+    if (b_item) {
+        load_icon_tiles(HUD_B_ICON_TILE, b_item);
+        make_icon_block(HUD_B_ICON_TILE, b_item, block);
+        set_bkg_tiles(17, 0, 2, 2, block);
+    } else {
+        set_bkg_tiles(17, 0, 2, 2, hud_empty_block);
     }
 }
 
@@ -180,5 +224,6 @@ void menu_hud_draw_numbers(SCRIPT_CTX * THIS) OLDCALL BANKED {
     }
     count_tile = biscuit_count ? menu_digit((UBYTE)((biscuit_count > 9u) ? 9u : biscuit_count)) : MENU_DIGIT_TILE_BASE;
     set_bkg_tiles(11u, 12u, 1u, 1u, &count_tile);
+    draw_menu_item_icons((UBYTE)VM_GLOBAL(VAR_EQUIPPEDAITEM), (UBYTE)VM_GLOBAL(VAR_EQUIPPEDBITEM));
     THIS;
 }

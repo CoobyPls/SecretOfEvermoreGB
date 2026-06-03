@@ -17,6 +17,7 @@
 #include "input.h"
 #include "events.h"
 #include "simulate_input.h"
+#include "storm_spell.h"
 #include "menu_pause_snapshot.h"
 #include "data_manager.h"
 #include "music_manager.h"
@@ -85,6 +86,7 @@ void process_VM(void) {
 
                 toggle_shadow_OAM();                
 
+                storm_spell_update();
                 camera_update();
                 scroll_update();
                 actors_update();

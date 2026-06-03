@@ -1,0 +1,69 @@
+{
+  "_resourceType": "scene",
+  "id": "9d28cd85-0aa3-4772-8d02-0fbf2b76a1e5",
+  "_index": 15,
+  "name": "ArenaEmpty",
+  "backgroundId": "fef15234-cbef-4da8-b8d4-bab9a41ffc11",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [
+    "",
+    "",
+    "",
+    "",
+    "default-sprite"
+  ],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_16",
+  "x": 272,
+  "y": 544,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+      },
+      "id": "codex-thraxx-polish-call-6aa3cea7-baab-4fec-841d-8314f077ed03"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+      },
+      "id": "codex-thraxx-polish-call-970c600a-074b-4816-bf35-e918c7b85c4b"
+    },
+    {
+      "command": "EVENT_IF",
+      "id": "codex-thraxx-polish-empty-menu-if-551da292-49c9-49e5-a669-9e67e1abe026",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "codex-thraxx-polish-call-d77c1c20-61f8-4874-91b3-fb9c95514264"
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

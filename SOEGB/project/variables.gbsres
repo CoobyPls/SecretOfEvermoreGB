@@ -903,13 +903,73 @@
     },
     {
       "id": "303c69ed-5de4-458e-bd72-65f93e80967e__L0",
-      "name": "Local 0",
-      "symbol": "var_local_2"
+      "name": "NorthernJungle1ExitDirection",
+      "symbol": "var_northernjungle1exitdire"
     },
     {
       "id": "5771324d-fda0-4115-b1d9-e73f9df04e4a__L0",
       "name": "BigBugFought",
       "symbol": "var_bigbugfought"
+    },
+    {
+      "id": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700182",
+      "name": "PlayerKnowsStorm",
+      "symbol": "var_playerknowsstorm"
+    },
+    {
+      "id": "5273bc0c-fcd4-4818-8c5e-71b32696825f__L0",
+      "name": "JunglePath2SkeetoMoveTimer",
+      "symbol": "var_junglepath2skeetomoveti"
+    },
+    {
+      "id": "5273bc0c-fcd4-4818-8c5e-71b32696825f__L1",
+      "name": "JunglePath2SkeetoIframeTimer",
+      "symbol": "var_junglepath2skeetoiframe"
+    },
+    {
+      "id": "5273bc0c-fcd4-4818-8c5e-71b32696825f__L2",
+      "name": "JunglePath2SkeetoHP",
+      "symbol": "var_junglepath2skeetohp"
+    },
+    {
+      "id": "5273bc0c-fcd4-4818-8c5e-71b32696825f__L3",
+      "name": "JunglePath2SkeetoWanderDir",
+      "symbol": "var_junglepath2skeetowander"
+    },
+    {
+      "id": "24061ba5-bfde-4a2c-8dd7-7d65f219b934__L0",
+      "name": "JunglePath2FlowerMoveTimer",
+      "symbol": "var_junglepath2flowermoveti"
+    },
+    {
+      "id": "24061ba5-bfde-4a2c-8dd7-7d65f219b934__L1",
+      "name": "JunglePath2FlowerIframeTimer",
+      "symbol": "var_junglepath2floweriframe"
+    },
+    {
+      "id": "24061ba5-bfde-4a2c-8dd7-7d65f219b934__L2",
+      "name": "JunglePath2FlowerHP",
+      "symbol": "var_junglepath2flowerhp"
+    },
+    {
+      "id": "24061ba5-bfde-4a2c-8dd7-7d65f219b934__L3",
+      "name": "JunglePath2FlowerWanderDir",
+      "symbol": "var_junglepath2flowerwander"
+    },
+    {
+      "id": "c24cfaa0-9f20-42ed-b735-aca1bf4f965f__L0",
+      "name": "JunglePath2ExitDirection",
+      "symbol": "var_junglepath2exitdirectio"
+    },
+    {
+      "id": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700192",
+      "name": "StrongHeartIntroSeen",
+      "symbol": "var_strongheartintroseen"
+    },
+    {
+      "id": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700193",
+      "name": "StrongHeartWakeLinePending",
+      "symbol": "var_strongheartwakelinepend"
     }
   ],
   "constants": []

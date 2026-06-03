@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "cb28485d-c821-4be5-bb1b-9d86ab389a86",
+  "_index": 17,
+  "name": "VillageShop",
+  "backgroundId": "48a42878-65b4-4271-b477-fd4c80254ade",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_18",
+  "x": 1404,
+  "y": 656,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

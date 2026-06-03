@@ -1,0 +1,116 @@
+{
+  "_resourceType": "sprite",
+  "id": "db202869-92d2-43d9-9f35-51f94aaa4817",
+  "name": "cursorleft3",
+  "symbol": "sprite_cursorleft3",
+  "states": [
+    {
+      "id": "dfdb9391-0693-4e8c-8e9b-e2a77b6e1da9",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "c66a572e-533d-47e7-8689-cf8abb6f4d21",
+          "frames": [
+            {
+              "id": "e96599b8-ccb8-4d13-9b82-1aeaf573198e",
+              "tiles": [
+                {
+                  "id": "b1579dc4-414a-4b11-9cb2-163af96a6d3c",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "926ddab3-d8a0-4746-a13a-b90b01f968f9",
+          "frames": [
+            {
+              "id": "478f798f-6a20-40c9-a7d5-70f08630151d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "24e32adf-8796-4dca-be7a-b56ddee71aae",
+          "frames": [
+            {
+              "id": "e3c1edbc-f61d-44e6-a0fd-85d5eef1ade8",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2f8c535f-aade-4705-93c1-ccf7d3ef37ea",
+          "frames": [
+            {
+              "id": "fc1ec45b-bacc-4b70-aceb-cb65b7a332a6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6fad60a1-39c1-4f43-b22d-6bc46d423315",
+          "frames": [
+            {
+              "id": "1a18ead2-766b-42fd-88d5-7ffa1c60e597",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "bfa43949-f9cb-48b2-8761-a34614661c93",
+          "frames": [
+            {
+              "id": "3674a7b6-f2db-40d2-a1fc-e4e7edc96a29",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "db1dd97f-6ef0-4ac4-b9e9-d8bd582013f7",
+          "frames": [
+            {
+              "id": "f97040ea-9d46-4d0b-b7c1-0eb6b62ee618",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "907212a7-4655-4910-8b4f-1e7437df0aca",
+          "frames": [
+            {
+              "id": "05c323aa-105c-4c5f-b5e2-cbd60c742466",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 8,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "cursorleft3.png",
+  "width": 8,
+  "height": 16,
+  "checksum": "a7ef372cab6a2ab32add7ddff6edec463031c7a2"
+}

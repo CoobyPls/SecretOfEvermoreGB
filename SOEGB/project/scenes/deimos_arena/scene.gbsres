@@ -388,6 +388,19 @@
       "children": {
         "true": [
           {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "f8953263-9352-4a3d-978e-fce3913ed5f2",
+              "priority": "high",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": false,
+              "effect": 18
+            },
+            "id": "codex-thraxx-polish-sound-cc187b2a-7155-4090-ae12-24334f47ff10"
+          },
+          {
             "command": "EVENT_VARIABLE_MATH",
             "args": {
               "vectorX": "9",

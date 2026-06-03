@@ -1,0 +1,74 @@
+{
+  "_resourceType": "script",
+  "id": "c9e6b1db-1f69-4c2d-b034-7afd3271de10",
+  "name": "TakeDamageRooted",
+  "description": "Rooted-enemy damage reaction: rate-limits hits, subtracts DamageTaken from SelfHP, and plays the hit sound without knockback.\n\nUse for plants or stationary enemies. The hit emote is intentionally omitted: in sprite-heavy rooms its four temporary sprite tiles can spill into HUD tile memory and corrupt the gameplay HUD.",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "IframeTimeRef",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "SelfHP",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "DamageTaken",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "symbol": "script_8",
+  "script": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "V0",
+        "time": {
+          "type": "number",
+          "value": 1
+        },
+        "frames": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "V1",
+              "operation": "sub",
+              "other": "var",
+              "vectorY": "V2",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "25105143-c33b-4a62-866f-2607da35d246"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "e29b389f-cafc-4305-b2dd-bc83816a6835",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": true,
+              "effect": 0
+            },
+            "id": "cbd5396d-7ea2-469a-bfc2-57d5c1f7a11b"
+          }
+        ]
+      },
+      "id": "b51d979e-20a8-4edf-9509-929b096be32b"
+    }
+  ]
+}

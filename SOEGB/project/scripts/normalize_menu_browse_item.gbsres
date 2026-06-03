@@ -349,51 +349,177 @@
                     ],
                     "false": [
                       {
-                        "command": "EVENT_SET_VALUE",
+                        "command": "EVENT_IF",
                         "args": {
-                          "variable": "44",
-                          "value": {
-                            "type": "number",
-                            "value": 0
-                          }
-                        },
-                        "id": "codex-menu-normalize-fallback-to-bone"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_POSITION",
-                        "args": {
-                          "actorId": "0",
-                          "x": {
-                            "type": "number",
-                            "value": 2
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "44"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 4
+                            }
                           },
-                          "y": {
-                            "type": "number",
-                            "value": 6
-                          },
-                          "units": "tiles"
+                          "__collapseElse": false,
+                          "__disableElse": false
                         },
-                        "id": "codex-menu-cursor-on-owned-bone"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SHOW",
-                        "args": {
-                          "actorId": "0"
-                        },
-                        "id": "codex-menu-show-cursor-on-owned-bone"
-                      },
-                      {
-                        "command": "EVENT_GBVM_SCRIPT",
-                        "args": {
-                          "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BONE CRUSHER\\n\\003\\002\\003DMG: 1\"\nVM_DISPLAY_TEXT",
-                          "references": [
+                        "children": {
+                          "true": [
                             {
-                              "type": "font",
-                              "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "variable",
+                                  "value": "182"
+                                },
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "0",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 7
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 9
+                                      },
+                                      "units": "tiles"
+                                    },
+                                    "id": "codex-menu-cursor-on-known-storm"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SHOW",
+                                    "args": {
+                                      "actorId": "0"
+                                    },
+                                    "id": "codex-menu-show-cursor-on-known-storm"
+                                  },
+                                  {
+                                    "command": "EVENT_GBVM_SCRIPT",
+                                    "args": {
+                                      "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002STORM\\n\\003\\002\\003SHOCKS TARGET\"\nVM_DISPLAY_TEXT",
+                                      "references": [
+                                        {
+                                          "type": "font",
+                                          "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                                        }
+                                      ]
+                                    },
+                                    "id": "codex-menu-description-known-storm"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "44",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    },
+                                    "id": "codex-menu-normalize-fallback-to-bone"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "0",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 2
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 6
+                                      },
+                                      "units": "tiles"
+                                    },
+                                    "id": "codex-menu-cursor-on-owned-bone"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SHOW",
+                                    "args": {
+                                      "actorId": "0"
+                                    },
+                                    "id": "codex-menu-show-cursor-on-owned-bone"
+                                  },
+                                  {
+                                    "command": "EVENT_GBVM_SCRIPT",
+                                    "args": {
+                                      "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BONE CRUSHER\\n\\003\\002\\003DMG: 1\"\nVM_DISPLAY_TEXT",
+                                      "references": [
+                                        {
+                                          "type": "font",
+                                          "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                                        }
+                                      ]
+                                    },
+                                    "id": "codex-menu-description-owned-bone"
+                                  }
+                                ]
+                              },
+                              "id": "codex-menu-known-storm-render-check"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "44",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-menu-normalize-fallback-to-bone"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_POSITION",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": 2
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 6
+                                },
+                                "units": "tiles"
+                              },
+                              "id": "codex-menu-cursor-on-owned-bone"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SHOW",
+                              "args": {
+                                "actorId": "0"
+                              },
+                              "id": "codex-menu-show-cursor-on-owned-bone"
+                            },
+                            {
+                              "command": "EVENT_GBVM_SCRIPT",
+                              "args": {
+                                "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BONE CRUSHER\\n\\003\\002\\003DMG: 1\"\nVM_DISPLAY_TEXT",
+                                "references": [
+                                  {
+                                    "type": "font",
+                                    "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                                  }
+                                ]
+                              },
+                              "id": "codex-menu-description-owned-bone"
                             }
                           ]
                         },
-                        "id": "codex-menu-description-owned-bone"
+                        "id": "codex-menu-render-owned-storm-or-bone"
                       }
                     ]
                   },

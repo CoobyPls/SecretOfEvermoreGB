@@ -1929,6 +1929,7 @@
                     "__collapseElse": false,
                     "__disableElse": false
                   },
+                  "id": "codex-menu-cycle-bone-or-rest",
                   "children": {
                     "true": [
                       {
@@ -1940,7 +1941,7 @@
                             "value": 1
                           }
                         },
-                        "id": "codex-menu-browse-select-petal"
+                        "id": "codex-menu-choice-bone-to-petal"
                       },
                       {
                         "command": "EVENT_ACTOR_SET_POSITION",
@@ -1956,20 +1957,7 @@
                           },
                           "units": "tiles"
                         },
-                        "id": "codex-menu-browse-cursor-to-petal"
-                      },
-                      {
-                        "command": "EVENT_GBVM_SCRIPT",
-                        "args": {
-                          "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002PETAL\\n\\003\\002\\003HEALS 5 HP\"\nVM_DISPLAY_TEXT",
-                          "references": [
-                            {
-                              "type": "font",
-                              "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
-                            }
-                          ]
-                        },
-                        "id": "codex-menu-description-petal"
+                        "id": "codex-menu-cursor-petal"
                       }
                     ],
                     "false": [
@@ -1990,6 +1978,7 @@
                           "__collapseElse": false,
                           "__disableElse": false
                         },
+                        "id": "codex-menu-cycle-petal-or-rest",
                         "children": {
                           "true": [
                             {
@@ -1998,10 +1987,10 @@
                                 "variable": "44",
                                 "value": {
                                   "type": "number",
-                                  "value": 2
+                                  "value": 4
                                 }
                               },
-                              "id": "codex-menu-browse-select-nectar"
+                              "id": "codex-menu-choice-petal-to-storm"
                             },
                             {
                               "command": "EVENT_ACTOR_SET_POSITION",
@@ -2009,28 +1998,15 @@
                                 "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
                                 "x": {
                                   "type": "number",
-                                  "value": 2
+                                  "value": 7
                                 },
                                 "y": {
                                   "type": "number",
-                                  "value": 12
+                                  "value": 9
                                 },
                                 "units": "tiles"
                               },
-                              "id": "codex-menu-browse-cursor-to-nectar"
-                            },
-                            {
-                              "command": "EVENT_GBVM_SCRIPT",
-                              "args": {
-                                "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002NECTAR\\n\\003\\002\\003HEALS 10 HP\"\nVM_DISPLAY_TEXT",
-                                "references": [
-                                  {
-                                    "type": "font",
-                                    "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
-                                  }
-                                ]
-                              },
-                              "id": "codex-menu-description-nectar"
+                              "id": "codex-menu-cursor-storm"
                             }
                           ],
                           "false": [
@@ -2045,12 +2021,13 @@
                                   },
                                   "valueB": {
                                     "type": "number",
-                                    "value": 2
+                                    "value": 4
                                   }
                                 },
                                 "__collapseElse": false,
                                 "__disableElse": false
                               },
+                              "id": "codex-menu-cycle-storm-or-lower",
                               "children": {
                                 "true": [
                                   {
@@ -2059,52 +2036,10 @@
                                       "variable": "44",
                                       "value": {
                                         "type": "number",
-                                        "value": 3
+                                        "value": 2
                                       }
                                     },
-                                    "id": "codex-menu-browse-select-biscuit"
-                                  },
-                                  {
-                                    "command": "EVENT_ACTOR_SET_POSITION",
-                                    "args": {
-                                      "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
-                                      "x": {
-                                        "type": "number",
-                                        "value": 7
-                                      },
-                                      "y": {
-                                        "type": "number",
-                                        "value": 12
-                                      },
-                                      "units": "tiles"
-                                    },
-                                    "id": "codex-menu-browse-cursor-to-biscuit"
-                                  },
-                                  {
-                                    "command": "EVENT_GBVM_SCRIPT",
-                                    "args": {
-                                      "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BISCUIT\\n\\003\\002\\003HEALS DOG\"\nVM_DISPLAY_TEXT",
-                                      "references": [
-                                        {
-                                          "type": "font",
-                                          "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
-                                        }
-                                      ]
-                                    },
-                                    "id": "codex-menu-description-biscuit"
-                                  }
-                                ],
-                                "false": [
-                                  {
-                                    "command": "EVENT_SET_VALUE",
-                                    "args": {
-                                      "variable": "44",
-                                      "value": {
-                                        "type": "number",
-                                        "value": 0
-                                      }
-                                    },
-                                    "id": "codex-menu-browse-select-bone"
+                                    "id": "codex-menu-choice-storm-to-nectar"
                                   },
                                   {
                                     "command": "EVENT_ACTOR_SET_POSITION",
@@ -2116,36 +2051,101 @@
                                       },
                                       "y": {
                                         "type": "number",
-                                        "value": 6
+                                        "value": 12
                                       },
                                       "units": "tiles"
                                     },
-                                    "id": "codex-menu-browse-cursor-to-bone"
-                                  },
+                                    "id": "codex-menu-cursor-nectar"
+                                  }
+                                ],
+                                "false": [
                                   {
-                                    "command": "EVENT_GBVM_SCRIPT",
+                                    "command": "EVENT_IF",
                                     "args": {
-                                      "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_LOAD_TEXT 0\n.asciz \"\\002\\002\\003\\002\\002BONE CRUSHER\\n\\003\\002\\003DMG: 1\"\nVM_DISPLAY_TEXT",
-                                      "references": [
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "44"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 2
+                                        }
+                                      },
+                                      "__collapseElse": false,
+                                      "__disableElse": false
+                                    },
+                                    "id": "codex-menu-cycle-nectar-or-bone",
+                                    "children": {
+                                      "true": [
                                         {
-                                          "type": "font",
-                                          "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "44",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 3
+                                            }
+                                          },
+                                          "id": "codex-menu-choice-nectar-to-biscuit"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_POSITION",
+                                          "args": {
+                                            "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                            "x": {
+                                              "type": "number",
+                                              "value": 7
+                                            },
+                                            "y": {
+                                              "type": "number",
+                                              "value": 12
+                                            },
+                                            "units": "tiles"
+                                          },
+                                          "id": "codex-menu-cursor-biscuit"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "44",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 0
+                                            }
+                                          },
+                                          "id": "codex-menu-choice-to-bone"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_POSITION",
+                                          "args": {
+                                            "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                            "x": {
+                                              "type": "number",
+                                              "value": 2
+                                            },
+                                            "y": {
+                                              "type": "number",
+                                              "value": 6
+                                            },
+                                            "units": "tiles"
+                                          },
+                                          "id": "codex-menu-cursor-bone"
                                         }
                                       ]
-                                    },
-                                    "id": "codex-menu-description-bone"
+                                    }
                                   }
                                 ]
-                              },
-                              "id": "codex-menu-cycle-nectar-to-biscuit-to-bone"
+                              }
                             }
                           ]
-                        },
-                        "id": "codex-menu-cycle-petal-to-nectar-to-bone"
+                        }
                       }
                     ]
-                  },
-                  "id": "codex-menu-cycle-three-item-browse-list"
+                  }
                 }
               ],
               "false": []
@@ -2309,21 +2309,14 @@
                   "command": "EVENT_IF",
                   "args": {
                     "condition": {
-                      "type": "and",
+                      "type": "eq",
                       "valueA": {
                         "type": "variable",
-                        "value": "48"
+                        "value": "44"
                       },
                       "valueB": {
-                        "type": "eq",
-                        "valueA": {
-                          "type": "variable",
-                          "value": "46"
-                        },
-                        "valueB": {
-                          "type": "number",
-                          "value": 0
-                        }
+                        "type": "number",
+                        "value": 1
                       }
                     },
                     "__collapseElse": false,
@@ -2334,48 +2327,13 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "46",
+                          "variable": "44",
                           "value": {
                             "type": "number",
-                            "value": 1
+                            "value": 4
                           }
                         },
-                        "id": "codex-menu-browse-equipped-target-b"
-                      },
-                      {
-                        "command": "EVENT_VARIABLE_MATH",
-                        "args": {
-                          "vectorX": "44",
-                          "operation": "set",
-                          "other": "var",
-                          "vectorY": "48",
-                          "value": 0,
-                          "minValue": 0,
-                          "maxValue": 32767,
-                          "clamp": false
-                        },
-                        "id": "codex-menu-browse-b-item-to-choice"
-                      },
-                      {
-                        "command": "EVENT_VARIABLE_MATH",
-                        "args": {
-                          "vectorX": "44",
-                          "operation": "sub",
-                          "other": "val",
-                          "value": 1,
-                          "minValue": 0,
-                          "maxValue": 32767,
-                          "clamp": false
-                        },
-                        "id": "codex-menu-browse-b-item-id-to-row"
-                      },
-                      {
-                        "command": "EVENT_CALL_CUSTOM_EVENT",
-                        "args": {
-                          "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
-                          "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
-                        },
-                        "id": "codex-menu-render-hovered-b-description"
+                        "id": "codex-menu-lateral-choice-petal-to-storm"
                       },
                       {
                         "command": "EVENT_ACTOR_SET_POSITION",
@@ -2383,83 +2341,393 @@
                           "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
                           "x": {
                             "type": "number",
-                            "value": 15
+                            "value": 7
                           },
                           "y": {
                             "type": "number",
-                            "value": 1
+                            "value": 9
                           },
                           "units": "tiles"
                         },
-                        "id": "codex-menu-browse-cursor-to-equipped-b"
+                        "id": "codex-menu-lateral-cursor-petal-to-storm"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SHOW",
+                        "args": {
+                          "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                        },
+                        "id": "codex-menu-lateral-show-cursor-petal-to-storm"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                          "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                        },
+                        "id": "codex-menu-lateral-normalize-petal-to-storm"
                       }
                     ],
                     "false": [
                       {
-                        "command": "EVENT_SET_VALUE",
+                        "command": "EVENT_IF",
                         "args": {
-                          "variable": "46",
-                          "value": {
-                            "type": "number",
-                            "value": 0
-                          }
-                        },
-                        "id": "codex-menu-browse-equipped-target-a"
-                      },
-                      {
-                        "command": "EVENT_VARIABLE_MATH",
-                        "args": {
-                          "vectorX": "44",
-                          "operation": "set",
-                          "other": "var",
-                          "vectorY": "47",
-                          "value": 0,
-                          "minValue": 0,
-                          "maxValue": 32767,
-                          "clamp": false
-                        },
-                        "id": "codex-menu-browse-a-item-to-choice"
-                      },
-                      {
-                        "command": "EVENT_VARIABLE_MATH",
-                        "args": {
-                          "vectorX": "44",
-                          "operation": "sub",
-                          "other": "val",
-                          "value": 1,
-                          "minValue": 0,
-                          "maxValue": 32767,
-                          "clamp": false
-                        },
-                        "id": "codex-menu-browse-a-item-id-to-row"
-                      },
-                      {
-                        "command": "EVENT_CALL_CUSTOM_EVENT",
-                        "args": {
-                          "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
-                          "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
-                        },
-                        "id": "codex-menu-render-hovered-a-description"
-                      },
-                      {
-                        "command": "EVENT_ACTOR_SET_POSITION",
-                        "args": {
-                          "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
-                          "x": {
-                            "type": "number",
-                            "value": 10
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "44"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 4
+                            }
                           },
-                          "y": {
-                            "type": "number",
-                            "value": 1
-                          },
-                          "units": "tiles"
+                          "__collapseElse": false,
+                          "__disableElse": false
                         },
-                        "id": "codex-menu-browse-cursor-to-equipped-a"
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "44",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1
+                                }
+                              },
+                              "id": "codex-menu-lateral-choice-storm-to-petal"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_POSITION",
+                              "args": {
+                                "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                "x": {
+                                  "type": "number",
+                                  "value": 2
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 9
+                                },
+                                "units": "tiles"
+                              },
+                              "id": "codex-menu-lateral-cursor-storm-to-petal"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SHOW",
+                              "args": {
+                                "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                              },
+                              "id": "codex-menu-lateral-show-cursor-storm-to-petal"
+                            },
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                                "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                              },
+                              "id": "codex-menu-lateral-normalize-storm-to-petal"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "44"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 2
+                                  }
+                                },
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "44",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 3
+                                      }
+                                    },
+                                    "id": "codex-menu-lateral-choice-nectar-to-biscuit"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 7
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 12
+                                      },
+                                      "units": "tiles"
+                                    },
+                                    "id": "codex-menu-lateral-cursor-nectar-to-biscuit"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SHOW",
+                                    "args": {
+                                      "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                                    },
+                                    "id": "codex-menu-lateral-show-cursor-nectar-to-biscuit"
+                                  },
+                                  {
+                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                    "args": {
+                                      "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                                      "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                                    },
+                                    "id": "codex-menu-lateral-normalize-nectar-to-biscuit"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "44"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 3
+                                        }
+                                      },
+                                      "__collapseElse": false,
+                                      "__disableElse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "44",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 2
+                                            }
+                                          },
+                                          "id": "codex-menu-lateral-choice-biscuit-to-nectar"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_POSITION",
+                                          "args": {
+                                            "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                            "x": {
+                                              "type": "number",
+                                              "value": 2
+                                            },
+                                            "y": {
+                                              "type": "number",
+                                              "value": 12
+                                            },
+                                            "units": "tiles"
+                                          },
+                                          "id": "codex-menu-lateral-cursor-biscuit-to-nectar"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SHOW",
+                                          "args": {
+                                            "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                                          },
+                                          "id": "codex-menu-lateral-show-cursor-biscuit-to-nectar"
+                                        },
+                                        {
+                                          "command": "EVENT_CALL_CUSTOM_EVENT",
+                                          "args": {
+                                            "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                                            "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                                          },
+                                          "id": "codex-menu-lateral-normalize-biscuit-to-nectar"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_IF",
+                                          "args": {
+                                            "condition": {
+                                              "type": "and",
+                                              "valueA": {
+                                                "type": "variable",
+                                                "value": "48"
+                                              },
+                                              "valueB": {
+                                                "type": "eq",
+                                                "valueA": {
+                                                  "type": "variable",
+                                                  "value": "46"
+                                                },
+                                                "valueB": {
+                                                  "type": "number",
+                                                  "value": 0
+                                                }
+                                              }
+                                            },
+                                            "__collapseElse": false,
+                                            "__disableElse": false
+                                          },
+                                          "children": {
+                                            "true": [
+                                              {
+                                                "command": "EVENT_SET_VALUE",
+                                                "args": {
+                                                  "variable": "46",
+                                                  "value": {
+                                                    "type": "number",
+                                                    "value": 1
+                                                  }
+                                                },
+                                                "id": "codex-menu-browse-equipped-target-b"
+                                              },
+                                              {
+                                                "command": "EVENT_VARIABLE_MATH",
+                                                "args": {
+                                                  "vectorX": "44",
+                                                  "operation": "set",
+                                                  "other": "var",
+                                                  "vectorY": "48",
+                                                  "value": 0,
+                                                  "minValue": 0,
+                                                  "maxValue": 32767,
+                                                  "clamp": false
+                                                },
+                                                "id": "codex-menu-browse-b-item-to-choice"
+                                              },
+                                              {
+                                                "command": "EVENT_VARIABLE_MATH",
+                                                "args": {
+                                                  "vectorX": "44",
+                                                  "operation": "sub",
+                                                  "other": "val",
+                                                  "value": 1,
+                                                  "minValue": 0,
+                                                  "maxValue": 32767,
+                                                  "clamp": false
+                                                },
+                                                "id": "codex-menu-browse-b-item-id-to-row"
+                                              },
+                                              {
+                                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                "args": {
+                                                  "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                                                  "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                                                },
+                                                "id": "codex-menu-render-hovered-b-description"
+                                              },
+                                              {
+                                                "command": "EVENT_ACTOR_SET_POSITION",
+                                                "args": {
+                                                  "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                                  "x": {
+                                                    "type": "number",
+                                                    "value": 15
+                                                  },
+                                                  "y": {
+                                                    "type": "number",
+                                                    "value": 1
+                                                  },
+                                                  "units": "tiles"
+                                                },
+                                                "id": "codex-menu-browse-cursor-to-equipped-b"
+                                              }
+                                            ],
+                                            "false": [
+                                              {
+                                                "command": "EVENT_SET_VALUE",
+                                                "args": {
+                                                  "variable": "46",
+                                                  "value": {
+                                                    "type": "number",
+                                                    "value": 0
+                                                  }
+                                                },
+                                                "id": "codex-menu-browse-equipped-target-a"
+                                              },
+                                              {
+                                                "command": "EVENT_VARIABLE_MATH",
+                                                "args": {
+                                                  "vectorX": "44",
+                                                  "operation": "set",
+                                                  "other": "var",
+                                                  "vectorY": "47",
+                                                  "value": 0,
+                                                  "minValue": 0,
+                                                  "maxValue": 32767,
+                                                  "clamp": false
+                                                },
+                                                "id": "codex-menu-browse-a-item-to-choice"
+                                              },
+                                              {
+                                                "command": "EVENT_VARIABLE_MATH",
+                                                "args": {
+                                                  "vectorX": "44",
+                                                  "operation": "sub",
+                                                  "other": "val",
+                                                  "value": 1,
+                                                  "minValue": 0,
+                                                  "maxValue": 32767,
+                                                  "clamp": false
+                                                },
+                                                "id": "codex-menu-browse-a-item-id-to-row"
+                                              },
+                                              {
+                                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                                "args": {
+                                                  "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                                                  "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                                                },
+                                                "id": "codex-menu-render-hovered-a-description"
+                                              },
+                                              {
+                                                "command": "EVENT_ACTOR_SET_POSITION",
+                                                "args": {
+                                                  "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                                  "x": {
+                                                    "type": "number",
+                                                    "value": 10
+                                                  },
+                                                  "y": {
+                                                    "type": "number",
+                                                    "value": 1
+                                                  },
+                                                  "units": "tiles"
+                                                },
+                                                "id": "codex-menu-browse-cursor-to-equipped-a"
+                                              }
+                                            ]
+                                          },
+                                          "id": "codex-menu-toggle-hover-between-equipped-slots"
+                                        }
+                                      ]
+                                    },
+                                    "id": "codex-menu-lateral-biscuit-or-equipped-fallback"
+                                  }
+                                ]
+                              },
+                              "id": "codex-menu-lateral-nectar-or-biscuit"
+                            }
+                          ]
+                        },
+                        "id": "codex-menu-lateral-storm-or-lower-row"
                       }
                     ]
                   },
-                  "id": "codex-menu-toggle-hover-between-equipped-slots"
+                  "id": "codex-menu-lateral-petal-or-grid"
                 }
               ]
             },
@@ -2769,6 +3037,11 @@
                   "id": "codex-menu-commit-assignment-to-target-slot"
                 },
                 {
+                  "command": "EVENT_MENU_HUD_NUMBERS",
+                  "args": {},
+                  "id": "codex-menu-redraw-slots-after-equip-assignment"
+                },
+                {
                   "command": "EVENT_CALL_CUSTOM_EVENT",
                   "args": {
                     "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc400",
@@ -3037,25 +3310,54 @@
                       }
                     },
                     "__collapseElse": true,
-                    "__disableElse": true
+                    "__disableElse": false
                   },
+                  "id": "codex-menu-map-storm-to-item-id",
                   "children": {
                     "true": [
                       {
-                        "command": "EVENT_SET_VALUE",
+                        "command": "EVENT_IF",
                         "args": {
-                          "variable": "45",
-                          "value": {
-                            "type": "number",
-                            "value": 0
-                          }
+                          "condition": {
+                            "type": "variable",
+                            "value": "182"
+                          },
+                          "__collapseElse": false,
+                          "__disableElse": false
                         },
-                        "id": "codex-menu-neutral-selection-cannot-assign-item"
+                        "id": "codex-menu-storm-known-check",
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "45",
+                                "value": {
+                                  "type": "number",
+                                  "value": 5
+                                }
+                              },
+                              "id": "codex-menu-select-known-storm"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "45",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-menu-block-unknown-storm"
+                            }
+                          ]
+                        }
                       }
                     ],
                     "false": []
-                  },
-                  "id": "codex-menu-ignore-a-before-first-direction"
+                  }
                 },
                 {
                   "command": "EVENT_IF",
@@ -3132,6 +3434,54 @@
         ]
       },
       "id": "codex-menu-input-a"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "182"
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "id": "codex-menu-show-known-storm",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700002",
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "units": "tiles"
+            },
+            "id": "codex-menu-storm-to-inventory"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700002"
+            },
+            "id": "codex-menu-show-storm"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700002"
+            },
+            "id": "codex-menu-hide-unknown-storm"
+          }
+        ]
+      }
     }
   ],
   "playerHit1Script": [],

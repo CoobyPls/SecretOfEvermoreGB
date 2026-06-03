@@ -31,31 +31,11 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_TEXT",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "text": [
-                "Looks like you \nmopped up those\ndinos, thanks! \n",
-                "They've had South\nJungle blocked for\nweeks!",
-                "Chief will want to\ntalk to y- Wait...\nDon't I know you?"
-              ],
-              "__section": "behavior",
-              "avatarId": "",
-              "minHeight": 5,
-              "maxHeight": 5,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30
+              "customEventId": "f78c0a4e-d4e7-4958-b560-34a7dfed6a5e"
             },
-            "id": "74da6331-a9e8-4845-955e-2954fbee3236"
+            "id": "codex-village-shop-call-true"
           },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
@@ -100,6 +80,13 @@
               "closeDelayFrames": 30
             },
             "id": "4976ab99-5611-4167-b7a2-54c3725427d0"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "f78c0a4e-d4e7-4958-b560-34a7dfed6a5e"
+            },
+            "id": "codex-village-shop-call-false"
           },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",

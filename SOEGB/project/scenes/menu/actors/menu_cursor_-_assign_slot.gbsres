@@ -1,7 +1,7 @@
 {
   "_resourceType": "actor",
   "id": "18bd256f-4fe1-4b55-8a31-30f4132f094f",
-  "_index": 3,
+  "_index": 4,
   "symbol": "actor_menu_assignment_curso",
   "prefabId": "",
   "name": "Menu Cursor - Assign Slot",

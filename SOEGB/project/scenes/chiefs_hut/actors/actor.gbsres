@@ -18,15 +18,26 @@
   "symbol": "actor_16",
   "script": [
     {
-      "command": "EVENT_GROUP",
-      "args": {},
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "192"
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "id": "codex-strongheart-intro-or-later",
       "children": {
         "true": [
           {
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "Well I'll be!\nAn outsider! At a\ntime like this?",
+                "I'll be!\nAn outsider! At a\ntime like this?",
                 "Wait, I know those\neyes! Elizabeth\ngrew up, it seems!",
                 "What a pleasant\nsurprise! However\nyour timimg...",
                 "It could not have\nbeen any worse had\nyou scripted it!"
@@ -118,6 +129,16 @@
             "id": "96a0e832-7c62-4280-b5d8-9d754028d2d6"
           },
           {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "192",
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "codex-strongheart-mark-intro-seen"
+          },
+          {
             "command": "EVENT_ACTOR_MOVE_TO",
             "args": {
               "__section": "movement",
@@ -152,9 +173,251 @@
             },
             "id": "a6bbdb57-7218-43d2-a46f-fac2b067ca10"
           }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "not",
+                "value": {
+                  "type": "variable",
+                  "value": "182"
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "id": "codex-strongheart-needs-storm-or-repeat",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "variable",
+                      "value": "15"
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Ah, you got him!\nMany thanks!",
+                            "You know, your \nparents didn't\njust use their\nbrawn to carve",
+                            "their trails \nthrough the wilds!\nWhat am I saying?\nAlchemy, my boy!",
+                            "Here in Evermore,\nyou can combine\nbits of reagents\nwhich you can",
+                            "buy, or gather\nfrom your\nsurroundings.\nI will teach",
+                            "you how to call \nthe power of\nnature itself!\nBEHOLD!",
+                            "NEW FORMULA!\nSTORM - SHOCKS\nTARGET"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "codex-strongheart-teach-storm-text"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "182",
+                          "value": {
+                            "type": "true"
+                          }
+                        },
+                        "id": "codex-strongheart-mark-storm-known"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "variable",
+                            "value": "12"
+                          },
+                          "__collapseElse": false,
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF_VALUE",
+                              "args": {
+                                "variable": "22",
+                                "operator": "<=",
+                                "comparator": 0,
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "15",
+                                      "value": {
+                                        "type": "true"
+                                      }
+                                    },
+                                    "id": "codex-strongheart-repair-raptor-defeated-flag"
+                                  },
+                                  {
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "Ah, you got him!\nMany thanks!",
+                                        "You know, your \nparents didn't\njust use their\nbrawn to carve",
+                                        "their trails \nthrough the wilds!\nWhat am I saying?\nAlchemy, my boy!",
+                                        "Here in Evermore,\nyou can combine\nbits of reagents\nwhich you can",
+                                        "buy, or gather\nfrom your\nsurroundings.\nI will teach",
+                                        "you how to call \nthe power of\nnature itself!\nBEHOLD!",
+                                        "NEW FORMULA!\nSTORM - SHOCKS\nTARGET"
+                                      ],
+                                      "__section": "text",
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 7,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 5,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": "true",
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a",
+                                      "closeDelayTime": 0.5,
+                                      "closeDelayFrames": 30
+                                    },
+                                    "id": "codex-strongheart-teach-storm-text"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "182",
+                                      "value": {
+                                        "type": "true"
+                                      }
+                                    },
+                                    "id": "codex-strongheart-mark-storm-known"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "Head north to\nthe Swamps in\nsearch of the\nMud Pepper."
+                                      ],
+                                      "__section": "text",
+                                      "avatarId": "",
+                                      "minHeight": 4,
+                                      "maxHeight": 7,
+                                      "textX": 1,
+                                      "textY": 1,
+                                      "textHeight": 5,
+                                      "position": "bottom",
+                                      "clearPrevious": true,
+                                      "showFrame": "true",
+                                      "speedIn": -1,
+                                      "speedOut": -1,
+                                      "closeWhen": "key",
+                                      "closeButton": "a",
+                                      "closeDelayTime": 0.5,
+                                      "closeDelayFrames": 30
+                                    },
+                                    "id": "codex-strongheart-repeat-mud-pepper-text"
+                                  }
+                                ]
+                              },
+                              "id": "codex-strongheart-teach-if-pit-raptor-hp-zero"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_TEXT",
+                              "args": {
+                                "text": [
+                                  "Head north to\nthe Swamps in\nsearch of the\nMud Pepper."
+                                ],
+                                "__section": "text",
+                                "avatarId": "",
+                                "minHeight": 4,
+                                "maxHeight": 7,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 5,
+                                "position": "bottom",
+                                "clearPrevious": true,
+                                "showFrame": "true",
+                                "speedIn": -1,
+                                "speedOut": -1,
+                                "closeWhen": "key",
+                                "closeButton": "a",
+                                "closeDelayTime": 0.5,
+                                "closeDelayFrames": 30
+                              },
+                              "id": "codex-strongheart-repeat-mud-pepper-text"
+                            }
+                          ]
+                        },
+                        "id": "codex-strongheart-raptor-pit-seen-fallback"
+                      }
+                    ]
+                  },
+                  "id": "codex-strongheart-raptor-defeated-primary"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Head north to\nthe Swamps in\nsearch of the\nMud Pepper."
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "codex-strongheart-repeat-mud-pepper-text"
+                }
+              ]
+            }
+          }
         ]
-      },
-      "id": "8576a723-361b-4c0b-ad6c-1cad0e3ed9d6"
+      }
     }
   ],
   "startScript": [],

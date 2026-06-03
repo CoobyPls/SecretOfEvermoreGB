@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "48a42878-65b4-4271-b477-fd4c80254ade",
+  "name": "VillageHouse1",
+  "symbol": "bg_villagehouse1",
+  "tileColors": "",
+  "filename": "VillageHouse1.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

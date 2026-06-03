@@ -58,7 +58,7 @@
               "value": "0",
               "minValue": "0",
               "maxValue": "32767",
-              "clamp": false
+              "clamp": true
             },
             "id": "0d4212a9-f670-4636-b95d-a83040a2fc94"
           },

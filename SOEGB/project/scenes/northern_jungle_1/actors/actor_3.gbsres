@@ -93,6 +93,22 @@
               "loopAnim": false
             },
             "id": "c2f7f67c-38d6-4fab-91ac-b2625059d1a1"
+          },
+          {
+            "id": "codex-northern_jungle_1-actor_3-open-hud-after-jar",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642",
+              "__collapse": true
+            }
+          },
+          {
+            "id": "codex-northern_jungle_1-actor_3-update-hud-after-jar",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18",
+              "__collapse": true
+            }
           }
         ],
         "false": [

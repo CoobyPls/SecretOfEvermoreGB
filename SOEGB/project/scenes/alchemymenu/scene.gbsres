@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "664b0fc2-077c-423c-baa6-0dbbd7f8c975",
+  "_index": 18,
+  "name": "AlchemyMenu",
+  "backgroundId": "3d1d6cce-c10f-41cd-b763-062197ae591d",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_20",
+  "x": 272,
+  "y": 704,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}
