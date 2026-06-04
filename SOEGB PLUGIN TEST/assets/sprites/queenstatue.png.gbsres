@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "c05daf92-ddd0-4f79-9eb2-bf062cb7a071",
+  "name": "queenstatue",
+  "symbol": "sprite_queenstatue",
+  "states": [
+    {
+      "id": "9c01dfc1-1f2e-46a3-8951-336b2d64777a",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "219e2124-2521-4be1-bb36-2520aabd8329",
+          "frames": [
+            {
+              "id": "9905112f-a44e-41ce-b138-21dddc83ad1c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "522548bd-55c5-4156-b80c-4b730b8aecb2",
+          "frames": [
+            {
+              "id": "477dc9ea-7434-4a7c-8697-b041f2cb7b36",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "567e46f1-94ea-4dc5-bde6-b2e9a02de345",
+          "frames": [
+            {
+              "id": "006fac64-dfa4-472c-94ed-2cdcbf3979dc",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4ab4b108-e70e-41bf-8af4-8a40bf01dde5",
+          "frames": [
+            {
+              "id": "e5ba8a3a-b75e-444f-a42f-00db33ed6bcf",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "46fd135d-af88-43d6-b429-60c06b382cdd",
+          "frames": [
+            {
+              "id": "1478b3b4-d815-4433-b5aa-70305c612e2b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c3c6ef07-aa03-4474-a40c-c8189278dc37",
+          "frames": [
+            {
+              "id": "d8c628e4-1fee-490a-a164-b8c69cde2f94",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "04dc332a-251b-4a4a-ab1d-dffbb9637da8",
+          "frames": [
+            {
+              "id": "f09f816f-88b9-4838-afd8-9b18905b94f3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7a9d30d7-30c5-4b60-b288-979c545c46fa",
+          "frames": [
+            {
+              "id": "a29679b0-d361-4e6b-a977-d743e41d4afa",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "queenstatue.png",
+  "width": 56,
+  "height": 89,
+  "checksum": "a994b86790c8a8f3142c50e8a33bc118f2b79f46"
+}

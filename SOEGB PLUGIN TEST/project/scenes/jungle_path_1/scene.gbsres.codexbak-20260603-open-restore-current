@@ -1,0 +1,285 @@
+{
+  "_resourceType": "scene",
+  "id": "01c0b4b0-a1c9-42da-8cc2-b322250e38dc",
+  "_index": 1,
+  "type": "ADVENTURE",
+  "name": "Jungle Path 1",
+  "symbol": "scene_2",
+  "x": 440,
+  "y": 48,
+  "width": 32,
+  "height": 32,
+  "backgroundId": "216200dc-16cc-4b93-bb82-b18197ccd8d6",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "playerSpriteSheetId": "48cca6ed-daa9-4497-bacc-a30ffc3ec91f",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "13"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            },
+            "id": "be82e8c9-ccd1-446c-a0d2-445cf77e1987"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 32
+              }
+            },
+            "id": "392686bc-04b1-46df-ab72-90df4ba0c2ef"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "9",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "13",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            },
+            "id": "7574c53d-3909-433f-9b10-ccfce8233f60"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-init-hud-defaults"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+      },
+      "id": "c369dacf-d9d1-4d78-b7bc-8a9aa3ac4bde"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+      },
+      "id": "63b70a95-aa19-4116-be5c-d5718766290d"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "caa84686-2e32-4b0a-80b6-7e776e2e5a43"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-enable-attack-if-dog-joined"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "select"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "id": "codex-plugin-test-install-select-storm",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "101",
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "codex-plugin-test-install-select-storm-storm-debug-mark-cast-start"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "24102c2d-88dc-480e-9f36-bf6d929390cf",
+              "priority": "medium",
+              "wait": false
+            },
+            "id": "codex-plugin-test-direct-sound-proof"
+          },
+          {
+            "command": "EVENT_MAGIC_CAST_SPELL",
+            "args": {
+              "spellName": "Storm Plugin Test Direct",
+              "spellId": 1,
+              "behavior": "burst",
+              "targetMode": "nearest_player",
+              "damageVariable": "30",
+              "targetXVariable": "99",
+              "targetYVariable": "100",
+              "castSuccessVariable": "101",
+              "minDamage": 1,
+              "maxDamage": 2,
+              "ingredient1Variable": "30",
+              "ingredient1Cost": 0,
+              "ingredient2Variable": "30",
+              "ingredient2Cost": 0,
+              "rangePx": 128,
+              "freezeFrames": 30,
+              "effectActor": "d51026ed-c9ea-4f13-bd3d-87c24c1bf740",
+              "effectReservedTiles": 20,
+              "effectFrames": 44,
+              "missileSpeedPx": 3,
+              "effectYOffsetPx": 24,
+              "targetCollisionGroup": "1",
+              "hitCollisionGroup": "3",
+              "effectFirstFrame": 1,
+              "effectLastFrame": 9,
+              "effectBlankFrame": 0,
+              "targetCollisionGroup2": "2"
+            },
+            "id": "codex-plugin-test-direct-storm-cast"
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [
+    {
+      "command": "EVENT_IF_FALSE",
+      "args": {
+        "variable": "11",
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "id": "352a2a1e-5c1f-450d-aa86-257e047846a9",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "11",
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "cfd65cba-cd92-47ba-8dd2-a965a606fb62"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "8bad2e0c-744c-46e1-984e-869b1298ad7f",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": false,
+              "effect": 0
+            },
+            "id": "codex-skeeto-drink-contact-sound"
+          },
+          {
+            "command": "EVENT_DEC_VALUE",
+            "args": {
+              "variable": "9"
+            },
+            "id": "da48bad6-bbdd-4b23-8c7b-8334a0fa9fb2"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "7ab6b3a7-bd03-4644-83c4-b7647b5d5b79"
+            },
+            "id": "codex-call-check-player-hp-after-damage"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": {
+                "type": "number",
+                "value": 0.65
+              },
+              "frames": {
+                "type": "number",
+                "value": 39
+              }
+            },
+            "id": "e93b1ed9-2a0e-4ec9-ae3e-42e55d701962"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "11",
+              "value": {
+                "type": "false"
+              }
+            },
+            "id": "fedde4e6-dac3-4c7c-9c13-6998caa29ee1"
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "playerHit2Script": [],
+  "playerHit3Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "af71a7ee-ef6e-45b6-8779-14843499a083"
+    }
+  ],
+  "collisions": "0f1a+004+0f4+0015+0f3+004+0f4+0015+0f3+004+0f4+001c+0f4+001c+0f4+001c+0f4+008+0f8+00c+0f4+008+0f8+00c+0f4+008+0f8+00c+0f4+008+0f8+00c+0f4+008+0f4+0010+0f4+008+0f4+0010+0f4+008+0f4+0010+0f4+008+0f4+0010+0f4+008+0f4+0010+0f4+008+0f4+0010+0f4+008+0f4+0010+0f4+008+0f4+0010+0f4+004+0f6+0012+0f4+004+0f6+0012+0f4+004+0f5+0013+0f4+004+0f4+0014+0fc+00c+0f14+00c+0fa+00!0f9+00c+0f14+00c+0fc+001c+0f4+001c+0f4+001c+0f4+001c+0f4+004+0f1c+004+0f1a+",
+  "updateScript": [
+    {
+      "command": "EVENT_MAGIC_UPDATE",
+      "args": {
+        "__collapse": false
+      },
+      "id": "codex-plugin-test-scene-magic-update"
+    }
+  ]
+}

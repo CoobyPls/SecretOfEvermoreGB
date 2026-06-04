@@ -1,0 +1,86 @@
+{
+  "_resourceType": "scene",
+  "id": "18d425d2-604d-4415-9f9a-1298917ede17",
+  "_index": 7,
+  "name": "Chief's Hut",
+  "backgroundId": "29ab343f-3529-4eba-8370-48c3406470f5",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "002b+0fe+006+0f!00c+0f!006+0f!00c+0f!006+0f!00c+0f!006+0f!00c+0f!006+0f!00c+0f!006+0f!00c+0f!006+0f!00c+0f!006+0f!00c+0f!006+0f!00c+0f!006+0f!00c+0f!006+0f5+004+0f5+00a+0f6+0043+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_8",
+  "x": 272,
+  "y": 224,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "193"
+        },
+        "__collapseElse": true,
+        "__disableElse": false
+      },
+      "id": "codex-strongheart-auto-wake-if-pending",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You're awake! \nLucky this beast \ndragged you in,\nor else you would",
+                "have certainly\nbecome a meal for\nour reptile\nassailant!",
+                "If you're set on\nhis hide, I won't\nstop you. But at\nleast take the ",
+                "healing petals in\nthe jar over in\nthe corner, okay?"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "codex-strongheart-auto-wake-text"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "193",
+              "value": {
+                "type": "false"
+              }
+            },
+            "id": "codex-strongheart-clear-wake-pending"
+          }
+        ],
+        "false": []
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "b3900278-94ee-4e75-9c74-7c3810a82ca6"
+      },
+      "id": "codex-chiefs-hut-install-start-menu-input"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

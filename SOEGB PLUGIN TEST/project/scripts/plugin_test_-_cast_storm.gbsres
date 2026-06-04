@@ -1,0 +1,95 @@
+{
+  "_resourceType": "script",
+  "id": "f36d9c3e-2b36-4660-9c37-4f1c8f4d5a01",
+  "name": "Plugin Test - Cast Storm",
+  "symbol": "script_plugin_test_cast_sto",
+  "description": "Sandbox-only diagnostic. Press Select in Jungle Path 1: first force-shows the Storm actor, then runs the Magic System plugin cast against the nearest Skeeto.",
+  "variables": {},
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Storm Effect Actor"
+    }
+  },
+  "script": [
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": 18
+        },
+        "y": {
+          "type": "number",
+          "value": 14
+        },
+        "units": "tiles"
+      },
+      "id": "codex-plugin-test-force-storm-position"
+    },
+    {
+      "command": "EVENT_ACTOR_SHOW",
+      "args": {
+        "actorId": "0"
+      },
+      "id": "codex-plugin-test-force-storm-show"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": {
+          "type": "number",
+          "value": 2
+        },
+        "frames": {
+          "type": "number",
+          "value": 120
+        }
+      },
+      "id": "codex-plugin-test-force-storm-visible-wait"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "0"
+      },
+      "id": "codex-plugin-test-force-storm-hide"
+    },
+    {
+      "command": "EVENT_MAGIC_CAST_SPELL",
+      "args": {
+        "spellName": "Storm Plugin Test",
+        "spellId": 1,
+        "behavior": "burst",
+        "targetMode": "nearest_player",
+        "soundEffect": "24102c2d-88dc-480e-9f36-bf6d929390cf",
+        "soundPriority": "high",
+        "damageVariable": "30",
+        "minDamage": 1,
+        "maxDamage": 2,
+        "ingredient1Variable": "30",
+        "ingredient1Cost": 0,
+        "ingredient2Variable": "30",
+        "ingredient2Cost": 0,
+        "rangePx": 128,
+        "freezeFrames": 30,
+        "effectReservedTiles": 23,
+        "effectFrames": 44,
+        "missileSpeedPx": 3,
+        "effectYOffsetPx": 24,
+        "targetCollisionGroup": "1",
+        "hitCollisionGroup": "3",
+        "effectActor": "0",
+        "targetXVariable": "99",
+        "targetYVariable": "100",
+        "castSuccessVariable": "101",
+        "targetCollisionGroup2": "2",
+        "effectFirstFrame": 1,
+        "effectLastFrame": 9,
+        "effectBlankFrame": 0
+      },
+      "id": "codex-plugin-test-storm-cast"
+    }
+  ]
+}

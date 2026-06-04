@@ -1,0 +1,42 @@
+﻿{
+    "_resourceType":  "scene",
+    "id":  "c59e0e01-511d-4f63-a391-37af3e0bf038",
+    "_index":  2,
+    "name":  "Raptor Pit",
+    "backgroundId":  "a085a431-b541-46f1-83b1-ae056623b1af",
+    "tilesetId":  "",
+    "width":  20,
+    "height":  32,
+    "type":  "TOPDOWN",
+    "colorModeOverride":  "none",
+    "paletteIds":  [
+
+                   ],
+    "spritePaletteIds":  [
+
+                         ],
+    "collisions":  "0f6+004+0f6+004+0f6+004+0f6+004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f6+004+0f6+004+0f6+004+0f6+004+",
+    "autoFadeSpeed":  1,
+    "symbol":  "scene_3",
+    "x":  694.4,
+    "y":  100,
+    "script":  [
+                   {
+                       "command":  "EVENT_CALL_CUSTOM_EVENT",
+                       "args":  {
+                                    "customEventId":  "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+                                },
+                       "id":  "abbc37e0-3696-4dac-893b-639cfb6b9530"
+                   }
+               ],
+    "playerHit1Script":  [
+
+                         ],
+    "playerHit2Script":  [
+
+                         ],
+    "playerHit3Script":  [
+
+                         ],
+    "playerSpriteSheetId":  "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd"
+}

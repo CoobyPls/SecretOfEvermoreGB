@@ -1,0 +1,10 @@
+{
+  "type": "enginePlugin",
+  "name": "GBS Magic System",
+  "author": "Coobert + Codex",
+  "url": "",
+  "description": "Reusable GB Studio magic/alchemy helper. Provides generic spell casting events that can target actors, show one reusable effect actor, temporarily pause the target, roll damage, and call the target hit script.",
+  "license": "MIT",
+  "version": "0.1.0",
+  "gbsVersion": ">=4.2.2"
+}

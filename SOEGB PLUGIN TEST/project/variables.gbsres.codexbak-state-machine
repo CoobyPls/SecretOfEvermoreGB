@@ -1,0 +1,911 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "RaptorsKilled",
+      "symbol": "var_raptorskilled"
+    },
+    {
+      "id": "1",
+      "name": "DogJoined",
+      "symbol": "var_dogjoined"
+    },
+    {
+      "id": "2",
+      "name": "Flower1HP",
+      "symbol": "var_flower1hp"
+    },
+    {
+      "id": "3",
+      "name": "VillageJar4Open",
+      "symbol": "var_villagejar4open"
+    },
+    {
+      "id": "4",
+      "name": "PlantBrain1",
+      "symbol": "var_plantbrain1"
+    },
+    {
+      "id": "5",
+      "name": "PlantIframetimer",
+      "symbol": "var_plantiframetimer"
+    },
+    {
+      "id": "6",
+      "name": "12",
+      "symbol": "var_12"
+    },
+    {
+      "id": "7",
+      "name": "DogY",
+      "symbol": "var_dogy"
+    },
+    {
+      "id": "8",
+      "name": "Plantdir1",
+      "symbol": "var_plantdir1"
+    },
+    {
+      "id": "9",
+      "name": "PlayerHP",
+      "symbol": "var_playerhp"
+    },
+    {
+      "id": "10",
+      "name": "VillageLadyWander",
+      "symbol": "var_villageladywander_0"
+    },
+    {
+      "id": "11",
+      "name": "PlayerInvuln",
+      "symbol": "var_playerinvuln"
+    },
+    {
+      "id": "12",
+      "name": "RaptorPitIntro",
+      "symbol": "var_raptorpitintro"
+    },
+    {
+      "id": "13",
+      "name": "PlayerMaxHP",
+      "symbol": "var_playermaxhp"
+    },
+    {
+      "id": "14",
+      "name": "EquippedIcon",
+      "symbol": "var_equippedicon"
+    },
+    {
+      "id": "15",
+      "name": "RaptorDefeated",
+      "symbol": "var_raptordefeated"
+    },
+    {
+      "id": "16",
+      "name": "NJPlantHP1",
+      "symbol": "var_njplanthp1"
+    },
+    {
+      "id": "17",
+      "name": "NJPlantHP2",
+      "symbol": "var_njplanthp2"
+    },
+    {
+      "id": "18",
+      "name": "SJPlantMoveTimer",
+      "symbol": "var_sjplantmovetimer"
+    },
+    {
+      "id": "19",
+      "name": "PlayerTalons",
+      "symbol": "var_playertalons"
+    },
+    {
+      "id": "20",
+      "name": "ItemNumPetal",
+      "symbol": "var_itemnumpetal"
+    },
+    {
+      "id": "21",
+      "name": "PlantDir2",
+      "symbol": "var_plantdir2"
+    },
+    {
+      "id": "22",
+      "name": "PitRaptorHP",
+      "symbol": "var_pitraptorhp"
+    },
+    {
+      "id": "23",
+      "name": "JP2JarOpen",
+      "symbol": "var_jp2jaropen"
+    },
+    {
+      "id": "24",
+      "name": "CrashJar1Open",
+      "symbol": "var_crashjar1open"
+    },
+    {
+      "id": "25",
+      "name": "NJJar3Open",
+      "symbol": "var_njjar3open_0"
+    },
+    {
+      "id": "26",
+      "name": "VillageJar1Open",
+      "symbol": "var_villagejar1open"
+    },
+    {
+      "id": "27",
+      "name": "VillageJar2Open",
+      "symbol": "var_villagejar2open"
+    },
+    {
+      "id": "28",
+      "name": "VillageJar3Open",
+      "symbol": "var_villagejar3open"
+    },
+    {
+      "id": "29",
+      "name": "CurrentWeapon",
+      "symbol": "var_currentweapon"
+    },
+    {
+      "id": "30",
+      "name": "CurrentDamage",
+      "symbol": "var_currentdamage"
+    },
+    {
+      "id": "31",
+      "name": "AttackPulse",
+      "symbol": "var_attackpulse"
+    },
+    {
+      "name": "MammothRaptor1MoveTimer",
+      "id": "32",
+      "symbol": "var_mammothraptor1movetimer"
+    },
+    {
+      "name": "MammothRaptor1IframeTimer",
+      "id": "33",
+      "symbol": "var_mammothraptor1iframetim"
+    },
+    {
+      "name": "MammothRaptor1HP",
+      "id": "34",
+      "symbol": "var_mammothraptor1hp"
+    },
+    {
+      "name": "MammothRaptor1Defeated",
+      "id": "35",
+      "symbol": "var_mammothraptor1defeated"
+    },
+    {
+      "name": "MammothRaptor2MoveTimer",
+      "id": "36",
+      "symbol": "var_mammothraptor2movetimer"
+    },
+    {
+      "name": "MammothRaptor2IframeTimer",
+      "id": "37",
+      "symbol": "var_mammothraptor2iframetim"
+    },
+    {
+      "name": "MammothRaptor2HP",
+      "id": "38",
+      "symbol": "var_mammothraptor2hp"
+    },
+    {
+      "name": "MammothRaptor2Defeated",
+      "id": "39",
+      "symbol": "var_mammothraptor2defeated"
+    },
+    {
+      "name": "MammothRaptor3MoveTimer",
+      "id": "40",
+      "symbol": "var_mammothraptor3movetimer"
+    },
+    {
+      "name": "MammothRaptor3IframeTimer",
+      "id": "41",
+      "symbol": "var_mammothraptor3iframetim"
+    },
+    {
+      "name": "MammothRaptor3HP",
+      "id": "42",
+      "symbol": "var_mammothraptor3hp"
+    },
+    {
+      "name": "MammothRaptor3Defeated",
+      "id": "43",
+      "symbol": "var_mammothraptor3defeated"
+    },
+    {
+      "id": "44",
+      "name": "MenuChoice",
+      "symbol": "var_menuchoice"
+    },
+    {
+      "id": "45",
+      "name": "MenuSelectedItem",
+      "symbol": "var_menuselecteditem"
+    },
+    {
+      "id": "46",
+      "name": "MenuAssignSlot",
+      "symbol": "var_menuassignslot"
+    },
+    {
+      "id": "47",
+      "name": "EquippedAItem",
+      "symbol": "var_equippedaitem"
+    },
+    {
+      "id": "48",
+      "name": "EquippedBItem",
+      "symbol": "var_equippedbitem"
+    },
+    {
+      "id": "49",
+      "name": "MenuAssignmentMode",
+      "symbol": "var_menuassignmentmode"
+    },
+    {
+      "id": "50",
+      "name": "EquippedAIcon",
+      "symbol": "var_equippedaicon"
+    },
+    {
+      "id": "51",
+      "name": "EquippedBIcon",
+      "symbol": "var_equippedbicon"
+    },
+    {
+      "id": "52",
+      "name": "MenuTalonIcon",
+      "symbol": "var_menutalonicon"
+    },
+    {
+      "id": "53",
+      "name": "MenuPetalIcon",
+      "symbol": "var_menupetalicon"
+    },
+    {
+      "id": "54",
+      "name": "ItemNumNectar",
+      "symbol": "var_itemnumnectar"
+    },
+    {
+      "id": "55",
+      "name": "MenuNectarIcon",
+      "symbol": "var_menunectaricon"
+    },
+    {
+      "id": "56",
+      "name": "DogHP",
+      "symbol": "var_doghp"
+    },
+    {
+      "id": "57",
+      "name": "DogMaxHP",
+      "symbol": "var_dogmaxhp"
+    },
+    {
+      "id": "58",
+      "name": "MenuBoyHPTensTile",
+      "symbol": "var_menuboyhptenstile"
+    },
+    {
+      "id": "59",
+      "name": "MenuBoyHPOnesTile",
+      "symbol": "var_menuboyhponestile"
+    },
+    {
+      "id": "60",
+      "name": "MenuBoyMaxHPTensTile",
+      "symbol": "var_menuboymaxhptenstile"
+    },
+    {
+      "id": "61",
+      "name": "MenuBoyMaxHPOnesTile",
+      "symbol": "var_menuboymaxhponestile"
+    },
+    {
+      "id": "62",
+      "name": "MenuDogHPTensTile",
+      "symbol": "var_menudoghptenstile"
+    },
+    {
+      "id": "63",
+      "name": "MenuDogHPOnesTile",
+      "symbol": "var_menudoghponestile"
+    },
+    {
+      "id": "64",
+      "name": "MenuDogMaxHPTensTile",
+      "symbol": "var_menudogmaxhptenstile"
+    },
+    {
+      "id": "65",
+      "name": "MenuDogMaxHPOnesTile",
+      "symbol": "var_menudogmaxhponestile"
+    },
+    {
+      "id": "66",
+      "name": "GameplayAIconChar",
+      "symbol": "var_gameplayaiconchar"
+    },
+    {
+      "id": "67",
+      "name": "GameplayBIconChar",
+      "symbol": "var_gameplaybiconchar"
+    },
+    {
+      "id": "68",
+      "name": "MenuPetalCountTile",
+      "symbol": "var_menupetalcounttile"
+    },
+    {
+      "id": "69",
+      "name": "MenuNectarCountTile",
+      "symbol": "var_menunectarcounttile"
+    },
+    {
+      "id": "70",
+      "name": "MenuTalonHundredsTile",
+      "symbol": "var_menutalonhundredstile"
+    },
+    {
+      "id": "71",
+      "name": "MenuTalonTensTile",
+      "symbol": "var_menutalonstenstile"
+    },
+    {
+      "id": "72",
+      "name": "MenuTalonOnesTile",
+      "symbol": "var_menutalononestile"
+    },
+    {
+      "id": "73",
+      "name": "ItemNumBiscuit",
+      "symbol": "var_itemnumbiscuit"
+    },
+    {
+      "id": "74",
+      "name": "EJJar2Open",
+      "symbol": "var_ejjar2open"
+    },
+    {
+      "id": "75",
+      "name": "QPJar1Open",
+      "symbol": "var_qpjar1open"
+    },
+    {
+      "id": "76",
+      "name": "QPJar2Open",
+      "symbol": "var_qpjar2open"
+    },
+    {
+      "id": "77",
+      "name": "QPJar3Open",
+      "symbol": "var_qpjar3open"
+    },
+    {
+      "id": "78",
+      "name": "NJJar1Open",
+      "symbol": "var_njjar1open"
+    },
+    {
+      "id": "79",
+      "name": "NJJar2Open",
+      "symbol": "var_njjar2open"
+    },
+    {
+      "id": "80",
+      "name": "HasGrassVest",
+      "symbol": "var_hasgrassvest"
+    },
+    {
+      "id": "81",
+      "name": "HasLeatherWraps",
+      "symbol": "var_hasleatherwraps"
+    },
+    {
+      "id": "82",
+      "name": "HasFlintSpear",
+      "symbol": "var_hasflintspear"
+    },
+    {
+      "id": "83",
+      "name": "HasObsidianAxe",
+      "symbol": "var_hasobsidianaxe"
+    },
+    {
+      "id": "84",
+      "name": "HasFlashSpell",
+      "symbol": "var_hasflashspell"
+    },
+    {
+      "id": "85",
+      "name": "JP1JarOpen",
+      "symbol": "var_jp1jaropen"
+    },
+    {
+      "id": "86",
+      "name": "ShopChoice",
+      "symbol": "var_shopchoice"
+    },
+    {
+      "id": "87",
+      "name": "InputInteracted",
+      "symbol": "var_inputinteracted"
+    },
+    {
+      "id": "510",
+      "name": "EJJar1Open",
+      "symbol": "var_ejjar1open"
+    },
+    {
+      "id": "511",
+      "name": "VillageJar5Open",
+      "symbol": "var_villagejar5open"
+    },
+    {
+      "id": "d1dd6ef0-8e13-4c0e-8d8c-d82635444dd2__L0",
+      "name": "Local 0",
+      "symbol": "var_local_1"
+    },
+    {
+      "id": "f9ed08cd-58bf-41a4-8be1-18bcf68573d7__L0",
+      "name": "IframeTimer",
+      "symbol": "var_iframetimer"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp"
+    },
+    {
+      "id": "f9ed08cd-58bf-41a4-8be1-18bcf68573d7__L1",
+      "name": "AttackTimer",
+      "symbol": "var_attacktimer"
+    },
+    {
+      "id": "e535c979-29f8-4ca5-8a1b-7cd4ff4177e9__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval"
+    },
+    {
+      "id": "e1187dff-4512-4a05-8dcd-2e83b0f1f332__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_0"
+    },
+    {
+      "id": "e1187dff-4512-4a05-8dcd-2e83b0f1f332__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_0"
+    },
+    {
+      "id": "e1187dff-4512-4a05-8dcd-2e83b0f1f332__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_0"
+    },
+    {
+      "id": "62f3aada-af9f-41f5-be5c-91af6d0c6f67__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_3"
+    },
+    {
+      "id": "62f3aada-af9f-41f5-be5c-91af6d0c6f67__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_3"
+    },
+    {
+      "id": "62f3aada-af9f-41f5-be5c-91af6d0c6f67__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_3"
+    },
+    {
+      "id": "62f3aada-af9f-41f5-be5c-91af6d0c6f67__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_3"
+    },
+    {
+      "id": "86ed8ea9-b00f-4061-8bd6-b56742a352f3__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_2"
+    },
+    {
+      "id": "86ed8ea9-b00f-4061-8bd6-b56742a352f3__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_2"
+    },
+    {
+      "id": "86ed8ea9-b00f-4061-8bd6-b56742a352f3__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_2"
+    },
+    {
+      "id": "86ed8ea9-b00f-4061-8bd6-b56742a352f3__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_2"
+    },
+    {
+      "id": "3370c171-d007-4483-86bd-d3e8e7a3c80d__L0",
+      "name": "Local 0",
+      "symbol": "var_local_0"
+    },
+    {
+      "id": "777f4c81-893d-4372-9ae8-1dea911500a3__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_1"
+    },
+    {
+      "id": "777f4c81-893d-4372-9ae8-1dea911500a3__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_1"
+    },
+    {
+      "id": "777f4c81-893d-4372-9ae8-1dea911500a3__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_1"
+    },
+    {
+      "id": "777f4c81-893d-4372-9ae8-1dea911500a3__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_1"
+    },
+    {
+      "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_0"
+    },
+    {
+      "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_0"
+    },
+    {
+      "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_0"
+    },
+    {
+      "id": "9573493b-01c8-4ab2-97d8-2ef8d65e4813__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_0"
+    },
+    {
+      "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_4"
+    },
+    {
+      "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_4"
+    },
+    {
+      "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_4"
+    },
+    {
+      "id": "b1ca6475-cc74-4431-9ece-a66036e77154__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_4"
+    },
+    {
+      "id": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_1"
+    },
+    {
+      "id": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_1"
+    },
+    {
+      "id": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_1"
+    },
+    {
+      "id": "c575458e-4927-457d-b83a-cc0e1471fac8__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_5"
+    },
+    {
+      "id": "c575458e-4927-457d-b83a-cc0e1471fac8__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_5"
+    },
+    {
+      "id": "c575458e-4927-457d-b83a-cc0e1471fac8__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_5"
+    },
+    {
+      "id": "c575458e-4927-457d-b83a-cc0e1471fac8__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_5"
+    },
+    {
+      "id": "346deb5d-e60e-40ba-ade6-76014447fe8d__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_6"
+    },
+    {
+      "id": "346deb5d-e60e-40ba-ade6-76014447fe8d__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_6"
+    },
+    {
+      "id": "346deb5d-e60e-40ba-ade6-76014447fe8d__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_6"
+    },
+    {
+      "id": "346deb5d-e60e-40ba-ade6-76014447fe8d__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_6"
+    },
+    {
+      "id": "de6e99f3-9de9-4801-b884-a4d6a70ba7aa__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_7"
+    },
+    {
+      "id": "de6e99f3-9de9-4801-b884-a4d6a70ba7aa__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_7"
+    },
+    {
+      "id": "de6e99f3-9de9-4801-b884-a4d6a70ba7aa__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_7"
+    },
+    {
+      "id": "de6e99f3-9de9-4801-b884-a4d6a70ba7aa__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_7"
+    },
+    {
+      "id": "28cbf467-5b44-4220-b7eb-872052311b6c__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_8"
+    },
+    {
+      "id": "28cbf467-5b44-4220-b7eb-872052311b6c__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_8"
+    },
+    {
+      "id": "28cbf467-5b44-4220-b7eb-872052311b6c__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_8"
+    },
+    {
+      "id": "28cbf467-5b44-4220-b7eb-872052311b6c__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_8"
+    },
+    {
+      "id": "ba0952d3-a376-4be8-8001-fd7e97725072__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_9"
+    },
+    {
+      "id": "ba0952d3-a376-4be8-8001-fd7e97725072__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_9"
+    },
+    {
+      "id": "ba0952d3-a376-4be8-8001-fd7e97725072__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_9"
+    },
+    {
+      "id": "ba0952d3-a376-4be8-8001-fd7e97725072__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_9"
+    },
+    {
+      "id": "acf383dd-f970-4dd1-84de-2d503c1663aa__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_10"
+    },
+    {
+      "id": "acf383dd-f970-4dd1-84de-2d503c1663aa__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_10"
+    },
+    {
+      "id": "acf383dd-f970-4dd1-84de-2d503c1663aa__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_10"
+    },
+    {
+      "id": "acf383dd-f970-4dd1-84de-2d503c1663aa__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_10"
+    },
+    {
+      "id": "a4d58259-b8a7-4d0b-b5dc-aca824df8128__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_11"
+    },
+    {
+      "id": "a4d58259-b8a7-4d0b-b5dc-aca824df8128__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_11"
+    },
+    {
+      "id": "a4d58259-b8a7-4d0b-b5dc-aca824df8128__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_11"
+    },
+    {
+      "id": "a4d58259-b8a7-4d0b-b5dc-aca824df8128__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_11"
+    },
+    {
+      "id": "601af14f-89e5-47f0-8171-4d231a76d49b__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_12"
+    },
+    {
+      "id": "601af14f-89e5-47f0-8171-4d231a76d49b__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_12"
+    },
+    {
+      "id": "601af14f-89e5-47f0-8171-4d231a76d49b__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_12"
+    },
+    {
+      "id": "601af14f-89e5-47f0-8171-4d231a76d49b__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_12"
+    },
+    {
+      "id": "752f279a-4918-4866-b35f-0787a93bc513__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_13"
+    },
+    {
+      "id": "752f279a-4918-4866-b35f-0787a93bc513__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_13"
+    },
+    {
+      "id": "752f279a-4918-4866-b35f-0787a93bc513__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_13"
+    },
+    {
+      "id": "752f279a-4918-4866-b35f-0787a93bc513__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_13"
+    },
+    {
+      "id": "631e451c-8041-4ff4-a5b7-fbd55151470f__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_2"
+    },
+    {
+      "id": "631e451c-8041-4ff4-a5b7-fbd55151470f__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_2"
+    },
+    {
+      "id": "631e451c-8041-4ff4-a5b7-fbd55151470f__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_2"
+    },
+    {
+      "id": "ff916c56-1e64-4062-95b1-f85de8458e0b__L1",
+      "name": "RaptorIframeRef",
+      "symbol": "var_raptoriframeref_4"
+    },
+    {
+      "id": "ff916c56-1e64-4062-95b1-f85de8458e0b__L2",
+      "name": "LocalRaptorHP",
+      "symbol": "var_localraptorhp_4"
+    },
+    {
+      "id": "ff916c56-1e64-4062-95b1-f85de8458e0b__L0",
+      "name": "RaptorMoveInterval",
+      "symbol": "var_raptormoveinterval_4"
+    },
+    {
+      "id": "b8b58b7f-f85b-4b12-be51-5e39348dfea4__L0",
+      "name": "SkeetoMoveTimer",
+      "symbol": "var_skeetomovetimer_14"
+    },
+    {
+      "id": "b8b58b7f-f85b-4b12-be51-5e39348dfea4__L1",
+      "name": "SkeetoIframeTimer",
+      "symbol": "var_skeetoiframetimer_14"
+    },
+    {
+      "id": "b8b58b7f-f85b-4b12-be51-5e39348dfea4__L2",
+      "name": "SkeetoHP",
+      "symbol": "var_skeetohp_14"
+    },
+    {
+      "id": "b8b58b7f-f85b-4b12-be51-5e39348dfea4__L3",
+      "name": "SkeetoWanderDir",
+      "symbol": "var_skeetowanderdir_14"
+    },
+    {
+      "id": "303c69ed-5de4-458e-bd72-65f93e80967e__L0",
+      "name": "Local 0",
+      "symbol": "var_local_2"
+    },
+    {
+      "id": "88",
+      "name": "ThraxxHP",
+      "symbol": "var_thraxxhp"
+    },
+    {
+      "id": "89",
+      "name": "ThraxxBossAction",
+      "symbol": "var_thraxxbossaction"
+    },
+    {
+      "id": "90",
+      "name": "ThraxxRibsOpen",
+      "symbol": "var_thraxxribsopen"
+    },
+    {
+      "id": "91",
+      "name": "ThraxxBrainTimer",
+      "symbol": "var_thraxxbraintimer"
+    },
+    {
+      "id": "92",
+      "name": "ThraxxOpenedLast",
+      "symbol": "var_thraxxopenedlast"
+    },
+    {
+      "id": "93",
+      "name": "ThraxxHeartLoops",
+      "symbol": "var_thraxxheartloops"
+    },
+    {
+      "id": "94",
+      "name": "ThraxxHeartIframe",
+      "symbol": "var_thraxxheartiframe"
+    },
+    {
+      "id": "95",
+      "name": "ThraxxAttackSide",
+      "symbol": "var_thraxxattackside"
+    },
+    {
+      "id": "96",
+      "name": "ThraxxNaturalClose",
+      "symbol": "var_thraxxnaturalclose"
+    },
+    {
+      "id": "97",
+      "name": "ThraxxActionLock",
+      "symbol": "var_thraxxactionlock"
+    },
+    {
+      "id": "98",
+      "name": "ThraxxOpenAttackRoll",
+      "symbol": "var_thraxxopenattackroll"
+    }
+  ],
+  "constants": []
+}

@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "207fffae-dd3a-4fe1-981b-c91fa2381d0e",
+  "name": "Nectar",
+  "symbol": "sprite_nectar",
+  "states": [
+    {
+      "id": "dcca9489-f8ff-4e95-9118-9ae931426c88",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "dd8a6bb1-65fb-45ec-8010-f838b59909f5",
+          "frames": [
+            {
+              "id": "81223cb7-50d1-48d6-be3e-ea1ab7c736d9",
+              "tiles": [
+                {
+                  "id": "9b2a48a2-5b66-45e1-8838-4c8f7431d798",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "931ff492-acfd-421b-a95e-9906012ccd5f",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f3cb83ef-2645-4b31-b229-2705bcd78da1",
+          "frames": [
+            {
+              "id": "5c6d7b9c-b9bd-4341-b1fe-b421e287659a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "9db1683a-54a8-4d22-9772-eccfc3388cd9",
+          "frames": [
+            {
+              "id": "dcfa1e8a-27a4-4278-a39b-de0783d877db",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "12ddb093-e3b9-4d0f-b5a7-042eb99366da",
+          "frames": [
+            {
+              "id": "127c741c-1e81-4d9c-87d1-009a198d61c6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7b795235-9c6f-4ed1-a205-5c277973c883",
+          "frames": [
+            {
+              "id": "52911ae5-8ba8-4441-a8d1-d4025000fdf1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "173e25ff-5831-4f14-91a0-5b045968d85c",
+          "frames": [
+            {
+              "id": "a7bb8054-21d1-47b0-b7d0-cc3ecddcb9a9",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "349e254e-1172-4ea6-bcad-369fc397c975",
+          "frames": [
+            {
+              "id": "5b024bd1-40cb-4188-b95e-fe7f31d29002",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d66b8bdd-96be-4a1e-9497-e89d7f690197",
+          "frames": [
+            {
+              "id": "d4465098-9038-4c28-81b1-8b747549fe32",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Nectar.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "8e446ef9ec8d7bf038f258632b697772ca9393a4"
+}

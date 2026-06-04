@@ -1,0 +1,74 @@
+{
+  "_resourceType": "scene",
+  "id": "e319ae28-39f0-4927-a34c-93d1bb4b65f7",
+  "_index": 5,
+  "name": "Title Screen",
+  "backgroundId": "f8a50ed0-1ee9-4ffa-b875-936cc488b80b",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "LOGO",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "title_screen",
+  "x": 104,
+  "y": 48,
+  "script": [
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_NEW_GAME_RESET_STATE",
+            "args": {},
+            "id": "codex-title-start-reset-fresh-run-state"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "0a9ae077-bc17-44f1-9bed-1435517e20e3",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": true,
+              "effect": 0
+            },
+            "id": "a0520fd5-f5b3-4b94-a1fd-38cc1ed17da9"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "6e83a9df-9d21-45bd-bbd9-6353b9fed8fe",
+              "x": {
+                "type": "number",
+                "value": 3
+              },
+              "y": {
+                "type": "number",
+                "value": 4
+              },
+              "direction": "right",
+              "fadeSpeed": "2"
+            },
+            "id": "70996d62-4d0b-44e9-be94-bbfa79369a07"
+          }
+        ]
+      },
+      "id": "f6b07cd6-c81e-4391-9d07-d950f0c40e88"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

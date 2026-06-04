@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "3722f7dd-d511-454a-abf6-062f04390623",
+  "name": "Thraxx'sArms",
+  "symbol": "sprite_thraxx_sarms",
+  "states": [
+    {
+      "id": "3d8f20b9-7bc4-4ebb-978f-d0815d3c925b",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "f5031707-44b5-4baa-9d4c-fb6b20aebd58",
+          "frames": [
+            {
+              "id": "bf31a7f6-ce70-4a8b-bb2b-9f56b7ffa84b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d778811b-d90a-4d48-a57d-7dcb7d499b94",
+          "frames": [
+            {
+              "id": "e984fcdb-85be-43a4-8a14-174eb394561b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f75a7fd0-d13c-4557-9f5b-49fcf6b924bc",
+          "frames": [
+            {
+              "id": "74bce234-cb82-4557-b941-dfe516ad0890",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "af2daf66-7e15-42d4-be81-1ae9fafd4d8c",
+          "frames": [
+            {
+              "id": "19490584-a4d2-4d0f-b21a-f1b47266d88f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "464f6b2a-e57d-4152-92b4-88bd64ba8035",
+          "frames": [
+            {
+              "id": "045ad99e-d3f5-4fea-81ae-04faba986fd1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c5589bf5-4989-4539-a1fb-13a782ef0860",
+          "frames": [
+            {
+              "id": "ebc17628-a3a7-4349-ba4c-15ff16b3a039",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "45cd609c-c470-4ca5-b95b-9d3c9fed3d63",
+          "frames": [
+            {
+              "id": "a991aff6-5c09-474f-a0f2-be17a44985f2",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "dae147ed-0df6-449b-893e-b4ab2148f120",
+          "frames": [
+            {
+              "id": "4648a1d7-3477-44a6-9ff0-baaa2a2e3f6f",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Thraxx'sArms.png",
+  "width": 96,
+  "height": 160,
+  "checksum": "c27490cbad294633bcba25e1c35ebffae37cd975"
+}

@@ -1,0 +1,68 @@
+﻿{
+    "_resourceType":  "scene",
+    "id":  "d4314ad7-3876-4995-b3cf-b4cce7116d54",
+    "_index":  4,
+    "name":  "Eastern Jungle",
+    "backgroundId":  "f20dfe55-2612-460f-ae4c-2532e6be8fb5",
+    "tilesetId":  "",
+    "width":  48,
+    "height":  32,
+    "type":  "TOPDOWN",
+    "colorModeOverride":  "none",
+    "paletteIds":  [
+
+                   ],
+    "spritePaletteIds":  [
+
+                         ],
+    "collisions":  "0f8+008+0f6+001a+0f8+008+0f6+001a+0f8+008+0f6+00e+0f14+008+0f6+00e+0f14+00c+0f8+008+0f8+004+0f8+00c+0f8+004+0fc+004+0f8+00e+0f6+004+0f6+00a+0f8+00e+0f6+004+0f4+00c+0f4+001c+0f4+00c+0f4+002c+0f4+002c+0f4+002c+0f4+00a+0f4+001e+0f4+00a+0f4+001e+0f4+004+0fa+001e+0f4+004+0fa+0026+0fa+0026+0fa+0046+0f8+0028+0f2+006+0f4+0024+0f2+006+0f4+0024+0f2+006+0f4+0024+0f2+006+0f4+001c+0fa+006+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+00e+0f4+001c+0f2+006+0fc+001c+0f2+006+0f2+006+0f4+001c+0f2+006+0f2+006+0f4+001c+0f2+006+0f2+006+",
+    "autoFadeSpeed":  1,
+    "symbol":  "scene_5",
+    "x":  1432,
+    "y":  400,
+    "script":  [
+                   {
+                       "command":  "EVENT_IF",
+                       "args":  {
+                                    "condition":  {
+                                                      "type":  "eq",
+                                                      "valueA":  {
+                                                                     "type":  "variable",
+                                                                     "value":  "1"
+                                                                 },
+                                                      "valueB":  {
+                                                                     "type":  "true"
+                                                                 }
+                                                  },
+                                    "__collapseElse":  true,
+                                    "__disableElse":  true
+                                },
+                       "children":  {
+                                        "true":  [
+                                                     {
+                                                         "command":  "EVENT_CALL_CUSTOM_EVENT",
+                                                         "args":  {
+                                                                      "customEventId":  "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd",
+                                                                      "variable":  "L0"
+                                                                  },
+                                                         "id":  "6eb980cb-9190-4ed4-ace0-813a05b175ec"
+                                                     }
+                                                 ],
+                                        "false":  [
+
+                                                  ]
+                                    },
+                       "id":  "codex-enable-attack-if-dog-joined"
+                   }
+               ],
+    "playerHit1Script":  [
+
+                         ],
+    "playerHit2Script":  [
+
+                         ],
+    "playerHit3Script":  [
+
+                         ]
+}
+

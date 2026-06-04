@@ -1,0 +1,8 @@
+{
+  "_resourceType": "project",
+  "name": "SOEGB PLUGIN TEST",
+  "author": "Hood Morning Productions",
+  "notes": "Copied sandbox for testing the Codex Magic System plugin with a Skeeto target.",
+  "_version": "4.2.0",
+  "_release": "10"
+}

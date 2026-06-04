@@ -1,0 +1,12 @@
+{
+  "_resourceType": "tileset",
+  "id": "06337109-65ba-4621-9159-f740bc9ef8ea",
+  "plugin": "Tomo/Sprite_Tile_Replacer",
+  "name": "Number_Tiles_vram1",
+  "symbol": "tileset_number_tiles_vram1",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "Number_Tiles_vram1.png"
+}

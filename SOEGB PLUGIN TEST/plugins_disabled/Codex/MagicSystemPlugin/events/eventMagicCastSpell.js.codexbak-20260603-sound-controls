@@ -1,0 +1,338 @@
+export const id = "EVENT_MAGIC_CAST_SPELL";
+export const name = "Magic: Cast Spell";
+export const groups = ["EVENT_GROUP_SCENE"];
+
+export const autoLabel = (fetchArg) => {
+  const spellId = fetchArg("spellId");
+  return `Magic: Cast Spell ${spellId}`;
+};
+
+export const fields = [
+  {
+    key: "spellName",
+    label: "Spell",
+    description: "Editor label only. The Game Boy uses Spell ID.",
+    type: "text",
+    defaultValue: "Storm",
+  },
+  {
+    key: "spellId",
+    label: "Spell ID",
+    description: "Numeric spell identifier. 1 could be Storm, 2 could be Flash, and so on.",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 1,
+  },
+  {
+    key: "behavior",
+    label: "Behavior",
+    description: "Burst appears on the target. Missile starts in front of the player and travels toward the target.",
+    type: "select",
+    options: [
+      ["burst", "Burst"],
+      ["missile", "Missile"],
+    ],
+    defaultValue: "burst",
+  },
+  {
+    key: "targetMode",
+    label: "Target Mode",
+    description: "Nearest to Player is implemented first. Other modes are reserved for future cursor/menu targeting.",
+    type: "select",
+    options: [
+      ["nearest_player", "Nearest to Player"],
+      ["nearest_cursor", "Nearest to Cursor (future)"],
+      ["manual_actor", "Manual Actor (future)"],
+    ],
+    defaultValue: "nearest_player",
+  },
+  {
+    key: "damageVariable",
+    label: "Damage Variable",
+    description: "Variable where the rolled damage will be written before the target hit script runs.",
+    type: "variable",
+    defaultValue: "LAST_VARIABLE",
+  },
+  {
+    key: "targetXVariable",
+    label: "Target X Variable",
+    description: "Variable where the spell target X position will be written in pixels.",
+    type: "variable",
+    defaultValue: "LAST_VARIABLE",
+  },
+  {
+    key: "targetYVariable",
+    label: "Target Y Variable",
+    description: "Variable where the spell target Y position will be written in pixels.",
+    type: "variable",
+    defaultValue: "LAST_VARIABLE",
+  },
+  {
+    key: "castSuccessVariable",
+    label: "Cast Success Variable",
+    description: "Set to 1 when a valid target is found, or 0 when the spell does not fire.",
+    type: "variable",
+    defaultValue: "LAST_VARIABLE",
+  },
+  {
+    key: "minDamage",
+    label: "Min Damage",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 1,
+  },
+  {
+    key: "maxDamage",
+    label: "Max Damage",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 2,
+  },
+  {
+    key: "ingredient1Variable",
+    label: "Ingredient 1 Variable",
+    description: "First ingredient inventory variable. Ignored when Ingredient 1 Cost is 0.",
+    type: "variable",
+    defaultValue: "LAST_VARIABLE",
+  },
+  {
+    key: "ingredient1Cost",
+    label: "Ingredient 1 Cost",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 0,
+  },
+  {
+    key: "ingredient2Variable",
+    label: "Ingredient 2 Variable",
+    description: "Second ingredient inventory variable. Ignored when Ingredient 2 Cost is 0.",
+    type: "variable",
+    defaultValue: "LAST_VARIABLE",
+  },
+  {
+    key: "ingredient2Cost",
+    label: "Ingredient 2 Cost",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 0,
+  },
+  {
+    key: "rangePx",
+    label: "Range (px)",
+    description: "Maximum Manhattan distance from the player to the target.",
+    type: "number",
+    min: 8,
+    max: 255,
+    defaultValue: 112,
+  },
+  {
+    key: "freezeFrames",
+    label: "Freeze Frames",
+    description: "How long the target actor logic stays disabled after the spell hits.",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 30,
+  },
+  {
+    key: "effectActor",
+    label: "Effect Actor",
+    description: "Reusable scene actor that displays the spell animation. Use a hidden, non-solid actor.",
+    type: "actor",
+    defaultValue: "$self$",
+  },
+  {
+    key: "effectReservedTiles",
+    label: "Effect Actor Reserved Tiles",
+    description: "Fallback lookup only. Used if Effect Actor is not available.",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 23,
+  },
+  {
+    key: "effectFrames",
+    label: "Effect Visible Frames",
+    description: "How long the effect actor stays visible before the update event hides it.",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 44,
+  },
+  {
+    key: "effectFirstFrame",
+    label: "Effect First Frame",
+    description: "First visible animation frame for this spell actor.",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 1,
+  },
+  {
+    key: "effectLastFrame",
+    label: "Effect Last Frame",
+    description: "Last visible animation frame for this spell actor.",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 9,
+  },
+  {
+    key: "effectBlankFrame",
+    label: "Effect Blank Frame",
+    description: "Frame used while the spell actor is idle. This should be an empty/transparent frame.",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 0,
+  },
+  {
+    key: "missileSpeedPx",
+    label: "Missile Speed (px/frame)",
+    description: "Only used by Missile behavior.",
+    type: "number",
+    min: 1,
+    max: 16,
+    defaultValue: 3,
+  },
+  {
+    key: "effectYOffsetPx",
+    label: "Effect Y Offset (px)",
+    description: "Positive value draws the effect above the target by this many pixels.",
+    type: "number",
+    min: 0,
+    max: 255,
+    defaultValue: 24,
+  },
+  {
+    key: "targetCollisionGroup",
+    label: "Target Collision Group 1",
+    description: "Primary collision group the spell is allowed to target. Enemies in this project usually use 1 or 2.",
+    type: "collisionMask",
+    includePlayer: false,
+    defaultValue: "1",
+  },
+  {
+    key: "targetCollisionGroup2",
+    label: "Target Collision Group 2",
+    description: "Optional second enemy collision group. Set to 0/None if this spell should only target one group.",
+    type: "collisionMask",
+    includePlayer: false,
+    defaultValue: "2",
+  },
+  {
+    key: "hitCollisionGroup",
+    label: "Hit Collision Group",
+    description: "Collision group passed to the target actor's hit script.",
+    type: "collisionMask",
+    includePlayer: true,
+    defaultValue: "3",
+  },
+];
+
+const TARGET_MODES = {
+  nearest_player: 0,
+  nearest_cursor: 1,
+  manual_actor: 2,
+};
+
+const BEHAVIORS = {
+  burst: 0,
+  missile: 1,
+};
+
+const clampByte = (value, fallback) => {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) return fallback;
+  return Math.max(0, Math.min(255, parsed | 0));
+};
+
+const collisionGroupToMask = (value, fallbackGroup) => {
+  const parsed = Number(value);
+  const group = Number.isFinite(parsed) ? parsed : fallbackGroup;
+  if (group <= 0) return 0;
+  if (group === 9) return 1; // GB Studio player group
+  return 1 << Math.min(3, group);
+};
+
+export const compile = (input, helpers) => {
+  const {
+    _addComment,
+    _callNative,
+    _stackPop,
+    _stackPushConst,
+    _stackPushReference,
+    actorPushById,
+    getVariableAlias,
+  } = helpers;
+
+  const spellId = clampByte(input.spellId, 1);
+  const behavior = BEHAVIORS[input.behavior] || 0;
+  const targetMode = TARGET_MODES[input.targetMode] || 0;
+  const minDamage = clampByte(input.minDamage, 1);
+  const maxDamage = clampByte(input.maxDamage, 2);
+  const ingredient1Cost = clampByte(input.ingredient1Cost, 0);
+  const ingredient2Cost = clampByte(input.ingredient2Cost, 0);
+  const rangePx = clampByte(input.rangePx, 112);
+  const freezeFrames = clampByte(input.freezeFrames, 30);
+  const effectReservedTiles = clampByte(input.effectReservedTiles, 23);
+  const effectFrames = clampByte(input.effectFrames, 44);
+  const effectFirstFrame = clampByte(input.effectFirstFrame, 1);
+  const effectLastFrame = clampByte(input.effectLastFrame, 9);
+  const effectBlankFrame = clampByte(input.effectBlankFrame, 0);
+  const missileSpeedPx = clampByte(input.missileSpeedPx, 3);
+  const effectYOffsetPx = clampByte(input.effectYOffsetPx, 24);
+  const targetCollisionGroup =
+    collisionGroupToMask(input.targetCollisionGroup, 1) |
+    collisionGroupToMask(input.targetCollisionGroup2, 0);
+  const hitCollisionGroup = collisionGroupToMask(input.hitCollisionGroup, 3);
+
+  _addComment(`Magic: cast ${input.spellName || "spell"} (${spellId})`);
+
+  _stackPushConst(targetCollisionGroup);
+  _stackPushConst(rangePx);
+  _stackPushConst(targetMode);
+  _stackPushConst(behavior);
+  _stackPushConst(spellId);
+  _callNative("magic_configure_targeting");
+  _stackPop(5);
+
+  _stackPushConst(hitCollisionGroup);
+  actorPushById(input.effectActor || "$self$");
+  _stackPushConst(maxDamage);
+  _stackPushConst(minDamage);
+  _stackPushReference(getVariableAlias(input.damageVariable));
+  _callNative("magic_configure_damage");
+  _stackPop(5);
+
+  _stackPushConst(ingredient2Cost);
+  _stackPushReference(getVariableAlias(input.ingredient2Variable));
+  _stackPushConst(ingredient1Cost);
+  _stackPushReference(getVariableAlias(input.ingredient1Variable));
+  _callNative("magic_configure_cost");
+  _stackPop(4);
+
+  _stackPushConst(effectBlankFrame);
+  _stackPushConst(effectLastFrame);
+  _stackPushConst(effectFirstFrame);
+  _stackPushConst(effectReservedTiles);
+  _stackPushConst(effectYOffsetPx);
+  _stackPushConst(missileSpeedPx);
+  _stackPushConst(effectFrames);
+  _stackPushConst(freezeFrames);
+  _callNative("magic_configure_effect");
+  _stackPop(8);
+
+  _stackPushReference(getVariableAlias(input.castSuccessVariable));
+  _stackPushReference(getVariableAlias(input.targetYVariable));
+  _stackPushReference(getVariableAlias(input.targetXVariable));
+  _callNative("magic_configure_output_vars");
+  _stackPop(3);
+
+  _callNative("magic_cast_configured");
+};

@@ -1,0 +1,96 @@
+{
+  "_resourceType": "actor",
+  "id": "8a198c1d-0212-466f-a3ae-6c78b381ab93",
+  "name": "HP 1",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "a1f0aefb-194f-4835-94f9-8c3febc7932b",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": true,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_hp_jungle_path_1_1",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "f69228e2-010b-487f-a4f9-c4b0aab47d8d"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "L0",
+        "time": {
+          "type": "number",
+          "value": 0.3
+        },
+        "frames": {
+          "type": "number",
+          "value": 18
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "9"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "757fd8a4-ffee-4403-8c31-77e0685328af"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "8d2b9af3-c197-45df-9ab6-756a40c05cfd"
+                }
+              ]
+            },
+            "id": "027bd844-90e3-4c41-b9c4-b85f998dd2d2"
+          }
+        ]
+      },
+      "id": "2dfafbd9-dc04-4d9f-b5c7-9fcd37920ce5"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 0,
+  "y": 16,
+  "_index": 2
+}

@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "47b9e785-a65c-4112-b9ed-207477acdfde",
+  "name": "ProjectileHurtbox",
+  "symbol": "sprite_projectilehurtbox",
+  "states": [
+    {
+      "id": "1c12e9e2-d32f-469c-8928-e9c93e986574",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "6e2c7fe7-bfb7-4a39-b38f-45be3e7238ed",
+          "frames": [
+            {
+              "id": "f22ab175-8d6b-4135-8794-c9c1fa23ee02",
+              "tiles": [
+                {
+                  "id": "39416add-49ac-4c90-a88f-084ba26c8316",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "a04b5c12-b716-4b50-8a53-c2b6e8e7460d",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "009f2e4d-be7e-460f-9d54-82564247b566",
+          "frames": [
+            {
+              "id": "aafdcace-9acb-4a7d-8c43-92b76fb8cf85",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "82d815d9-cd22-4924-9e0c-47c95d455c41",
+          "frames": [
+            {
+              "id": "c0df9fd2-103a-4322-8ecb-2ef09a566dd3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4a3ce8f9-bd9b-4b96-9656-93f8f8a16c50",
+          "frames": [
+            {
+              "id": "99690ef7-46a9-4c80-b735-162a009dfab6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "815e9c59-13d2-4476-bff3-9459a73e760b",
+          "frames": [
+            {
+              "id": "bac73cfb-f86a-4a23-804a-dbddb1348ad4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "27e41ea3-ab95-4aae-ac30-f6038d5d8f22",
+          "frames": [
+            {
+              "id": "890ade75-cf08-4723-85fc-ee79d4fd46d1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6a2ca022-54e1-422e-85f1-b8ad5ea590f7",
+          "frames": [
+            {
+              "id": "9dbf6f97-1cf2-4aad-a8ee-92bf1cb8678c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "eb78531e-1883-43e5-abfb-7c643e6908d2",
+          "frames": [
+            {
+              "id": "4b5884c3-000d-468c-851c-70c4992111c6",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "ProjectileHurtbox.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "5b89076395cfaff21e2b3f45d169d5a87db181ac"
+}

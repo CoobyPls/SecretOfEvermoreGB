@@ -1,0 +1,88 @@
+{
+  "_resourceType": "actor",
+  "id": "b6c73d56-2237-44fb-9703-38ec8b33d0c2",
+  "name": "HP 4",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "cb247264-5551-4581-b66a-a15147134992",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": true,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_hp_jungle_path_1_4",
+  "script": [],
+  "startScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "L0",
+        "time": {
+          "type": "number",
+          "value": 0.3
+        },
+        "frames": {
+          "type": "number",
+          "value": 18
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "9"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 4
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "d4c78d70-5983-4b24-b801-c9f2f6c35c93"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "79e83076-d365-4565-984e-9f6d27092156"
+                }
+              ]
+            },
+            "id": "532ed6f3-6663-4015-b0da-76c6fed67adf"
+          }
+        ]
+      },
+      "id": "59422a8e-28f7-4cde-88fc-6abe3cf1a332"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 0,
+  "y": 16,
+  "_index": 5
+}

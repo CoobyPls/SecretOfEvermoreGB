@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "0f78d149-2ce7-4adb-85e4-5b8626156e02",
+  "name": "Quicksand Field",
+  "symbol": "bg_quicksand_field",
+  "tileColors": "",
+  "filename": "Quicksand Field.png",
+  "width": 32,
+  "height": 64,
+  "imageWidth": 256,
+  "imageHeight": 512
+}

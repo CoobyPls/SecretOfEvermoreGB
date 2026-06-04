@@ -1,0 +1,46 @@
+{
+  "_resourceType": "actor",
+  "id": "b54f2cc2-2e87-431e-a584-aeea60476047",
+  "prefabId": "",
+  "coordinateType": "tiles",
+  "frame": 0,
+  "animate": false,
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 0,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "3",
+  "collisionExtraFlags": [
+    "solid"
+  ],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-hitboxbrain-colloff-794fc608-4132-411c-87f0-c1bc7a049d7a"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-hitboxbrain-hide-da89038f-06ed-4e30-ade0-c4c0e5406a9d"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "_index": 8,
+  "symbol": "actor_thraxx_right_hitbox",
+  "name": "Thraxx Right Hand Hitbox",
+  "x": 10,
+  "y": 10,
+  "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde"
+}

@@ -1,0 +1,1671 @@
+{
+  "_resourceType": "actor",
+  "id": "a933ddaf-f6ee-46d1-92dc-7fc150d78a82",
+  "_index": 0,
+  "symbol": "actor_48",
+  "prefabId": "",
+  "name": "Thraxx Chest Animation Controller",
+  "coordinateType": "tiles",
+  "x": 0,
+  "y": 0,
+  "frame": 1,
+  "animate": false,
+  "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 0,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "1",
+        "value": {
+          "type": "true"
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-00885c4f-3bdf-4892-af60-4e8e78586ca7"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "13",
+        "value": {
+          "type": "number",
+          "value": 10
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-4f865a06-1ea1-4d16-ba33-56b7c9d254f8"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "9",
+        "value": {
+          "type": "number",
+          "value": 10
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-d410f37e-122a-456b-88ef-02c47625fafa"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "57",
+        "value": {
+          "type": "number",
+          "value": 10
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-ce370048-90cf-492d-9f13-fad0c63f8307"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "56",
+        "value": {
+          "type": "number",
+          "value": 10
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-2d042496-5d82-4bd8-8a41-dc8a6fe8f9c4"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "47",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-cd51ddef-b503-4f7e-a79c-a56ea64826a0"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "50",
+        "value": {
+          "type": "number",
+          "value": 3
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-d12a51a4-6be7-4131-8459-89feadd71b00"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "48",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-283479f9-c5ad-4c45-a22f-326de09ee6aa"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "51",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-3fe1384c-230e-4f85-b170-15b66c32e575"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "29",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-eb269df2-d017-4f40-a567-e31c5b3b933f"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "30",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-5de679fc-9c58-43e9-8f63-22d1012f0c94"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "88",
+        "value": {
+          "type": "number",
+          "value": 5
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-edc51b5d-1d4f-4f16-8c37-b3bb8144609c"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "89",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-1213a8aa-0860-43e7-8d0b-979bd2fe0b18"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "90",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-81cdb7e4-553a-426f-baa4-530a681a6b6a"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "91",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-c80e519c-7a66-4bbb-bef6-0ba1e21745ae"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "92",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-f39c1359-595a-4190-8cb0-87ea350a13fa"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "93",
+        "value": {
+          "type": "number",
+          "value": 4
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-29284615-b1b7-4f73-a3ce-675fdd010edb"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "95",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-0f086c20-1941-49c8-8748-5c8a032d90bd"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "96",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-thraxx-testinit-event_set_value-81cefec3-8cba-4793-8b1a-e4d4530dad11"
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-testinit-event_actor_collisions_disable-c5eabdbb-8e99-4373-acca-0a7b400ebadd"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-testinit-event_actor_hide-93102843-690b-4428-9097-1cdb822e80ba"
+    },
+    {
+      "command": "EVENT_THRAXX_CHEST_FRAME",
+      "args": {
+        "frame": 0
+      },
+      "id": "codex-thraxx-testinit-event_thraxx_chest_frame-4bd050df-7a83-41b3-a4ca-04ac547e6101"
+    },
+    {
+      "command": "EVENT_SOUND_PLAY_EFFECT",
+      "args": {
+        "type": "8f5d9375-b516-4d32-89bc-755225f3ff91",
+        "priority": "medium",
+        "pitch": 4,
+        "frequency": 200,
+        "duration": 0.5,
+        "wait": false,
+        "effect": 0
+      },
+      "id": "codex-thraxx-testinit-event_sound_play_effect-26f0f9cb-71ff-498c-b37a-612fb9aa55cd"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "97",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-thraxx-conductor-set_value-e1199f7b-0698-495b-8ff1-9a62f69dcc92"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "98",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-conductor-set_value-cc23b1d0-3af7-41b2-b91b-d3003d373738"
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+      },
+      "id": "codex-thraxx-hitboxbrain-colloff-797f0fb9-e172-40c3-8c83-e7328a3af74f"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+      },
+      "id": "codex-thraxx-hitboxbrain-hide-fb8155e5-30b2-4877-9bac-8ffc6adc46a0"
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+      },
+      "id": "codex-thraxx-hitboxbrain-colloff-309f3100-45d5-468b-8c14-92df49a4672f"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+      },
+      "id": "codex-thraxx-hitboxbrain-hide-646b1a73-cf57-45ed-b80f-5c771fd538d4"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_IF_VALUE",
+      "args": {
+        "variable": "88",
+        "operator": ">",
+        "comparator": 0,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "id": "codex-thraxx-hitboxbrain-ifgt-af2cce93-45db-4ade-874e-b5c40318af6a",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "not",
+                "value": {
+                  "type": "variable",
+                  "value": "97"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
+            },
+            "id": "codex-thraxx-hitboxbrain-ifnot-6f32b090-99cf-48fb-9ab4-54989e153b18",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_RATE_LIMIT",
+                  "args": {
+                    "variable": "91",
+                    "units": "time",
+                    "time": {
+                      "type": "number",
+                      "value": 1.25
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 75
+                    },
+                    "__collapse": false
+                  },
+                  "id": "codex-thraxx-hitboxbrain-rate-58921d8b-ad9e-4a3a-b577-f804fe41971c",
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "89",
+                          "operation": "set",
+                          "other": "rnd",
+                          "vectorY": "89",
+                          "value": "0",
+                          "minValue": "1",
+                          "maxValue": 3,
+                          "clamp": false
+                        },
+                        "id": "codex-thraxx-hitboxbrain-rand-3970709f-1991-4eb2-a5c3-7bc37f6e0f1d"
+                      },
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "variable",
+                            "value": "92"
+                          },
+                          "__collapseElse": true,
+                          "__disableElse": true,
+                          "__collapse": false
+                        },
+                        "id": "codex-thraxx-hitboxbrain-ifvar-38a4f55a-d3e9-4c3a-9806-17021dcbc5db",
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "89"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 3
+                                  }
+                                },
+                                "__collapseElse": true,
+                                "__disableElse": true,
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-ifeq-d1d607de-c642-4e11-9944-97f279f74733",
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "89",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-set-d1e41de3-c208-4784-b4b0-8173cd62eae8"
+                                  }
+                                ],
+                                "false": []
+                              }
+                            }
+                          ],
+                          "false": []
+                        }
+                      },
+                      {
+                        "command": "EVENT_GROUP",
+                        "args": {
+                          "__comment": false,
+                          "text": "Do not choose the same hand attack twice in a row."
+                        },
+                        "id": "codex-thraxx-recovery-no-repeat-marker",
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "98"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 1
+                                  }
+                                },
+                                "__collapseElse": true,
+                                "__disableElse": true,
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-recovery-if-b7ac7e7a-eee3-44f8-8111-3bc310e143d9",
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "89"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 1
+                                        }
+                                      },
+                                      "__collapseElse": true,
+                                      "__disableElse": true,
+                                      "__collapse": false
+                                    },
+                                    "id": "codex-thraxx-recovery-if-bce62162-dc53-4c51-a9d3-ff3b4ab1298e",
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "89",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 2
+                                            }
+                                          },
+                                          "id": "codex-thraxx-recovery-set_value-62f5be5e-6e0e-470c-805c-8d8c640f7ae2"
+                                        }
+                                      ],
+                                      "false": []
+                                    }
+                                  }
+                                ],
+                                "false": []
+                              }
+                            },
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "98"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 2
+                                  }
+                                },
+                                "__collapseElse": true,
+                                "__disableElse": true,
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-recovery-if-83200779-caed-4c9f-9e30-0fba319ca647",
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "89"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 2
+                                        }
+                                      },
+                                      "__collapseElse": true,
+                                      "__disableElse": true,
+                                      "__collapse": false
+                                    },
+                                    "id": "codex-thraxx-recovery-if-2bb46e9f-bc64-42fa-9eaf-fd112eee811b",
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "89",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 1
+                                            }
+                                          },
+                                          "id": "codex-thraxx-recovery-set_value-514951a0-6455-4d3a-acd2-e554355aacb5"
+                                        }
+                                      ],
+                                      "false": []
+                                    }
+                                  }
+                                ],
+                                "false": []
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "command": "EVENT_SWITCH",
+                        "args": {
+                          "variable": "89",
+                          "choices": 3,
+                          "__collapseElse": false,
+                          "__collapseCase0": false,
+                          "value0": 1,
+                          "__collapseCase1": false,
+                          "value1": 2,
+                          "__collapseCase2": false,
+                          "value2": 3,
+                          "__collapseCase3": false,
+                          "value3": 4,
+                          "__collapseCase4": false,
+                          "value4": 5,
+                          "__collapseCase5": false,
+                          "value5": 6,
+                          "__collapseCase6": false,
+                          "value6": 7,
+                          "__collapseCase7": false,
+                          "value7": 8,
+                          "__collapseCase8": false,
+                          "value8": 9,
+                          "__collapseCase9": false,
+                          "value9": 10,
+                          "__collapseCase10": false,
+                          "value10": 11,
+                          "__collapseCase11": false,
+                          "value11": 12,
+                          "__collapseCase12": false,
+                          "value12": 13,
+                          "__collapseCase13": false,
+                          "value13": 14,
+                          "__collapseCase14": false,
+                          "value14": 15,
+                          "__collapseCase15": false,
+                          "value15": 16
+                        },
+                        "id": "codex-thraxx-hitboxbrain-switch-881e23cb-74be-4d5d-b5fe-af4855e60f29",
+                        "children": {
+                          "false": [],
+                          "true0": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "97",
+                                "value": {
+                                  "type": "true"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-70cdbfc4-706d-4eb0-be9f-8218ac51bbf3"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "89",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-60bbeb20-9179-4068-ad7a-99036b7855ca"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "95",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-b3c68406-d7d2-480e-b753-17dafe41869b"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "98",
+                                "value": {
+                                  "type": "number",
+                                  "value": 1
+                                }
+                              },
+                              "id": "codex-thraxx-recovery-set-last-side-1"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "96",
+                                "value": {
+                                  "type": "false"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-b8d9bf6f-1296-4916-be8e-256f5c99e939"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "92",
+                                "value": {
+                                  "type": "false"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-59de7506-dd9d-4291-9ff6-d16e7b2a01ba"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-colloff-b7b4d167-1cd2-4508-802d-b730534dd93d"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-hide-b7097ebf-46c7-422e-b73a-8864ae48b403"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-colloff-ba8cf20f-f432-403a-a060-2d9c221f103f"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-hide-1db11411-6105-446e-aef3-968c936dc0e8"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "fbec2f16-1617-4825-9f32-ed0f70ad7e19",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-0483bdcd-3831-4782-b3b7-891a3cb6780e"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.075
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-702451ec-41c0-4072-ba5a-beacbc857ce6"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "fbec2f16-1617-4825-9f32-ed0f70ad7e19",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 1
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-cfca0b57-f3fe-493a-8852-abd83fb49cdf"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.075
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-d0703542-e98b-4cdf-91c4-1479b4ea138a"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "fbec2f16-1617-4825-9f32-ed0f70ad7e19",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 2
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-14ce9fa8-970b-47c0-8058-39ef921fd019"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-collon-ffba97ac-c203-4941-be10-84262b9cecb7"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SHOW",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-show-bc5f76d5-0ce1-4cf1-8990-d8dcfbbcd7d0"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.075
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-cdc1a89a-3cec-4f97-ae0c-af0e4fc7433d"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "fbec2f16-1617-4825-9f32-ed0f70ad7e19",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 3
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-d9d9428f-20f6-4c82-87a9-965e549f6284"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.1
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 6
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-1db31b10-e217-4486-8c02-09b7979e77e8"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-colloff-1972a54f-6674-447c-be96-8d33549ded66"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-hide-230bc5b3-8fba-4b16-b0a8-17a2fc3bb798"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "fbec2f16-1617-4825-9f32-ed0f70ad7e19",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-ce3959df-bdce-495d-9d90-dd05c2a82324"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "95",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-598f30ec-43bb-4f62-9e8d-a0d650ec76a0"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.75
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 45
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-recovery-post-action-wait-true0"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "97",
+                                "value": {
+                                  "type": "false"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-0153b79e-23c2-47de-bd21-840ab1818645"
+                            }
+                          ],
+                          "true1": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "97",
+                                "value": {
+                                  "type": "true"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-510f9f89-6597-477c-8c2b-074b918038a7"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "89",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-968f2ceb-0cdd-4d93-abae-4f3b63b835a8"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "95",
+                                "value": {
+                                  "type": "number",
+                                  "value": 2
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-bcc0d8bb-64cc-45e5-93f5-02cfd2da0244"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "98",
+                                "value": {
+                                  "type": "number",
+                                  "value": 2
+                                }
+                              },
+                              "id": "codex-thraxx-recovery-set-last-side-2"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "96",
+                                "value": {
+                                  "type": "false"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-72ad1bd4-95f5-429e-af9a-dfb24277c808"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "92",
+                                "value": {
+                                  "type": "false"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-0f19cde2-d566-41ef-9234-e6165da56f55"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-colloff-e577b9d1-3bba-416c-baca-8850d64562c7"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-hide-966a6d0b-ed8c-49b0-b28a-faa21aa1572f"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-colloff-a42813a5-c938-4d06-9de9-f5b4ad9d8154"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-hide-92ee5373-b981-48fd-bb5d-f519ef97b680"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "eb45f441-997b-4836-a1ac-08c84cc2d1be",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-d96d83e2-4676-4149-98cf-6c76ca62ee51"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.075
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-ecbf46d8-fae1-424c-ba16-8129986cacc9"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "eb45f441-997b-4836-a1ac-08c84cc2d1be",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 1
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-2b232485-afc7-4a83-bcdf-7b3c89a22cdc"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.075
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-e389ec13-5c4e-4add-a9f5-8de9bd6bab18"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "eb45f441-997b-4836-a1ac-08c84cc2d1be",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 2
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-bb4234e3-8dd7-4f0f-ae86-7be9f4e894d1"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-collon-28aac35e-08af-4b80-82af-2736bbf62046"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SHOW",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-show-827221a2-3ade-432c-bcb5-5f682b5e2119"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.075
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-56a58623-2047-471b-b93e-c3ae895ea76c"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "eb45f441-997b-4836-a1ac-08c84cc2d1be",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 3
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-b4418996-369d-4e99-89a1-7a3339fbd16d"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.1
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 6
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-aab9d7f4-3fd6-4fe2-8755-906ed1039cd8"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-colloff-2d6eed25-690c-400c-b043-e5ea8010ccd1"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-hide-c3336672-57f8-4273-8895-b83da3ffd471"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_FRAME",
+                              "args": {
+                                "actorId": "eb45f441-997b-4836-a1ac-08c84cc2d1be",
+                                "frame": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-actor_frame-0ae6564b-3b68-478a-b6c4-987320689cc1"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "95",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-f6cfcdc7-bf72-47fa-8edc-527b57010b08"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.75
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 45
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-recovery-post-action-wait-true1"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "97",
+                                "value": {
+                                  "type": "false"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-75952f09-a76c-4135-99b6-c696a3200325"
+                            }
+                          ],
+                          "true2": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "97",
+                                "value": {
+                                  "type": "true"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-d84e81f9-7ad1-4b2f-a59e-dbaf8ebf1ea1"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "89",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-65ac3514-d9eb-40e5-a2fe-d546d6bb76e8"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "92",
+                                "value": {
+                                  "type": "true"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-06fab9a4-b03e-482f-b42b-f53fab44b5d9"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "95",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-67182b76-8c60-42fe-883b-077de9c5903e"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "96",
+                                "value": {
+                                  "type": "false"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-df6355c6-1563-4602-b63c-0c9d5396810d"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-colloff-57da4a77-718f-4a1b-802c-fd78025d6683"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "75d2a35e-9167-4b43-b21d-1a282bd2f14f"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-hide-3b79ee4a-e820-4843-a537-6679a250b00a"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-colloff-d7a844d3-3b41-4bea-91e5-43951ce2f509"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_HIDE",
+                              "args": {
+                                "actorId": "b54f2cc2-2e87-431e-a584-aeea60476047"
+                              },
+                              "id": "codex-thraxx-hitboxbrain-hide-e17b72d0-817f-4b82-8cf0-b7033dc178fc"
+                            },
+                            {
+                              "command": "EVENT_THRAXX_CHEST_FRAME",
+                              "args": {
+                                "frame": 0
+                              },
+                              "id": "codex-thraxx-hitboxbrain-chest-b09519ec-9dd0-429c-9f90-65df6613d4e9"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.1
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 6
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-3b91bcfb-3e0c-43da-8fc0-734368109ed0"
+                            },
+                            {
+                              "command": "EVENT_THRAXX_CHEST_FRAME",
+                              "args": {
+                                "frame": 2
+                              },
+                              "id": "codex-thraxx-hitboxbrain-chest-f707927f-cd53-42d0-bb50-3d00c2ebfe30"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.1
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 6
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-83ec0a21-6df1-42d3-9ea6-b9914efd6929"
+                            },
+                            {
+                              "command": "EVENT_THRAXX_CHEST_FRAME",
+                              "args": {
+                                "frame": 4
+                              },
+                              "id": "codex-thraxx-hitboxbrain-chest-c5ff7d50-7e3a-4c0e-a06b-4523f35bac6b"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.1
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 6
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-13d02e1e-37e6-4b63-afb8-426028c5e7e7"
+                            },
+                            {
+                              "command": "EVENT_THRAXX_CHEST_FRAME",
+                              "args": {
+                                "frame": 6
+                              },
+                              "id": "codex-thraxx-hitboxbrain-chest-b467ca38-ae56-438c-a808-df8bd61fd602"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.1
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 6
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-wait-89c9bb57-ad75-4c32-b68f-94ca5bc1402b"
+                            },
+                            {
+                              "command": "EVENT_THRAXX_CHEST_FRAME",
+                              "args": {
+                                "frame": 8
+                              },
+                              "id": "codex-thraxx-hitboxbrain-chest-ddda62ce-45d2-40e8-bf2c-5c45ecdb6035"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "90",
+                                "value": {
+                                  "type": "true"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-1ec16a0c-3df1-4141-bc87-46d66c49c84f"
+                            },
+                            {
+                              "command": "EVENT_VARIABLE_MATH",
+                              "args": {
+                                "vectorX": "93",
+                                "operation": "set",
+                                "other": "rnd",
+                                "vectorY": "93",
+                                "value": "0",
+                                "minValue": "3",
+                                "maxValue": 5,
+                                "clamp": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-rand-8235f436-f401-46d6-8cb7-5a73be26abfd"
+                            },
+                            {
+                              "command": "EVENT_SWITCH",
+                              "args": {
+                                "variable": "93",
+                                "choices": 3,
+                                "__collapseElse": false,
+                                "__collapseCase0": false,
+                                "value0": 3,
+                                "__collapseCase1": false,
+                                "value1": 4,
+                                "__collapseCase2": false,
+                                "value2": 5,
+                                "__collapseCase3": false,
+                                "value3": 4,
+                                "__collapseCase4": false,
+                                "value4": 5,
+                                "__collapseCase5": false,
+                                "value5": 6,
+                                "__collapseCase6": false,
+                                "value6": 7,
+                                "__collapseCase7": false,
+                                "value7": 8,
+                                "__collapseCase8": false,
+                                "value8": 9,
+                                "__collapseCase9": false,
+                                "value9": 10,
+                                "__collapseCase10": false,
+                                "value10": 11,
+                                "__collapseCase11": false,
+                                "value11": 12,
+                                "__collapseCase12": false,
+                                "value12": 13,
+                                "__collapseCase13": false,
+                                "value13": 14,
+                                "__collapseCase14": false,
+                                "value14": 15,
+                                "__collapseCase15": false,
+                                "value15": 16
+                              },
+                              "id": "codex-thraxx-hitboxbrain-switch-91e6c346-443d-4c8e-a5cf-198d8f1555bd",
+                              "children": {
+                                "false": [],
+                                "true0": [
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 1.2
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 72
+                                      },
+                                      "__collapse": false
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-wait-73f5c3a9-a180-4fb7-bd77-39b9db1a2e6c"
+                                  }
+                                ],
+                                "true1": [
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 1.6
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 96
+                                      },
+                                      "__collapse": false
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-wait-44315a1e-9570-45cd-ae25-b3a9f45852d9"
+                                  }
+                                ],
+                                "true2": [
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 2.0
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 120
+                                      },
+                                      "__collapse": false
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-wait-31c1ad45-d3c1-4338-998e-df3379cf02e6"
+                                  }
+                                ],
+                                "true3": [],
+                                "true4": [],
+                                "true5": [],
+                                "true6": [],
+                                "true7": [],
+                                "true8": [],
+                                "true9": [],
+                                "true10": [],
+                                "true11": [],
+                                "true12": [],
+                                "true13": [],
+                                "true14": [],
+                                "true15": []
+                              }
+                            },
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "variable",
+                                  "value": "90"
+                                },
+                                "__collapseElse": true,
+                                "__disableElse": true,
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-hitboxbrain-ifvar-8ae34b13-59d9-4f1e-be85-61abece0b99d",
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                                    "args": {
+                                      "type": "8f5d9375-b516-4d32-89bc-755225f3ff91",
+                                      "priority": "high",
+                                      "pitch": 4,
+                                      "frequency": 200,
+                                      "duration": 0.5,
+                                      "wait": false,
+                                      "effect": 0
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-sound-9bc89eaf-cdcd-4ef6-91e7-cc1f159e4076"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "96",
+                                      "value": {
+                                        "type": "true"
+                                      }
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-set-549766be-ad66-4260-9f40-fd65e3575f40"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "90",
+                                      "value": {
+                                        "type": "false"
+                                      }
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-set-272debf7-55e6-4e65-8f5e-321cde05abba"
+                                  },
+                                  {
+                                    "command": "EVENT_THRAXX_CHEST_FRAME",
+                                    "args": {
+                                      "frame": 6
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-chest-43c412b7-69b3-4480-8405-9136aa1016cc"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.1
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 6
+                                      },
+                                      "__collapse": false
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-wait-61d3d0e8-ed7c-450f-9602-3b9c92146a89"
+                                  },
+                                  {
+                                    "command": "EVENT_THRAXX_CHEST_FRAME",
+                                    "args": {
+                                      "frame": 4
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-chest-c272f009-2d91-4838-a8d9-ffeae3d54904"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.1
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 6
+                                      },
+                                      "__collapse": false
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-wait-4082a84f-52e8-4b02-8215-d908c0d375c6"
+                                  },
+                                  {
+                                    "command": "EVENT_THRAXX_CHEST_FRAME",
+                                    "args": {
+                                      "frame": 2
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-chest-cf4272a9-af31-468a-b2d5-9d126eca7777"
+                                  },
+                                  {
+                                    "command": "EVENT_WAIT",
+                                    "args": {
+                                      "time": {
+                                        "type": "number",
+                                        "value": 0.1
+                                      },
+                                      "frames": {
+                                        "type": "number",
+                                        "value": 6
+                                      },
+                                      "__collapse": false
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-wait-e53d7c51-637d-46cf-9e02-daab157f5f8c"
+                                  },
+                                  {
+                                    "command": "EVENT_THRAXX_CHEST_FRAME",
+                                    "args": {
+                                      "frame": 0
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-chest-626889ed-3da1-47ff-b188-e5bbc7a0dd20"
+                                  },
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "96",
+                                      "value": {
+                                        "type": "false"
+                                      }
+                                    },
+                                    "id": "codex-thraxx-hitboxbrain-set-7a71a8fc-7a16-4690-82d4-53d39b67768c"
+                                  }
+                                ],
+                                "false": []
+                              }
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "95",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-f030432e-975b-4615-bbd4-88c907036bcd"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "89",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-022194dd-7b85-4320-be72-1986adaf91a3"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": {
+                                  "type": "number",
+                                  "value": 0.9
+                                },
+                                "frames": {
+                                  "type": "number",
+                                  "value": 54
+                                },
+                                "__collapse": false
+                              },
+                              "id": "codex-thraxx-recovery-post-action-wait-ribs"
+                            },
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "97",
+                                "value": {
+                                  "type": "false"
+                                }
+                              },
+                              "id": "codex-thraxx-hitboxbrain-set-008cdee9-1f55-4fc0-991e-4fdb68f7137e"
+                            }
+                          ],
+                          "true3": [],
+                          "true4": [],
+                          "true5": [],
+                          "true6": [],
+                          "true7": [],
+                          "true8": [],
+                          "true9": [],
+                          "true10": [],
+                          "true11": [],
+                          "true12": [],
+                          "true13": [],
+                          "true14": [],
+                          "true15": []
+                        }
+                      }
+                    ],
+                    "false": []
+                  }
+                }
+              ],
+              "false": []
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

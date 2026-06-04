@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "42c80cc5-dfca-4bed-8076-de9cafb28dcd",
+  "name": "ChiefStrongHeart",
+  "symbol": "sprite_chiefstrongheart",
+  "states": [
+    {
+      "id": "2b3296b4-d2fd-4dd7-bd91-58670de58fd1",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "8952abdd-da66-4cf2-9a7c-bdecfbd756b0",
+          "frames": [
+            {
+              "id": "f24bf85e-19d5-4621-8582-d694ee93d55d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4e562f08-7802-43eb-9c00-e16e579d2eca",
+          "frames": [
+            {
+              "id": "89b11383-2f27-4542-aadf-7cd4fb0602d6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "72e3b2a9-aec5-4a7a-918b-8dcdd0693f62",
+          "frames": [
+            {
+              "id": "cac5d531-6309-4172-8bd2-73d6b6e676de",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ad65c7e4-5aed-4b4c-aa38-84b2b2b0fa6a",
+          "frames": [
+            {
+              "id": "f8bb266f-4407-4ce9-80df-354e7da59f87",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "148e7e77-2f5f-404f-8810-7f75ba947e3c",
+          "frames": [
+            {
+              "id": "18719587-6b13-4e4c-8e16-512e889bdb1f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0a082bd1-ed8e-460d-b015-84a432e2673f",
+          "frames": [
+            {
+              "id": "3bdf3eb0-baf8-42c1-9f44-d96a71117b49",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "eefdef28-ab2a-4b66-8361-1a20d8463f8c",
+          "frames": [
+            {
+              "id": "08be8c8f-348b-4753-a163-93ad26a1cc3c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "93610df4-10ba-478f-8465-ddf00c6f7a35",
+          "frames": [
+            {
+              "id": "b165ce68-dca9-49a0-ad3f-18f8b75dd504",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "ChiefStrongHeart.png",
+  "width": 128,
+  "height": 96,
+  "checksum": "d2cbe014ebe805f5242693df1ed0481ffefe109c"
+}

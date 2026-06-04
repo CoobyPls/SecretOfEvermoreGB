@@ -1,0 +1,177 @@
+﻿{
+    "_resourceType":  "actor",
+    "id":  "12eb3424-c20c-4ef4-bec0-d54b1bc9c0ef",
+    "name":  "HP Bar",
+    "frame":  0,
+    "animate":  false,
+    "spriteSheetId":  "cb247264-5551-4581-b66a-a15147134992",
+    "prefabId":  "",
+    "direction":  "down",
+    "moveSpeed":  1,
+    "animSpeed":  15,
+    "paletteId":  "",
+    "isPinned":  true,
+    "persistent":  false,
+    "collisionGroup":  "",
+    "collisionExtraFlags":  [
+
+                            ],
+    "prefabScriptOverrides":  {
+
+                              },
+    "symbol":  "actor_hp_bar_fire_eyes_village",
+    "script":  [
+
+               ],
+    "startScript":  [
+                        {
+                            "command":  "EVENT_IF",
+                            "args":  {
+                                         "condition":  {
+                                                           "type":  "gt",
+                                                           "valueA":  {
+                                                                          "type":  "variable",
+                                                                          "value":  "9"
+                                                                      },
+                                                           "valueB":  {
+                                                                          "type":  "number",
+                                                                          "value":  4
+                                                                      }
+                                                       },
+                                         "__collapseElse":  false,
+                                         "__disableElse":  false
+                                     },
+                            "children":  {
+                                             "true":  [
+                                                          {
+                                                              "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                              "args":  {
+                                                                           "actorId":  "$self$",
+                                                                           "spriteSheetId":  "cb247264-5551-4581-b66a-a15147134992"
+                                                                       },
+                                                              "id":  "3417bb44-ea01-4c0f-9f42-39f3f4c22886"
+                                                          }
+                                                      ],
+                                             "false":  [
+                                                           null
+                                                       ]
+                                         },
+                            "id":  "f68b654a-4082-4265-8917-d6cde62d581a"
+                        },
+                        {
+                            "command":  "EVENT_VARIABLE_MATH",
+                            "args":  {
+                                         "vectorX":  "L2",
+                                         "operation":  "set",
+                                         "other":  "var",
+                                         "vectorY":  "9",
+                                         "value":  0,
+                                         "minValue":  0,
+                                         "maxValue":  32767,
+                                         "clamp":  false
+                                     },
+                            "id":  "3b9171e8-15e7-441a-816d-8c532cf4fdcf"
+                        }
+                    ],
+    "updateScript":  [
+                         {
+                             "command":  "EVENT_RATE_LIMIT",
+                             "args":  {
+                                          "variable":  "L0",
+                                          "units":  "time",
+                                          "time":  {
+                                                       "type":  "number",
+                                                       "value":  0.3
+                                                   },
+                                          "frames":  {
+                                                         "type":  "number",
+                                                         "value":  18
+                                                     }
+                                      },
+                             "children":  {
+                                              "true":  [
+                                                           {
+                                                               "command":  "EVENT_IF_VALUE_COMPARE",
+                                                               "args":  {
+                                                                            "vectorX":  "L2",
+                                                                            "operator":  "!=",
+                                                                            "vectorY":  "9",
+                                                                            "__collapseElse":  true,
+                                                                            "__disableElse":  true
+                                                                        },
+                                                               "children":  {
+                                                                                "true":  [
+                                                                                             {
+                                                                                                 "command":  "EVENT_IF",
+                                                                                                 "args":  {
+                                                                                                              "condition":  {
+                                                                                                                                "type":  "gt",
+                                                                                                                                "valueA":  {
+                                                                                                                                               "type":  "variable",
+                                                                                                                                               "value":  "9"
+                                                                                                                                           },
+                                                                                                                                "valueB":  {
+                                                                                                                                               "type":  "number",
+                                                                                                                                               "value":  4
+                                                                                                                                           }
+                                                                                                                            },
+                                                                                                              "__collapseElse":  false,
+                                                                                                              "__disableElse":  false
+                                                                                                          },
+                                                                                                 "children":  {
+                                                                                                                  "true":  [
+                                                                                                                               {
+                                                                                                                                   "command":  "EVENT_ACTOR_SET_SPRITE",
+                                                                                                                                   "args":  {
+                                                                                                                                                "actorId":  "$self$",
+                                                                                                                                                "spriteSheetId":  "cb247264-5551-4581-b66a-a15147134992"
+                                                                                                                                            },
+                                                                                                                                   "id":  "7e72f248-ffd4-40d9-9dc6-406e455a87e5"
+                                                                                                                               }
+                                                                                                                           ],
+                                                                                                                  "false":  [
+                                                                                                                                null
+                                                                                                                            ]
+                                                                                                              },
+                                                                                                 "id":  "3fc16bef-5ddd-4211-b1e3-25eea382da7f"
+                                                                                             },
+                                                                                             {
+                                                                                                 "command":  "EVENT_VARIABLE_MATH",
+                                                                                                 "args":  {
+                                                                                                              "vectorX":  "L2",
+                                                                                                              "operation":  "set",
+                                                                                                              "other":  "var",
+                                                                                                              "vectorY":  "9",
+                                                                                                              "value":  0,
+                                                                                                              "minValue":  0,
+                                                                                                              "maxValue":  32767,
+                                                                                                              "clamp":  false
+                                                                                                          },
+                                                                                                 "id":  "07bd300f-909d-48da-a012-1ffc48c57fe2"
+                                                                                             }
+                                                                                         ],
+                                                                                "false":  [
+
+                                                                                          ]
+                                                                            },
+                                                               "id":  "fbfe2c2a-364a-4035-b015-34d35b65296c"
+                                                           }
+                                                       ]
+                                          },
+                             "id":  "020bad8a-94fa-4ed3-af35-df0c904ec890"
+                         }
+                     ],
+    "hit1Script":  [
+
+                   ],
+    "hit2Script":  [
+
+                   ],
+    "hit3Script":  [
+
+                   ],
+    "coordinateType":  "tiles",
+    "x":  0,
+    "y":  16,
+    "_index":  100
+}

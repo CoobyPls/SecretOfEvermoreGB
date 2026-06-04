@@ -1,0 +1,36 @@
+{
+  "_resourceType": "actor",
+  "id": "21a9db11-eee6-4d77-a94b-ca98d38f4d70",
+  "name": "DogConcept",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "3b756d3e-7b08-4dd7-8506-07f05131da99",
+  "prefabId": "bdec97b4-3087-4593-a0da-a585308b2fdd",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {
+    "1e44819c-603e-4685-903c-26b3b80509c6": {
+      "id": "1e44819c-603e-4685-903c-26b3b80509c6",
+      "args": {
+        "__section": "movement"
+      }
+    }
+  },
+  "_index": 3,
+  "symbol": "actor_38",
+  "coordinateType": "tiles",
+  "x": 34,
+  "y": 18,
+  "script": [],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

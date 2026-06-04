@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "783683ab-529b-448a-8433-be587063131d",
+  "name": "StormIcon",
+  "symbol": "sprite_stormicon",
+  "states": [
+    {
+      "id": "158a2038-5802-4a64-b17c-129bc1f65301",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "e6a5b549-3f70-4886-a7f1-fbd008015710",
+          "frames": [
+            {
+              "id": "e2693bc6-a4fa-4bf2-99ac-6adb0b9b6c9a",
+              "tiles": [
+                {
+                  "id": "9bcbb36a-e829-46c9-b1d5-b2199225fe69",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "afe4a738-4e10-4fd1-8ad8-d142fe5d622d",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "17e2b2e5-08ff-441a-a79f-39ccd741f9e0",
+          "frames": [
+            {
+              "id": "b1e81018-6c64-40e0-944a-cef2f63c4ba4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8b4d626d-b6b8-4091-9943-05f7eead611d",
+          "frames": [
+            {
+              "id": "a4132c39-7daf-492b-8e0f-9450a9be3703",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2fd34325-f884-49fa-b61a-3e85109b78ff",
+          "frames": [
+            {
+              "id": "62adfe2e-d348-4067-83a1-5c114ca6de65",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5e01c08d-f8fb-4131-b90c-e646198ed039",
+          "frames": [
+            {
+              "id": "37a59b45-760c-4cf5-a690-03b4d996ee4e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c3bea8dd-7704-43e0-8429-92dd150b4f0f",
+          "frames": [
+            {
+              "id": "7aef2544-2a08-49ee-aeec-8510a583a4a3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5ff5325a-cc15-4a7d-9970-9b95654933b5",
+          "frames": [
+            {
+              "id": "ef293820-b2f5-45a7-b53b-72b547930695",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "98bc2ba2-e5df-47b4-bcd4-aca86f311b95",
+          "frames": [
+            {
+              "id": "8c9dcfcc-dc0b-437d-8705-dd3845cdafc9",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "StormIcon.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "050f47a19f6690fc3a7c6a5f6aaaac44a0a331b3"
+}

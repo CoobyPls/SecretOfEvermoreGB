@@ -1,0 +1,3217 @@
+{
+  "_resourceType": "scene",
+  "id": "6bb86bc2-2a4b-4358-b08b-520734de382e",
+  "_index": 12,
+  "name": "Menu",
+  "backgroundId": "aa286c7f-802f-4f7c-b882-878dac594ac9",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_13",
+  "x": 104,
+  "y": 384,
+  "script": [
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "player"
+      },
+      "id": "codex-menu-hide-gameplay-player"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "52",
+        "value": {
+          "type": "number",
+          "value": 5
+        }
+      },
+      "id": "codex-menu-hud-tile-talon-5"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "53",
+        "value": {
+          "type": "number",
+          "value": 3
+        }
+      },
+      "id": "codex-menu-hud-tile-petal-1"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "55",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "codex-menu-hud-tile-nectar-2"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "50"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "47",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "codex-menu-default-a-item-bone"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "50",
+              "value": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "codex-menu-default-a-icon-bone-tile-3"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-seed-a-slot-if-empty"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "51"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "51",
+              "value": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "codex-menu-default-b-icon-empty-box-tile-4"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-seed-b-slot-if-empty"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "20"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "47"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "47",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-menu-depleted-petal-clears-a-item"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "50",
+                    "value": {
+                      "type": "number",
+                      "value": 4
+                    }
+                  },
+                  "id": "codex-menu-depleted-petal-clears-a-icon-to-box-tile-4"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-menu-check-depleted-petal-in-a"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "48"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "48",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-menu-depleted-petal-clears-b-item"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "51",
+                    "value": {
+                      "type": "number",
+                      "value": 4
+                    }
+                  },
+                  "id": "codex-menu-depleted-petal-clears-b-icon-to-box-tile-4"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-menu-check-depleted-petal-in-b"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-empty-petal-slots-if-no-stock"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "54"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "47"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "47",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-menu-depleted-nectar-clears-a-item"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "50",
+                    "value": {
+                      "type": "number",
+                      "value": 4
+                    }
+                  },
+                  "id": "codex-menu-depleted-nectar-clears-a-icon-to-box-tile-4"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-menu-check-depleted-nectar-in-a"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "48"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "48",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-menu-depleted-nectar-clears-b-item"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "51",
+                    "value": {
+                      "type": "number",
+                      "value": 4
+                    }
+                  },
+                  "id": "codex-menu-depleted-nectar-clears-b-icon-to-box-tile-4"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-menu-check-depleted-nectar-in-b"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-empty-nectar-slots-if-no-stock"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "44",
+        "value": {
+          "type": "number",
+          "value": 3
+        }
+      },
+      "id": "codex-menu-browse-start-neutral"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "45",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-clear-pending-item"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "46",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-assignment-default-a-slot"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "49",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "codex-menu-enter-browse-mode"
+    },
+    {
+      "command": "EVENT_OVERLAY_HIDE",
+      "args": {
+        "__collapse": false
+      },
+      "id": "codex-menu-hide-gameplay-overlay-show-background"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "18bd256f-4fe1-4b55-8a31-30f4132f094f"
+      },
+      "id": "codex-menu-hide-assignment-cursor-on-entry"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+        "x": {
+          "type": "number",
+          "value": 2
+        },
+        "y": {
+          "type": "number",
+          "value": 9
+        },
+        "units": "tiles"
+      },
+      "id": "codex-menu-reset-browse-cursor-to-petal-on-entry"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+      },
+      "id": "codex-menu-hide-browse-cursor-on-entry"
+    },
+    {
+      "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
+      "args": {
+        "speedIn": -3,
+        "speedOut": -3,
+        "speed": 0,
+        "allowFastForward": false
+      },
+      "id": "codex-menu-description-text-instant"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_OVERLAY_SET_SUBMAP 0, 0, 20, 4, 0, 14\nVM_OVERLAY_MOVE_TO 0, 14, .OVERLAY_SPEED_INSTANT",
+        "references": []
+      },
+      "id": "codex-menu-align-authored-description-panel"
+    },
+    {
+      "command": "EVENT_MENU_HUD_NUMBERS",
+      "args": {},
+      "id": "codex-menu-render-hp-and-talons-onto-authored-background"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031001"
+      },
+      "id": "codex-menu-hide-old-boy-current-tens-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031002"
+      },
+      "id": "codex-menu-hide-old-boy-current-ones-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031003"
+      },
+      "id": "codex-menu-hide-old-boy-slash-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031004"
+      },
+      "id": "codex-menu-hide-old-boy-max-tens-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031005"
+      },
+      "id": "codex-menu-hide-old-boy-max-ones-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031006"
+      },
+      "id": "codex-menu-hide-old-dog-current-tens-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031007"
+      },
+      "id": "codex-menu-hide-old-dog-current-ones-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031008"
+      },
+      "id": "codex-menu-hide-old-dog-slash-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031009"
+      },
+      "id": "codex-menu-hide-old-dog-max-tens-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "c550eeaf-f6df-4c6f-a58c-c37161031010"
+      },
+      "id": "codex-menu-hide-old-dog-max-ones-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc200"
+      },
+      "id": "codex-menu-hide-old-talon-number-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "d68b80cf-ccb6-494b-a7e9-6ca67ab0433a"
+      },
+      "id": "codex-menu-hide-old-petal-number-sprite"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "f4d3515d-a4c6-40fd-b624-74107825195f"
+      },
+      "id": "codex-menu-hide-old-nectar-number-sprite"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "20"
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "",
+              "references": [
+                {
+                  "type": "variable",
+                  "id": "20"
+                },
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-render-owned-petal-count-on-background"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "975d2fb5-d7e7-4dc3-a4da-e26023bbd002"
+            },
+            "id": "codex-menu-hide-unowned-petal-inventory-icon"
+          }
+        ]
+      },
+      "id": "codex-menu-show-owned-petal-and-count-only"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "54"
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "",
+              "references": [
+                {
+                  "type": "variable",
+                  "id": "54"
+                },
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-render-owned-nectar-count-on-background"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "975d2fb5-d7e7-4dc3-a4da-e26023bbd003"
+            },
+            "id": "codex-menu-hide-unowned-nectar-inventory-icon"
+          }
+        ]
+      },
+      "id": "codex-menu-show-owned-nectar-and-count-only"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "",
+              "references": [
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-mark-bone-equipped-a"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-if-bone-in-a-marker"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "48"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "",
+              "references": [
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-mark-bone-equipped-b"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-if-bone-in-b-marker"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "",
+              "references": [
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-mark-petal-equipped-a"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-if-petal-in-a-marker"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "48"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "",
+              "references": [
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-mark-petal-equipped-b"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-if-petal-in-b-marker"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "47"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "",
+              "references": [
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-mark-nectar-equipped-a"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-if-nectar-in-a-marker"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "48"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "",
+              "references": [
+                {
+                  "type": "font",
+                  "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+                }
+              ]
+            },
+            "id": "codex-menu-mark-nectar-equipped-b"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-if-nectar-in-b-marker"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "57"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "57",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            },
+            "id": "codex-menu-initialize-dog-max-hp-to-ten"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "56",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "57",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            },
+            "id": "codex-menu-initialize-dog-current-hp-from-max"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-menu-seed-dog-health-state-if-uninitialized"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "58",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "9",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-current-tens-copy-player-hp"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "58",
+        "operation": "div",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-current-tens-divide-by-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "58",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-current-tens-offset-to-digit-tiles"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "59",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "9",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-current-ones-copy-player-hp"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "59",
+        "operation": "mod",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-current-ones-mod-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "59",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-current-ones-offset-to-digit-tiles"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "60",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "13",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-max-tens-copy-player-max-hp"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "60",
+        "operation": "div",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-max-tens-divide-by-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "60",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-max-tens-offset-to-digit-tiles"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "61",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "13",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-max-ones-copy-player-max-hp"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "61",
+        "operation": "mod",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-max-ones-mod-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "61",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-boy-max-ones-offset-to-digit-tiles"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "62",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "56",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-current-tens-copy-dog-hp"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "62",
+        "operation": "div",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-current-tens-divide-by-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "62",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-current-tens-offset-to-digit-tiles"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "63",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "56",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-current-ones-copy-dog-hp"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "63",
+        "operation": "mod",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-current-ones-mod-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "63",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-current-ones-offset-to-digit-tiles"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "64",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "57",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-max-tens-copy-dog-max-hp"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "64",
+        "operation": "div",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-max-tens-divide-by-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "64",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-max-tens-offset-to-digit-tiles"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "65",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "57",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-max-ones-copy-dog-max-hp"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "65",
+        "operation": "mod",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-max-ones-mod-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "65",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-dog-max-ones-offset-to-digit-tiles"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "d68b80cf-ccb6-494b-a7e9-6ca67ab0433a",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "50"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-equipped-a-hud-tile-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "f4d3515d-a4c6-40fd-b624-74107825195f",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "51"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-equipped-b-hud-tile-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031001",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "58"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-boy-current-tens-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031002",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "59"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-boy-current-ones-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031003",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "number",
+          "value": 16
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-boy-hp-slash-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031004",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "60"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-boy-max-tens-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031005",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "61"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-boy-max-ones-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031006",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "62"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-dog-current-tens-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031007",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "63"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-dog-current-ones-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031008",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "number",
+          "value": 16
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-dog-hp-slash-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031009",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "64"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-dog-max-tens-on-open"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "c550eeaf-f6df-4c6f-a58c-c37161031010",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "65"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-dog-max-ones-on-open"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "68",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "20",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 9,
+        "clamp": true
+      },
+      "id": "codex-menu-petal-count-clamp-to-one-digit"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "68",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-petal-count-to-digit-tile"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "69",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "54",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 9,
+        "clamp": true
+      },
+      "id": "codex-menu-nectar-count-clamp-to-one-digit"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "69",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-nectar-count-to-digit-tile"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "70",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "19",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 999,
+        "clamp": true
+      },
+      "id": "codex-menu-talon-hundreds-copy-capped-total"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "70",
+        "operation": "div",
+        "other": "val",
+        "value": 100,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-talon-hundreds-divide"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "70",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-talon-hundreds-to-digit-tile"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "71",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "19",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 999,
+        "clamp": true
+      },
+      "id": "codex-menu-talon-tens-copy-capped-total"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "71",
+        "operation": "div",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-talon-tens-divide"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "71",
+        "operation": "mod",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-talon-tens-mod-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "71",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-talon-tens-to-digit-tile"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "72",
+        "operation": "set",
+        "other": "var",
+        "vectorY": "19",
+        "value": 0,
+        "minValue": 0,
+        "maxValue": 999,
+        "clamp": true
+      },
+      "id": "codex-menu-talon-ones-copy-capped-total"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "72",
+        "operation": "mod",
+        "other": "val",
+        "value": 10,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-talon-ones-mod-ten"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "72",
+        "operation": "add",
+        "other": "val",
+        "value": 6,
+        "minValue": 0,
+        "maxValue": 32767,
+        "clamp": false
+      },
+      "id": "codex-menu-talon-ones-to-digit-tile"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "d68b80cf-ccb6-494b-a7e9-6ca67ab0433a",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "68"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-petal-count"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "f4d3515d-a4c6-40fd-b624-74107825195f",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "69"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-nectar-count"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "975d2fb5-d7e7-4dc3-a4da-e26023bbc200",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "70"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-menu-render-talon-hundreds"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "975d2fb5-d7e7-4dc3-a4da-e26023bbc200",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "71"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "codex-menu-render-talon-tens"
+    },
+    {
+      "command": "XV_SPRITE_TILE_REPLACER",
+      "args": {
+        "actor": "975d2fb5-d7e7-4dc3-a4da-e26023bbc200",
+        "vram_bank": {
+          "type": "number",
+          "value": 0
+        },
+        "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+        "tileset_tiles": "_tileset_menuhudtiles",
+        "source_tile_idx": {
+          "type": "variable",
+          "value": "72"
+        },
+        "target_tile_idx": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "codex-menu-render-talon-ones"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc400",
+        "$actor[0]$": "e0df2b30-6af2-4b15-8717-2a8c835b0711",
+        "$actor[1]$": "b00e0b60-3fbe-4685-bfc4-d4421e749dac",
+        "$actor[2]$": "4ce5d110-327c-4cd2-a619-2c1e7a82ea5d",
+        "$actor[3]$": "d68b80cf-ccb6-494b-a7e9-6ca67ab0433a",
+        "$actor[4]$": "f4d3515d-a4c6-40fd-b624-74107825195f",
+        "$actor[5]$": "975d2fb5-d7e7-4dc3-a4da-e26023bbd002",
+        "$actor[6]$": "975d2fb5-d7e7-4dc3-a4da-e26023bbd003"
+      },
+      "id": "codex-menu-place-items-and-counts-on-open"
+    },
+    {
+      "command": "EVENT_MENU_HUD_NUMBERS",
+      "args": {},
+      "id": "codex-menu-render-settled-numbers-after-layout"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "b"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "49"
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "49",
+                    "value": {
+                      "type": "false"
+                    }
+                  },
+                  "id": "codex-menu-cancel-assignment-mode"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "18bd256f-4fe1-4b55-8a31-30f4132f094f"
+                  },
+                  "id": "codex-menu-cancel-hide-flashing-cursor"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                  },
+                  "id": "codex-menu-cancel-show-browse-cursor"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SOUND_PLAY_EFFECT",
+                  "args": {
+                    "type": "0fe7ca59-4ad7-4fc9-97f6-4b717ff45142",
+                    "priority": "medium",
+                    "wait": false
+                  },
+                  "id": "codex-menu-play-close-sound"
+                },
+                {
+                  "command": "EVENT_OVERLAY_SHOW",
+                  "args": {
+                    "color": "white",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "id": "codex-menu-restore-gameplay-hud-window-before-pop"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+                  },
+                  "id": "codex-menu-redraw-gameplay-hud-before-pop"
+                },
+                {
+                  "command": "EVENT_MENU_PAUSE_RESTORE",
+                  "args": {},
+                  "id": "codex-menu-request-gameplay-actor-restore-before-pop"
+                },
+                {
+                  "command": "EVENT_SCENE_POP_STATE",
+                  "args": {
+                    "fadeSpeed": "2"
+                  },
+                  "id": "codex-menu-b-restore-gameplay-native"
+                }
+              ]
+            },
+            "id": "codex-menu-b-cancel-or-close"
+          }
+        ]
+      },
+      "id": "codex-menu-input-b"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "up",
+          "down"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "cca87b91-82a2-497b-935e-af705686351f",
+              "priority": "medium",
+              "wait": false
+            },
+            "id": "codex-menu-play-click-on-browse-move"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "not",
+                "value": {
+                  "type": "variable",
+                  "value": "49"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "44"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "id": "codex-menu-cycle-bone-or-rest",
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "44",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "codex-menu-choice-bone-to-petal"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                          "x": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-cursor-petal"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "44"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 1
+                            }
+                          },
+                          "__collapseElse": false,
+                          "__disableElse": false
+                        },
+                        "id": "codex-menu-cycle-petal-or-rest",
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "44",
+                                "value": {
+                                  "type": "number",
+                                  "value": 4
+                                }
+                              },
+                              "id": "codex-menu-choice-petal-to-storm"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_POSITION",
+                              "args": {
+                                "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                "x": {
+                                  "type": "number",
+                                  "value": 7
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 9
+                                },
+                                "units": "tiles"
+                              },
+                              "id": "codex-menu-cursor-storm"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "44"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 4
+                                  }
+                                },
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "id": "codex-menu-cycle-storm-or-lower",
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "44",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 2
+                                      }
+                                    },
+                                    "id": "codex-menu-choice-storm-to-nectar"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                      "x": {
+                                        "type": "number",
+                                        "value": 2
+                                      },
+                                      "y": {
+                                        "type": "number",
+                                        "value": 12
+                                      },
+                                      "units": "tiles"
+                                    },
+                                    "id": "codex-menu-cursor-nectar"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "eq",
+                                        "valueA": {
+                                          "type": "variable",
+                                          "value": "44"
+                                        },
+                                        "valueB": {
+                                          "type": "number",
+                                          "value": 2
+                                        }
+                                      },
+                                      "__collapseElse": false,
+                                      "__disableElse": false
+                                    },
+                                    "id": "codex-menu-cycle-nectar-or-bone",
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "44",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 3
+                                            }
+                                          },
+                                          "id": "codex-menu-choice-nectar-to-biscuit"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_POSITION",
+                                          "args": {
+                                            "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                            "x": {
+                                              "type": "number",
+                                              "value": 7
+                                            },
+                                            "y": {
+                                              "type": "number",
+                                              "value": 12
+                                            },
+                                            "units": "tiles"
+                                          },
+                                          "id": "codex-menu-cursor-biscuit"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "44",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 0
+                                            }
+                                          },
+                                          "id": "codex-menu-choice-to-bone"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_SET_POSITION",
+                                          "args": {
+                                            "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                                            "x": {
+                                              "type": "number",
+                                              "value": 2
+                                            },
+                                            "y": {
+                                              "type": "number",
+                                              "value": 6
+                                            },
+                                            "units": "tiles"
+                                          },
+                                          "id": "codex-menu-cursor-bone"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-menu-direction-only-while-browsing"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "not",
+                "value": {
+                  "type": "variable",
+                  "value": "49"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                  },
+                  "id": "codex-menu-show-browse-cursor-after-first-direction"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                    "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                  },
+                  "id": "codex-menu-skip-assigned-items-during-browse"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-menu-normalize-cursor-only-while-browsing"
+          }
+        ]
+      },
+      "id": "codex-menu-input-up-down"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "left",
+          "right"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "cca87b91-82a2-497b-935e-af705686351f",
+              "priority": "medium",
+              "wait": false
+            },
+            "id": "codex-menu-play-click-on-slot-move"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "49"
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "46"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "46",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "codex-menu-target-b-slot"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "18bd256f-4fe1-4b55-8a31-30f4132f094f",
+                          "x": {
+                            "type": "number",
+                            "value": 15
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-flashing-cursor-to-b"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "46",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-target-a-slot"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "18bd256f-4fe1-4b55-8a31-30f4132f094f",
+                          "x": {
+                            "type": "number",
+                            "value": 10
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-flashing-cursor-to-a"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-toggle-a-b-assignment-target"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "and",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "48"
+                      },
+                      "valueB": {
+                        "type": "eq",
+                        "valueA": {
+                          "type": "variable",
+                          "value": "46"
+                        },
+                        "valueB": {
+                          "type": "number",
+                          "value": 0
+                        }
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "46",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "codex-menu-browse-equipped-target-b"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "44",
+                          "operation": "set",
+                          "other": "var",
+                          "vectorY": "48",
+                          "value": 0,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": false
+                        },
+                        "id": "codex-menu-browse-b-item-to-choice"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "44",
+                          "operation": "sub",
+                          "other": "val",
+                          "value": 1,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": false
+                        },
+                        "id": "codex-menu-browse-b-item-id-to-row"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                          "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                        },
+                        "id": "codex-menu-render-hovered-b-description"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                          "x": {
+                            "type": "number",
+                            "value": 15
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-browse-cursor-to-equipped-b"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "46",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-browse-equipped-target-a"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "44",
+                          "operation": "set",
+                          "other": "var",
+                          "vectorY": "47",
+                          "value": 0,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": false
+                        },
+                        "id": "codex-menu-browse-a-item-to-choice"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "44",
+                          "operation": "sub",
+                          "other": "val",
+                          "value": 1,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": false
+                        },
+                        "id": "codex-menu-browse-a-item-id-to-row"
+                      },
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                          "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                        },
+                        "id": "codex-menu-render-hovered-a-description"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+                          "x": {
+                            "type": "number",
+                            "value": 10
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-browse-cursor-to-equipped-a"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-toggle-hover-between-equipped-slots"
+                }
+              ]
+            },
+            "id": "codex-menu-left-right-only-while-assigning"
+          }
+        ]
+      },
+      "id": "codex-menu-input-left-right"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "a"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "cca87b91-82a2-497b-935e-af705686351f",
+              "priority": "medium",
+              "wait": false
+            },
+            "id": "codex-menu-play-click-on-select"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "49"
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "46"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "47",
+                          "operation": "set",
+                          "other": "var",
+                          "vectorY": "45",
+                          "value": 0,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": false
+                        },
+                        "id": "codex-menu-write-selected-item-to-a"
+                      },
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "45"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 1
+                            }
+                          },
+                          "__collapseElse": false,
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "50",
+                                "value": {
+                                  "type": "number",
+                                  "value": 3
+                                }
+                              },
+                              "id": "codex-menu-a-icon-bone-tile-3"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "45"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 2
+                                  }
+                                },
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "50",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "codex-menu-a-icon-petal-tile-1"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_VARIABLE_MATH",
+                                    "args": {
+                                      "vectorX": "50",
+                                      "operation": "set",
+                                      "other": "var",
+                                      "vectorY": "55",
+                                      "value": 0,
+                                      "minValue": 0,
+                                      "maxValue": 32767,
+                                      "clamp": false
+                                    },
+                                    "id": "codex-menu-a-icon-nectar-from-hud-tile-variable"
+                                  }
+                                ]
+                              },
+                              "id": "codex-menu-a-icon-petal-or-nectar"
+                            }
+                          ]
+                        },
+                        "id": "codex-menu-choose-a-icon-from-item"
+                      },
+                      {
+                        "command": "XV_SPRITE_TILE_REPLACER",
+                        "args": {
+                          "actor": "d68b80cf-ccb6-494b-a7e9-6ca67ab0433a",
+                          "vram_bank": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+                          "tileset_tiles": "_tileset_menuhudtiles",
+                          "source_tile_idx": {
+                            "type": "variable",
+                            "value": "68"
+                          },
+                          "target_tile_idx": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-restore-petal-count-tile-after-assignment"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "48",
+                          "operation": "set",
+                          "other": "var",
+                          "vectorY": "45",
+                          "value": 0,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": false
+                        },
+                        "id": "codex-menu-write-selected-item-to-b"
+                      },
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "45"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 1
+                            }
+                          },
+                          "__collapseElse": false,
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "51",
+                                "value": {
+                                  "type": "number",
+                                  "value": 3
+                                }
+                              },
+                              "id": "codex-menu-b-icon-bone-tile-3"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "45"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 2
+                                  }
+                                },
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "51",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 1
+                                      }
+                                    },
+                                    "id": "codex-menu-b-icon-petal-tile-1"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_VARIABLE_MATH",
+                                    "args": {
+                                      "vectorX": "51",
+                                      "operation": "set",
+                                      "other": "var",
+                                      "vectorY": "55",
+                                      "value": 0,
+                                      "minValue": 0,
+                                      "maxValue": 32767,
+                                      "clamp": false
+                                    },
+                                    "id": "codex-menu-b-icon-nectar-from-hud-tile-variable"
+                                  }
+                                ]
+                              },
+                              "id": "codex-menu-b-icon-petal-or-nectar"
+                            }
+                          ]
+                        },
+                        "id": "codex-menu-choose-b-icon-from-item"
+                      },
+                      {
+                        "command": "XV_SPRITE_TILE_REPLACER",
+                        "args": {
+                          "actor": "f4d3515d-a4c6-40fd-b624-74107825195f",
+                          "vram_bank": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "tileset_bank_tiles": "___bank_tileset_menuhudtiles",
+                          "tileset_tiles": "_tileset_menuhudtiles",
+                          "source_tile_idx": {
+                            "type": "variable",
+                            "value": "69"
+                          },
+                          "target_tile_idx": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-restore-nectar-count-tile-after-assignment"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-commit-assignment-to-target-slot"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc400",
+                    "$actor[0]$": "e0df2b30-6af2-4b15-8717-2a8c835b0711",
+                    "$actor[1]$": "b00e0b60-3fbe-4685-bfc4-d4421e749dac",
+                    "$actor[2]$": "4ce5d110-327c-4cd2-a619-2c1e7a82ea5d",
+                    "$actor[3]$": "d68b80cf-ccb6-494b-a7e9-6ca67ab0433a",
+                    "$actor[4]$": "f4d3515d-a4c6-40fd-b624-74107825195f",
+                    "$actor[5]$": "975d2fb5-d7e7-4dc3-a4da-e26023bbd002",
+                    "$actor[6]$": "975d2fb5-d7e7-4dc3-a4da-e26023bbd003"
+                  },
+                  "id": "codex-menu-place-items-after-equip"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "975d2fb5-d7e7-4dc3-a4da-e26023bbc600",
+                    "$actor[0]$": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                  },
+                  "id": "codex-menu-keep-owned-item-selected-after-equip"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "49",
+                    "value": {
+                      "type": "false"
+                    }
+                  },
+                  "id": "codex-menu-return-to-browse-after-equip"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "18bd256f-4fe1-4b55-8a31-30f4132f094f"
+                  },
+                  "id": "codex-menu-hide-flashing-cursor-after-equip"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                  },
+                  "id": "codex-menu-show-browse-cursor-after-equip"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "44"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "45",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "codex-menu-select-bone-for-assignment"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "eq",
+                            "valueA": {
+                              "type": "variable",
+                              "value": "44"
+                            },
+                            "valueB": {
+                              "type": "number",
+                              "value": 1
+                            }
+                          },
+                          "__collapseElse": false,
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "variable",
+                                  "value": "20"
+                                },
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "45",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 2
+                                      }
+                                    },
+                                    "id": "codex-menu-select-usable-petal-for-assignment"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                      "variable": "45",
+                                      "value": {
+                                        "type": "number",
+                                        "value": 0
+                                      }
+                                    },
+                                    "id": "codex-menu-block-empty-petal-assignment"
+                                  }
+                                ]
+                              },
+                              "id": "codex-menu-petal-requires-positive-quantity"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_IF",
+                              "args": {
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "44"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 2
+                                  }
+                                },
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "variable",
+                                        "value": "54"
+                                      },
+                                      "__collapseElse": false,
+                                      "__disableElse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "45",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 3
+                                            }
+                                          },
+                                          "id": "codex-menu-select-usable-nectar-for-assignment"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "45",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 0
+                                            }
+                                          },
+                                          "id": "codex-menu-block-empty-nectar-assignment"
+                                        }
+                                      ]
+                                    },
+                                    "id": "codex-menu-nectar-requires-positive-quantity"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_IF",
+                                    "args": {
+                                      "condition": {
+                                        "type": "variable",
+                                        "value": "73"
+                                      },
+                                      "__collapseElse": false,
+                                      "__disableElse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "45",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 4
+                                            }
+                                          },
+                                          "id": "codex-menu-select-usable-biscuit-for-assignment"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_SET_VALUE",
+                                          "args": {
+                                            "variable": "45",
+                                            "value": {
+                                              "type": "number",
+                                              "value": 0
+                                            }
+                                          },
+                                          "id": "codex-menu-block-empty-biscuit-assignment"
+                                        }
+                                      ]
+                                    },
+                                    "id": "codex-menu-biscuit-requires-positive-quantity"
+                                  }
+                                ]
+                              },
+                              "id": "codex-menu-nectar-or-biscuit-requires-stock"
+                            }
+                          ]
+                        },
+                        "id": "codex-menu-map-petal-or-nectar-to-item-id"
+                      }
+                    ]
+                  },
+                  "id": "codex-menu-map-highlight-to-item-id"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "44"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 4
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": false
+                  },
+                  "id": "codex-menu-map-storm-to-item-id",
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF",
+                        "args": {
+                          "condition": {
+                            "type": "variable",
+                            "value": "182"
+                          },
+                          "__collapseElse": false,
+                          "__disableElse": false
+                        },
+                        "id": "codex-menu-storm-known-check",
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "45",
+                                "value": {
+                                  "type": "number",
+                                  "value": 5
+                                }
+                              },
+                              "id": "codex-menu-select-known-storm"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_SET_VALUE",
+                              "args": {
+                                "variable": "45",
+                                "value": {
+                                  "type": "number",
+                                  "value": 0
+                                }
+                              },
+                              "id": "codex-menu-block-unknown-storm"
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "false": []
+                  }
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "variable",
+                      "value": "45"
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "46",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "codex-menu-new-assignment-starts-on-a"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "49",
+                          "value": {
+                            "type": "true"
+                          }
+                        },
+                        "id": "codex-menu-begin-assignment-mode"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_HIDE",
+                        "args": {
+                          "actorId": "ad9d4a75-0913-4f71-a816-98c58e4bdb18"
+                        },
+                        "id": "codex-menu-hide-solid-cursor-for-assignment"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SET_POSITION",
+                        "args": {
+                          "actorId": "18bd256f-4fe1-4b55-8a31-30f4132f094f",
+                          "x": {
+                            "type": "number",
+                            "value": 10
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "units": "tiles"
+                        },
+                        "id": "codex-menu-flashing-cursor-start-at-a"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_SHOW",
+                        "args": {
+                          "actorId": "18bd256f-4fe1-4b55-8a31-30f4132f094f"
+                        },
+                        "id": "codex-menu-show-flashing-assignment-cursor"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "codex-menu-open-assignment-only-for-usable-item"
+                }
+              ]
+            },
+            "id": "codex-menu-a-select-or-confirm"
+          }
+        ]
+      },
+      "id": "codex-menu-input-a"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "182"
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "id": "codex-menu-show-known-storm",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700002",
+              "x": {
+                "type": "number",
+                "value": 8
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "units": "tiles"
+            },
+            "id": "codex-menu-storm-to-inventory"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700002"
+            },
+            "id": "codex-menu-show-storm"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "8dc4c5d6-5d0e-4212-a2bb-2c0de5700002"
+            },
+            "id": "codex-menu-hide-unknown-storm"
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

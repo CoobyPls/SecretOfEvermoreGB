@@ -1,0 +1,394 @@
+#pragma bank 255
+
+#include <gbdk/platform.h>
+#include <rand.h>
+
+#include "actor.h"
+#include "collision.h"
+#include "macro.h"
+#include "vm.h"
+#include "data/game_globals.h"
+#include "magic_system.h"
+
+#define MAGIC_BEHAVIOR_BURST 0u
+#define MAGIC_BEHAVIOR_MISSILE 1u
+#define MAGIC_TARGET_NEAREST_PLAYER 0u
+
+#define MAGIC_STATE_IDLE 0u
+#define MAGIC_STATE_BURST 1u
+#define MAGIC_STATE_MISSILE 2u
+
+#define MAGIC_CAST_FAIL_BUSY 3u
+#define MAGIC_CAST_FAIL_BAD_TARGET_MODE 4u
+#define MAGIC_CAST_FAIL_NO_TARGET 5u
+#define MAGIC_CAST_FAIL_COST 6u
+
+#define MAGIC_TARGET_DEBUG_NONE 0u
+#define MAGIC_TARGET_DEBUG_NOT_NEAREST_MODE 10u
+#define MAGIC_TARGET_DEBUG_NO_ACTIVE_ENEMY 11u
+#define MAGIC_TARGET_DEBUG_NO_SCRIPT_BANK 12u
+#define MAGIC_TARGET_DEBUG_NO_HIT_HANDLE 13u
+#define MAGIC_TARGET_DEBUG_OUT_OF_RANGE 14u
+
+static actor_t *magic_frozen_target;
+static actor_t *magic_pending_target;
+static actor_t *magic_effect_actor;
+static UBYTE magic_state;
+static UBYTE magic_freeze_timer;
+static UBYTE magic_effect_timer;
+static UBYTE magic_spell_id;
+static UBYTE magic_behavior;
+static UBYTE magic_target_mode;
+static UBYTE magic_range_px;
+static UBYTE magic_target_collision_mask;
+static UBYTE magic_hit_collision_mask;
+static UBYTE magic_effect_actor_id;
+static UBYTE *magic_damage_out;
+static UBYTE magic_min_damage;
+static UBYTE magic_max_damage;
+static UBYTE *magic_ingredient1;
+static UBYTE *magic_ingredient2;
+static UBYTE magic_ingredient1_cost;
+static UBYTE magic_ingredient2_cost;
+static UBYTE magic_freeze_frames;
+static UBYTE magic_effect_reserved_tiles;
+static UBYTE magic_effect_frames;
+static UBYTE magic_missile_speed_px;
+static UBYTE magic_effect_y_offset_px;
+static UBYTE magic_effect_first_frame;
+static UBYTE magic_effect_last_frame;
+static UBYTE magic_effect_blank_frame;
+static UWORD *magic_target_x_out;
+static UWORD *magic_target_y_out;
+static UWORD *magic_cast_success_out;
+
+static void magic_write_cast_success(UBYTE value) {
+    if (magic_cast_success_out) *magic_cast_success_out = value;
+#ifdef VAR_SPELLCASTSUCCESS
+    VM_GLOBAL(VAR_SPELLCASTSUCCESS) = value;
+#endif
+}
+
+static void magic_write_target_position(actor_t *target) {
+    UWORD target_x;
+    UWORD target_y;
+
+    if (!target) return;
+
+    target_x = SUBPX_TO_PX(target->pos.x);
+    target_y = (target->pos.y > PX_TO_SUBPX(magic_effect_y_offset_px)) ?
+        SUBPX_TO_PX(target->pos.y - PX_TO_SUBPX(magic_effect_y_offset_px)) : 0u;
+
+    if (magic_target_x_out) *magic_target_x_out = target_x;
+    if (magic_target_y_out) *magic_target_y_out = target_y;
+#ifdef VAR_SPELLTARGETX
+    VM_GLOBAL(VAR_SPELLTARGETX) = target_x;
+#endif
+#ifdef VAR_SPELLTARGETY
+    VM_GLOBAL(VAR_SPELLTARGETY) = target_y;
+#endif
+}
+
+static void magic_write_target_debug(UWORD value) {
+    if (magic_target_x_out) *magic_target_x_out = value;
+#ifdef VAR_SPELLTARGETX
+    VM_GLOBAL(VAR_SPELLTARGETX) = value;
+#endif
+}
+
+static void magic_hide_effect(void) {
+    if (magic_effect_actor &&
+        CHK_FLAG(magic_effect_actor->flags, ACTOR_FLAG_ACTIVE)) {
+        magic_effect_actor->frame = magic_effect_blank_frame;
+        SET_FLAG(magic_effect_actor->flags, ACTOR_FLAG_HIDDEN);
+    }
+    magic_effect_actor = NULL;
+}
+
+static void magic_show_effect(actor_t *target) {
+    if (!target) return;
+
+    magic_effect_actor = actors + magic_effect_actor_id;
+    if (!magic_effect_actor ||
+        !CHK_FLAG(magic_effect_actor->flags, ACTOR_FLAG_ACTIVE)) {
+        magic_effect_actor = NULL;
+        return;
+    }
+
+    magic_effect_actor->pos.x = target->pos.x;
+    magic_effect_actor->pos.y = (target->pos.y > PX_TO_SUBPX(magic_effect_y_offset_px)) ?
+        target->pos.y - PX_TO_SUBPX(magic_effect_y_offset_px) : 0u;
+    magic_effect_actor->frame = magic_effect_first_frame;
+    actor_set_frames(magic_effect_actor, magic_effect_first_frame, (UBYTE)(magic_effect_last_frame + 1u));
+    CLR_FLAG(magic_effect_actor->flags, ACTOR_FLAG_HIDDEN | ACTOR_FLAG_DISABLED);
+}
+
+static UWORD magic_axis_distance(UWORD a, UWORD b) {
+    return (a > b) ? (a - b) : (b - a);
+}
+
+static UWORD magic_distance_to_player(actor_t *actor) {
+    return magic_axis_distance(actor->pos.x, PLAYER.pos.x) +
+           magic_axis_distance(actor->pos.y, PLAYER.pos.y);
+}
+
+static UBYTE magic_is_targetable(actor_t *actor, UBYTE collision_mask) {
+    if (!actor || actor == &PLAYER) return FALSE;
+    if (!CHK_FLAG(actor->flags, ACTOR_FLAG_ACTIVE) ||
+        CHK_FLAG(actor->flags, ACTOR_FLAG_HIDDEN | ACTOR_FLAG_DISABLED)) return FALSE;
+    if (!(actor->collision_group & collision_mask)) return FALSE;
+    if (!actor->script.bank || !(actor->hscript_hit & SCRIPT_TERMINATED)) return FALSE;
+    return TRUE;
+}
+
+static actor_t *magic_find_target(UBYTE target_mode, UBYTE collision_mask, UWORD range_subpx) {
+    actor_t *candidate;
+    actor_t *target = NULL;
+    UWORD distance;
+    UWORD best_distance = range_subpx + 1u;
+    UBYTE saw_enemy = FALSE;
+    UBYTE saw_script_bank = FALSE;
+    UBYTE saw_hit_handle = FALSE;
+    UBYTE saw_in_range = FALSE;
+
+    if (target_mode != MAGIC_TARGET_NEAREST_PLAYER) {
+        magic_write_target_debug(MAGIC_TARGET_DEBUG_NOT_NEAREST_MODE);
+        return NULL;
+    }
+
+    for (candidate = actors_active_head; candidate; candidate = candidate->next) {
+        if (!candidate || candidate == &PLAYER) continue;
+        if (!CHK_FLAG(candidate->flags, ACTOR_FLAG_ACTIVE) ||
+            CHK_FLAG(candidate->flags, ACTOR_FLAG_HIDDEN | ACTOR_FLAG_DISABLED)) continue;
+        if (!(candidate->collision_group & collision_mask)) continue;
+        saw_enemy = TRUE;
+        if (!candidate->script.bank) continue;
+        saw_script_bank = TRUE;
+        if (!(candidate->hscript_hit & SCRIPT_TERMINATED)) continue;
+        saw_hit_handle = TRUE;
+        distance = magic_distance_to_player(candidate);
+        if (distance > range_subpx) continue;
+        saw_in_range = TRUE;
+        if (distance < best_distance) {
+            best_distance = distance;
+            target = candidate;
+        }
+    }
+
+    if (!target) {
+        if (!saw_enemy) magic_write_target_debug(MAGIC_TARGET_DEBUG_NO_ACTIVE_ENEMY);
+        else if (!saw_script_bank) magic_write_target_debug(MAGIC_TARGET_DEBUG_NO_SCRIPT_BANK);
+        else if (!saw_hit_handle) magic_write_target_debug(MAGIC_TARGET_DEBUG_NO_HIT_HANDLE);
+        else if (!saw_in_range) magic_write_target_debug(MAGIC_TARGET_DEBUG_OUT_OF_RANGE);
+        else magic_write_target_debug(MAGIC_TARGET_DEBUG_NONE);
+    }
+
+    return target;
+}
+
+static UBYTE magic_can_pay_cost(void) {
+    if (magic_ingredient1_cost && (!magic_ingredient1 || *magic_ingredient1 < magic_ingredient1_cost)) return FALSE;
+    if (magic_ingredient2_cost && (!magic_ingredient2 || *magic_ingredient2 < magic_ingredient2_cost)) return FALSE;
+    return TRUE;
+}
+
+static void magic_pay_cost(void) {
+    if (magic_ingredient1_cost && magic_ingredient1) *magic_ingredient1 -= magic_ingredient1_cost;
+    if (magic_ingredient2_cost && magic_ingredient2) *magic_ingredient2 -= magic_ingredient2_cost;
+}
+
+static void magic_roll_damage(void) {
+    UBYTE damage_range;
+    UBYTE damage;
+
+    if (magic_max_damage < magic_min_damage) {
+        magic_max_damage = magic_min_damage;
+    }
+
+    damage_range = (UBYTE)(magic_max_damage - magic_min_damage + 1u);
+    damage = (UBYTE)(magic_min_damage + (rand() % damage_range));
+    if (magic_damage_out) *magic_damage_out = damage;
+#ifdef VAR_CURRENTDAMAGE
+    VM_GLOBAL(VAR_CURRENTDAMAGE) = damage;
+#endif
+}
+
+static void magic_unfreeze_target(void) {
+    if (magic_frozen_target &&
+        CHK_FLAG(magic_frozen_target->flags, ACTOR_FLAG_ACTIVE) &&
+        !CHK_FLAG(magic_frozen_target->flags, ACTOR_FLAG_HIDDEN)) {
+        CLR_FLAG(magic_frozen_target->flags, ACTOR_FLAG_DISABLED);
+    }
+    magic_frozen_target = NULL;
+    magic_freeze_timer = 0u;
+}
+
+static void magic_freeze_pending_target(void) {
+    if (!magic_freeze_frames || !magic_pending_target) return;
+
+    magic_frozen_target = magic_pending_target;
+    magic_freeze_timer = magic_freeze_frames;
+    SET_FLAG(magic_pending_target->flags, ACTOR_FLAG_DISABLED);
+}
+
+static void magic_land_spell(void) {
+    if (magic_pending_target &&
+        CHK_FLAG(magic_pending_target->flags, ACTOR_FLAG_ACTIVE) &&
+        !CHK_FLAG(magic_pending_target->flags, ACTOR_FLAG_HIDDEN)) {
+        script_execute(magic_pending_target->script.bank, magic_pending_target->script.ptr,
+                       &(magic_pending_target->hscript_hit), 1, (UWORD)magic_hit_collision_mask);
+    }
+
+    magic_pending_target = NULL;
+    magic_state = MAGIC_STATE_IDLE;
+    magic_hide_effect();
+    magic_unfreeze_target();
+}
+
+static void magic_update_missile(void) {
+    if (magic_effect_timer) {
+        magic_effect_timer--;
+    } else {
+        magic_land_spell();
+        return;
+    }
+
+    if (!magic_pending_target ||
+        !CHK_FLAG(magic_pending_target->flags, ACTOR_FLAG_ACTIVE) ||
+        CHK_FLAG(magic_pending_target->flags, ACTOR_FLAG_HIDDEN)) {
+        magic_land_spell();
+        return;
+    }
+
+    magic_land_spell();
+}
+
+void magic_configure_targeting(SCRIPT_CTX *THIS) OLDCALL BANKED {
+    magic_spell_id = *(UBYTE *)VM_REF_TO_PTR(FN_ARG0);
+    magic_behavior = *(UBYTE *)VM_REF_TO_PTR(FN_ARG1);
+    magic_target_mode = *(UBYTE *)VM_REF_TO_PTR(FN_ARG2);
+    magic_range_px = *(UBYTE *)VM_REF_TO_PTR(FN_ARG3);
+    magic_target_collision_mask = *(UBYTE *)VM_REF_TO_PTR(FN_ARG4);
+
+    if (magic_range_px < 8u) magic_range_px = 128u;
+    if (!magic_target_collision_mask) magic_target_collision_mask = (COLLISION_GROUP_1 | COLLISION_GROUP_2);
+    if (magic_spell_id == 1u) magic_target_collision_mask |= (COLLISION_GROUP_1 | COLLISION_GROUP_2);
+
+    THIS;
+}
+
+void magic_configure_damage(SCRIPT_CTX *THIS) OLDCALL BANKED {
+    magic_damage_out = (UBYTE *)VM_REF_TO_PTR(FN_ARG0);
+    magic_min_damage = *(UBYTE *)VM_REF_TO_PTR(FN_ARG1);
+    magic_max_damage = *(UBYTE *)VM_REF_TO_PTR(FN_ARG2);
+    magic_effect_actor_id = *(UBYTE *)VM_REF_TO_PTR(FN_ARG3);
+    magic_hit_collision_mask = *(UBYTE *)VM_REF_TO_PTR(FN_ARG4);
+
+    if (magic_spell_id == 1u || !magic_hit_collision_mask) magic_hit_collision_mask = COLLISION_GROUP_3;
+
+    THIS;
+}
+
+void magic_configure_cost(SCRIPT_CTX *THIS) OLDCALL BANKED {
+    magic_ingredient1 = (UBYTE *)VM_REF_TO_PTR(FN_ARG0);
+    magic_ingredient1_cost = *(UBYTE *)VM_REF_TO_PTR(FN_ARG1);
+    magic_ingredient2 = (UBYTE *)VM_REF_TO_PTR(FN_ARG2);
+    magic_ingredient2_cost = *(UBYTE *)VM_REF_TO_PTR(FN_ARG3);
+
+    THIS;
+}
+
+void magic_configure_effect(SCRIPT_CTX *THIS) OLDCALL BANKED {
+    magic_freeze_frames = *(UBYTE *)VM_REF_TO_PTR(FN_ARG0);
+    magic_effect_frames = *(UBYTE *)VM_REF_TO_PTR(FN_ARG1);
+    magic_missile_speed_px = *(UBYTE *)VM_REF_TO_PTR(FN_ARG2);
+    magic_effect_y_offset_px = *(UBYTE *)VM_REF_TO_PTR(FN_ARG3);
+    magic_effect_reserved_tiles = *(UBYTE *)VM_REF_TO_PTR(FN_ARG4);
+    magic_effect_first_frame = *(UBYTE *)VM_REF_TO_PTR(FN_ARG5);
+    magic_effect_last_frame = *(UBYTE *)VM_REF_TO_PTR(FN_ARG6);
+    magic_effect_blank_frame = *(UBYTE *)VM_REF_TO_PTR(FN_ARG7);
+
+    THIS;
+}
+
+void magic_configure_output_vars(SCRIPT_CTX *THIS) OLDCALL BANKED {
+    magic_target_x_out = (UWORD *)VM_REF_TO_PTR(FN_ARG0);
+    magic_target_y_out = (UWORD *)VM_REF_TO_PTR(FN_ARG1);
+    magic_cast_success_out = (UWORD *)VM_REF_TO_PTR(FN_ARG2);
+
+    THIS;
+}
+
+void magic_cast_configured(SCRIPT_CTX *THIS) OLDCALL BANKED {
+    if (magic_state != MAGIC_STATE_IDLE) {
+        magic_write_cast_success(MAGIC_CAST_FAIL_BUSY);
+        THIS;
+        return;
+    }
+
+    if (magic_target_mode != MAGIC_TARGET_NEAREST_PLAYER) {
+        magic_write_cast_success(MAGIC_CAST_FAIL_BAD_TARGET_MODE);
+        THIS;
+        return;
+    }
+
+    magic_pending_target = magic_find_target(magic_target_mode, magic_target_collision_mask, PX_TO_SUBPX(magic_range_px));
+    if (!magic_pending_target) {
+        magic_pending_target = NULL;
+        magic_write_cast_success(MAGIC_CAST_FAIL_NO_TARGET);
+        THIS;
+        return;
+    }
+
+    if (!magic_can_pay_cost()) {
+        magic_pending_target = NULL;
+        magic_write_cast_success(MAGIC_CAST_FAIL_COST);
+        THIS;
+        return;
+    }
+
+    magic_write_target_position(magic_pending_target);
+    magic_write_cast_success(1u);
+    magic_show_effect(magic_pending_target);
+
+    magic_pay_cost();
+    magic_roll_damage();
+
+    if (magic_behavior == MAGIC_BEHAVIOR_MISSILE) {
+        magic_state = MAGIC_STATE_MISSILE;
+        magic_effect_timer = magic_effect_frames;
+        magic_freeze_pending_target();
+    } else {
+        magic_state = MAGIC_STATE_BURST;
+        magic_effect_timer = magic_effect_frames;
+        magic_freeze_pending_target();
+        script_execute(magic_pending_target->script.bank, magic_pending_target->script.ptr,
+                       &(magic_pending_target->hscript_hit), 1, (UWORD)magic_hit_collision_mask);
+        magic_pending_target = NULL;
+        magic_state = MAGIC_STATE_IDLE;
+    }
+
+    magic_spell_id;
+    THIS;
+}
+
+void magic_system_update(SCRIPT_CTX *THIS) OLDCALL BANKED {
+    if (magic_state == MAGIC_STATE_MISSILE) {
+        magic_update_missile();
+    } else if (magic_effect_timer) {
+        magic_effect_timer--;
+        if (!magic_effect_timer) {
+            magic_state = MAGIC_STATE_IDLE;
+            magic_hide_effect();
+        }
+    }
+
+    if (magic_freeze_timer) {
+        magic_freeze_timer--;
+        if (!magic_freeze_timer) {
+            magic_unfreeze_target();
+        }
+    }
+
+    THIS;
+}

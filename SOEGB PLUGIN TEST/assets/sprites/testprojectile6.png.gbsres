@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "1ff3c151-f2f0-49c1-bd10-6dbdf695b364",
+  "name": "testprojectile6",
+  "symbol": "sprite_testprojectile6",
+  "states": [
+    {
+      "id": "47e79d8e-3937-43dc-8b4a-d724902abf06",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "4774c86b-b92f-4f76-8944-4c6953d8c565",
+          "frames": [
+            {
+              "id": "1e074ec4-e391-499e-8a1d-6b8b230844c2",
+              "tiles": [
+                {
+                  "id": "9e3a9b78-d0a1-4fcc-a009-c14bf94bb5b1",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "c3575295-ca55-430f-9c83-dc3706ccc5fc",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "b30848f2-e7e4-4569-964c-a71f61030fbe",
+          "frames": [
+            {
+              "id": "5a1be589-c3dc-4c21-81a6-7f425e991ac5",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1259b965-926d-47cd-8a37-692723c923aa",
+          "frames": [
+            {
+              "id": "4212609a-37e9-4c95-9d71-de42ee05878f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "eb3efc5b-67b5-4d5b-9b9f-463dcd3d9cba",
+          "frames": [
+            {
+              "id": "83933672-ea57-4253-8f53-d617c5772da1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "08192653-09c9-4149-a80a-eb5cdf0a4411",
+          "frames": [
+            {
+              "id": "b669cd7a-f79e-4e8b-bde4-c46d4b028de4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "680efe21-9ece-4ae1-9898-03d0af384bbb",
+          "frames": [
+            {
+              "id": "fa72366a-69ab-43ec-b154-fe8658143897",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a0fe1481-6f8e-4f8e-b017-a8c05df78235",
+          "frames": [
+            {
+              "id": "6723b345-4f32-4919-885b-e8c7cf22bf4e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6dfbb80e-cdcf-4f53-9bba-1ad0c4dcc071",
+          "frames": [
+            {
+              "id": "fdc69653-c248-4e5c-85a4-f64d7587d017",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "testprojectile6.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "45cfd959d56f219c667c1086e59b80f4b32694a1"
+}

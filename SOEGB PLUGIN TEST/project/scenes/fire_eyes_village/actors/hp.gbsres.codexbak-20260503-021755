@@ -1,0 +1,213 @@
+﻿{
+    "_resourceType":  "actor",
+    "id":  "3eb7e728-9390-4940-b404-f58346169899",
+    "name":  "HP Bar",
+    "frame":  4,
+    "animate":  false,
+    "spriteSheetId":  "8a0522de-cb3c-40f2-b9df-5b5b007aca98",
+    "prefabId":  "",
+    "direction":  "down",
+    "moveSpeed":  1,
+    "animSpeed":  15,
+    "paletteId":  "",
+    "isPinned":  true,
+    "persistent":  false,
+    "collisionGroup":  "",
+    "collisionExtraFlags":  [
+
+                            ],
+    "prefabScriptOverrides":  {
+
+                              },
+    "symbol":  "actor_hp_bar_fire_eyes_village",
+    "script":  [
+
+               ],
+    "startScript":  [
+                        {
+                            "command":  "EVENT_IF",
+                            "args":  {
+                                         "condition":  {
+                                                           "type":  "gt",
+                                                           "valueA":  {
+                                                                          "type":  "variable",
+                                                                          "value":  "9"
+                                                                      },
+                                                           "valueB":  {
+                                                                          "type":  "number",
+                                                                          "value":  0
+                                                                      }
+                                                       },
+                                         "__collapseElse":  false,
+                                         "__disableElse":  false
+                                     },
+                            "children":  {
+                                             "true":  [
+                                                          {
+                                                              "command":  "EVENT_VARIABLE_MATH",
+                                                              "args":  {
+                                                                           "vectorX":  "L1",
+                                                                           "operation":  "set",
+                                                                           "other":  "var",
+                                                                           "vectorY":  "9",
+                                                                           "value":  0,
+                                                                           "minValue":  0,
+                                                                           "maxValue":  32767,
+                                                                           "clamp":  false
+                                                                       },
+                                                              "id":  "b58970f7-034f-4eac-95fb-a8bf663b3179"
+                                                          },
+                                                          {
+                                                              "command":  "EVENT_VARIABLE_MATH",
+                                                              "args":  {
+                                                                           "vectorX":  "L1",
+                                                                           "operation":  "sub",
+                                                                           "other":  "val",
+                                                                           "vectorY":  "LAST_VARIABLE",
+                                                                           "value":  1,
+                                                                           "minValue":  0,
+                                                                           "maxValue":  32767,
+                                                                           "clamp":  true
+                                                                       },
+                                                              "id":  "91f28a63-ffba-4614-9ecf-eea6c17a6315"
+                                                          },
+                                                          {
+                                                              "command":  "EVENT_ACTOR_SET_FRAME",
+                                                              "args":  {
+                                                                           "actorId":  "$self$",
+                                                                           "frame":  {
+                                                                                         "type":  "variable",
+                                                                                         "value":  "L1"
+                                                                                     }
+                                                                       },
+                                                              "id":  "4f3a99ed-6559-4890-8b95-5992fd30faeb"
+                                                          }
+                                                      ],
+                                             "false":  [
+                                                           {
+                                                               "command":  "EVENT_ACTOR_SET_FRAME",
+                                                               "args":  {
+                                                                            "actorId":  "$self$",
+                                                                            "frame":  {
+                                                                                          "type":  "number",
+                                                                                          "value":  0
+                                                                                      }
+                                                                        },
+                                                               "id":  "d1243d8b-e4f0-4d6d-a24c-40933159c97b"
+                                                           }
+                                                       ]
+                                         },
+                            "id":  "7975f5be-5910-4de5-a645-0b02c6f6580b"
+                        }
+                    ],
+    "updateScript":  [
+                         {
+                             "command":  "EVENT_RATE_LIMIT",
+                             "args":  {
+                                          "variable":  "L0",
+                                          "units":  "time",
+                                          "time":  {
+                                                       "type":  "number",
+                                                       "value":  0.3
+                                                   },
+                                          "frames":  {
+                                                         "type":  "number",
+                                                         "value":  18
+                                                     }
+                                      },
+                             "children":  {
+                                              "true":  [
+                                                           {
+                                                               "command":  "EVENT_IF",
+                                                               "args":  {
+                                                                            "condition":  {
+                                                                                              "type":  "gt",
+                                                                                              "valueA":  {
+                                                                                                             "type":  "variable",
+                                                                                                             "value":  "9"
+                                                                                                         },
+                                                                                              "valueB":  {
+                                                                                                             "type":  "number",
+                                                                                                             "value":  0
+                                                                                                         }
+                                                                                          },
+                                                                            "__collapseElse":  false,
+                                                                            "__disableElse":  false
+                                                                        },
+                                                               "children":  {
+                                                                                "true":  [
+                                                                                             {
+                                                                                                 "command":  "EVENT_VARIABLE_MATH",
+                                                                                                 "args":  {
+                                                                                                              "vectorX":  "L1",
+                                                                                                              "operation":  "set",
+                                                                                                              "other":  "var",
+                                                                                                              "vectorY":  "9",
+                                                                                                              "value":  0,
+                                                                                                              "minValue":  0,
+                                                                                                              "maxValue":  32767,
+                                                                                                              "clamp":  false
+                                                                                                          },
+                                                                                                 "id":  "06209f92-0f6e-42da-9599-b92f5046b429"
+                                                                                             },
+                                                                                             {
+                                                                                                 "command":  "EVENT_VARIABLE_MATH",
+                                                                                                 "args":  {
+                                                                                                              "vectorX":  "L1",
+                                                                                                              "operation":  "sub",
+                                                                                                              "other":  "val",
+                                                                                                              "vectorY":  "LAST_VARIABLE",
+                                                                                                              "value":  1,
+                                                                                                              "minValue":  0,
+                                                                                                              "maxValue":  32767,
+                                                                                                              "clamp":  true
+                                                                                                          },
+                                                                                                 "id":  "01c6b1ff-793e-4417-a095-a7fdbe1ead26"
+                                                                                             },
+                                                                                             {
+                                                                                                 "command":  "EVENT_ACTOR_SET_FRAME",
+                                                                                                 "args":  {
+                                                                                                              "actorId":  "$self$",
+                                                                                                              "frame":  {
+                                                                                                                            "type":  "variable",
+                                                                                                                            "value":  "L1"
+                                                                                                                        }
+                                                                                                          },
+                                                                                                 "id":  "fbe4cc68-fadc-4313-8959-6a111d0c5db4"
+                                                                                             }
+                                                                                         ],
+                                                                                "false":  [
+                                                                                              {
+                                                                                                  "command":  "EVENT_ACTOR_SET_FRAME",
+                                                                                                  "args":  {
+                                                                                                               "actorId":  "$self$",
+                                                                                                               "frame":  {
+                                                                                                                             "type":  "number",
+                                                                                                                             "value":  0
+                                                                                                                         }
+                                                                                                           },
+                                                                                                  "id":  "294ab877-cc96-4bb9-a59b-ae90513db8e8"
+                                                                                              }
+                                                                                          ]
+                                                                            },
+                                                               "id":  "8fea4e6c-bae3-4bb6-89af-2c32096ae08b"
+                                                           }
+                                                       ]
+                                          },
+                             "id":  "be9d4586-8b6e-4424-a0d4-fd0751add2de"
+                         }
+                     ],
+    "hit1Script":  [
+
+                   ],
+    "hit2Script":  [
+
+                   ],
+    "hit3Script":  [
+
+                   ],
+    "coordinateType":  "tiles",
+    "x":  0,
+    "y":  16,
+    "_index":  100
+}

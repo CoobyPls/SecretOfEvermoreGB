@@ -1,0 +1,37 @@
+{
+  "_resourceType": "actor",
+  "id": "d51026ed-c9ea-4f13-bd3d-87c24c1bf740",
+  "_index": 5,
+  "symbol": "actor_spell_effect_storm_ju",
+  "prefabId": "",
+  "name": "Spell Effect - Storm",
+  "coordinateType": "tiles",
+  "x": 28,
+  "y": 8,
+  "frame": 0,
+  "animate": true,
+  "spriteSheetId": "e67ccb56-8a4e-44ef-8f79-cbb6193c6fb9",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 0,
+  "animSpeed": 5,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-plugin-test-storm-hide-on-scene-start"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

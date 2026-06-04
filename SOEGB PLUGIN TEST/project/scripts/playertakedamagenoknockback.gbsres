@@ -1,0 +1,70 @@
+{
+  "_resourceType": "script",
+  "id": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+  "name": "PlayerTakeDamageNoKnockback",
+  "description": "Reusable player damage script for hazard/projectile hits that should NOT push the player.\n\nUses PlayerInvuln as a numeric rate-limit timer so interrupted attack scripts cannot leave the player permanently immune to later enemies in the same room.",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "DamageTaken",
+      "passByReference": false
+    }
+  },
+  "actors": {},
+  "symbol": "script_9",
+  "script": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "11",
+        "time": {
+          "type": "number",
+          "value": 0.65
+        },
+        "frames": {
+          "type": "number",
+          "value": 39
+        },
+        "__collapse": true
+      },
+      "id": "99fb3dd5-def3-4211-b3a0-3f7ec4027ad8",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "9",
+              "operation": "sub",
+              "other": "var",
+              "vectorY": "V0",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "d6b8344a-48c3-4e77-8465-40a1aea28e55"
+          },
+          {
+            "command": "EVENT_TEXT_SET_SOUND_EFFECT",
+            "args": {
+              "type": "crash",
+              "pitch": 4,
+              "frequency": 300,
+              "duration": 1,
+              "effect": 0
+            },
+            "id": "b116c1c2-e8d5-454c-b254-80f578bcab57"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "7ab6b3a7-bd03-4644-83c4-b7647b5d5b79"
+            },
+            "id": "codex-call-check-player-hp-after-damage"
+          }
+        ],
+        "false": []
+      }
+    }
+  ]
+}

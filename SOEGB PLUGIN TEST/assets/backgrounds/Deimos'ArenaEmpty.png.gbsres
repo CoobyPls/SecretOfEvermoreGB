@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "fef15234-cbef-4da8-b8d4-bab9a41ffc11",
+  "name": "Deimos'ArenaEmpty",
+  "symbol": "bg_deimos_arenaempty",
+  "tileColors": "",
+  "filename": "Deimos'ArenaEmpty.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

@@ -1,0 +1,116 @@
+{
+  "_resourceType": "actor",
+  "id": "35de20b5-4e36-46a5-a0df-44952e423d93",
+  "_index": 6,
+  "symbol": "actor_53",
+  "prefabId": "",
+  "name": "Thraxx Rib Blocker Right",
+  "coordinateType": "tiles",
+  "x": 10,
+  "y": 8,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "47b9e785-a65c-4112-b9ed-207477acdfde",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 0,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [
+    "solid"
+  ],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-ribblock-event_actor_collisions_enable-96987d88-77e1-4e02-8d19-feb23c60cf16"
+    },
+    {
+      "command": "EVENT_ACTOR_SHOW",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-thraxx-ribblock-event_actor_show-0ef83c18-9dc8-449f-825e-ab9cc866f20d"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_RATE_LIMIT",
+      "args": {
+        "variable": "L0",
+        "units": "time",
+        "time": {
+          "type": "number",
+          "value": 0.15
+        },
+        "frames": {
+          "type": "number",
+          "value": 9
+        },
+        "__collapse": false
+      },
+      "id": "codex-thraxx-fix2-event_rate_limit-f8428159-a04d-4190-8b50-f9d7aeb34a9b",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "90"
+              },
+              "__collapseElse": true,
+              "__disableElse": false,
+              "__collapse": false
+            },
+            "id": "codex-thraxx-fix2-event_if-2aa1a390-bb5d-42ec-87d0-c0ef3811a95c",
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_collisions_disable-1de0526c-c7a3-4a3e-bea8-1d69650a4f05"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_hide-e0bfa364-02f4-4e33-b453-fed5d7b1b18e"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_collisions_enable-284affc5-039d-4010-9ebe-0401b59b487b"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "codex-thraxx-fix2-event_actor_show-b6edcd34-c201-4082-999d-0ab377326030"
+                }
+              ]
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

@@ -1,0 +1,473 @@
+﻿{
+    "_resourceType":  "scene",
+    "id":  "c59e0e01-511d-4f63-a391-37af3e0bf038",
+    "_index":  2,
+    "name":  "Raptor Pit",
+    "backgroundId":  "a085a431-b541-46f1-83b1-ae056623b1af",
+    "tilesetId":  "",
+    "width":  20,
+    "height":  32,
+    "type":  "TOPDOWN",
+    "colorModeOverride":  "none",
+    "paletteIds":  [
+
+                   ],
+    "spritePaletteIds":  [
+
+                         ],
+    "collisions":  "0f6+004+0f6+004+0f6+004+0f6+004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f6+004+0f6+004+0f6+004+0f6+004+",
+    "autoFadeSpeed":  1,
+    "symbol":  "scene_3",
+    "x":  694.4,
+    "y":  100,
+    "script":  [
+                   {
+                       "command":  "EVENT_IF",
+                       "args":  {
+                                    "condition":  {
+                                                      "type":  "not",
+                                                      "value":  {
+                                                                    "type":  "variable",
+                                                                    "value":  "12"
+                                                                }
+                                                  },
+                                    "__collapseElse":  true,
+                                    "__disableElse":  true
+                                },
+                       "children":  {
+                                        "true":  [
+                                                     {
+                                                         "command":  "EVENT_TEXT",
+                                                         "args":  {
+                                                                      "text":  [
+                                                                                   "I have a bad\nfeeling about\nthis..."
+                                                                               ],
+                                                                      "__section":  "text",
+                                                                      "avatarId":  "",
+                                                                      "minHeight":  4,
+                                                                      "maxHeight":  7,
+                                                                      "textX":  1,
+                                                                      "textY":  1,
+                                                                      "textHeight":  5,
+                                                                      "position":  "bottom",
+                                                                      "clearPrevious":  true,
+                                                                      "showFrame":  "true",
+                                                                      "speedIn":  -1,
+                                                                      "speedOut":  -1,
+                                                                      "closeWhen":  "key",
+                                                                      "closeButton":  "a",
+                                                                      "closeDelayTime":  0.5,
+                                                                      "closeDelayFrames":  30
+                                                                  },
+                                                         "id":  "2854e89e-4417-41ff-8746-de7da2b915ed"
+                                                     },
+                                                     {
+                                                         "command":  "EVENT_SET_VALUE",
+                                                         "args":  {
+                                                                      "variable":  "12",
+                                                                      "value":  {
+                                                                                    "type":  "true"
+                                                                                }
+                                                                  },
+                                                         "id":  "5cee5a7b-9488-449c-b3af-1852401b4006"
+                                                     }
+                                                 ],
+                                        "false":  [
+
+                                                  ]
+                                    },
+                       "id":  "8c6b1953-2c74-4097-a276-681e0dca940a"
+                   },
+                   {
+                       "command":  "EVENT_IF",
+                       "args":  {
+                                    "condition":  {
+                                                      "type":  "variable",
+                                                      "value":  "1"
+                                                  },
+                                    "__collapseElse":  true,
+                                    "__disableElse":  true
+                                },
+                       "children":  {
+                                        "true":  [
+                                                     {
+                                                         "command":  "EVENT_CALL_CUSTOM_EVENT",
+                                                         "args":  {
+                                                                      "customEventId":  "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+                                                                  },
+                                                         "id":  "e7d77ee0-786b-4c95-8561-7e2d2b98eb6f"
+                                                     }
+                                                 ],
+                                        "false":  [
+
+                                                  ]
+                                    },
+                       "id":  "e5879c89-d9d1-422e-89c8-bfe975b689c7"
+                   }
+               ],
+    "playerHit1Script":  [
+                             {
+                                 "command":  "EVENT_IF",
+                                 "args":  {
+                                              "condition":  {
+                                                                "type":  "variable",
+                                                                "value":  "2"
+                                                            },
+                                              "__collapseElse":  true,
+                                              "__disableElse":  true
+                                          },
+                                 "children":  {
+                                                  "true":  [
+                                                               {
+                                                                   "command":  "EVENT_IF",
+                                                                   "args":  {
+                                                                                "condition":  {
+                                                                                                  "type":  "not",
+                                                                                                  "value":  {
+                                                                                                                "type":  "variable",
+                                                                                                                "value":  "11"
+                                                                                                            }
+                                                                                              },
+                                                                                "__collapseElse":  true,
+                                                                                "__disableElse":  true
+                                                                            },
+                                                                   "children":  {
+                                                                                    "true":  [
+                                                                                                 {
+                                                                                                     "command":  "EVENT_SET_VALUE",
+                                                                                                     "args":  {
+                                                                                                                  "variable":  "11",
+                                                                                                                  "value":  {
+                                                                                                                                "type":  "true"
+                                                                                                                            }
+                                                                                                              },
+                                                                                                     "id":  "1b0230ce-51df-447a-a8ea-91208ca0b60d"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "command":  "EVENT_DEC_VALUE",
+                                                                                                     "args":  {
+                                                                                                                  "variable":  "9"
+                                                                                                              },
+                                                                                                     "id":  "246d0b17-c4b0-46c5-b61d-9e6ae0229b20"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "command":  "EVENT_IF",
+                                                                                                     "args":  {
+                                                                                                                  "condition":  {
+                                                                                                                                    "type":  "eq",
+                                                                                                                                    "valueA":  {
+                                                                                                                                                   "type":  "variable",
+                                                                                                                                                   "value":  "9"
+                                                                                                                                               },
+                                                                                                                                    "valueB":  {
+                                                                                                                                                   "type":  "number",
+                                                                                                                                                   "value":  0
+                                                                                                                                               }
+                                                                                                                                },
+                                                                                                                  "__collapseElse":  false,
+                                                                                                                  "__disableElse":  false
+                                                                                                              },
+                                                                                                     "children":  {
+                                                                                                                      "true":  [
+                                                                                                                                   {
+                                                                                                                                       "command":  "EVENT_SET_VALUE",
+                                                                                                                                       "args":  {
+                                                                                                                                                    "variable":  "10",
+                                                                                                                                                    "value":  {
+                                                                                                                                                                  "type":  "true"
+                                                                                                                                                              }
+                                                                                                                                                },
+                                                                                                                                       "id":  "ed3d2bec-b920-4d9b-8797-41d8d4326a88"
+                                                                                                                                   },
+                                                                                                                                   {
+                                                                                                                                       "command":  "EVENT_SET_VALUE",
+                                                                                                                                       "args":  {
+                                                                                                                                                    "variable":  "2",
+                                                                                                                                                    "value":  {
+                                                                                                                                                                  "type":  "false"
+                                                                                                                                                              }
+                                                                                                                                                },
+                                                                                                                                       "id":  "10575526-8e22-4b00-97b1-ee56263c7c7e"
+                                                                                                                                   },
+                                                                                                                                   {
+                                                                                                                                       "command":  "EVENT_SET_VALUE",
+                                                                                                                                       "args":  {
+                                                                                                                                                    "variable":  "11",
+                                                                                                                                                    "value":  {
+                                                                                                                                                                  "type":  "false"
+                                                                                                                                                              }
+                                                                                                                                                },
+                                                                                                                                       "id":  "ba97c461-d0ab-4b25-ad6c-f45112c46fac"
+                                                                                                                                   },
+                                                                                                                                   {
+                                                                                                                                       "command":  "EVENT_TEXT",
+                                                                                                                                       "args":  {
+                                                                                                                                                    "text":  [
+                                                                                                                                                                 "The raptor knocks\nyou through the\nbrush!"
+                                                                                                                                                             ],
+                                                                                                                                                    "__section":  "text",
+                                                                                                                                                    "avatarId":  "",
+                                                                                                                                                    "minHeight":  4,
+                                                                                                                                                    "maxHeight":  7,
+                                                                                                                                                    "textX":  1,
+                                                                                                                                                    "textY":  1,
+                                                                                                                                                    "textHeight":  5,
+                                                                                                                                                    "position":  "bottom",
+                                                                                                                                                    "clearPrevious":  true,
+                                                                                                                                                    "showFrame":  "true",
+                                                                                                                                                    "speedIn":  -1,
+                                                                                                                                                    "speedOut":  -1,
+                                                                                                                                                    "closeWhen":  "key",
+                                                                                                                                                    "closeButton":  "a",
+                                                                                                                                                    "closeDelayTime":  0.5,
+                                                                                                                                                    "closeDelayFrames":  30
+                                                                                                                                                },
+                                                                                                                                       "id":  "31b8d4ec-ef18-41a0-8728-5b9d8405a12b"
+                                                                                                                                   },
+                                                                                                                                   {
+                                                                                                                                       "command":  "EVENT_SWITCH_SCENE",
+                                                                                                                                       "args":  {
+                                                                                                                                                    "sceneId":  "9a2f2286-3d4c-4954-9d18-7a8a20635f4d",
+                                                                                                                                                    "x":  {
+                                                                                                                                                              "type":  "number",
+                                                                                                                                                              "value":  45
+                                                                                                                                                          },
+                                                                                                                                                    "y":  {
+                                                                                                                                                              "type":  "number",
+                                                                                                                                                              "value":  61
+                                                                                                                                                          },
+                                                                                                                                                    "direction":  "",
+                                                                                                                                                    "fadeSpeed":  "2"
+                                                                                                                                                },
+                                                                                                                                       "id":  "e5c2535a-5b9f-40d4-bbb9-9d1b1de45be5"
+                                                                                                                                   }
+                                                                                                                               ],
+                                                                                                                      "false":  [
+                                                                                                                                    {
+                                                                                                                                        "command":  "EVENT_IF_ACTOR_DIRECTION",
+                                                                                                                                        "args":  {
+                                                                                                                                                     "actorId":  "player",
+                                                                                                                                                     "direction":  {
+                                                                                                                                                                       "type":  "direction",
+                                                                                                                                                                       "value":  "down"
+                                                                                                                                                                   },
+                                                                                                                                                     "__collapseElse":  true,
+                                                                                                                                                     "__collapse":  true
+                                                                                                                                                 },
+                                                                                                                                        "children":  {
+                                                                                                                                                         "true":  [
+                                                                                                                                                                      {
+                                                                                                                                                                          "command":  "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                                                                                                                          "args":  {
+                                                                                                                                                                                       "__section":  "movement",
+                                                                                                                                                                                       "actorId":  "player",
+                                                                                                                                                                                       "x":  {
+                                                                                                                                                                                                 "type":  "number",
+                                                                                                                                                                                                 "value":  0
+                                                                                                                                                                                             },
+                                                                                                                                                                                       "y":  {
+                                                                                                                                                                                                 "type":  "number",
+                                                                                                                                                                                                 "value":  -2
+                                                                                                                                                                                             },
+                                                                                                                                                                                       "collideWith":  [
+                                                                                                                                                                                                           "walls",
+                                                                                                                                                                                                           "actors"
+                                                                                                                                                                                                       ],
+                                                                                                                                                                                       "lockDirection":  [
+
+                                                                                                                                                                                                         ],
+                                                                                                                                                                                       "moveType":  "horizontal"
+                                                                                                                                                                                   },
+                                                                                                                                                                          "id":  "1e750092-6c16-43b6-9519-98d176fdf362"
+                                                                                                                                                                      }
+                                                                                                                                                                  ],
+                                                                                                                                                         "false":  [
+
+                                                                                                                                                                   ]
+                                                                                                                                                     },
+                                                                                                                                        "id":  "0be265b1-4192-49c2-80de-aa8c9b93f6b5"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "command":  "EVENT_IF_ACTOR_DIRECTION",
+                                                                                                                                        "args":  {
+                                                                                                                                                     "actorId":  "player",
+                                                                                                                                                     "direction":  {
+                                                                                                                                                                       "type":  "direction",
+                                                                                                                                                                       "value":  "up"
+                                                                                                                                                                   },
+                                                                                                                                                     "__collapseElse":  true,
+                                                                                                                                                     "__collapse":  true
+                                                                                                                                                 },
+                                                                                                                                        "children":  {
+                                                                                                                                                         "true":  [
+                                                                                                                                                                      {
+                                                                                                                                                                          "command":  "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                                                                                                                          "args":  {
+                                                                                                                                                                                       "__section":  "movement",
+                                                                                                                                                                                       "actorId":  "player",
+                                                                                                                                                                                       "x":  {
+                                                                                                                                                                                                 "type":  "number",
+                                                                                                                                                                                                 "value":  0
+                                                                                                                                                                                             },
+                                                                                                                                                                                       "y":  {
+                                                                                                                                                                                                 "type":  "number",
+                                                                                                                                                                                                 "value":  2
+                                                                                                                                                                                             },
+                                                                                                                                                                                       "collideWith":  [
+                                                                                                                                                                                                           "walls",
+                                                                                                                                                                                                           "actors"
+                                                                                                                                                                                                       ],
+                                                                                                                                                                                       "lockDirection":  [
+
+                                                                                                                                                                                                         ],
+                                                                                                                                                                                       "moveType":  "horizontal"
+                                                                                                                                                                                   },
+                                                                                                                                                                          "id":  "f7b9c945-36cc-40e0-8899-ae3254282145"
+                                                                                                                                                                      }
+                                                                                                                                                                  ],
+                                                                                                                                                         "false":  [
+
+                                                                                                                                                                   ]
+                                                                                                                                                     },
+                                                                                                                                        "id":  "ad97ea87-7fc5-473b-9edb-63a8b7bf88e7"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "command":  "EVENT_IF_ACTOR_DIRECTION",
+                                                                                                                                        "args":  {
+                                                                                                                                                     "actorId":  "player",
+                                                                                                                                                     "direction":  {
+                                                                                                                                                                       "type":  "direction",
+                                                                                                                                                                       "value":  "left"
+                                                                                                                                                                   },
+                                                                                                                                                     "__collapseElse":  true,
+                                                                                                                                                     "__collapse":  true
+                                                                                                                                                 },
+                                                                                                                                        "children":  {
+                                                                                                                                                         "true":  [
+                                                                                                                                                                      {
+                                                                                                                                                                          "command":  "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                                                                                                                          "args":  {
+                                                                                                                                                                                       "__section":  "movement",
+                                                                                                                                                                                       "actorId":  "player",
+                                                                                                                                                                                       "x":  {
+                                                                                                                                                                                                 "type":  "number",
+                                                                                                                                                                                                 "value":  2
+                                                                                                                                                                                             },
+                                                                                                                                                                                       "y":  {
+                                                                                                                                                                                                 "type":  "number",
+                                                                                                                                                                                                 "value":  0
+                                                                                                                                                                                             },
+                                                                                                                                                                                       "collideWith":  [
+                                                                                                                                                                                                           "walls",
+                                                                                                                                                                                                           "actors"
+                                                                                                                                                                                                       ],
+                                                                                                                                                                                       "lockDirection":  [
+
+                                                                                                                                                                                                         ],
+                                                                                                                                                                                       "moveType":  "horizontal"
+                                                                                                                                                                                   },
+                                                                                                                                                                          "id":  "47c8598b-3a2d-4d3d-a782-5d1ca63ac866"
+                                                                                                                                                                      }
+                                                                                                                                                                  ],
+                                                                                                                                                         "false":  [
+
+                                                                                                                                                                   ]
+                                                                                                                                                     },
+                                                                                                                                        "id":  "e0cf8a02-07d9-461d-a61a-7c43b4c117aa"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "command":  "EVENT_IF_ACTOR_DIRECTION",
+                                                                                                                                        "args":  {
+                                                                                                                                                     "actorId":  "player",
+                                                                                                                                                     "direction":  {
+                                                                                                                                                                       "type":  "direction",
+                                                                                                                                                                       "value":  "right"
+                                                                                                                                                                   },
+                                                                                                                                                     "__collapseElse":  true,
+                                                                                                                                                     "__collapse":  true
+                                                                                                                                                 },
+                                                                                                                                        "children":  {
+                                                                                                                                                         "true":  [
+                                                                                                                                                                      {
+                                                                                                                                                                          "command":  "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                                                                                                                          "args":  {
+                                                                                                                                                                                       "__section":  "movement",
+                                                                                                                                                                                       "actorId":  "player",
+                                                                                                                                                                                       "x":  {
+                                                                                                                                                                                                 "type":  "number",
+                                                                                                                                                                                                 "value":  -2
+                                                                                                                                                                                             },
+                                                                                                                                                                                       "y":  {
+                                                                                                                                                                                                 "type":  "number",
+                                                                                                                                                                                                 "value":  0
+                                                                                                                                                                                             },
+                                                                                                                                                                                       "collideWith":  [
+                                                                                                                                                                                                           "walls",
+                                                                                                                                                                                                           "actors"
+                                                                                                                                                                                                       ],
+                                                                                                                                                                                       "lockDirection":  [
+
+                                                                                                                                                                                                         ],
+                                                                                                                                                                                       "moveType":  "horizontal"
+                                                                                                                                                                                   },
+                                                                                                                                                                          "id":  "9671dc4a-d86a-48ca-8c04-4d985a4b557b"
+                                                                                                                                                                      }
+                                                                                                                                                                  ],
+                                                                                                                                                         "false":  [
+
+                                                                                                                                                                   ]
+                                                                                                                                                     },
+                                                                                                                                        "id":  "3fc31000-19e2-4fe1-882d-ef18a6cbac03"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "command":  "EVENT_WAIT",
+                                                                                                                                        "args":  {
+                                                                                                                                                     "time":  {
+                                                                                                                                                                  "type":  "number",
+                                                                                                                                                                  "value":  1
+                                                                                                                                                              },
+                                                                                                                                                     "frames":  {
+                                                                                                                                                                    "type":  "number",
+                                                                                                                                                                    "value":  1
+                                                                                                                                                                }
+                                                                                                                                                 },
+                                                                                                                                        "id":  "bb9917ed-2b33-4595-a2e6-d39d8bbec814"
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "command":  "EVENT_SET_VALUE",
+                                                                                                                                        "args":  {
+                                                                                                                                                     "variable":  "11",
+                                                                                                                                                     "value":  {
+                                                                                                                                                                   "type":  "false"
+                                                                                                                                                               }
+                                                                                                                                                 },
+                                                                                                                                        "id":  "a92d911e-6e2b-41ab-a549-8a449c5600ee"
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                  },
+                                                                                                     "id":  "b2324e03-e523-4ebe-b326-2b30bcbbb01d"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "false":  [
+
+                                                                                              ]
+                                                                                },
+                                                                   "id":  "98a9e376-8603-44b5-8ed8-71f5b93a792e"
+                                                               }
+                                                           ],
+                                                  "false":  [
+
+                                                            ]
+                                              },
+                                 "id":  "f93416ac-4171-4c0d-bc7a-8eb5166c193f"
+                             }
+                         ],
+    "playerHit2Script":  [
+
+                         ],
+    "playerHit3Script":  [
+
+                         ],
+    "playerSpriteSheetId":  "9c3aeca9-b800-4d51-bb47-0ac46d60c3dd"
+}
+

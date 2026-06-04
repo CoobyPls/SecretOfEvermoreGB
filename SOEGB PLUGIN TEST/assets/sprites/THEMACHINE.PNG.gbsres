@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "c1821f2d-518c-4a32-af32-a54d817486f1",
+  "name": "THEMACHINE",
+  "symbol": "sprite_themachine",
+  "states": [
+    {
+      "id": "2e6043e7-aa2a-48dd-8ed5-25c29fae9b97",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "6436a5f4-dd0a-4194-b7b1-c2962ed735de",
+          "frames": [
+            {
+              "id": "4c379f1b-716a-4db1-a11d-1dbcc057274d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "08ed0717-834d-4adf-895a-d83f32771313",
+          "frames": [
+            {
+              "id": "9999d073-0134-4216-b43a-15d2bbd5eda3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fedc5c38-d5e0-4f54-95b3-15524fc09ce8",
+          "frames": [
+            {
+              "id": "10be9c7c-096b-4973-afba-c4a549e81c87",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0accc2ad-abce-4b42-a463-50ff90ae6d96",
+          "frames": [
+            {
+              "id": "cd627e71-ddcc-4f98-b1f2-508aed67c864",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b026c808-143c-4a93-a0df-2692c6f10fda",
+          "frames": [
+            {
+              "id": "cb937193-a49e-4a21-8dbf-d36b2e14f2d5",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a7a73b4c-05c7-4b59-b59e-1aff6541d13d",
+          "frames": [
+            {
+              "id": "2397c4bb-414d-42a7-8aaf-7ccd3115668c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c9b14805-0468-44e2-a4b6-25bc27458b3f",
+          "frames": [
+            {
+              "id": "2075574b-0aa8-4055-83d5-e0134fea3848",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "69d60b02-84a3-4bf2-8c2d-cf913fba7564",
+          "frames": [
+            {
+              "id": "db2a4bbb-f3b8-4774-b5f5-d27469ebf614",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "THEMACHINE.PNG",
+  "width": 160,
+  "height": 144,
+  "checksum": "e9874450de62c15ef7a330dbe9c3713cf39de921"
+}

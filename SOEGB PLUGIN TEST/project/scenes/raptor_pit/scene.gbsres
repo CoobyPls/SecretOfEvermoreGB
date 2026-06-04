@@ -1,0 +1,210 @@
+{
+  "_resourceType": "scene",
+  "id": "c59e0e01-511d-4f63-a391-37af3e0bf038",
+  "_index": 2,
+  "type": "ADVENTURE",
+  "name": "Raptor Pit",
+  "symbol": "scene_3",
+  "x": 952,
+  "y": 384,
+  "width": 20,
+  "height": 32,
+  "backgroundId": "a085a431-b541-46f1-83b1-ae056623b1af",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "playerSpriteSheetId": "48cca6ed-daa9-4497-bacc-a30ffc3ec91f",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "13"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            },
+            "id": "be82e8c9-ccd1-446c-a0d2-445cf77e1987"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 32
+              }
+            },
+            "id": "392686bc-04b1-46df-ab72-90df4ba0c2ef"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "9",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "13",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            },
+            "id": "7574c53d-3909-433f-9b10-ccfce8233f60"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-init-hud-defaults"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+            },
+            "id": "caa84686-2e32-4b0a-80b6-7e776e2e5a43"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-enable-attack-if-dog-joined"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "15"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "8f5d9375-b516-4d32-89bc-755225f3ff91",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": true,
+              "effect": 0
+            },
+            "id": "82c9121e-f7f0-4947-be04-7c41d002e981"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "I got a bad\nfeeling ab-\nWhere'd my dog go?",
+                "Guess I'm on\nmy own!"
+              ],
+              "__section": "layout",
+              "avatarId": "",
+              "minHeight": 5,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 7,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "2854e89e-4417-41ff-8746-de7da2b915ed"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+            },
+            "id": "a4f54b1d-42f8-4464-88c6-7d5037043a41"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "codex-hud-after-text-update"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "12",
+              "value": {
+                "type": "true"
+              },
+              "__collapse": false
+            },
+            "id": "5cee5a7b-9488-449c-b3af-1852401b4006"
+          }
+        ],
+        "false": []
+      },
+      "id": "8c6b1953-2c74-4097-a276-681e0dca940a"
+    }
+  ],
+  "playerHit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3fbf8fa1-df64-4ff5-a197-6795a0c75cf8",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "11"
+        },
+        "$variable[V1]$": {
+          "type": "number",
+          "value": 1
+        },
+        "$actor[1]$": "6f3926b2-1324-42cb-80a9-c1d9b6dbd0e4"
+      },
+      "id": "codex-raptor-pit-player-hit-loss-to-chief"
+    }
+  ],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "0f6+004+0f6+004+0f6+004+0f6+004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f2+00c+0f2+004+0f2+00c+0f2+004+0f6+004+0f6+004+0f6+004+0f6+004+"
+}

@@ -1,0 +1,11 @@
+﻿build/
+cache/
+
+*.bak
+*.sav
+*.icloud
+
+user_settings.gbsres
+
+codex_backups/
+

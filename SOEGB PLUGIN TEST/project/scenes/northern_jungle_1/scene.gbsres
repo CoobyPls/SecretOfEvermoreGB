@@ -1,0 +1,311 @@
+{
+  "_resourceType": "scene",
+  "id": "608720ca-8de7-4a41-b794-c78222f4132f",
+  "_index": 10,
+  "name": "Northern Jungle 1",
+  "backgroundId": "ca23f18e-9486-4657-81a3-2d82c70ac211",
+  "tilesetId": "",
+  "width": 48,
+  "height": 44,
+  "type": "ADVENTURE",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "0f2+0022+0f2+008+0f4+0022+0f2+008+0f4+006+0f8+00a+0f4+004+0f4+008+0f4+006+0f8+00a+0f4+004+0f4+008+0fc+004+0f10+004+0f4+008+0fc+004+0f10+004+0f4+008+0fc+006+0f14+00a+0f5+004+0f3+006+0f14+00a+0f5+004+0f!008+0f2+00a+0f8+00a+0f4+00e+0f2+00a+0f2+004+0f2+00a+0f4+001a+0f2+004+0f2+008+0f6+002a+0f6+002a+0f6+002a+0f6+00e+0f2+001c+0f4+00e+0f2+001c+0f4+008+0f8+001c+0f4+008+0f8+001c+0f14+001a+0f16+001a+0f10+001a+0f16+001a+0f10+0020+0f10+0020+0fc+0026+0fa+0026+0fa+00e+0f4+004+0fa+00a+0f6+00e+0f4+004+0fa+00a+0f6+00e+0f14+00a+0f4+00e+0f14+00a+0f4+0010+0f8+004+0f6+00a+0f4+0010+0f8+004+0f6+00a+0f4+0012+0f4+008+0f4+00a+0f4+0012+0f4+008+0f4+00a+0f4+006+0f6+0012+0f6+006+0f6+006+0f6+0012+0f6+006+0f6+004+0fc+00e+0f12+004+0fc+00e+0f12+004+0fe+00a+0f14+004+0fe+00a+0f14+004+0f2c+004+0f2c+004+0f2c+004+0f2a+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_11",
+  "x": 704,
+  "y": 30,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "id": "codex-northern-jungle-1-init-hud-defaults-if-needed",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "13"
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "id": "codex-northern-jungle-1-init-player-max-hp",
+            "args": {
+              "variable": "13",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            }
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "id": "codex-northern-jungle-1-init-equipped-icon",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 32
+              }
+            }
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "id": "codex-northern-jungle-1-init-current-hp-from-max",
+            "args": {
+              "vectorX": "9",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "13",
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 32767,
+              "clamp": false
+            }
+          }
+        ],
+        "false": []
+      }
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "id": "codex-northern-jungle-1-force-dogjoined-for-combat-test",
+      "args": {
+        "variable": "1",
+        "value": {
+          "type": "true"
+        },
+        "__comment": false,
+        "__collapse": false
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-open-hud",
+      "args": {
+        "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-update-hud",
+      "args": {
+        "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-install-attack-input",
+      "args": {
+        "customEventId": "1b01c7af-fae7-4fa7-bfe3-7a9fb0759edd"
+      }
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "select"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "id": "codex-northern-jungle-1-install-select-storm",
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "101",
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "codex-northern-jungle-1-install-select-storm-storm-debug-mark-cast-start"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "24102c2d-88dc-480e-9f36-bf6d929390cf",
+              "priority": "medium",
+              "wait": false
+            },
+            "id": "codex-northern-jungle-1-storm-play-shock"
+          },
+          {
+            "command": "EVENT_MAGIC_CAST_SPELL",
+            "args": {
+              "spellName": "Storm Plugin Test Northern Jungle 1",
+              "spellId": 1,
+              "behavior": "burst",
+              "targetMode": "nearest_player",
+              "damageVariable": "30",
+              "targetXVariable": "99",
+              "targetYVariable": "100",
+              "castSuccessVariable": "101",
+              "minDamage": 1,
+              "maxDamage": 2,
+              "ingredient1Variable": "30",
+              "ingredient1Cost": 0,
+              "ingredient2Variable": "30",
+              "ingredient2Cost": 0,
+              "rangePx": 160,
+              "freezeFrames": 30,
+              "effectActor": "18f67eae-a45d-4f13-9995-1677e1827382",
+              "effectReservedTiles": 20,
+              "effectFrames": 45,
+              "missileSpeedPx": 3,
+              "effectYOffsetPx": 24,
+              "targetCollisionGroup": "1",
+              "hitCollisionGroup": "3",
+              "effectFirstFrame": 1,
+              "effectLastFrame": 9,
+              "effectBlankFrame": 0
+            },
+            "id": "codex-northern-jungle-1-storm-cast"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "101"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "18f67eae-a45d-4f13-9995-1677e1827382",
+                    "x": {
+                      "type": "variable",
+                      "value": "99"
+                    },
+                    "y": {
+                      "type": "variable",
+                      "value": "100"
+                    },
+                    "units": "pixels"
+                  },
+                  "id": "codex-northern-jungle-1-storm-move-to-target"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "18f67eae-a45d-4f13-9995-1677e1827382",
+                    "frame": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "codex-northern-jungle-1-storm-start-visible-frame"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "18f67eae-a45d-4f13-9995-1677e1827382"
+                  },
+                  "id": "codex-northern-jungle-1-storm-show-at-target"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": {
+                      "type": "number",
+                      "value": 0.75
+                    },
+                    "frames": {
+                      "type": "number",
+                      "value": 45
+                    }
+                  },
+                  "id": "codex-northern-jungle-1-storm-visible-duration"
+                },
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "18f67eae-a45d-4f13-9995-1677e1827382"
+                  },
+                  "id": "codex-northern-jungle-1-storm-hide-after-cast"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "18f67eae-a45d-4f13-9995-1677e1827382",
+                    "frame": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "codex-northern-jungle-1-storm-return-blank-frame"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-northern-jungle-1-storm-show-if-cast-succeeded"
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [
+    {
+      "command": "EVENT_SOUND_PLAY_EFFECT",
+      "args": {
+        "type": "8bad2e0c-744c-46e1-984e-869b1298ad7f",
+        "priority": "medium",
+        "pitch": 4,
+        "frequency": 200,
+        "duration": 0.5,
+        "wait": false,
+        "effect": 0
+      },
+      "id": "codex-skeeto-drink-contact-sound"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-contact-damage",
+      "args": {
+        "customEventId": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 1
+        },
+        "__comment": false,
+        "__collapse": false
+      }
+    }
+  ],
+  "playerHit2Script": [],
+  "playerHit3Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "id": "codex-northern-jungle-1-projectile-damage",
+      "args": {
+        "customEventId": "7f5f9da6-d18d-48fb-8846-5c71b964d454",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 1
+        },
+        "__comment": true
+      }
+    }
+  ]
+}

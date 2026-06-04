@@ -1,0 +1,292 @@
+{
+  "_resourceType": "script",
+  "id": "29f9826d-d9df-405b-afc7-beb1a49f8c18",
+  "name": "Update HUD",
+  "symbol": "script_update_hud",
+  "description": "Redraws the two-row gameplay HUD with Boy/Dog HP and the current A/B item slots. Talons remain Start Menu-only.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "50"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "66",
+              "value": {
+                "type": "number",
+                "value": 127
+              }
+            },
+            "id": "codex-gameplay-a-petal-font-icon"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "50"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "66",
+                    "value": {
+                      "type": "number",
+                      "value": 156
+                    }
+                  },
+                  "id": "codex-gameplay-a-nectar-font-icon"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "50"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 3
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 141
+                          }
+                        },
+                        "id": "codex-gameplay-a-bone-font-icon"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "66",
+                          "value": {
+                            "type": "number",
+                            "value": 142
+                          }
+                        },
+                        "id": "codex-gameplay-a-empty-font-icon"
+                      }
+                    ]
+                  },
+                  "id": "codex-gameplay-map-a-bone-or-empty"
+                }
+              ]
+            },
+            "id": "codex-gameplay-map-a-nectar-or-other"
+          }
+        ]
+      },
+      "id": "codex-gameplay-map-a-petal-or-other"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "51"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "67",
+              "value": {
+                "type": "number",
+                "value": 127
+              }
+            },
+            "id": "codex-gameplay-b-petal-font-icon"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "51"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "67",
+                    "value": {
+                      "type": "number",
+                      "value": 156
+                    }
+                  },
+                  "id": "codex-gameplay-b-nectar-font-icon"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "51"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 3
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__disableElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "67",
+                          "value": {
+                            "type": "number",
+                            "value": 141
+                          }
+                        },
+                        "id": "codex-gameplay-b-bone-font-icon"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "67",
+                          "value": {
+                            "type": "number",
+                            "value": 142
+                          }
+                        },
+                        "id": "codex-gameplay-b-empty-font-icon"
+                      }
+                    ]
+                  },
+                  "id": "codex-gameplay-map-b-bone-or-empty"
+                }
+              ]
+            },
+            "id": "codex-gameplay-map-b-nectar-or-other"
+          }
+        ]
+      },
+      "id": "codex-gameplay-map-b-petal-or-other"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_SET_CONST VAR_MENUTALONHUNDREDSTILE, 128\nVM_SET_CONST VAR_MENUTALONSTENSTILE, 0\nVM_SET_CONST VAR_MENUTALONONESTILE, 0\nVM_LOAD_TILESET VAR_MENUTALONHUNDREDSTILE, ___bank_bg_menu, _bg_menu\nVM_OVERLAY_SET_MAP VAR_MENUTALONHUNDREDSTILE, VAR_MENUTALONSTENSTILE, VAR_MENUTALONONESTILE, ___bank_bg_menu, _bg_menu",
+        "references": [
+          {
+            "type": "variable",
+            "id": "9"
+          },
+          {
+            "type": "variable",
+            "id": "13"
+          },
+          {
+            "type": "variable",
+            "id": "56"
+          },
+          {
+            "type": "variable",
+            "id": "57"
+          },
+          {
+            "type": "font",
+            "id": "f3ef3197-76ad-4ef3-b1bb-6935f4b548cf"
+          },
+          {
+            "type": "background",
+            "id": "aa286c7f-802f-4f7c-b882-878dac594ac9"
+          }
+        ]
+      },
+      "id": "codex-gameplay-restore-authored-hud-map"
+    },
+    {
+      "command": "EVENT_GAMEPLAY_HUD_NUMBERS",
+      "args": {},
+      "id": "codex-gameplay-draw-authored-two-row-party-hud-numbers"
+    },
+    {
+      "command": "EVENT_GAMEPLAY_HUD_ICONS",
+      "args": {},
+      "id": "codex-gameplay-draw-full-size-equipped-item-icons"
+    }
+  ]
+}

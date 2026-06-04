@@ -1,0 +1,117 @@
+{
+  "_resourceType": "script",
+  "id": "975d2fb5-d7e7-4dc3-a4da-e26023bbc800",
+  "name": "Use Item - Biscuit Heal Dog 10",
+  "symbol": "script_use_item_biscuit_hea",
+  "description": "Consumable item action for Biscuit - Heals Dog. If at least one Biscuit exists and DogHP is below DogMaxHP, consumes exactly one Biscuit, heals 10 HP, clamps DogHP to DogMaxHP, and redraws the gameplay HUD.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "73"
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "56"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "57"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_DEC_VALUE",
+                  "args": {
+                    "variable": "73"
+                  },
+                  "id": "codex-biscuit-consume-one"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "56",
+                    "operation": "add",
+                    "other": "val",
+                    "value": 10,
+                    "minValue": 0,
+                    "maxValue": 32767,
+                    "clamp": false
+                  },
+                  "id": "codex-biscuit-heal-dog-ten"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "gt",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "56"
+                      },
+                      "valueB": {
+                        "type": "variable",
+                        "value": "57"
+                      }
+                    },
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "56",
+                          "operation": "set",
+                          "other": "var",
+                          "vectorY": "57",
+                          "value": 0,
+                          "minValue": 0,
+                          "maxValue": 32767,
+                          "clamp": false
+                        },
+                        "id": "codex-biscuit-clamp-dog-to-max-hp"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "codex-biscuit-if-overheal-cap"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+                  },
+                  "id": "codex-biscuit-refresh-hud-after-heal"
+                }
+              ],
+              "false": []
+            },
+            "id": "codex-biscuit-only-use-when-dog-hurt"
+          }
+        ],
+        "false": []
+      },
+      "id": "codex-biscuit-only-use-when-carried"
+    }
+  ]
+}

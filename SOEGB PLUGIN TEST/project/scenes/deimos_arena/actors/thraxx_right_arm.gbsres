@@ -1,0 +1,41 @@
+{
+  "_resourceType": "actor",
+  "id": "eb45f441-997b-4836-a1ac-08c84cc2d1be",
+  "prefabId": "",
+  "coordinateType": "tiles",
+  "frame": 0,
+  "animate": false,
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 0,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_SET_FRAME",
+      "args": {
+        "actorId": "$self$",
+        "frame": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "codex-thraxx-hitboxbrain-actor_frame-6ad74be3-20bf-4393-8715-8b978e30ff3f"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "_index": 3,
+  "symbol": "actor_51",
+  "name": "Thraxx Right Arm",
+  "x": 12,
+  "y": 7,
+  "spriteSheetId": "cec6f58c-f66e-4689-8657-f12a160efbb8"
+}

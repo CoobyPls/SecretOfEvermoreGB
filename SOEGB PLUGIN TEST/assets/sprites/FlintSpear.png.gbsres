@@ -1,0 +1,129 @@
+{
+  "_resourceType": "sprite",
+  "id": "5f4f63cd-4e99-40f7-b163-166e35a07126",
+  "name": "FlintSpear",
+  "symbol": "sprite_flintspear",
+  "states": [
+    {
+      "id": "c16aefe1-3d95-4608-b288-dd772158f15c",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "86e4f72f-2052-4d8b-a285-0934f483fa51",
+          "frames": [
+            {
+              "id": "e0c0478e-31b2-4e72-a696-aa01e8bb1c5a",
+              "tiles": [
+                {
+                  "id": "bf198ff1-b61d-4b0e-8f59-542057ece1e2",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "8f5772cd-91ca-462b-a7e2-481cfc0b5933",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "997b4143-39bc-4a15-bf34-701257a2519e",
+          "frames": [
+            {
+              "id": "9158f7af-882b-4087-98b5-7811b01f4aed",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "debef901-7045-4b40-b4a7-1ce173886e6f",
+          "frames": [
+            {
+              "id": "4703e229-dc7e-43a6-a56b-bc08589785a1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4dfecd75-e381-478a-88c2-1a2787a0fcca",
+          "frames": [
+            {
+              "id": "cba48fbe-ac6d-4933-9019-4910321d98ed",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "36716e3a-b167-4759-8da7-c1ea30ad2145",
+          "frames": [
+            {
+              "id": "e045c3cc-f1d2-4b42-887a-d795a6f32f1d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5b014383-6f4a-4139-b371-1841708228b7",
+          "frames": [
+            {
+              "id": "b6bb548f-5b74-473e-80d8-936430e958e2",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "feb65cfb-99c4-47c5-a4ac-83c6eafbd7a0",
+          "frames": [
+            {
+              "id": "ee889ca8-2508-470f-a4db-62c226a4e3b0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c2013872-5a61-4f0b-940b-23ff71b1db96",
+          "frames": [
+            {
+              "id": "486c90b5-61b6-49bf-ad70-e7a13ad677b8",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 2,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "FlintSpear.png",
+  "width": 16,
+  "height": 16,
+  "checksum": "8977d0aebfe6b87787dbb0738b582627124c9833"
+}

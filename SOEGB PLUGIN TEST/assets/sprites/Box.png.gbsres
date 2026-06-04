@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "764c726d-e53e-4d9c-a549-f3a57f4349bf",
+  "name": "Box",
+  "symbol": "sprite_box",
+  "states": [
+    {
+      "id": "0ea0968f-c7a2-4495-9995-3613a7c688a3",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "4b3e3492-c858-4870-9e4d-5c1f0958c15e",
+          "frames": [
+            {
+              "id": "ca998e1b-5966-433b-986c-6a6f73b7a408",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8b44f27f-3320-48eb-849e-eb382e2b8229",
+          "frames": [
+            {
+              "id": "2be4eb7c-4a1b-490d-8239-730cd272e206",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a0048e76-5e8b-4d9d-a22b-fd7eb1af5ba5",
+          "frames": [
+            {
+              "id": "3306de91-2233-49c5-aff4-27358964f643",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6f29583d-8d20-439c-9c2d-5fd0d96d318c",
+          "frames": [
+            {
+              "id": "923aac97-934a-48fd-886f-a6da6470566a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1bb0abcc-d0ff-4e85-9a83-4ce7a24a8e6e",
+          "frames": [
+            {
+              "id": "e35a8ca0-498d-464b-ac48-09527eb9519b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "95f89c5f-7cb5-4973-b0bc-0ab21cd5414c",
+          "frames": [
+            {
+              "id": "6f85f12c-5c25-4186-8115-35c23019c2c2",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8845be2e-0306-444b-bf82-d904a9bf0a11",
+          "frames": [
+            {
+              "id": "81ff9d97-c810-48d0-97b7-598cd9f0ea98",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "418c7f13-19e4-4900-bf88-4ae1927f5bfb",
+          "frames": [
+            {
+              "id": "835b0f7d-c7df-4692-b6ed-08dde0824cb8",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Box.png",
+  "width": 22,
+  "height": 24,
+  "checksum": "7ed93a156e9ae8bed05ef7cc23f3cb89318d4941"
+}

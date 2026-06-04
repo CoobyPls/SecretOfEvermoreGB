@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "32944fec-94e1-46f6-85fd-ac0dd71eee74",
+  "name": "MammothGraveyard",
+  "symbol": "bg_mammothgraveyard",
+  "tileColors": "",
+  "filename": "MammothGraveyard.png",
+  "width": 64,
+  "height": 32,
+  "imageWidth": 512,
+  "imageHeight": 256
+}

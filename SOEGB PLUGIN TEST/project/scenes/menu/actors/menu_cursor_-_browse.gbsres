@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "ad9d4a75-0913-4f71-a816-98c58e4bdb18",
+  "_index": 3,
+  "symbol": "actor_menu_browse_cursor",
+  "prefabId": "",
+  "name": "Menu Cursor - Browse",
+  "coordinateType": "tiles",
+  "x": 2,
+  "y": 6,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "db0691dc-431e-4f53-a517-492a311fafa1",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "codex-menu-browse-cursor-no-collision"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "description": "Solid cursor used while browsing items. MenuChoice values: 0 Bone, 1 Petal, 2 Nectar, 3 Biscuit, 4 Storm. It hides while an item is awaiting A/B assignment."
+}

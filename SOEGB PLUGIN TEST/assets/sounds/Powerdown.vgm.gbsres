@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "4ad460b8-df54-4395-b6cf-8a251ce41a42",
+  "name": "Powerdown.vgm",
+  "symbol": "sound_powerdown_vgm",
+  "type": "vgm",
+  "filename": "Powerdown.vgm"
+}

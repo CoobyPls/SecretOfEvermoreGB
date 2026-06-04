@@ -1,0 +1,127 @@
+{
+  "_resourceType": "actor",
+  "id": "3a017f8f-65a5-4815-b7d5-f4c6d73fd3f6",
+  "name": "",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "4c97cfa0-1e76-4fb2-ac07-1fc7c4e5d2cb",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [
+    "solid"
+  ],
+  "prefabScriptOverrides": {},
+  "symbol": "actor_66",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "15"
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "f78c0a4e-d4e7-4958-b560-34a7dfed6a5e"
+            },
+            "id": "0dede97f-e908-442a-a53c-bb597e01da24"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+            },
+            "id": "d8ac9c43-5d08-4f9d-927e-3c3b38f82cf8"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "b9ec4e03-ac07-4e04-9075-2023f2b16d7e"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Yikes, those scaly\npunks really gave\nyou the works, eh?",
+                "Lucky that beast\ndragged you in by \nyour clothes!",
+                "You should stock\nup before you go\nback out!",
+                "Sure be a shame\nif you AND your \nmoney get eaten!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 5,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "cb3af646-e49c-4e4c-9a31-6a481bb44e66"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "f78c0a4e-d4e7-4958-b560-34a7dfed6a5e"
+            },
+            "id": "0e8002c3-cf1d-4328-a065-9a267b1aeafd"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "b8b9c6c0-33b5-4d3e-a815-4e36938ce642"
+            },
+            "id": "6fa5e1d1-fa21-4fc1-ba91-e05494344350"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "29f9826d-d9df-405b-afc7-beb1a49f8c18"
+            },
+            "id": "0dcd2991-1d73-4027-aa38-42a567c67866"
+          }
+        ]
+      },
+      "id": "ce48ec56-4103-449b-b8b7-8774cbff78ff"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "2f4c3ce8-0b03-4aa2-9a85-817f6f73cf4e"
+      },
+      "id": "975523ab-0485-4d11-a054-ec848b1b5c7f"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "coordinateType": "tiles",
+  "x": 10,
+  "y": 6,
+  "_index": 1
+}
