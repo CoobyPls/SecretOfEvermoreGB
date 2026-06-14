@@ -134,8 +134,6 @@ static UBYTE vstream_ensure_actor_tile_window(actor_t *actor, UBYTE requested_ti
     if (!actor || !requested_tiles) return 0u;
     if (requested_tiles > VSTREAM_OBJ_TILE_COUNT) return 0u;
     if (VSTREAM_OBJ_TILE_BASE < VSTREAM_TEXT_SAFE_END && VSTREAM_OBJ_TILE_END > VSTREAM_TEXT_SAFE_START) return 0u;
-    if (!vstream_tile_map_reserved && allocated_sprite_tiles > VSTREAM_OBJ_TILE_BASE) return 0u;
-
     actor->base_tile = VSTREAM_OBJ_TILE_BASE;
     actor->reserve_tiles = VSTREAM_OBJ_TILE_COUNT;
     vstream_reserve_obj_tile_map();

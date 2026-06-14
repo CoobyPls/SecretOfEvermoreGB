@@ -86,7 +86,7 @@ That range sits below GB Studio's dialogue/UI tile area, which keeps the effect 
 
 All streamed effects share that same fixed block. Keep one stream active at a time.
 
-If a scene has already loaded enough sprites to use tile `96` or higher before the streamer starts, the plugin will reject the stream instead of overwriting those tiles. For a clean setup, keep the reusable effect actor in the scene from the start and avoid filling the scene with a pile of large sprite sheets before using the streamer.
+For a clean setup, keep the reusable effect actor in the scene from the start and avoid filling the scene with a pile of large sprite sheets before using the streamer.
 
 ## Events Included
 
