@@ -1,0 +1,10 @@
+{
+  "type": "enginePlugin",
+  "name": "Coobsoft VBlank Tile Streamer",
+  "author": "Coobsoft",
+  "url": "",
+  "description": "Standalone conservative VBlank sprite tile streamer for GB Studio. Streams registered sprite tiles into one reusable actor's reserved OBJ tile window over multiple frames.",
+  "license": "MIT",
+  "version": "0.1.0",
+  "gbsVersion": ">=4.2.2"
+}

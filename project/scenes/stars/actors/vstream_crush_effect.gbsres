@@ -1,0 +1,53 @@
+{
+  "_resourceType": "actor",
+  "id": "b9f8fb01-64b2-40b5-9b1c-d116d777d001",
+  "_index": 1,
+  "symbol": "actor_vstream_crush",
+  "prefabId": "",
+  "name": "VStream Crush Effect",
+  "coordinateType": "tiles",
+  "x": 31,
+  "y": 31,
+  "frame": 0,
+  "animate": true,
+  "spriteSheetId": "da1ce57c-218a-49ea-9f27-1a9cb29460e8",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 2,
+  "animSpeed": 7,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "id": "f86e7588-9a44-43d2-a007-9797f1d92105",
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "b9f8fb01-64b2-40b5-9b1c-d116d777d001",
+        "x": {
+          "type": "number",
+          "value": 31
+        },
+        "y": {
+          "type": "number",
+          "value": 31
+        },
+        "units": "tiles"
+      }
+    },
+    {
+      "id": "bd4ab7ce-a1cd-4181-af26-aca87ebddf35",
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "b9f8fb01-64b2-40b5-9b1c-d116d777d001"
+      }
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

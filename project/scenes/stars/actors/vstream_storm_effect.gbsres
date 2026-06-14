@@ -1,0 +1,53 @@
+{
+  "_resourceType": "actor",
+  "id": "78a2da06-517b-46f9-81ef-20e882a7a003",
+  "_index": 3,
+  "symbol": "actor_vstream_storm",
+  "prefabId": "",
+  "name": "VStream Storm Effect",
+  "coordinateType": "tiles",
+  "x": 31,
+  "y": 31,
+  "frame": 0,
+  "animate": true,
+  "spriteSheetId": "e67ccb56-8a4e-44ef-8f79-cbb6193c6fb9",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 2,
+  "animSpeed": 7,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "id": "d7592e21-12ce-45a1-abfb-714d64508751",
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "78a2da06-517b-46f9-81ef-20e882a7a003",
+        "x": {
+          "type": "number",
+          "value": 31
+        },
+        "y": {
+          "type": "number",
+          "value": 31
+        },
+        "units": "tiles"
+      }
+    },
+    {
+      "id": "411fa847-8cbf-4028-a46a-4665a8c4a025",
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "78a2da06-517b-46f9-81ef-20e882a7a003"
+      }
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

@@ -1,0 +1,53 @@
+{
+  "_resourceType": "actor",
+  "id": "1cc3f24c-4d36-4c53-bc76-bfbf53f8c002",
+  "_index": 2,
+  "symbol": "actor_vstream_flash",
+  "prefabId": "",
+  "name": "VStream Flash Effect",
+  "coordinateType": "tiles",
+  "x": 31,
+  "y": 31,
+  "frame": 0,
+  "animate": true,
+  "spriteSheetId": "c624f151-df6a-4e34-b2ca-158954c68aee",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 7,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "id": "80fa2927-d363-4b7e-b218-623db52bee1c",
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "1cc3f24c-4d36-4c53-bc76-bfbf53f8c002",
+        "x": {
+          "type": "number",
+          "value": 31
+        },
+        "y": {
+          "type": "number",
+          "value": 31
+        },
+        "units": "tiles"
+      }
+    },
+    {
+      "id": "e8652704-272c-4e00-8507-edb7250143a9",
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "1cc3f24c-4d36-4c53-bc76-bfbf53f8c002"
+      }
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}
