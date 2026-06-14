@@ -8,7 +8,7 @@ The point of the demo is simple: the effect actor does not need to keep every sp
 
 Flash is set up as the moving example. It starts from the player and travels to the cat.
 
-The streamed graphics always use OBJ sprite tiles `192-239`. That keeps them in the same VRAM spot every time, away from GB Studio's text tiles.
+The streamed graphics always use OBJ sprite tiles `96-143`. That keeps them in the same VRAM spot every time, below GB Studio's dialogue/UI text tiles.
 
 ## Try The Demo
 

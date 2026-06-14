@@ -80,11 +80,13 @@ The demo project does this in the `Stars` scene.
 
 ## Step 7: Know The VRAM Map
 
-The streamer always uses OBJ sprite tiles `192-239`.
+The streamer always uses OBJ sprite tiles `96-143`.
 
-That range is reserved by the plugin when a stream starts, so GB Studio's normal sprite loader should not claim those tiles afterward. Text boxes and UI text use background/window tiles, not OBJ sprite tiles, so normal dialogue text will not overwrite the streamed spell graphics.
+That range sits below GB Studio's dialogue/UI tile area, which keeps the effect graphics from overwriting text tiles. The plugin also moves GB Studio's sprite allocator past the stream block when it starts, so later sprite loads should not claim those tiles either.
 
 All streamed effects share that same fixed block. Keep one stream active at a time.
+
+If a scene has already loaded enough sprites to use tile `96` or higher before the streamer starts, the plugin will reject the stream instead of overwriting those tiles. For a clean setup, keep the reusable effect actor in the scene from the start and avoid filling the scene with a pile of large sprite sheets before using the streamer.
 
 ## Events Included
 

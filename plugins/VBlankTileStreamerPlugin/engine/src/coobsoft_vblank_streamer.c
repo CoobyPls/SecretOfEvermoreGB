@@ -21,9 +21,11 @@ extern UBYTE allocated_sprite_tiles;
 #define VSTREAM_NORMAL_TILE_MAX 48u
 #define VSTREAM_RISKY_TILE_MAX 48u
 #define VSTREAM_ABSOLUTE_TILE_MAX 48u
-#define VSTREAM_OBJ_TILE_BASE 192u
+#define VSTREAM_OBJ_TILE_BASE 96u
 #define VSTREAM_OBJ_TILE_COUNT 48u
-#define VSTREAM_OBJ_TILE_END 240u
+#define VSTREAM_OBJ_TILE_END 144u
+#define VSTREAM_TEXT_SAFE_START 151u
+#define VSTREAM_TEXT_SAFE_END 180u
 
 #ifndef CHK_FLAG
 #define CHK_FLAG(VAR, FLAG) (((VAR) & (FLAG)) != 0u)
@@ -72,6 +74,7 @@ static UBYTE vstream_hide_actor = TRUE;
 static UBYTE vstream_status = VSTREAM_STATUS_IDLE;
 static UBYTE vstream_tiles_done = 0u;
 static UBYTE vstream_total_tiles = 0u;
+static UBYTE vstream_tile_map_reserved = FALSE;
 static UWORD *vstream_status_out = 0;
 
 static const vstream_asset_t *vstream_current_asset(void) {
@@ -117,18 +120,21 @@ static direction_e vstream_dir_to_tile(actor_t *actor, UBYTE target_tile_x, UBYT
 }
 
 static void vstream_reserve_obj_tile_map(void) {
-    /* Fixed OBJ tile map for streamed effects: 192-239.
-     * GB Studio text uses BG/window tiles, and this keeps normal sprite loads
-     * from claiming the streamer block after the scene is already running.
+    /* Fixed OBJ tile map for streamed effects: 96-143.
+     * GB Studio's dialogue/UI tile data lives higher up in VRAM, so the stream
+     * block stays below it and the sprite allocator is moved past the block.
      */
     if (allocated_sprite_tiles < VSTREAM_OBJ_TILE_END) {
         allocated_sprite_tiles = VSTREAM_OBJ_TILE_END;
     }
+    vstream_tile_map_reserved = TRUE;
 }
 
 static UBYTE vstream_ensure_actor_tile_window(actor_t *actor, UBYTE requested_tiles) {
     if (!actor || !requested_tiles) return 0u;
     if (requested_tiles > VSTREAM_OBJ_TILE_COUNT) return 0u;
+    if (VSTREAM_OBJ_TILE_BASE < VSTREAM_TEXT_SAFE_END && VSTREAM_OBJ_TILE_END > VSTREAM_TEXT_SAFE_START) return 0u;
+    if (!vstream_tile_map_reserved && allocated_sprite_tiles > VSTREAM_OBJ_TILE_BASE) return 0u;
 
     actor->base_tile = VSTREAM_OBJ_TILE_BASE;
     actor->reserve_tiles = VSTREAM_OBJ_TILE_COUNT;
